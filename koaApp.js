@@ -1,6 +1,8 @@
 const fs                = require('fs');
 const getOrderDetail    = require('./utils/athena/detail')
 const getOrderTag       = require('./utils/athena/tag')
+const getOrderList      = require('./utils/athena/list')
+
 const getLocal          = require('./localNotes')
 
 const MONTH_MAPPING = {
@@ -68,7 +70,7 @@ koaApp.use(async (ctx, next) => {
 
 
 koaApp.use(async (ctx, next) => {
-    if (ctx.path === '/data') {
+    if (ctx.path === '/detail') {
         let order_id = `${ctx.query.order_id}`
 
         // const tag = await getOrderTag(order_id);
@@ -82,8 +84,11 @@ koaApp.use(async (ctx, next) => {
         let body = await buildBody( detail,  tag);
 
         ctx.body = body
+    } else if (ctx.path === '/list') {
+        let list = await getOrderList();
+        ctx.body = list
     } else if (ctx.path === '/') {
-         ctx.body = fs.readFileSync('index.html', {encoding:'utf8', flag:'r'});
+            ctx.body = fs.readFileSync('index.html', {encoding:'utf8', flag:'r'});
     } else {
         ctx.body = 'Hello World: ' + ctx.path;
     }
@@ -103,8 +108,8 @@ async function buildBody(detail, tag){
 
 
     /** Tags map to Status */
-     let tags =  tag.map(t=>t.name)
-     if(detail.status != 3) {
+    let tags =  tag.map(t=>t.name)
+    if(detail.status != 3) {
         status = "In-Progress"; // Ticket is still open, we consider this as in-progress
     } else {
         if(tags.includes('Open Status')) {
@@ -165,23 +170,6 @@ async function buildBody(detail, tag){
     /** Current Follower */
     const follower = detail.follower;
 
-    /** Service Type */
-    const category_1_name =  detail.category_1_name;
-    // console.log(`category name : ${category_1_name}`)
-    let srv_type = '';
-    if (detail.items.filter(r => r.label == "categorization").pop().content.category_1_name.toLowerCase().includes("catalog")) {
-        srv_type = "Inbound"
-    } else if (detail.items.filter(r => r.label == "categorization").pop().content.category_1_name.toLowerCase().includes("new request")) {
-        srv_type = "Audit"
-    } else {
-        if(category_1_name.toLowerCase().includes("catalog")) {
-            srv_type = "Inbound"
-        } else if (category_1_name.toLowerCase().includes("new request")) {
-            srv_type = "Audit"
-        } else {
-            srv_type = "UNKNOWN!!!"
-        }
-    }
 
     /** Ticket Open Time */
     const create_time  = (new Date(detail.create_time*1000)).toISOString().split('T')[0];
@@ -195,21 +183,11 @@ async function buildBody(detail, tag){
     const duration = (close_time == '')?'':(((parseInt(detail.update_time)-parseInt(detail.create_time))) / 3600 / 24).toFixed(2)
     // console.log((((parseInt(detail.update_time)-parseInt(detail.create_time))) / 3600 / 24).toFixed(2))
 
-    const replies=  detail.replies;
-
-    /** Blocker, Dropoff, Feedback */
+    /** Co-Pitch Requested*/
+    const replies =  detail.replies;
+    let is_copitch        = "No"
 
     if(replies) {
-        const blocker_reg    = /(\[blocker\]\[)(.*)(\])/m
-        const feedback_reg   = /(\[feedback\]\[)(.*)(\])/m
-        const dropoff_reg    = /(\[dropoff\]\[)(.*)(\])/m
-        const summary_reg    = /(\[summary\]\[)(.*)(\])/m
-        const insights_reg   = /(\[insights\]\[)(.*)(\])/m
-
-        const conclusion_reg   = /(.*)(\[conclusion\])(.*)/m
-
-
-
         for(let k = 0; k < replies.length; k++) {
             const reply = replies[k];
             const reply_time = (new Date(reply.create_time*1000)).toISOString().split('T')[0];
@@ -217,61 +195,19 @@ async function buildBody(detail, tag){
 
             for(let j = 0; j < items.length; j++) {
                 const item = items[j];
-
-                /** Product feedback */
-                let feedback_matches = item.content.toLowerCase().match(feedback_reg);
-                if(feedback_matches) {
-                    feedback = feedback_matches[2]
-                }
-
-                /** Client drop off reason */
-                let dropoff_matches = item.content.toLowerCase().match(dropoff_reg);
-                if(dropoff_matches) {
-                    dropoff = dropoff_matches[2]
-                }
-
-                /** Blockers */
-                let blocker_matches = item.content.toLowerCase().match(blocker_reg);
-                if(blocker_matches) {
-                    blocker = blocker_matches[2];
-                }
-
-                /** Sumary */
-                let summary_matches = item.content.toLowerCase().match(summary_reg);
-                if(summary_matches) {
-                    summary = summary_matches[2];
-                }
-
-                /** Insights */
-                let insights_matches = item.content.toLowerCase().match(insights_reg);
-                if(insights_matches) {
-                    insights = insights_matches[2];
-                }
-
-                /** Conclusion */
-                let conclusion_matches = item.content.toLowerCase().match(conclusion_reg)
-                // console.log(item.content)
-                if(conclusion_matches) {
-                    // console.log(conclusion_matches)
-                    // console.log(conclusion_matches[2])
-
-                    conclusion = conclusion_matches[3]
-                                                        .replaceAll('&nbsp;', '')
-                                                        .replaceAll('<strong>', '').replaceAll('</strong>', '')
-                                                        .replaceAll('<br>', ' ').replaceAll('</br>', ' ')
-                                                        .replaceAll('<span>', '').replaceAll('</span>', '')
-                                                        .replaceAll('<p>', '').replaceAll('</p>', '')
-                                                        .replaceAll(/(<span )(.*)(>)/g, ' ')
-                    // console.log(conclusion)
+                if(item.content.toLowerCase().includes("copitch request")) {
+                    is_copitch = "Yes";
+                    break;
                 }
             }
         }
-    } else {
-        console.log('no match')
-    }
+    } 
+
+    /** Priority */
+    let priority = "P" + detail.priority;
 
     /** Append & Replace with Local File */
-    const localNotes = await getLocal();
+    const localNotes = []; //await getLocal();
     for(let i = 0; i < localNotes.length; i++) {
         const note = localNotes[i];
         if(note.includes(detail.id)) {
@@ -290,43 +226,6 @@ async function buildBody(detail, tag){
         }
     }
 
-    /** Normalize Blocker  */
-    let issues = {
-        signal: false,
-        catalog: false,
-        other: false,
-        noissue: false
-    }
-    if(blocker.toLowerCase().includes('signal')) {
-        issues.signal = true;
-    }
-    if(blocker.toLowerCase().includes('pixel')) {
-        issues.signal = true;
-    }
-    if(blocker.toLowerCase().includes('catalog')) {
-        issues.catalog = true;
-    }
-    if(blocker.toLowerCase().includes('other')) {
-        issues.other = true;
-    }
-    if(blocker.toLowerCase().includes('no')) {
-        issues.noissue = true;
-    }
-
-    if(issues.signal == true && issues.catalog == true) {
-        blocker = 'Signal+Catalog'
-    } else if (issues.signal == true) {
-        blocker = 'Signal Only'
-    } else if (issues.catalog == true) {
-        blocker = 'Catalog Only'
-    } else if (issues.other == true) {
-        blocker = 'Other Issue'
-    } else if(issues.noissue == true){
-        blocker = "No Major Issue"
-    } else {
-        blocker = ''
-    }
-    // console.log(`blocker = ${blocker}`)
 
 
     /** Return to request */
@@ -334,6 +233,8 @@ async function buildBody(detail, tag){
         refresh: (new Date(Date.now())).toISOString().substring(0,19) + 'Z',
         client,
         adv_id,
+        is_copitch,
+        priority,
         status,
         country,
         region,
@@ -343,13 +244,7 @@ async function buildBody(detail, tag){
         close_time,
         close_month,
         duration,
-        srv_type,
-        blocker,
-        dropoff,
-        feedback,
-        summary,
-        insights,
-        conclusion,
+
 
 
         delimeter: "------------------------------------------------",
