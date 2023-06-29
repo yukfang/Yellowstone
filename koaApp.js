@@ -195,7 +195,8 @@ async function buildBody(detail, tag){
 
             for(let j = 0; j < items.length; j++) {
                 const item = items[j];
-                if(item.content.toLowerCase().includes("copitch request")) {
+                if(item.content.toLowerCase().includes("co-pitch request") 
+                    || item.content.toLowerCase().includes("copitch request")) {
                     is_copitch = "Yes";
                     break;
                 }
