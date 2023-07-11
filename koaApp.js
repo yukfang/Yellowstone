@@ -169,6 +169,10 @@ async function buildBody(detail, tag){
 
     /** Current Follower */
     const follower = detail.follower;
+    /** Priority */
+    let priority = "P" + detail.priority;
+    /** GBS  */
+    const gbs = 'XYZ';
 
 
     /** Ticket Open Time */
@@ -186,7 +190,6 @@ async function buildBody(detail, tag){
     /** Co-Pitch Requested*/
     const replies =  detail.replies;
     let is_copitch        = "No"
-
     if(replies) {
         for(let k = 0; k < replies.length; k++) {
             const reply = replies[k];
@@ -204,8 +207,31 @@ async function buildBody(detail, tag){
         }
     } 
 
-    /** Priority */
-    let priority = "P" + detail.priority;
+    /** Status Update */
+    let status_notes = ''
+    const status_update_reg   = /(.*)(\[Status Update\])(.*)/m
+    if(replies) {
+        for(let k = 0; k < replies.length; k++) {
+            const reply = replies[k];
+            const items = reply.items.filter(x => x.type == 6);
+
+            for(let j = 0; j < items.length; j++) {
+                const item = items[j];
+                const status_update = item.content.match(status_update_reg)
+                if(status_update) {
+                    status_notes = status_update[3]
+                }
+            }
+        }
+    } 
+    status_notes = status_notes.replace(/<\/p>/, '')
+                                .replace(/(<span )(.*)(>)/m, ' ').replace(/<\/span>/,'')
+                                .replace(/<ul>/, '').replace(/<\/ul>/, '')
+                                .replace(/<li>/, '').replace(/<\/li>/, '')
+
+
+
+
 
     /** Append & Replace with Local File */
     const localNotes = []; //await getLocal();
@@ -240,11 +266,14 @@ async function buildBody(detail, tag){
         country,
         region,
         follower,
+        gbs,
+        status_notes,
         create_time,
         create_month,
         close_time,
         close_month,
         duration,
+        
 
 
 
