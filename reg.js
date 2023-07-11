@@ -4,17 +4,21 @@
     
     
     const matches = raw.match(reg)
-    console.log(matches)
+    // console.log(matches)
     
-    console.log(raw.replace(/<\/p>/, '').replace(/<\/span>/,'').replace(/(<span )(.*)(>)/m, ' '))
+    // console.log(raw.replace(/<\/p>/, '').replace(/<\/span>/,'').replace(/(<span )(.*)(>)/m, ' '))
 }
 
 
 {
-    const raw = '[Status Update]]123'
-    const conclusion_reg   = /(.*)(\[Status Update\])(.*)/m
-    const conclusion = raw.match(conclusion_reg)
-    console.log(conclusion)
+    const raw = "&nbsp;Synced up with AirAsia to explain benefits of MAM and AAM. Also sent across audit doc + GTM S2S template for clients to implement EAPI and improve their funnel events.&nbsp;https://bytedance.sg.feishu.cn/docx/Gy9tdLZYBoXf9PxspNdltFQNgFR&nbsp;"
+    status_notes = raw.replaceAll("&nbsp;", '')
+                                .replace(/(<span )(.*)(>)/m, ' ').replace(/<\/span>/,'')
+                                .replace(/<ul>/, '').replace(/<\/ul>/, '')
+                                .replace(/<li>/, '').replace(/<\/li>/, '')
+                                .replace(/<p>/, '').replace(/<\/p>/, '')
+                                .replace(/<strong>/, '').replace(/<\/strong>/, '')
+    console.log(status_notes)
 }
 
 

@@ -224,12 +224,15 @@ async function buildBody(detail, tag){
             }
         }
     } 
-    status_notes = status_notes.replace(/<\/p>/, '')
+    status_notes = status_notes.replaceAll("&nbsp;", '')
                                 .replace(/(<span )(.*)(>)/m, ' ').replace(/<\/span>/,'')
                                 .replace(/<ul>/, '').replace(/<\/ul>/, '')
                                 .replace(/<li>/, '').replace(/<\/li>/, '')
+                                .replace(/<p>/, '').replace(/<\/p>/, '')
+                                .replace(/<strong>/, '').replace(/<\/strong>/, '')
+                                // .replace(/&nbsp;/m, '')
 
-
+                                
 
 
 
