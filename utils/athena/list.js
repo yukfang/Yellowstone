@@ -66,8 +66,8 @@ async function athena_api_v2_swimlane(){
                        {
                           "field":"create_time",
                           "filter_type":1,
-                          "range_lower":"2023-06-01T00:00:00",
-                          "range_upper":"2023-06-29T00:00:00"
+                          "range_lower":"2023-05-01T00:00:00",
+                          "range_upper":"2024-12-29T00:00:00"
                        },
                        {
                           "field":"archive_category",
@@ -97,7 +97,7 @@ async function athena_api_v2_swimlane(){
     if(response.status == 200 ) {
         const data = JSON.parse(response.data).data;
         // console.table(data.data)
-        // console.table(data.data.filter(x => x.title.toLowerCase().includes("yellowstone")), ["order_id", "title"])
+        console.table(data.data.filter(x => x.title.toLowerCase().includes("yellowstone")), ["order_id"])
         return data.data;
 
         // const tracking = {

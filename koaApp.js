@@ -44,7 +44,6 @@ const REGION_MAPPING = {
     "SEA-ID" :  "APAC",
     "OUTBOUND-HK"   : "APAC",
 
-
     /** CNOB */
     "OUTBOUND-CN"   : "CNOB"
 }
@@ -96,7 +95,7 @@ koaApp.use(async (ctx, next) => {
     next();
 })
 
-async function buildBody(detail, tag){
+async function buildBody(detail, tags){
     let   blocker   = '';
     let   feedback  = '';
     let   dropoff   = '';
@@ -107,31 +106,21 @@ async function buildBody(detail, tag){
 
 
 
-    /** Tags map to Status */
-    let tags =  tag.map(t=>t.name)
-    if(detail.status != 3) {
-        status = "In-Progress"; // Ticket is still open, we consider this as in-progress
-    } else {
-        if(tags.includes('Open Status')) {
-            status = 'Unknown'
-        } else if(tags.includes("Out of Scope")) {
-            status = "Out of Scope"
-        } else if (tags.includes("Closed  - With Successful Adoption")) {
-            status = "Successful Adoption"
-        } else if (tags.includes('Closed  - No Adoption Improvement')) {
-            status = "No Adoption"
-            const dropoff_tag = tag.find(t => t.name === "Closed  - No Adoption Improvement");
-            if(dropoff_tag) {
-                dropoff = dropoff_tag.sub_tags[0].name  // By default, it's assumed that there is only one sub tag
-            }
-        } else if(tags.includes("Completed - Optimal") || tags.includes("Completed - Not Optimal")) {
-            status = "Successful Adoption"
-        } else if(tags.includes("Question Answered")  ) {
-            status = "No Adoption"
-        }  else  {
-            status = "Client Dropoff"
+    /** Tags & Status */
+    // Tags
+    try{
+        main_status = ''
+        sub_status  = ''
+        if(tags && tags.length > 0) {
+            console.log(tags)
+            main_status   = tags[0]?.name || ''
+            sub_status    = tags[0].sub_tags[0]?.name || ''
+            console.log(`${main_status} ${sub_status} lololo`)
         }
+    } catch(err) {
+        throw err
     }
+
 
     /** Client Name */
     const client = detail.items.filter(r=> r.label.includes('Client Name') || r.label.includes('Advertiser name')).pop().content;
@@ -265,7 +254,8 @@ async function buildBody(detail, tag){
         adv_id,
         is_copitch,
         priority,
-        status,
+        main_status,
+        sub_status,
         country,
         region,
         follower,

@@ -8,6 +8,7 @@ let cookie = {
 
 module.exports =
 async function athena_api_v2_processor_order_bind_tag_list(order_id){
+    console.log(`abc`)
     if(Date.now() - cookie.fetchTime > 1000 * 60 * 3) {
         cookie = {
             value: (await cookieRemote()),
@@ -37,22 +38,23 @@ async function athena_api_v2_processor_order_bind_tag_list(order_id){
         // console.log(tags)
         const impl_tags_data = tags.filter(tg => tg.group_name.includes("Implementation Status"))
         // console.log(impl_tags)
-        // console.log('  ')
         // const data = JSON.parse(response.data).data.tags.filter(tg => tg.group_name.includes("Implementation Status"));
         // console.log(data.tags.filter(tg => tg.group_name.includes("Implementation Status")))
         if(impl_tags_data.length == 1) {
             // var tagStr = '';
             const tags = impl_tags_data[0].tags;
-            // console.log(tags)
+            console.log(tags)
+            return tags
         }
         for(let i = 0; i < impl_tags_data.length; i++) {
-             impl_tags_data[i].tags.forEach(t => {
-                // console.log(t)
-                impl_tags.push(t)
-             });
+            impl_tags_data[i].tags.forEach(t => {
+               // console.log(t)
+               impl_tags.push(t)
+            });
         }
     } else {
         console.log(`Get Order ${order_id} Tag Error !!!`)
+        return null;
     }
 
     return impl_tags
