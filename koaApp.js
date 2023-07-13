@@ -114,7 +114,7 @@ async function buildBody(detail, tags){
         if(tags && tags.length > 0) {
             console.log(tags)
             main_status   = tags[0]?.name || ''
-            sub_status    = tags[0].sub_tags[0]?.name || ''
+            sub_status    = tags[0].sub_tags[0]?.name || main_status
             console.log(`${main_status} ${sub_status} lololo`)
         }
     } catch(err) {
