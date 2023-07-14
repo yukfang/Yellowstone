@@ -97,7 +97,6 @@ async function athena_api_v2_swimlane(){
     if(response.status == 200 ) {
         const data = JSON.parse(response.data).data;
         // console.table(data.data)
-        console.table(data.data.filter(x => x.title.toLowerCase().includes("yellowstone")), ["order_id"])
         return data.data;
 
         // const tracking = {
