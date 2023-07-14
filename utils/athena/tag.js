@@ -43,7 +43,7 @@ async function athena_api_v2_processor_order_bind_tag_list(order_id){
         if(impl_tags_data.length == 1) {
             // var tagStr = '';
             const tags = impl_tags_data[0].tags;
-            console.log(tags)
+            // console.log(tags)
             return tags
         }
         for(let i = 0; i < impl_tags_data.length; i++) {

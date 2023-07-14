@@ -98,26 +98,6 @@ async function athena_api_v2_swimlane(){
         const data = JSON.parse(response.data).data;
         // console.table(data.data)
         return data.data;
-
-        // const tracking = {
-        //     status: data.status,
-        //     follower: data.follower,
-        //     create_time: data.create_time,
-        //     plat_id: data.plat_id,
-        //     id: data.id,
-        //     title: data.title,
-        //     category_1_name: data.category_1_name,
-        //     update_time: data.update_time,
-        //     owner_name: data.owner_name,
-        //     pending_time: data.pending_time,
-        //     // items: data.items,
-        //     replies: data.replies,
-        //     replies_items: data.replies[0].items
-
-        // }
-
-        // console.log(tracking);
-
     } else {
         console.log(`Get Order list Error !!!`)
         return null;

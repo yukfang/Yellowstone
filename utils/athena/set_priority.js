@@ -6,7 +6,7 @@ let cookie = {
     fetchTime : 0
 }
 
-async function set_priority(order_id){
+async function set_priority(order_id, priority){
     const endpoint = `https://ads.tiktok.com/athena/api/admin/order/priority/set/`;
     const method      = 'POST';
 
@@ -18,7 +18,7 @@ async function set_priority(order_id){
     }
 
     let header      = {Cookie: cookie.value}
-    let body        = {order_id, priority: 2}
+    let body        = {order_id, priority}
     let param       = null;
 
 
@@ -37,6 +37,6 @@ async function set_priority(order_id){
 }
 
 
-set_priority(974767)
+// set_priority(974767)
 
 module.exports = set_priority

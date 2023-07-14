@@ -2,6 +2,8 @@ const fs                = require('fs');
 const getOrderDetail    = require('./utils/athena/detail')
 const getOrderTag       = require('./utils/athena/tag')
 const getOrderList      = require('./utils/athena/list')
+const SEAP0List         = require('./utils/athena/SEAP0')
+const setPriority       = require('./utils/athena/set_priority')
 
 const getLocal          = require('./localNotes')
 
@@ -72,14 +74,9 @@ koaApp.use(async (ctx, next) => {
     if (ctx.path === '/detail') {
         let order_id = `${ctx.query.order_id}`
 
-        // const tag = await getOrderTag(order_id);
-        // const detail = await getOrderDetail(order_id);
-        // let body = await buildBody( detail,  tag);
-
         let [detail, tag] = await Promise.all([getOrderDetail(order_id), getOrderTag(order_id)])
 
-        // console.log(tag)
-
+        await auditPriority(detail);
         let body = await buildBody( detail,  tag);
 
         ctx.body = body
@@ -95,6 +92,35 @@ koaApp.use(async (ctx, next) => {
     next();
 })
 
+async function auditPriority(detail){
+    // console.log(detail)
+    const priority = detail.priority
+    const order_id = detail.id
+    const adv_ids  = detail.items.filter(i => i.label.includes('Ad Account ID')).pop().content;
+    console.log(`${order_id } Priority = ${priority}`)
+    // console.log(adv_ids)
+
+    let has_p0 = false;
+    for(let i = 0; i < adv_ids.length; i++) {
+        if(SEAP0List.includes(adv_ids[i])) {
+            has_p0 = true;
+            break;
+        }
+    }
+
+    if(priority != 0 && has_p0) {
+        // set priority P0
+        await setPriority(order_id, 0)
+        console.log(`Set priority to P0`)
+    } else if (priority === 0 && !has_p0) {
+        // set priority p2
+        await setPriority(order_id, 2)
+        console.log(`Set priority to P2`)
+    } else {
+
+    }
+}
+
 async function buildBody(detail, tags){
     let   blocker   = '';
     let   feedback  = '';
@@ -104,18 +130,16 @@ async function buildBody(detail, tags){
     let   insights  = '';
     let   status    = '';
 
-
-
     /** Tags & Status */
     // Tags
     try{
         main_status = ''
         sub_status  = ''
         if(tags && tags.length > 0) {
-            console.log(tags)
+            // console.log(tags)
             main_status   = tags[0]?.name || ''
             sub_status    = tags[0].sub_tags[0]?.name || main_status
-            console.log(`${main_status} ${sub_status} lololo`)
+            // console.log(`${main_status} ${sub_status} lololo`)
         }
     } catch(err) {
         throw err
