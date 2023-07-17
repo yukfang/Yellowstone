@@ -111,10 +111,12 @@ async function auditPriority(detail){
     if(priority != 0 && has_p0) {
         // set priority P0
         await setPriority(order_id, 0)
+        detail.priority = 'P0'
         console.log(`Set priority to P0`)
     } else if (priority === 0 && !has_p0) {
         // set priority p2
         await setPriority(order_id, 2)
+        detail.priority = 'P2'
         console.log(`Set priority to P2`)
     } else {
 
