@@ -2,7 +2,7 @@ const fs                = require('fs');
 const getOrderDetail    = require('./utils/athena/detail')
 const getOrderTag       = require('./utils/athena/tag')
 const getOrderList      = require('./utils/athena/list')
-const SEAP0List         = require('./utils/athena/SEAP0')
+const APACP0List         = require('./utils/athena/APAC_P0')
 const setPriority       = require('./utils/athena/set_priority')
 
 const getLocal          = require('./localNotes')
@@ -102,7 +102,7 @@ async function auditPriority(detail){
 
     let has_p0 = false;
     for(let i = 0; i < adv_ids.length; i++) {
-        if(SEAP0List.includes(adv_ids[i])) {
+        if(APACP0List.includes(adv_ids[i])) {
             has_p0 = true;
             break;
         }
