@@ -92,6 +92,79 @@ koaApp.use(async (ctx, next) => {
     next();
 })
 
+async function isImplementationAgreed(detail){
+    const replies =  detail.replies;
+    let isImplAgreed        = "No"
+    if(replies) {
+        for(let k = 0; k < replies.length; k++) {
+            const reply = replies[k];
+            const items = reply.items.filter(x => x.type == 6);
+
+            for(let j = 0; j < items.length; j++) {
+                const item = items[j];
+                if(item.content.toLowerCase().includes("implementation agreed") 
+                        || item.content.toLowerCase().includes("so agreed")
+                        || item.content.toLowerCase().includes("eapi agreed")) {
+                    isImplAgreed = "Yes";
+                    break;
+                }
+            }
+        }
+    } 
+    return isImplAgreed;
+}
+
+async function isCoPitchRequested(detail) {
+    const replies =  detail.replies;
+    let is_copitch        = "No"
+    if(replies) {
+        for(let k = 0; k < replies.length; k++) {
+            const reply = replies[k];
+            const reply_time = (new Date(reply.create_time*1000)).toISOString().split('T')[0];
+            const items = reply.items.filter(x => x.type == 6);
+
+            for(let j = 0; j < items.length; j++) {
+                const item = items[j];
+                if(item.content.toLowerCase().includes("co-pitch request") 
+                    || item.content.toLowerCase().includes("copitch request")) {
+                    is_copitch = "Yes";
+                    break;
+                }
+            }
+        }
+    } 
+    return is_copitch
+}
+
+async function getETA(detail){
+    const eta_reg   = /(.*)(\[eta=(.*)\])(.*)/m
+
+    const replies  =  detail.replies;
+    let eta        = ""
+    if(replies) {
+        for(let k = 0; k < replies.length; k++) {
+            const reply = replies[k];
+            const items = reply.items.filter(x => x.type == 6);
+
+            for(let j = 0; j < items.length; j++) {
+                const item = items[j];
+                const eta_matches = item.content.toLowerCase().match(eta_reg)
+                console.log(eta_matches)
+                if(eta_matches) {
+                    eta = eta_matches[3]
+                }
+                if(eta.length > 1) {
+                    eta = "2023-" + eta[0] + eta[1] + "-" + eta[2] + eta[3]
+                }
+
+                // No break, use last one to override previous ones
+            }
+        }
+    } 
+    console.log(`return eta = ${eta}`)
+    return eta
+}
+
 async function auditPriority(detail){
     // console.log(detail)
     const priority = detail.priority
@@ -203,28 +276,23 @@ async function buildBody(detail, tags){
     // console.log((((parseInt(detail.update_time)-parseInt(detail.create_time))) / 3600 / 24).toFixed(2))
 
     /** Co-Pitch Requested*/
-    const replies =  detail.replies;
-    let is_copitch        = "No"
-    if(replies) {
-        for(let k = 0; k < replies.length; k++) {
-            const reply = replies[k];
-            const reply_time = (new Date(reply.create_time*1000)).toISOString().split('T')[0];
-            const items = reply.items.filter(x => x.type == 6);
+    let is_copitch = await isCoPitchRequested(detail)
 
-            for(let j = 0; j < items.length; j++) {
-                const item = items[j];
-                if(item.content.toLowerCase().includes("co-pitch request") 
-                    || item.content.toLowerCase().includes("copitch request")) {
-                    is_copitch = "Yes";
-                    break;
-                }
-            }
-        }
-    } 
+    /** Is Implementation Agreed */
+    let isImplAgreed = await isImplementationAgreed(detail)
+
+    /** Get ETA */
+    let eta = '' 
+    if(isImplAgreed === "Yes") {
+        eta =  await getETA(detail)
+    } else {
+        console.log(`not agreed`)
+    }
 
     /** Status Update */
     let status_notes = ''
     const status_update_reg   = /(.*)(\[Status Update\])(.*)/m
+    const replies =  detail.replies;
     if(replies) {
         for(let k = 0; k < replies.length; k++) {
             const reply = replies[k];
@@ -286,6 +354,8 @@ async function buildBody(detail, tags){
         region,
         follower,
         gbs,
+        isImplAgreed,
+        eta,
         status_notes,
         create_time,
         create_month,

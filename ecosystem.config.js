@@ -10,7 +10,7 @@ module.exports = {
 
       script  : "./index.js",
       watch   : true,
-      name    : "catalogtracker"
+      name    : "ystracker"
     }
 
   ]
