@@ -239,6 +239,9 @@ async function buildBody(detail, tags){
         'Region', 'Country / Region', 'Client Region', 'Country/Region', 'GBS Country/Region', "GBS Country / Region"
     ]
     let country = detail.items.filter(r => regionLables.includes(r.label)).pop().content;
+    if(country.toLowerCase().includes("-au")) {
+        country = "AU"
+    }
     /** Adjust wrong country */
     if(`${detail.id}` === '1326137') {
         country = "SEA-SG"
