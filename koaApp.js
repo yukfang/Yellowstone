@@ -165,6 +165,8 @@ async function getETA(detail){
 }
 
 async function auditPriority(detail){
+
+
     // console.log(detail)
     const priority = detail.priority
     const order_id = detail.id
@@ -180,7 +182,9 @@ async function auditPriority(detail){
         }
     }
 
-    if(priority != 0 && has_p0) {
+    if(detail.follower.includes('方是惟')) {
+        /** Shiwei will manage the priority manually */
+    } else if(priority != 0 && has_p0) {
         // set priority P0
         await setPriority(order_id, 0)
         detail.priority = '0'
@@ -329,9 +333,6 @@ async function buildBody(detail, tags){
 
 
                                 
-
-
-
     /** Append & Replace with Local File */
     const localNotes = []; //await getLocal();
     for(let i = 0; i < localNotes.length; i++) {
