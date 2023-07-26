@@ -235,7 +235,13 @@ async function buildBody(detail, tags){
     const regionLables = [
         'Region', 'Country / Region', 'Client Region', 'Country/Region', 'GBS Country/Region', "GBS Country / Region"
     ]
-    const country = detail.items.filter(r => regionLables.includes(r.label)).pop().content;
+    let country = detail.items.filter(r => regionLables.includes(r.label)).pop().content;
+    /** Adjust wrong country */
+    if(`${detail.id}` === '1326137') {
+        country = "SEA-SG"
+    }  else {
+        console.log(detail.id)
+    }
 
     /** Region */
     let region = country;
@@ -254,6 +260,8 @@ async function buildBody(detail, tags){
     } else if (country.includes("OUTBOUND-")) {
         region = "CNOB"
     }
+
+
 
     /** Current Follower */
     const follower = detail.follower;
