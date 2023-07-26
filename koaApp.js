@@ -317,13 +317,14 @@ async function buildBody(detail, tags){
         }
     } 
     status_notes =  status_notes.replaceAll('</p>', "").replaceAll('<p>',"")
-                                .replaceAll('<ul>', '').replaceAll('<\/ul>', '')
+                                .replaceAll('<ul>', '').replaceAll('</ul>', '')
+                                .replaceAll('<br>', '').replaceAll('</br>', '')
                                 .replaceAll('<li>', '').replaceAll('</li>', '')
                                 .replaceAll('<strong>', '').replaceAll('</strong>', '')
                                 .replaceAll('&gt;', ">")
                                 .replaceAll('&#39;', "'")
                                 .replaceAll("&nbsp;", '')
-                                .replaceAll(/(<span )(.*)(>)/m, ' ').replaceAll(/<\/span>/,'')
+                                .replace(/(<span )(.*)(>)/m, ' ').replace(/<\/span>/,'')
 
 
 
