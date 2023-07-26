@@ -120,7 +120,6 @@ async function isCoPitchRequested(detail) {
     if(replies) {
         for(let k = 0; k < replies.length; k++) {
             const reply = replies[k];
-            const reply_time = (new Date(reply.create_time*1000)).toISOString().split('T')[0];
             const items = reply.items.filter(x => x.type == 6);
 
             for(let j = 0; j < items.length; j++) {
@@ -305,23 +304,27 @@ async function buildBody(detail, tags){
         for(let k = 0; k < replies.length; k++) {
             const reply = replies[k];
             const items = reply.items.filter(x => x.type == 6);
+            const reply_time = (new Date(reply.create_time*1000)).toISOString().split('T')[0];
+
 
             for(let j = 0; j < items.length; j++) {
                 const item = items[j];
                 const status_update = item.content.match(status_update_reg)
                 if(status_update) {
-                    status_notes = status_update[3]
+                    status_notes = `[${reply_time}]` + status_update[3]
                 }
             }
         }
     } 
-    status_notes = status_notes.replaceAll("&nbsp;", '')
+    status_notes =  status_notes.replaceAll("&nbsp;", '')
                                 .replace(/(<span )(.*)(>)/m, ' ').replace(/<\/span>/,'')
                                 .replace(/<ul>/, '').replace(/<\/ul>/, '')
                                 .replace(/<li>/, '').replace(/<\/li>/, '')
-                                .replace(/<p>/, '').replace(/<\/p>/, '')
+                                // .replace(/<p>/, '').replace(/<\/p>/, '')
                                 .replace(/<strong>/, '').replace(/<\/strong>/, '')
-                                // .replace(/&nbsp;/m, '')
+                                .replaceAll('&#39;', "'")
+                                .replaceAll('</p>', "").replaceAll('<p>',"")
+                                .replaceAll('&gt;', ">")
 
                                 
 
