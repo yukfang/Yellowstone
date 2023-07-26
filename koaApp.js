@@ -241,6 +241,8 @@ async function buildBody(detail, tags){
     let country = detail.items.filter(r => regionLables.includes(r.label)).pop().content;
     if(country.toLowerCase().includes("-au")) {
         country = "AU"
+    } else if(country.toLowerCase().includes('-hk')) {
+        country = 'SEA-HK'
     }
     /** Adjust wrong country */
     if(`${detail.id}` === '1326137') {
@@ -258,6 +260,8 @@ async function buildBody(detail, tags){
     } else if (country.includes("MENA-")) {
         region = "METAP"
     } else if (country.includes("SEA-")) {
+        region = "APAC"
+    }else if (country.includes("AU")) {
         region = "APAC"
     } else if( country.includes("NORTHAMERICA-")) {
         region = "NA"
