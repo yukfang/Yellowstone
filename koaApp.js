@@ -316,15 +316,16 @@ async function buildBody(detail, tags){
             }
         }
     } 
-    status_notes =  status_notes.replaceAll("&nbsp;", '')
-                                .replace(/(<span )(.*)(>)/m, ' ').replace(/<\/span>/,'')
-                                .replace(/<ul>/, '').replace(/<\/ul>/, '')
-                                .replace(/<li>/, '').replace(/<\/li>/, '')
-                                // .replace(/<p>/, '').replace(/<\/p>/, '')
-                                .replace(/<strong>/, '').replace(/<\/strong>/, '')
-                                .replaceAll('&#39;', "'")
-                                .replaceAll('</p>', "").replaceAll('<p>',"")
+    status_notes =  status_notes.replaceAll('</p>', "").replaceAll('<p>',"")
+                                .replaceAll('<ul>', '').replaceAll('<\/ul>', '')
+                                .replaceAll('<li>', '').replaceAll('</li>', '')
+                                .replaceAll('<strong>', '').replaceAll('</strong>', '')
                                 .replaceAll('&gt;', ">")
+                                .replaceAll('&#39;', "'")
+                                .replaceAll("&nbsp;", '')
+                                .replaceAll(/(<span )(.*)(>)/m, ' ').replaceAll(/<\/span>/,'')
+
+
 
                                 
 
