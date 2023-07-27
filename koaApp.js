@@ -250,7 +250,7 @@ async function buildBody(detail, tags){
     /** Adjust wrong country */
     if(`${detail.id}` === '1326137') {
         country = "SEA-SG"
-    }  else if(`${detail.id}` in ['1350595', '1350588', '1350590']) {
+    }  else if(['1350595', '1350588', '1350590', '1350576'].includes(`${detail.id}`)) {
         country = "SEA-SG"
     }   
     else {
