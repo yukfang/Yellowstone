@@ -8,7 +8,6 @@ let cookie = {
 
 module.exports =
 async function athena_api_v2_processor_order_bind_tag_list(order_id){
-    console.log(`abc`)
     if(Date.now() - cookie.fetchTime > 1000 * 60 * 3) {
         cookie = {
             value: (await cookieRemote()),

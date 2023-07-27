@@ -151,25 +151,25 @@ async function getETA(detail){
                 console.log(eta_matches)
                 if(eta_matches) {
                     eta = eta_matches[3]
-                }
-                if(eta.length > 1) {
-                    eta = "2023-" + eta[0] + eta[1] + "-" + eta[2] + eta[3]
+                    if(eta.length > 1) {
+                        eta = "2023-" + eta[0] + eta[1] + "-" + eta[2] + eta[3]
+                        // console.log(eta)
+                    }
                 }
 
                 // No break, use last one to override previous ones
             }
         }
     } 
-    console.log(`return eta = ${eta}`)
+    // console.log(`return eta = ${eta}`)
     return eta
 }
 
 async function auditPriority(detail){
-
-
     // console.log(detail)
     const priority = detail.priority
     const order_id = detail.id
+    // console.log(detail)
     const adv_ids  = detail.items.filter(i => i.label.includes('Ad Account ID')).pop().content;
     console.log(`${order_id } Priority = ${priority}`)
     // console.log(adv_ids)
