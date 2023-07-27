@@ -315,7 +315,8 @@ async function buildBody(detail, tags){
 
     /** Status Update */
     let status_notes = ''
-    const status_update_reg   = /(.*)(\[Status Update\])(.*)/m
+    const status_update_reg   = /(.*)(\[Status update\])(.*)/i
+    // status_update_reg.ignoreCase = true;
     const replies =  detail.replies;
     if(replies) {
         for(let k = 0; k < replies.length; k++) {
