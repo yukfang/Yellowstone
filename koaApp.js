@@ -243,6 +243,8 @@ async function buildBody(detail, tags){
         country = "AU"
     } else if(country.toLowerCase().includes('-hk')) {
         country = 'SEA-HK'
+    }  else if(country.toLowerCase().includes('taiwan')) {
+        country = 'SEA-TW'
     }
     /** Adjust wrong country */
     if(`${detail.id}` === '1326137') {
