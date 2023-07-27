@@ -246,10 +246,14 @@ async function buildBody(detail, tags){
     }  else if(country.toLowerCase().includes('taiwan')) {
         country = 'SEA-TW'
     }
+
     /** Adjust wrong country */
     if(`${detail.id}` === '1326137') {
         country = "SEA-SG"
-    }  else {
+    }  else if(`${detail.id}` in ['1350595', '1350588', '1350590']) {
+        country = "SEA-SG"
+    }   
+    else {
         console.log(detail.id)
     }
 
