@@ -226,7 +226,7 @@ async function buildBody(detail, tags){
             } else if(sub_status.includes("Pending with Client")) {
                 sub_status = "Pending Client Assessment"
             }
-            // console.log(`${main_status} ${sub_status} lololo`)
+            console.log(`${main_status} ${sub_status} lololo`)
         }
     } catch(err) {
         throw err
