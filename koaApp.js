@@ -42,6 +42,11 @@ const REGION_MAPPING = {
 
     /**APAC */
     "Japan"  :  "APAC",
+    "JP"  :  "APAC",
+    "KR"  :  "APAC",
+    "AU"  :  "APAC",
+
+    "SEA-KR"  :  "APAC",
     "SEA-AU" :  "APAC",
     "SEA-ID" :  "APAC",
     "OUTBOUND-HK"   : "APAC",
