@@ -245,6 +245,10 @@ async function buildBody(detail, tags){
         country = 'SEA-HK'
     }  else if(country.toLowerCase().includes('taiwan')) {
         country = 'SEA-TW'
+    } else if(country.toLowerCase().includes('-kr')) {
+        country = 'KR'
+    } else if(country.toLowerCase().includes('japan')) {
+        country = 'JP'
     }
 
     /** Adjust wrong country */
