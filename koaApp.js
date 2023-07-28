@@ -187,9 +187,8 @@ async function auditPriority(detail){
         }
     }
 
-    if(detail.follower.includes('方是惟')) {
-        /** Shiwei will manage the priority manually */
-    } else if(priority != 0 && has_p0) {
+
+    if(priority != 0 && has_p0) {
         // set priority P0
         await setPriority(order_id, 0)
         detail.priority = '0'
