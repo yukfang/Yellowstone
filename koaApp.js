@@ -41,15 +41,15 @@ const REGION_MAPPING = {
     // "LATAM-MX"      : "LATAM",
 
     /**APAC */
-    "Japan"  :  "APAC",
-    "JP"  :  "APAC",
-    "KR"  :  "APAC",
-    "AU"  :  "APAC",
+    "Japan"     :  "APAC",
+    "JP"        :  "APAC",
+    "KR"        :  "APAC",
+    "AU"        :  "APAC",
 
-    "SEA-KR"  :  "APAC",
-    "SEA-AU" :  "APAC",
-    "SEA-ID" :  "APAC",
-    "OUTBOUND-HK"   : "APAC",
+    "SEA-KR"        :  "APAC",
+    "SEA-AU"        :  "APAC",
+    "SEA-ID"        :  "APAC",
+    "OUTBOUND-HK"   :  "APAC",
 
     /** CNOB */
     "OUTBOUND-CN"   : "CNOB"
@@ -254,6 +254,8 @@ async function buildBody(detail, tags){
         country = 'KR'
     } else if(country.toLowerCase().includes('japan')) {
         country = 'JP'
+    } else if(country.toLowerCase().includes('-jp')) {
+        country = 'JP'
     }
 
     /** Adjust wrong country */
@@ -276,7 +278,7 @@ async function buildBody(detail, tags){
         region = "METAP"
     } else if (country.includes("SEA-")) {
         region = "APAC"
-    }else if (country.includes("AU")) {
+    } else if (country.includes("AU")) {
         region = "APAC"
     } else if( country.includes("NORTHAMERICA-")) {
         region = "NA"
