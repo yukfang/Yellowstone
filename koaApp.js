@@ -322,7 +322,7 @@ async function buildBody(detail, tags){
     /** Is Adv Shopify */
     const shopify_regex =   /(.*)(\[method=shopify\])(.*)/i
     // const replies =  detail.replies;
-    let is_shopify = false
+    let is_shopify = "false"
     if(replies) {
         for(let k = 0; k < replies.length; k++) {
             const reply = replies[k];
@@ -333,7 +333,7 @@ async function buildBody(detail, tags){
                 const shopify_flag = item.content.match(shopify_regex)
                 if(shopify_flag) {
                     // console.log(shopify_flag)
-                    is_shopify = true;
+                    is_shopify = "true";
                     break
                 }
             }
