@@ -212,6 +212,8 @@ async function buildBody(detail, tags){
     let   insights  = '';
     let   status    = '';
 
+    const replies = detail.replies;
+
     /** Tags & Status */
     // Tags
     try{
@@ -353,7 +355,6 @@ async function buildBody(detail, tags){
     let status_notes = ''
     const status_update_reg   = /(.*)(\[Status update\])(.*)/i
     // status_update_reg.ignoreCase = true;
-    const replies =  detail.replies;
     if(replies) {
         for(let k = 0; k < replies.length; k++) {
             const reply = replies[k];
