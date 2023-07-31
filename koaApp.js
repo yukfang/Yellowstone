@@ -317,6 +317,27 @@ async function buildBody(detail, tags){
     /** Co-Pitch Requested*/
     let is_copitch = await isCoPitchRequested(detail)
 
+    /** Is Adv Shopify */
+    const shopify_regex =   /(.*)(\[method=shopify\])(.*)/i
+    // const replies =  detail.replies;
+    let is_shopify = false
+    if(replies) {
+        for(let k = 0; k < replies.length; k++) {
+            const reply = replies[k];
+            const items = reply.items.filter(x => x.type == 6);
+
+            for(let j = 0; j < items.length; j++) {
+                const item = items[j];
+                const shopify_flag = item.content.match(shopify_regex)
+                if(shopify_flag) {
+                    // console.log(shopify_flag)
+                    is_shopify = true;
+                    break
+                }
+            }
+        }
+    } 
+
     /** Is Implementation Agreed */
     let isImplAgreed = await isImplementationAgreed(detail)
 
@@ -398,6 +419,7 @@ async function buildBody(detail, tags){
         follower,
         gbs,
         isImplAgreed,
+        is_shopify,
         eta,
         status_notes,
         create_time,
