@@ -56,6 +56,7 @@ const REGION_MAPPING = {
 }
 
 const Koa = require('koa');
+const { match } = require('assert');
 const koaApp = new Koa();
 var port = (process.env.PORT ||  80 );
 
@@ -239,11 +240,10 @@ async function buildBody(detail, tags){
     const client = detail.items.filter(r=> r.label.includes('Client Name') || r.label.includes('Advertiser name')).pop().content;
 
     /** ADV ID */
-    const adv_id = detail.items.filter(r=> r.label.includes('Ad Account ID')).pop().content.toString();
-    // if(detail.id == '1031013') {
-    //     console.log(`adv_id: `)
-    //     console.log(detail.items.filter(r=> r.label.includes('Ad Account ID')).pop().content.toString())
-    // }
+    let adv_id = detail.items.filter(r=> r.label.includes('Ad Account ID')).pop().content.toString();
+    if(detail.id == '1295031') {
+        adv_id = '7221785686087581698' // In ticket it's 7025549290462314498 as wrong input
+    }
 
     /** Country */
     const regionLables = [
@@ -320,9 +320,9 @@ async function buildBody(detail, tags){
     let is_copitch = await isCoPitchRequested(detail)
 
     /** Is Adv Shopify */
-    const shopify_regex =   /(.*)(\[method=shopify\])(.*)/i
+    const eapi_method_regex =   /(.*)(\[method=(.*)\])(.*)/i
     // const replies =  detail.replies;
-    let is_shopify = "false"
+    let eapi_method = ""
     if(replies) {
         for(let k = 0; k < replies.length; k++) {
             const reply = replies[k];
@@ -330,10 +330,10 @@ async function buildBody(detail, tags){
 
             for(let j = 0; j < items.length; j++) {
                 const item = items[j];
-                const shopify_flag = item.content.match(shopify_regex)
-                if(shopify_flag) {
+                const matches = item.content.match(eapi_method_regex)
+                if(matches) {
                     // console.log(shopify_flag)
-                    is_shopify = "true";
+                    eapi_method = matches[3]
                     break
                 }
             }
@@ -420,7 +420,7 @@ async function buildBody(detail, tags){
         follower,
         gbs,
         isImplAgreed,
-        is_shopify,
+        eapi_method,
         eta,
         status_notes,
         create_time,
