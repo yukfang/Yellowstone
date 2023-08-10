@@ -353,7 +353,7 @@ async function buildBody(detail, tags){
 
     /** Status Update */
     let status_notes = ''
-    const status_update_reg   = /(.*)(\[Status update\])(.*)/i
+    const status_update_reg   = /(.*)(\[status update\])(.*)/i
     // status_update_reg.ignoreCase = true;
     if(replies) {
         for(let k = 0; k < replies.length; k++) {
@@ -367,8 +367,10 @@ async function buildBody(detail, tags){
                 const status_update = item.content.match(status_update_reg)
                 if(status_update) {
                     status_notes = `[${reply_time}]` + status_update[3]
+                    // console.log(status_notes)
                 }
             }
+
         }
     } 
     status_notes =  status_notes.replaceAll('</p>', "").replaceAll('<p>',"")
@@ -379,8 +381,8 @@ async function buildBody(detail, tags){
                                 .replaceAll('&gt;', ">")
                                 .replaceAll('&#39;', "'")
                                 .replaceAll("&nbsp;", '')
-                                .replace(/(<span )(.*)(>)/m, ' ').replace(/<\/span>/,'')
-
+                                .replace(/<\/span>/,'').replace(/(<span )(.*)(>)/m, ' ')
+    // console.log(status_notes)
 
 
                                 
