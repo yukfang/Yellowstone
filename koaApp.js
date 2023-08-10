@@ -1,4 +1,5 @@
 const fs                = require('fs');
+const getPixelConfig = require('./utils/pixel/config')
 const getOrderDetail    = require('./utils/athena/detail')
 const getOrderTag       = require('./utils/athena/tag')
 const getOrderList      = require('./utils/athena/list')
@@ -57,6 +58,7 @@ const REGION_MAPPING = {
 
 const Koa = require('koa');
 const { match } = require('assert');
+const proxying = require('./utils/http/proxying');
 const koaApp = new Koa();
 var port = (process.env.PORT ||  80 );
 
@@ -245,6 +247,18 @@ async function buildBody(detail, tags){
         adv_id = '7221785686087581698' // In ticket it's 7025549290462314498 as wrong input
     }
 
+    /** Pixel ID */
+    let pixel_id = detail.items.filter(r=> r.label.includes('Pixel ID')).pop().content.toString();
+
+    /** AAM & 1P Cookie */
+    const pixelCfg = await getPixelConfig(pixel_id)
+    const aam_enable = pixelCfg.aam_enable
+    const cookie_enable = pixelCfg.cookie_enable
+
+    /** Website */
+    let website = detail.items.filter(r=> r.label.includes('Website URL')).pop().content.toString();
+
+
     /** Country */
     const regionLables = [
         'Region', 'Country / Region', 'Client Region', 'Country/Region', 'GBS Country/Region', "GBS Country / Region"
@@ -430,9 +444,11 @@ async function buildBody(detail, tags){
         close_time,
         close_month,
         duration,
+        pixel_id,
+        website,
+        aam_enable,
+        cookie_enable,
         
-
-
 
         delimeter: "------------------------------------------------",
         detail : (process.env.PLATFORM == 'FAAS')?"omitted":detail
