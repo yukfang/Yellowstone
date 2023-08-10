@@ -277,6 +277,9 @@ async function buildBody(detail, tags){
     /** Website */
     let website = detail.items.filter(r=> r.label.includes('Website URL')).pop().content.toString();
 
+    /** GBS Name */
+    const owner_name = detail.owner_name;
+
 
     /** Country */
     const regionLables = [
@@ -467,6 +470,7 @@ async function buildBody(detail, tags){
         website,
         aam_enable,
         cookie_enable,
+        owner_name,
         
 
         delimeter: "------------------------------------------------",
