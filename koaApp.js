@@ -291,8 +291,7 @@ async function buildBody(detail, tags){
         console.log(err)
     }
 
-    /** GBS Name */
-    const owner_name = detail.owner_name;
+ 
 
 
     /** Country */
@@ -345,13 +344,18 @@ async function buildBody(detail, tags){
     }
 
 
+    /** Ticket Requester */
+    const owner_name = detail.owner_name;
+    /** GBS  */
+    const gbs = detail.owner_name;
+
+
 
     /** Current Follower */
     const follower = detail.follower;
     /** Priority */
     let priority = "P" + detail.priority;
-    /** GBS  */
-    const gbs = 'XYZ';
+
 
 
     /** Ticket Open Time */
@@ -471,6 +475,7 @@ async function buildBody(detail, tags){
         region,
         follower,
         gbs,
+        owner_name,
         isImplAgreed,
         eapi_method,
         eta,
@@ -484,8 +489,7 @@ async function buildBody(detail, tags){
         website,
         aam_enable,
         cookie_enable,
-        owner_name,
-        
+         
 
         delimeter: "------------------------------------------------",
         detail : (process.env.PLATFORM == 'FAAS')?"omitted":detail
