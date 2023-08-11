@@ -3,11 +3,13 @@ const getPixelConfig = require('./utils/pixel/config')
 const getOrderDetail    = require('./utils/athena/detail')
 const getOrderTag       = require('./utils/athena/tag')
 const getOrderList      = require('./utils/athena/list')
-const APACP0List         = require('./utils/athena/APAC_P0')
+const APACP0List        = require('./utils/athena/APAC_P0')
+const APAC_LIST         = require('./utils/athena/GBS_APAC_HITLIST')
 const setPriority       = require('./utils/athena/set_priority')
 const extractClass = require('./utils/report/class')
 const extractCountry = require('./utils/report/country')
 const extractRegion = require('./utils/report/region')
+const extractTeam = require('./utils/report/team')
 
 const getLocal          = require('./localNotes')
 
@@ -145,36 +147,50 @@ async function getETA(detail){
 }
 
 async function auditPriority(detail){
-    // console.log(detail)
     const priority = detail.priority
     const order_id = detail.id
     // console.log(detail)
     const adv_ids  = detail.items.filter(i => i.label.includes('Ad Account ID')).pop().content;
     console.log(`${order_id } Priority = ${priority}`)
-    // console.log(adv_ids)
 
-    let has_p0 = false;
+    let gbsPriority = 3
     for(let i = 0; i < adv_ids.length; i++) {
-        if(APACP0List.includes(adv_ids[i])) {
-            has_p0 = true;
-            break;
+        const adv_id = adv_ids[i]
+        if(APAC_LIST.hasOwnProperty(adv_id)) {
+            let hitlistPriority = APAC_LIST[adv_id].priority
+            if(hitlistPriority < gbsPriority) {
+                gbsPriority = hitlistPriority
+            }
         }
     }
 
-
-    if(priority != 0 && has_p0) {
-        // set priority P0
-        await setPriority(order_id, 0)
-        detail.priority = '0'
-        console.log(`Set priority to P0`)
-    } else if (priority === 0 && !has_p0) {
-        // set priority p2
-        await setPriority(order_id, 2)
-        detail.priority = '2'
-        console.log(`Set priority to P2`)
-    } else {
-
+    // console.log(`GBS Priority = ${gbsPriority} Athena Priority = ${priority}`)
+    if(priority !== gbsPriority) {
+        await setPriority(order_id, gbsPriority)
+        detail.priority = gbsPriority
     }
+
+    // let has_p0 = false;
+    // for(let i = 0; i < adv_ids.length; i++) {
+    //     if(APACP0List.includes(adv_ids[i])) {
+    //         has_p0 = true;
+    //         break;
+    //     }
+    // }
+
+    // if(priority != 0 && has_p0) {
+    //     // set priority P0
+    //     await setPriority(order_id, 0)
+    //     detail.priority = '0'
+    //     console.log(`Set priority to P0`)
+    // } else if (priority === 0 && !has_p0) {
+    //     // set priority p2
+    //     await setPriority(order_id, 2)
+    //     detail.priority = '2'
+    //     console.log(`Set priority to P2`)
+    // } else {
+
+    // }
 }
 
 async function buildBody(detail, tags){
@@ -271,6 +287,9 @@ async function buildBody(detail, tags){
 
     /** Region */
     const region =  extractRegion(country)
+
+    /** GBS Team */
+    const team = extractTeam(adv_id)
 
 
     /** Ticket Requester */
@@ -425,6 +444,7 @@ async function buildBody(detail, tags){
         aam_enable,
         cookie_enable,
         className,
+        team,
          
 
         delimeter: "------------------------------------------------",
