@@ -388,7 +388,7 @@ const APAC_LIST = {}
 
 /** Process SEEA */
 for(let i = 0; i < SEA_RAW_LIST.length; i++) {
-    const raw = SEA_RAW_LIST[i].replaceAll(' ', '').replaceAll('\t', '').trim().replaceAll("P", "")
+    const raw = SEA_RAW_LIST[i].replaceAll(' ', '').replaceAll('\t', '').trim().replaceAll("P0", "0").replaceAll("P1", "1").replaceAll("P2", "2")
     const [adv_id, priority, team] = raw.split(',')
     APAC_LIST[adv_id] = {
         priority : parseInt(priority),
