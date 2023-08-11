@@ -248,34 +248,48 @@ async function buildBody(detail, tags){
     }
 
     /** Pixel ID */
-    let pixel_id = detail.items.filter(r=> r.label.includes('Pixel ID')).pop().content.toString();
-    if(pixel_id.trim().length !== "CA45I9RC77UFFUCCC3E0".length) {
-        pixel_id = '';
-        const pixel_reg =   /(.*)(\[pixel=(.*)\])(.*)/i
-        if(replies) {
-            for(let k = 0; k < replies.length; k++) {
-                const reply = replies[k];
-                const items = reply.items.filter(x => x.type == 6);
-    
-                for(let j = 0; j < items.length; j++) {
-                    const item = items[j];
-                    const matches = item.content.match(pixel_reg)
-                    if(matches) {
-                        console.log(matches)
-                        pixel_id = matches[3]
+    let pixel_id = ''
+    try {
+        pixel_id = detail.items.filter(r=> r.label.includes('Pixel ID')).pop().content.toString();
+        if(pixel_id.trim().length !== "CA45I9RC77UFFUCCC3E0".length) {
+            pixel_id = '';
+            const pixel_reg =   /(.*)(\[pixel=(.*)\])(.*)/i
+            if(replies) {
+                for(let k = 0; k < replies.length; k++) {
+                    const reply = replies[k];
+                    const items = reply.items.filter(x => x.type == 6);
+        
+                    for(let j = 0; j < items.length; j++) {
+                        const item = items[j];
+                        const matches = item.content.match(pixel_reg)
+                        if(matches) {
+                            console.log(matches)
+                            pixel_id = matches[3]
+                        }
                     }
                 }
             }
         }
+    } catch( err) {
+        console.log(err)
     }
 
+
     /** AAM & 1P Cookie */
-    const pixelCfg = await getPixelConfig(pixel_id)
+    let pixelCfg = {}
+    if(pixel_id !== '' ) {
+        pixelCfg = await getPixelConfig(pixel_id)
+    }
     const aam_enable = pixelCfg.aam_enable
     const cookie_enable = pixelCfg.cookie_enable
 
     /** Website */
-    let website = detail.items.filter(r=> r.label.includes('Website URL')).pop().content.toString();
+    let website = ''
+    try {
+        website = detail.items.filter(r=> r.label.includes('Website URL')).pop().content.toString();
+    } catch (err) {
+        console.log(err)
+    }
 
     /** GBS Name */
     const owner_name = detail.owner_name;
