@@ -384,11 +384,33 @@ const NON_SEA_RAW_LIST = [
 "7067817066648059906",
 ]
 
+
+function audit() {
+    const records = SEA_RAW_LIST.map(r => {
+        const [adv_id, priority, team] = r.replaceAll(' ', '').replaceAll('\t', '').trim().replaceAll("P0", "0").replaceAll("P1", "1").replaceAll("P2", "2").split(',')
+        return {adv_id,priority,team}
+    })
+    console.log(`Total Records: ${records.length}`)
+    console.log(`Total P0: ${records.filter(r=>r.priority==='0').length}`)
+    console.log(`Total P1: ${records.filter(r=>r.priority==='1').length}`)
+    console.log(`Total P2: ${records.filter(r=>r.priority==='2').length}`)
+
+    const adv_ids = records.map(r=>r.adv_id)
+    const duplicates = adv_ids.filter((item, index) => adv_ids.indexOf(item) !== index);
+    console.log(`Duplicated Records:  `)
+    console.log(duplicates)
+
+}
+
+audit()
+
 const APAC_LIST = {}
 
-/** Process SEEA */
+/** Process SEA */
 for(let i = 0; i < SEA_RAW_LIST.length; i++) {
     const raw = SEA_RAW_LIST[SEA_RAW_LIST.length - i -1].replaceAll(' ', '').replaceAll('\t', '').trim().replaceAll("P0", "0").replaceAll("P1", "1").replaceAll("P2", "2")
+    
+
     const [adv_id, priority, team] = raw.split(',')
     APAC_LIST[adv_id] = {
         priority : parseInt(priority),
