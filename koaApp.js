@@ -42,6 +42,7 @@ koaApp.use(async (ctx, next) => {
 });
 
 
+
 // x-response-time
 koaApp.use(async (ctx, next) => {
     const start = Date.now();
@@ -158,13 +159,14 @@ async function auditPriority(detail){
         const adv_id = adv_ids[i]
         if(APAC_LIST.hasOwnProperty(adv_id)) {
             let hitlistPriority = APAC_LIST[adv_id].priority
+            console.log(`${hitlistPriority} ${gbsPriority}`)
             if(hitlistPriority < gbsPriority) {
                 gbsPriority = hitlistPriority
             }
         }
     }
 
-    // console.log(`GBS Priority = ${gbsPriority} Athena Priority = ${priority}`)
+    console.log(`GBS Priority = ${gbsPriority} Athena Priority = ${priority}`)
     if(priority !== gbsPriority) {
         await setPriority(order_id, gbsPriority)
         detail.priority = gbsPriority
@@ -218,7 +220,7 @@ async function buildBody(detail, tags){
             } else if(sub_status.includes("Pending with Client")) {
                 sub_status = "Pending Client Assessment"
             }
-            console.log(`${main_status} ${sub_status} lololo`)
+            console.log(`${main_status} ${sub_status}`)
         }
     } catch(err) {
         throw err
