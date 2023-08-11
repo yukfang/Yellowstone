@@ -5,6 +5,9 @@ const getOrderTag       = require('./utils/athena/tag')
 const getOrderList      = require('./utils/athena/list')
 const APACP0List         = require('./utils/athena/APAC_P0')
 const setPriority       = require('./utils/athena/set_priority')
+const extractClass = require('./utils/report/class')
+const extractCountry = require('./utils/report/country')
+const extractRegion = require('./utils/report/region')
 
 const getLocal          = require('./localNotes')
 
@@ -23,38 +26,6 @@ const MONTH_MAPPING = {
     "12" : "Dec",
 }
 
-const REGION_MAPPING = {
-    /** EUI */
-    "EU-DE" :   "EUI",
-    "EU-GB" :   "EUI",
-    "EU-IT" :   "EUI",
-    "EU-FR" :   "EUI",
-
-    /** METAP */
-    "MENA-AE" : "METAP",
-
-
-    /** NA */
-    "NORTH AMERICA" : "NA",
-
-    /** LATAM */
-    // "LATAM-BR"      : "LATAM",
-    // "LATAM-MX"      : "LATAM",
-
-    /**APAC */
-    "Japan"     :  "APAC",
-    "JP"        :  "APAC",
-    "KR"        :  "APAC",
-    "AU"        :  "APAC",
-
-    "SEA-KR"        :  "APAC",
-    "SEA-AU"        :  "APAC",
-    "SEA-ID"        :  "APAC",
-    "OUTBOUND-HK"   :  "APAC",
-
-    /** CNOB */
-    "OUTBOUND-CN"   : "CNOB"
-}
 
 const Koa = require('koa');
 const { match } = require('assert');
@@ -292,62 +263,26 @@ async function buildBody(detail, tags){
     }
 
  
-
+    /** class Name - CNOB only */
+    const className = extractClass(detail)
 
     /** Country */
-    const regionLables = [
-        'Region', 'Country / Region', 'Client Region', 'Country/Region', 'GBS Country/Region', "GBS Country / Region"
-    ]
-    let country = detail.items.filter(r => regionLables.includes(r.label)).pop().content;
-    if(country.toLowerCase().includes("-au")) {
-        country = "AU"
-    } else if(country.toLowerCase().includes('-hk')) {
-        country = 'SEA-HK'
-    }  else if(country.toLowerCase().includes('taiwan')) {
-        country = 'SEA-TW'
-    } else if(country.toLowerCase().includes('-kr')) {
-        country = 'KR'
-    } else if(country.toLowerCase().includes('japan')) {
-        country = 'JP'
-    } else if(country.toLowerCase().includes('-jp')) {
-        country = 'JP'
-    }
-
-    /** Adjust wrong country */
-    if(`${detail.id}` === '1326137') {
-        country = "SEA-SG"
-    }  else if(['1350595', '1350588', '1350590', '1350576'].includes(`${detail.id}`)) {
-        country = "SEA-SG"
-    }   
-    else {
-        console.log(detail.id)
-    }
+    const country = extractCountry(detail)
 
     /** Region */
-    let region = country;
-    if(REGION_MAPPING.hasOwnProperty(country)) {
-        region = REGION_MAPPING[country]
-    } else if(country.includes("EU-")) {
-        region = "EUI"
-    } else if (country.includes("MENA-")) {
-        region = "METAP"
-    } else if (country.includes("SEA-")) {
-        region = "APAC"
-    } else if (country.includes("AU")) {
-        region = "APAC"
-    } else if( country.includes("NORTHAMERICA-")) {
-        region = "NA"
-    } else if (country.includes("LATAM-")) {
-        region = "LATAM"
-    } else if (country.includes("OUTBOUND-")) {
-        region = "CNOB"
-    }
+    const region =  extractRegion(country)
 
 
     /** Ticket Requester */
     const owner_name = detail.owner_name;
     /** GBS  */
-    const gbs = detail.owner_name;
+    let gbs = ''
+    try {
+
+    } catch (err) {
+        console.log(err)
+    }
+
 
 
 
@@ -489,6 +424,7 @@ async function buildBody(detail, tags){
         website,
         aam_enable,
         cookie_enable,
+        className,
          
 
         delimeter: "------------------------------------------------",
