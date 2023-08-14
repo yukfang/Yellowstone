@@ -59,7 +59,7 @@ koaApp.use(async (ctx, next) => {
         let [detail, tag] = await Promise.all([getOrderDetail(order_id), getOrderTag(order_id)])
 
         await auditPriority(detail);
-        let body = await buildBody( detail,  tag);
+        let body = await buildBody( detail, tag);
 
         ctx.body = body
     } else if (ctx.path === '/list') {
@@ -150,9 +150,8 @@ async function getETA(detail){
 async function auditPriority(detail){
     const priority = detail.priority
     const order_id = detail.id
-    // console.log(detail)
-    const adv_ids  = detail.items.filter(i => i.label.includes('Ad Account ID')).pop().content;
-    console.log(`${order_id } Priority = ${priority}`)
+    const adv_ids = require('./utils/report/adv_id')(detail)
+    console.log(`${order_id }, Adv_id=${adv_ids} Priority = ${priority}`)
 
     let gbsPriority = 3
     for(let i = 0; i < adv_ids.length; i++) {
@@ -171,28 +170,6 @@ async function auditPriority(detail){
         await setPriority(order_id, gbsPriority)
         detail.priority = gbsPriority
     }
-
-    // let has_p0 = false;
-    // for(let i = 0; i < adv_ids.length; i++) {
-    //     if(APACP0List.includes(adv_ids[i])) {
-    //         has_p0 = true;
-    //         break;
-    //     }
-    // }
-
-    // if(priority != 0 && has_p0) {
-    //     // set priority P0
-    //     await setPriority(order_id, 0)
-    //     detail.priority = '0'
-    //     console.log(`Set priority to P0`)
-    // } else if (priority === 0 && !has_p0) {
-    //     // set priority p2
-    //     await setPriority(order_id, 2)
-    //     detail.priority = '2'
-    //     console.log(`Set priority to P2`)
-    // } else {
-
-    // }
 }
 
 async function buildBody(detail, tags){
@@ -231,10 +208,8 @@ async function buildBody(detail, tags){
     const client = detail.items.filter(r=> r.label.includes('Client Name') || r.label.includes('Advertiser name')).pop().content;
 
     /** ADV ID */
-    let adv_id = detail.items.filter(r=> r.label.includes('Ad Account ID')).pop().content.toString();
-    if(detail.id == '1295031') {
-        adv_id = '7221785686087581698' // In ticket it's 7025549290462314498 as wrong input
-    }
+    let adv_id = require('./utils/report/adv_id')(detail)
+    detail.adv_id = adv_id
 
     /** Pixel ID */
     let pixel_id = ''
