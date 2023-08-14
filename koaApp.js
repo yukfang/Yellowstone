@@ -150,18 +150,15 @@ async function getETA(detail){
 async function auditPriority(detail){
     const priority = detail.priority
     const order_id = detail.id
-    const adv_ids = require('./utils/report/adv_id')(detail)
-    console.log(`${order_id }, Adv_id=${adv_ids} Priority = ${priority}`)
+    const adv_id = require('./utils/report/adv_id')(detail)
+    console.log(`${order_id }, Adv_id=${adv_id} Priority = ${priority}`)
 
     let gbsPriority = 3
-    for(let i = 0; i < adv_ids.length; i++) {
-        const adv_id = adv_ids[i]
-        if(APAC_LIST.hasOwnProperty(adv_id)) {
-            let hitlistPriority = APAC_LIST[adv_id].priority
-            console.log(`${hitlistPriority} ${gbsPriority}`)
-            if(hitlistPriority < gbsPriority) {
-                gbsPriority = hitlistPriority
-            }
+    if(APAC_LIST.hasOwnProperty(adv_id)) {
+        let hitlistPriority = APAC_LIST[adv_id].priority
+        console.log(`${hitlistPriority} ${gbsPriority}`)
+        if(hitlistPriority < gbsPriority) {
+            gbsPriority = hitlistPriority
         }
     }
 
