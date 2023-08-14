@@ -10,6 +10,7 @@ const extractClass = require('./utils/report/class')
 const extractCountry = require('./utils/report/country')
 const extractRegion = require('./utils/report/region')
 const extractTeam = require('./utils/report/team')
+const extractGBS = require('./utils/report/gbs')
 
 const getLocal          = require('./localNotes')
 
@@ -270,6 +271,8 @@ async function buildBody(detail, tags){
     const owner_name = detail.owner_name;
     /** GBS  */
     let gbs = ''
+    let sales = extractGBS(detail).sales
+    let cst = extractGBS(detail).cst
     try {
 
     } catch (err) {
@@ -403,6 +406,8 @@ async function buildBody(detail, tags){
         region,
         follower,
         gbs,
+        sales,
+        cst,
         owner_name,
         isImplAgreed,
         eapi_method,
