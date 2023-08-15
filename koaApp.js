@@ -242,8 +242,13 @@ async function buildBody(detail, tags){
     if(pixel_id !== '' ) {
         pixelCfg = await getPixelConfig(pixel_id)
     }
-    const aam_enable = pixelCfg.aam_enable
+    const aam_enable    = pixelCfg.aam_enable
     const cookie_enable = pixelCfg.cookie_enable
+
+    /** Pixel O / eAPI O */
+    const SO = require('./utils/report/signal')
+    const pixel_optimal = SO.pixel_o;
+    const eapi_optimal = SO.eapi_o;
 
     /** Website */
     let website = ''
@@ -424,6 +429,8 @@ async function buildBody(detail, tags){
         cookie_enable,
         className,
         team,
+        pixel_optimal,
+        eapi_optimal,
          
 
         delimeter: "------------------------------------------------",
