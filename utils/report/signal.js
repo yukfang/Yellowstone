@@ -1,11 +1,9 @@
 function extract(detail){
-    const owner_name = detail.owner_name;
-
     const replies = detail.replies
     const pixel_reg  =   /(.*)(\[pixel_optimal=(.*)\])(.*)/i
     const eapi_reg   =   /(.*)(\[eapi_optimal=(.*)\])(.*)/i
-    let pixel_o = ''
-    let eapi_o  = ''
+    let pixel_o = 'no'
+    let eapi_o  = 'no'
  
     if(replies) {
         for(let k = 0; k < replies.length; k++) {

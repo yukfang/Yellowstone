@@ -246,7 +246,8 @@ async function buildBody(detail, tags){
     const cookie_enable = pixelCfg.cookie_enable
 
     /** Pixel O / eAPI O */
-    const SO = require('./utils/report/signal')
+    const SO = require('./utils/report/signal')(detail)
+    console.log(`SO=${SO}`)
     const pixel_optimal = SO.pixel_o;
     const eapi_optimal = SO.eapi_o;
 
