@@ -182,7 +182,9 @@ async function buildBody(detail, tags){
     const replies = detail.replies;
 
     /** Tags & Status */
-    // Tags
+    const ticketStatus = require('./utils/report/status')(tags)
+
+    /*
     try{
         main_status = ''
         sub_status  = ''
@@ -200,7 +202,7 @@ async function buildBody(detail, tags){
     } catch(err) {
         throw err
     }
-
+*/
 
     /** Client Name */
     const client = detail.items.filter(r=> r.label.includes('Client Name') || r.label.includes('Advertiser name')).pop().content;
@@ -406,8 +408,8 @@ async function buildBody(detail, tags){
         adv_id,
         is_copitch,
         priority,
-        main_status,
-        sub_status,
+        main_status : ticketStatus.main_status,
+        sub_status  : ticketStatus.sub_status,
         country,
         region,
         follower,
