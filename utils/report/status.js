@@ -1,6 +1,6 @@
 function extract(tags){
     let main_status = 'Open Status'
-    let sub_status  = 'New'
+    let sub_status  = 'MPO Scoping Phase'
     try{
         if(tags && tags.length > 0) {
             // console.log(tags)
