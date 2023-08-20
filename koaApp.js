@@ -366,15 +366,17 @@ async function buildBody(detail, tags){
 
         }
     } 
-    status_notes =  status_notes.replaceAll('</p>', "").replaceAll('<p>',"")
-                                .replaceAll('<ul>', '').replaceAll('</ul>', '')
-                                .replaceAll('<br>', '').replaceAll('</br>', '')
-                                .replaceAll('<li>', '').replaceAll('</li>', '')
-                                .replaceAll('<strong>', '').replaceAll('</strong>', '')
-                                .replaceAll('&gt;', ">")
-                                .replaceAll('&#39;', "'")
-                                .replaceAll("&nbsp;", '')
-                                .replace(/<\/span>/,'').replace(/(<span )(.*)(>)/m, ' ')
+    status_notes =  status_notes
+                    .replace(/<p>/g,      "").replace(/<\/p>/g, "")
+                    .replace(/<ul>/g,     '').replace(/<\/ul>/g, '')
+                    .replace(/<br>/g,     '').replace(/<\/br>/g, '')
+                    .replace(/<li>/g,     '').replace(/<\/li>/g, '')
+                    .replace(/<ol>/g,     '').replace(/<\/ol>/g, '')
+                    .replace(/<strong>/g, '').replace(/<\/strong>/g, '')
+                    .replace(/<\/span>/g, '').replace(/(<span )(.*)(>)/g, ' ')
+                    .replace(/&gt;/g, ">")
+                    .replace(/&#39;/g, "'")
+                    .replace(/&nbsp;/g, '')
     // console.log(status_notes)
 
 
