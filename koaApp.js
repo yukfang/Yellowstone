@@ -186,7 +186,7 @@ async function buildBody(detail, tags){
     /** Pixel ID */
     let pixel_id = ''
     try {
-        pixel_id = detail.items.filter(r=> r.label.includes('Pixel ID')).pop()?.content.toString();
+        pixel_id = detail.items.filter(r=> r.label.includes('Pixel ID')).pop()?.content.toString() || "";
         if(pixel_id.trim().length !== "CA45I9RC77UFFUCCC3E0".length) {
             pixel_id = '';
             const pixel_reg =   /(.*)(\[pixel=(.*)\])(.*)/i
