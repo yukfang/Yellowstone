@@ -11,7 +11,7 @@ module.exports = {
       script  : "./index.js",
       watch   : true,
       name    : "ystracker",
-      instances  : 4
+      instances  : 1
     }
 
   ]
