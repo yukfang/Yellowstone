@@ -32,9 +32,10 @@ const koaApp = new Koa();
 var port = (process.env.PORT ||  80 );
 
 koaApp.use(async (ctx, next) => {
-    const rt = ctx.response.get('X-Response-Time');
-    console.log(`${ctx.method} ${ctx.url} - ${rt}`);
     await next();
+    const rt = ctx.response.get('X-Response-Time');
+    console.log(`${ctx.method} ${ctx.url} - ${rt} \n\n`);
+    console.log('-------------------------------------------------------------------')
 });
 
 // x-response-time
@@ -46,8 +47,11 @@ koaApp.use(async (ctx, next) => {
 });
 
 koaApp.use(async (ctx, next) => {
+    console.log('-------------------------------------------------------------------')
     if (ctx.path === '/detail') {
         let order_id = `${ctx.query.order_id}`
+        console.log(`>>>>>> Processing ${order_id} >>>>>>`)
+
         let [detail, tag] = await Promise.all([getOrderDetail(order_id), getOrderTag(order_id)])
 
         await auditPriority(detail);
@@ -209,6 +213,7 @@ async function buildBody(detail, tags){
     } catch( err) {
         console.log(err)
     }
+    console.log(`1 ${new Date(Date.now())}`)
 
 
     /** AAM & 1P Cookie */
@@ -218,12 +223,16 @@ async function buildBody(detail, tags){
     }
     const aam_enable    = pixelCfg.aam_enable
     const cookie_enable = pixelCfg.cookie_enable
+    console.log(`2 ${new Date(Date.now())}`)
+
 
     /** Pixel O / eAPI O */
     const SO = require('./utils/report/signal')(detail)
     // console.log(`SO=${SO}`)
     const pixel_optimal = SO.pixel_o;
     const eapi_optimal = SO.eapi_o;
+    console.log(`3 ${new Date(Date.now())}`)
+
 
     /** Website */
     let website = ''
@@ -232,41 +241,54 @@ async function buildBody(detail, tags){
     } catch (err) {
         console.log(err)
     }
+    console.log(`4 ${new Date(Date.now())}`)
 
  
     /** class Name - CNOB only */
     const className = extractClass(detail)
+    console.log(`5 ${new Date(Date.now())}`)
+
 
     /** Country */
     const country = extractCountry(detail)
+    console.log(`6 ${new Date(Date.now())}`)
+
 
     /** Region */
     const region =  extractRegion(country)
+    console.log(`7 ${new Date(Date.now())}`)
+
 
     /** GBS Team */
     const team = extractTeam(adv_id)
+    console.log(`8 ${new Date(Date.now())}`)
+
 
 
     /** Ticket Requester */
     const owner_name = detail.owner_name;
     /** GBS  */
     let gbs = ''
-    let sales = extractGBS(detail).sales
-    let cst = extractGBS(detail).cst
+    // let sales = extractGBS(detail).sales
+    // let cst   = extractGBS(detail).cst
+    let sales = ""
+    let cst   = ""
     try {
 
     } catch (err) {
         console.log(err)
     }
+    console.log(`9 ${new Date(Date.now())}`)
 
 
 
-
+ 
     /** Current Follower */
     const follower = detail.follower;
     /** Priority */
     let priority = "P" + detail.priority;
 
+    console.log(`10 ${new Date(Date.now())}`)
 
 
     /** Ticket Open Time */
@@ -283,6 +305,8 @@ async function buildBody(detail, tags){
 
     /** Co-Pitch Requested*/
     let is_copitch = await isCoPitchRequested(detail)
+    console.log(`11 ${new Date(Date.now())}`)
+
 
     /** Is Adv Shopify */
     const eapi_method_regex =   /(.*)(\[method=(.*)\])(.*)/i
@@ -304,6 +328,8 @@ async function buildBody(detail, tags){
             }
         }
     }
+    console.log(`12 ${new Date(Date.now())}`)
+
 
     /** Is Implementation Agreed */
     let isImplAgreed = await isImplementationAgreed(detail)
@@ -350,6 +376,7 @@ async function buildBody(detail, tags){
                     .replace(/&#39;/g, "'")
                     .replace(/&nbsp;/g, '')
     // console.log(status_notes)
+    console.log(`13 ${new Date(Date.now())}`)
 
 
                                 
