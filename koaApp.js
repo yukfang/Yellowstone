@@ -184,26 +184,6 @@ async function buildBody(detail, tags){
     /** Tags & Status */
     const ticketStatus = require('./utils/report/status')(tags)
 
-    /*
-    try{
-        main_status = ''
-        sub_status  = ''
-        if(tags && tags.length > 0) {
-            // console.log(tags)
-            main_status   = tags[0]?.name || ''
-            sub_status    = tags[0].sub_tags[0]?.name || main_status
-            if(sub_status.includes("Pending with GBS")) {
-                sub_status = "Pending GBS Comms"
-            } else if(sub_status.includes("Pending with Client")) {
-                sub_status = "Pending Client Assessment"
-            }
-            console.log(`${main_status} ${sub_status}`)
-        }
-    } catch(err) {
-        throw err
-    }
-*/
-
     /** Client Name */
     const client = detail.items.filter(r=> r.label.includes('Client Name') || r.label.includes('Advertiser name')).pop().content;
 
@@ -249,7 +229,7 @@ async function buildBody(detail, tags){
 
     /** Pixel O / eAPI O */
     const SO = require('./utils/report/signal')(detail)
-    console.log(`SO=${SO}`)
+    // console.log(`SO=${SO}`)
     const pixel_optimal = SO.pixel_o;
     const eapi_optimal = SO.eapi_o;
 
