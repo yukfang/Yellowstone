@@ -236,7 +236,7 @@ async function buildBody(detail, tags){
     /** Website */
     let website = ''
     try {
-        website = detail.items.filter(r=> r.label.includes('Website URL')).pop().content.toString();
+        website = detail.items.filter(r=> r.label.includes('Website URL')).pop()?.content.toString();
     } catch (err) {
         console.log(err)
     }
