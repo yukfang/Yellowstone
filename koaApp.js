@@ -1,18 +1,15 @@
 const fs                = require('fs');
-const getPixelConfig = require('./utils/pixel/config')
+const getPixelConfig    = require('./utils/pixel/config')
 const getOrderDetail    = require('./utils/athena/detail')
 const getOrderTag       = require('./utils/athena/tag')
 const getOrderList      = require('./utils/athena/list')
-const APACP0List        = require('./utils/athena/APAC_P0')
 const APAC_LIST         = require('./utils/athena/GBS_APAC_HITLIST')
 const setPriority       = require('./utils/athena/set_priority')
-const extractClass = require('./utils/report/class')
-const extractCountry = require('./utils/report/country')
-const extractRegion = require('./utils/report/region')
-const extractTeam = require('./utils/report/team')
-const extractGBS = require('./utils/report/gbs')
-
-const getLocal          = require('./localNotes')
+const extractClass          = require('./utils/report/class')
+const extractCountry        = require('./utils/report/country')
+const extractRegion         = require('./utils/report/region')
+const extractTeam           = require('./utils/report/team')
+const extractGBS            = require('./utils/report/gbs')
 
 const MONTH_MAPPING = {
     "01" : "Jan",
@@ -31,8 +28,6 @@ const MONTH_MAPPING = {
 
 
 const Koa = require('koa');
-const { match } = require('assert');
-const proxying = require('./utils/http/proxying');
 const koaApp = new Koa();
 var port = (process.env.PORT ||  80 );
 
@@ -42,8 +37,6 @@ koaApp.use(async (ctx, next) => {
     await next();
 });
 
-
-
 // x-response-time
 koaApp.use(async (ctx, next) => {
     const start = Date.now();
@@ -52,17 +45,14 @@ koaApp.use(async (ctx, next) => {
     ctx.set('X-Response-Time', `${ms}ms`);
 });
 
-
 koaApp.use(async (ctx, next) => {
     if (ctx.path === '/detail') {
         let order_id = `${ctx.query.order_id}`
-        console.log(`...... Start processing ${order_id} ......`)
-
         let [detail, tag] = await Promise.all([getOrderDetail(order_id), getOrderTag(order_id)])
 
         await auditPriority(detail);
         let body = await buildBody( detail, tag);
-        console.log("")
+        console.log("\n")
 
         ctx.body = body
     } else if (ctx.path === '/list') {
