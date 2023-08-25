@@ -56,11 +56,13 @@ koaApp.use(async (ctx, next) => {
 koaApp.use(async (ctx, next) => {
     if (ctx.path === '/detail') {
         let order_id = `${ctx.query.order_id}`
+        console.log(`...... Start processing ${order_id} ......`)
 
         let [detail, tag] = await Promise.all([getOrderDetail(order_id), getOrderTag(order_id)])
 
         await auditPriority(detail);
         let body = await buildBody( detail, tag);
+        console.log("")
 
         ctx.body = body
     } else if (ctx.path === '/list') {
@@ -321,7 +323,7 @@ async function buildBody(detail, tags){
     if(isImplAgreed === "Yes") {
         eta =  await getETA(detail)
     } else {
-        console.log(`not agreed`)
+        // console.log(`not agreed`)
     }
 
     /** Status Update */
