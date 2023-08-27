@@ -10,6 +10,7 @@ const extractCountry        = require('./utils/report/country')
 const extractRegion         = require('./utils/report/region')
 const extractTeam           = require('./utils/report/team')
 const extractGBS            = require('./utils/report/gbs')
+const extractETA            = require('./utils/report/eta')
 
 const MONTH_MAPPING = {
     "01" : "Jan",
@@ -213,8 +214,6 @@ async function buildBody(detail, tags){
     } catch( err) {
         console.log(err)
     }
-    console.log(`1 ${new Date(Date.now())}`)
-
 
     /** AAM & 1P Cookie */
     let pixelCfg = {}
@@ -223,16 +222,14 @@ async function buildBody(detail, tags){
     }
     const aam_enable    = pixelCfg.aam_enable
     const cookie_enable = pixelCfg.cookie_enable
-    console.log(`2 ${new Date(Date.now())}`)
-
+ 
 
     /** Pixel O / eAPI O */
     const SO = require('./utils/report/signal')(detail)
     // console.log(`SO=${SO}`)
     const pixel_optimal = SO.pixel_o;
     const eapi_optimal = SO.eapi_o;
-    console.log(`3 ${new Date(Date.now())}`)
-
+ 
 
     /** Website */
     let website = ''
@@ -241,28 +238,23 @@ async function buildBody(detail, tags){
     } catch (err) {
         console.log(err)
     }
-    console.log(`4 ${new Date(Date.now())}`)
-
+ 
  
     /** class Name - CNOB only */
     const className = extractClass(detail)
-    console.log(`5 ${new Date(Date.now())}`)
-
+ 
 
     /** Country */
     const country = extractCountry(detail)
-    console.log(`6 ${new Date(Date.now())}`)
-
+ 
 
     /** Region */
     const region =  extractRegion(country)
-    console.log(`7 ${new Date(Date.now())}`)
-
+ 
 
     /** GBS Team */
     const team = extractTeam(adv_id)
-    console.log(`8 ${new Date(Date.now())}`)
-
+ 
 
 
     /** Ticket Requester */
@@ -278,36 +270,24 @@ async function buildBody(detail, tags){
     } catch (err) {
         console.log(err)
     }
-    console.log(`9 ${new Date(Date.now())}`)
-
-
-
  
     /** Current Follower */
     const follower = detail.follower;
     /** Priority */
     let priority = "P" + detail.priority;
 
-    console.log(`10 ${new Date(Date.now())}`)
-
-
     /** Ticket Open Time */
     const create_time  = (new Date(detail.create_time*1000)).toISOString().split('T')[0];
-    // console.log(create_time.substring(5, 7))
-    // console.log(MONTH_MAPPING["04"])
     const create_month = MONTH_MAPPING[create_time.substring(5, 7)]
     /** Ticket Close Time */
     const close_time = (detail.status==3)?((new Date(detail.update_time*1000)).toISOString().split('T')[0]):'';
     const close_month = ' ' + MONTH_MAPPING[close_time.substring(5, 7)]
     /** Ticket Duration */
     const duration = (close_time == '')?'':(((parseInt(detail.update_time)-parseInt(detail.create_time))) / 3600 / 24).toFixed(2)
-    // console.log((((parseInt(detail.update_time)-parseInt(detail.create_time))) / 3600 / 24).toFixed(2))
 
     /** Co-Pitch Requested*/
     let is_copitch = await isCoPitchRequested(detail)
-    console.log(`11 ${new Date(Date.now())}`)
-
-
+ 
     /** Is Adv Shopify */
     const eapi_method_regex =   /(.*)(\[method=(.*)\])(.*)/i
     // const replies =  detail.replies;
@@ -328,19 +308,12 @@ async function buildBody(detail, tags){
             }
         }
     }
-    console.log(`12 ${new Date(Date.now())}`)
-
 
     /** Is Implementation Agreed */
     let isImplAgreed = await isImplementationAgreed(detail)
 
     /** Get ETA */
-    let eta = '' 
-    if(isImplAgreed === "Yes") {
-        eta =  await getETA(detail)
-    } else {
-        // console.log(`not agreed`)
-    }
+    let eta = extractETA(detail)
 
     /** Status Update */
     let status_notes = ''
@@ -365,7 +338,7 @@ async function buildBody(detail, tags){
         }
     } 
     status_notes =  status_notes
-                    .replace(/<p>/g,      "").replace(/<\/p>/g, "")
+                    .replace(/<p>/g,      '').replace(/<\/p>/g,  '')
                     .replace(/<ul>/g,     '').replace(/<\/ul>/g, '')
                     .replace(/<br>/g,     '').replace(/<\/br>/g, '')
                     .replace(/<li>/g,     '').replace(/<\/li>/g, '')
@@ -376,8 +349,6 @@ async function buildBody(detail, tags){
                     .replace(/&#39;/g, "'")
                     .replace(/&nbsp;/g, '')
     // console.log(status_notes)
-    console.log(`13 ${new Date(Date.now())}`)
-
 
                                 
     /** Append & Replace with Local File */
@@ -399,8 +370,6 @@ async function buildBody(detail, tags){
             }
         }
     }
-
-
 
     /** Return to request */
     return JSON.stringify({

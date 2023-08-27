@@ -1,4 +1,4 @@
-function extractCountry(detail){
+function extract(detail){
     const regionLables = [
         'Region', 'Country / Region', 'Client Region', 'Country/Region', 'GBS Country/Region', "GBS Country / Region"
     ]
@@ -53,4 +53,4 @@ function test() {
 
 // test();
 
-module.exports = extractCountry
+module.exports = extract

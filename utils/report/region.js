@@ -31,7 +31,7 @@ const REGION_MAPPING = {
     /** CNOB */
     "OUTBOUND-CN"   : "CNOB"
 }
-function extractRegion(country){
+function extract(country){
 
     let region = country
     if(REGION_MAPPING.hasOwnProperty(country)) {
@@ -61,4 +61,4 @@ function test() {
 
 // test();
 
-module.exports = extractRegion
+module.exports = extract

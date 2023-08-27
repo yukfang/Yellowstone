@@ -1,9 +1,9 @@
 function extract(detail){
     const replies = detail.replies
-    const class_reg =   /(.*)(\[class=(.*)\])(.*)/i
-    let className = ''
+    const reg =   /(.*)(\[eta=(.*)\])(.*)/i
+    let eta = ''
 
-    const reg_exp = class_reg
+    const reg_exp = reg
     if(replies) {
         for(let k = 0; k < replies.length; k++) {
             const reply = replies[k];
@@ -13,13 +13,13 @@ function extract(detail){
                 const item = items[j];
                 const matches = item.content.match(reg_exp)
                 if(matches) {
-                    className = matches[3]
+                    eta = matches[3]
                 }
             }
         }
     }
     
-    return (className === '')?'':(className+'班')
+    return eta
 }
 
 function test() {
