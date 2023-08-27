@@ -12,6 +12,7 @@ const extractTeam           = require('./utils/report/team')
 const extractGBS            = require('./utils/report/gbs')
 const extractETA            = require('./utils/report/eta')
 const extractStatusUpdate   = require('./utils/report/status_update')
+const extractPriority       = require('./utils/report/priority')
 
 const MONTH_MAPPING = {
     "01" : "Jan",
@@ -56,8 +57,8 @@ koaApp.use(async (ctx, next) => {
 
         let [detail, tag] = await Promise.all([getOrderDetail(order_id), getOrderTag(order_id)])
 
-        await auditPriority(detail);
-        let body = await buildBody( detail, tag);
+        // await auditPriority(detail);
+        let body = await buildBodyRemote( detail, tag);
         console.log("\n")
 
         ctx.body = body
@@ -139,7 +140,7 @@ async function auditPriority(detail){
     }
 }
 
-async function buildBody(detail, tags){
+async function buildBodyRemote(detail, tags){
     const replies = detail.replies;
 
     /** Tags & Status */
@@ -203,7 +204,7 @@ async function buildBody(detail, tags){
     /** Current Follower */
     const follower = detail.follower;
     /** Priority */
-    let priority = "P" + detail.priority;
+    let priority = await extractPriority(detail)
 
     /** Ticket Open Time */
     const create_time  = (new Date(detail.create_time*1000)).toISOString().split('T')[0];
@@ -247,8 +248,7 @@ async function buildBody(detail, tags){
     /** Status Update */
     let status_notes = extractStatusUpdate(detail)                            
 
-    /** Return to request */
-    return JSON.stringify({
+    const summary = JSON.stringify({
         refresh: (new Date(Date.now())).toISOString().substring(0,19) + 'Z',
         client,
         adv_id,
@@ -285,6 +285,12 @@ async function buildBody(detail, tags){
         delimeter: "------------------------------------------------",
         detail : (process.env.PLATFORM in ['FAAS', 'AppService', 'BitBase', 'VM'])?"omitted":detail
     }, null, 2)
+
+    /** Save a copy to LocalCache */
+    await fs.writeFileSync(`./LocalCache/${detail.id}.json`, summary);
+
+    /** Return to request */
+    return summary
 }
 
 async function init() {

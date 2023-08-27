@@ -2,6 +2,7 @@ module.exports = {
   apps : [
     {
       "ignore_watch" : [
+          "LocalCache"
       ],
       "watch_options": {
         "followSymlinks": false,

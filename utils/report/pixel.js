@@ -5,9 +5,7 @@ function extract(detail){
 
     const reg_exp = pixel_reg
     try {
-        console.log(detail)
         pixelCode = detail.items.filter(r=> r.label.includes('Pixel ID')).pop()?.content.toString() || "";
-        console.log(pixelCode)
         if(pixelCode.trim().length !== "CA45I9RC77UFFUCCC3E0".length) {
             if(replies) {
                 for(let k = 0; k < replies.length; k++) {
