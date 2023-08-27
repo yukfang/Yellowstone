@@ -1,4 +1,5 @@
 const fs                = require('fs');
+const token             = require('./utils/athena/cookie')
 const getPixelConfig    = require('./utils/pixel/config')
 const getOrderDetail    = require('./utils/athena/detail')
 const getOrderTag       = require('./utils/athena/tag')
@@ -12,6 +13,10 @@ const extractGBS            = require('./utils/report/gbs')
 const extractETA            = require('./utils/report/eta')
 const extractStatusUpdate   = require('./utils/report/status_update')
 const extractPriority       = require('./utils/report/priority')
+
+const delayms = (ms) => new Promise((res, rej) => {
+    setTimeout(res, ms * 1)
+})
 
 const MONTH_MAPPING = {
     "01" : "Jan",
@@ -304,25 +309,46 @@ async function buildBodyRemote(order_id){
 }
 
 
-async function ensureDirectoryExists() {
-    const path = './some/directory/path';
 
-    try {
-        await fs.access(path);
-        console.log('Directory already exists!');
-    } catch {
-        // If directory does not exist, error will be thrown
-        try {
-            await fs.mkdir(path, { recursive: true });
-            console.log('Directory created!');
-        } catch (mkdirError) {
-            console.error('Error creating directory:', mkdirError);
+async function timerTask() {
+    console.log(`>>>>>> Start Timer Refreshing...`)
+    await token();
+    const cachePath = `./LocalCache`
+    if (!fs.existsSync(cachePath)){
+        fs.mkdirSync(cachePath);
+    }
+
+    const files = fs.readdirSync(cachePath)
+    const summaries = []
+    for(let i = 0; i < files.length; i++) {
+        const filePath = `${cachePath}/${files[i]}`
+        if(fs.existsSync(filePath)) {
+            const summary = await ((f)=>{
+                return new Promise((resolve) => {
+                    resolve(JSON.parse(fs.readFileSync(f, {encoding:'utf8', flag:'r'})))
+                }).catch(err=>{
+                    console.log('JSON Parse error ' + err)
+                })
+            })(filePath)
+
+            summaries.push(summary)
         }
     }
+    summaries.sort((a,b) => new Date(a.refresh) - new Date(b.refresh))
+    console.log(`summary len = ${summaries.length}`)
+    console.log(summaries.map(s => s.refresh))
+
+    for(let i = 0; i < summaries.length; i++) {
+        buildBodyRemote(summaries[i].detail.id)
+        await delayms(200)
+    }
+    console.log(`... End Timer Refreshing <<<`)
+
 }
 
 async function init() {
     console.log(`Server Init ---> ${(new Date(Date.now())).toISOString()}`);
+    setInterval(timerTask, 1000 * 60 * 30)
 }
 
 module.exports = {
