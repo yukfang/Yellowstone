@@ -11,6 +11,7 @@ const extractRegion         = require('./utils/report/region')
 const extractTeam           = require('./utils/report/team')
 const extractGBS            = require('./utils/report/gbs')
 const extractETA            = require('./utils/report/eta')
+const extractStatusUpdate   = require('./utils/report/status_update')
 
 const MONTH_MAPPING = {
     "01" : "Jan",
@@ -115,35 +116,6 @@ async function isCoPitchRequested(detail) {
     return is_copitch
 }
 
-async function getETA(detail){
-    const eta_reg   = /(.*)(\[eta=(.*)\])(.*)/m
-
-    const replies  =  detail.replies;
-    let eta        = ""
-    if(replies) {
-        for(let k = 0; k < replies.length; k++) {
-            const reply = replies[k];
-            const items = reply.items.filter(x => x.type == 6);
-
-            for(let j = 0; j < items.length; j++) {
-                const item = items[j];
-                const eta_matches = item.content.toLowerCase().match(eta_reg)
-                console.log(eta_matches)
-                if(eta_matches) {
-                    eta = eta_matches[3]
-                    if(eta.length > 1) {
-                        eta = "2023-" + eta[0] + eta[1] + "-" + eta[2] + eta[3]
-                        // console.log(eta)
-                    }
-                }
-
-                // No break, use last one to override previous ones
-            }
-        }
-    } 
-    // console.log(`return eta = ${eta}`)
-    return eta
-}
 
 async function auditPriority(detail){
     const priority = detail.priority
@@ -168,14 +140,6 @@ async function auditPriority(detail){
 }
 
 async function buildBody(detail, tags){
-    let   blocker   = '';
-    let   feedback  = '';
-    let   dropoff   = '';
-    let   summary   = '';
-    let   conclusion = '';
-    let   insights  = '';
-    let   status    = '';
-
     const replies = detail.replies;
 
     /** Tags & Status */
@@ -189,31 +153,7 @@ async function buildBody(detail, tags){
     detail.adv_id = adv_id
 
     /** Pixel ID */
-    let pixel_id = ''
-    try {
-        pixel_id = detail.items.filter(r=> r.label.includes('Pixel ID')).pop()?.content.toString() || "";
-        if(pixel_id.trim().length !== "CA45I9RC77UFFUCCC3E0".length) {
-            pixel_id = '';
-            const pixel_reg =   /(.*)(\[pixel=(.*)\])(.*)/i
-            if(replies) {
-                for(let k = 0; k < replies.length; k++) {
-                    const reply = replies[k];
-                    const items = reply.items.filter(x => x.type == 6);
-        
-                    for(let j = 0; j < items.length; j++) {
-                        const item = items[j];
-                        const matches = item.content.match(pixel_reg)
-                        if(matches) {
-                            console.log(matches)
-                            pixel_id = matches[3]
-                        }
-                    }
-                }
-            }
-        }
-    } catch( err) {
-        console.log(err)
-    }
+    let pixel_id = require('./utils/report/pixel')(detail)
 
     /** AAM & 1P Cookie */
     let pixelCfg = {}
@@ -239,24 +179,18 @@ async function buildBody(detail, tags){
         console.log(err)
     }
  
- 
     /** class Name - CNOB only */
     const className = extractClass(detail)
- 
 
     /** Country */
     const country = extractCountry(detail)
  
-
     /** Region */
     const region =  extractRegion(country)
  
-
     /** GBS Team */
     const team = extractTeam(adv_id)
  
-
-
     /** Ticket Requester */
     const owner_name = detail.owner_name;
     /** GBS  */
@@ -265,11 +199,6 @@ async function buildBody(detail, tags){
     // let cst   = extractGBS(detail).cst
     let sales = ""
     let cst   = ""
-    try {
-
-    } catch (err) {
-        console.log(err)
-    }
  
     /** Current Follower */
     const follower = detail.follower;
@@ -281,7 +210,7 @@ async function buildBody(detail, tags){
     const create_month = MONTH_MAPPING[create_time.substring(5, 7)]
     /** Ticket Close Time */
     const close_time = (detail.status==3)?((new Date(detail.update_time*1000)).toISOString().split('T')[0]):'';
-    const close_month = ' ' + MONTH_MAPPING[close_time.substring(5, 7)]
+    const close_month = (close_time==="")?(""):(' ' + MONTH_MAPPING[close_time.substring(5, 7)])
     /** Ticket Duration */
     const duration = (close_time == '')?'':(((parseInt(detail.update_time)-parseInt(detail.create_time))) / 3600 / 24).toFixed(2)
 
@@ -314,62 +243,9 @@ async function buildBody(detail, tags){
 
     /** Get ETA */
     let eta = extractETA(detail)
-
+ 
     /** Status Update */
-    let status_notes = ''
-    const status_update_reg   = /(.*)(\[status update\])(.*)/i
-    // status_update_reg.ignoreCase = true;
-    if(replies) {
-        for(let k = 0; k < replies.length; k++) {
-            const reply = replies[k];
-            const items = reply.items.filter(x => x.type == 6);
-            const reply_time = (new Date(reply.create_time*1000)).toISOString().split('T')[0];
-
-
-            for(let j = 0; j < items.length; j++) {
-                const item = items[j];
-                const status_update = item.content.match(status_update_reg)
-                if(status_update) {
-                    status_notes = `[${reply_time}]` + status_update[3]
-                    // console.log(status_notes)
-                }
-            }
-
-        }
-    } 
-    status_notes =  status_notes
-                    .replace(/<p>/g,      '').replace(/<\/p>/g,  '')
-                    .replace(/<ul>/g,     '').replace(/<\/ul>/g, '')
-                    .replace(/<br>/g,     '').replace(/<\/br>/g, '')
-                    .replace(/<li>/g,     '').replace(/<\/li>/g, '')
-                    .replace(/<ol>/g,     '').replace(/<\/ol>/g, '')
-                    .replace(/<strong>/g, '').replace(/<\/strong>/g, '')
-                    .replace(/<\/span>/g, '').replace(/(<span )(.*)(>)/g, ' ')
-                    .replace(/&gt;/g, ">")
-                    .replace(/&#39;/g, "'")
-                    .replace(/&nbsp;/g, '')
-    // console.log(status_notes)
-
-                                
-    /** Append & Replace with Local File */
-    const localNotes = []; //await getLocal();
-    for(let i = 0; i < localNotes.length; i++) {
-        const note = localNotes[i];
-        if(note.includes(detail.id)) {
-            const items = note.substring(1, note.length-1 ).split('][')
-            if(items[1].toLowerCase() == 'blocker') {
-                blocker = items[2].trim();
-            } else if(items[1].toLowerCase() == 'feedback') {
-                feedback = items[2]
-            } else if(items[1].toLowerCase() == 'dropoff') {
-                dropoff = items[2]
-            } else if(items[1].toLowerCase() == 'summary') {
-                summary = items[2]
-            } else if(items[1].toLowerCase() == 'insights') {
-                insights = items[2]
-            }
-        }
-    }
+    let status_notes = extractStatusUpdate(detail)                            
 
     /** Return to request */
     return JSON.stringify({
@@ -407,7 +283,7 @@ async function buildBody(detail, tags){
          
 
         delimeter: "------------------------------------------------",
-        detail : (process.env.PLATFORM == 'FAAS')?"omitted":detail
+        detail : (process.env.PLATFORM in ['FAAS', 'AppService', 'BitBase', 'VM'])?"omitted":detail
     }, null, 2)
 }
 
@@ -419,5 +295,3 @@ module.exports = {
   koaApp,
   init,
 };
-
-
