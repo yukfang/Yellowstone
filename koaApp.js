@@ -4,7 +4,6 @@ const getOrderDetail    = require('./utils/athena/detail')
 const getOrderTag       = require('./utils/athena/tag')
 const getOrderList      = require('./utils/athena/list')
 const APAC_LIST         = require('./utils/athena/GBS_APAC_HITLIST')
-const setPriority       = require('./utils/athena/set_priority')
 const extractClass          = require('./utils/report/class')
 const extractCountry        = require('./utils/report/country')
 const extractRegion         = require('./utils/report/region')
@@ -55,10 +54,9 @@ koaApp.use(async (ctx, next) => {
         let order_id = `${ctx.query.order_id}`
         console.log(`>>>>>> Processing ${order_id} >>>>>>`)
 
-        let [detail, tag] = await Promise.all([getOrderDetail(order_id), getOrderTag(order_id)])
+        // let [detail, tag] = await Promise.all([getOrderDetail(order_id), getOrderTag(order_id)])
 
-        // await auditPriority(detail);
-        let body = await buildBodyRemote( detail, tag);
+        let body = await buildBody(order_id);
         console.log("\n")
 
         ctx.body = body
@@ -73,6 +71,10 @@ koaApp.use(async (ctx, next) => {
 
     next();
 })
+
+async function buildBody(order_id){
+    return ( await buildBodyLocal(order_id) ) || (await buildBodyRemote(order_id))
+}
 
 async function isImplementationAgreed(detail){
     const replies =  detail.replies;
@@ -117,30 +119,34 @@ async function isCoPitchRequested(detail) {
     return is_copitch
 }
 
+async function buildBodyLocal(order_id) {
+    const cachePath = `./LocalCache/${order_id}.json`
+ 
+    if(fs.existsSync(cachePath)) {
+        const summary = await ((f)=>{
+            return new Promise((resolve) => {
+                resolve(JSON.parse(fs.readFileSync(f, {encoding:'utf8', flag:'r'})))
+            }).catch(err=>{
+                console.log('JSON Parse error ' + err)
+            })
+        })(cachePath)
 
-async function auditPriority(detail){
-    const priority = detail.priority
-    const order_id = detail.id
-    const adv_id = require('./utils/report/adv_id')(detail)
-    console.log(`${order_id }, Adv_id=${adv_id} Priority = ${priority}`)
+        const ts_now = Date.now()
+        const ts_last = new Date(summary.refresh)
 
-    let gbsPriority = 3
-    if(APAC_LIST.hasOwnProperty(adv_id)) {
-        let hitlistPriority = APAC_LIST[adv_id].priority
-        console.log(`${hitlistPriority} ${gbsPriority}`)
-        if(hitlistPriority < gbsPriority) {
-            gbsPriority = hitlistPriority
-        }
+        const REFRESH_INTERVAL = 60
+        if(ts_now - ts_last <= 1000 * 60 * REFRESH_INTERVAL) {
+            console.log(`Last Refresh is ${summary.refresh}, less than ${REFRESH_INTERVAL}, use Local`)
+            return JSON.stringify(summary, null, 2)
+        } 
     }
 
-    console.log(`GBS Priority = ${gbsPriority} Athena Priority = ${priority}`)
-    if(priority !== gbsPriority) {
-        await setPriority(order_id, gbsPriority)
-        detail.priority = gbsPriority
-    }
+    return null
 }
 
-async function buildBodyRemote(detail, tags){
+async function buildBodyRemote(order_id){
+    let [detail, tags] = await Promise.all([getOrderDetail(order_id), getOrderTag(order_id)])
+
     const replies = detail.replies;
 
     /** Tags & Status */
@@ -287,10 +293,32 @@ async function buildBodyRemote(detail, tags){
     }, null, 2)
 
     /** Save a copy to LocalCache */
+    const cachePath = './LocalCache';
+    if (!fs.existsSync(cachePath)){
+        fs.mkdirSync(cachePath);
+    }
     await fs.writeFileSync(`./LocalCache/${detail.id}.json`, summary);
 
     /** Return to request */
     return summary
+}
+
+
+async function ensureDirectoryExists() {
+    const path = './some/directory/path';
+
+    try {
+        await fs.access(path);
+        console.log('Directory already exists!');
+    } catch {
+        // If directory does not exist, error will be thrown
+        try {
+            await fs.mkdir(path, { recursive: true });
+            console.log('Directory created!');
+        } catch (mkdirError) {
+            console.error('Error creating directory:', mkdirError);
+        }
+    }
 }
 
 async function init() {
