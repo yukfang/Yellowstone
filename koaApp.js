@@ -158,7 +158,7 @@ async function buildBodyRemote(order_id){
     const ticketStatus = require('./utils/report/status')(tags)
 
     /** Client Name */
-    const client = detail.items.filter(r=> r.label.includes('Client Name') || r.label.includes('Advertiser name')).pop().content;
+    const client = detail.items.filter(r=> r.label.includes('Client Name') || r.label.includes('Advertiser name')).pop()?.content || ""
 
     /** ADV ID */
     let adv_id = require('./utils/report/adv_id')(detail)
@@ -184,12 +184,8 @@ async function buildBodyRemote(order_id){
  
 
     /** Website */
-    let website = ''
-    try {
-        website = detail.items.filter(r=> r.label.includes('Website URL')).pop()?.content.toString();
-    } catch (err) {
-        console.log(err)
-    }
+    let  website = detail.items.filter(r=> r.label.includes('Website URL')).pop()?.content.toString() || ""
+ 
  
     /** class Name - CNOB only */
     const className = extractClass(detail)
