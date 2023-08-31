@@ -334,7 +334,9 @@ async function timerTask() {
             summaries.push(summary)
         }
     }
-    summaries.sort((a,b) => new Date(a.refresh) - new Date(b.refresh))
+    // summaries.sort((a,b) => new Date(a.refresh) - new Date(b.refresh))
+    summaries.sort((a,b) => a.id - b.id)
+
     console.log(`summary len = ${summaries.length}`)
     console.log(summaries.map(s => s.refresh))
 
@@ -348,7 +350,7 @@ async function timerTask() {
 
 async function init() {
     console.log(`Server Init ---> ${(new Date(Date.now())).toISOString()}`);
-    setInterval(timerTask, 1000 * 60 * 30)
+    setInterval(timerTask, 1000 * 60 * 45)
 }
 
 module.exports = {
