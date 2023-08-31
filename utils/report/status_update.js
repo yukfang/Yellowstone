@@ -1,10 +1,11 @@
 function extract(detail){
     const replies = detail.replies
     const status_update_reg   = /(.*)(\[status update\])(.*)/i
+    const conclusion_reg      = /(.*)(\[conclusion\])(.*)/i
 
-    let status_notes = ''
 
-    const reg_exp = status_update_reg
+    let notes = ''
+
     if(replies) {
         for(let k = 0; k < replies.length; k++) {
             const reply = replies[k];
@@ -15,12 +16,16 @@ function extract(detail){
                 const item = items[j];
                 const status_update = item.content.match(status_update_reg)
                 if(status_update) {
-                    status_notes = `[${reply_time}]` + status_update[3]
+                    notes = `[${reply_time}]` + status_update[3]
+                }
+                const conclusion = item.content.match(conclusion_reg)
+                if(conclusion) {
+                    notes = `[${reply_time}]` + conclusion[3]
                 }
             }
         }
     } 
-    status_notes =  status_notes
+    notes =  notes
                     .replace(/<p>/g,      '').replace(/<\/p>/g,  '')
                     .replace(/<ul>/g,     '').replace(/<\/ul>/g, '')
                     .replace(/<br>/g,     '').replace(/<\/br>/g, '')
@@ -33,7 +38,7 @@ function extract(detail){
                     .replace(/&nbsp;/g, '')
     // console.log(status_notes)
     
-    return status_notes
+    return notes
 }
 
 function test() {

@@ -80,26 +80,6 @@ async function updateShopify(order_id) {
 async function patch(){
     const shopify_athena_id = [
         '1323694',
-        '1317726',
-        '1326826',
-        '1292091',
-        '1305703',
-        '1323746',
-        '1326590',
-        '1317874',
-        '1326694',
-        '1311607',
-        '1323763',
-        '1317724',
-        '1317806',
-        '1311597',
-        '1312061',
-        '1312098',
-        '1323788',
-        '1326137',
-        '1326152',
-        '1326305',
-        '1326311',
         '1317718',
         '1326829',
         '1323090',
@@ -116,4 +96,4 @@ async function patch(){
     // await reply(12345, "[method=Shopify]")
 }
 
-patch()
+reply('1411762', "[status update] GBS creates ticket by mistake. GBS closed the ticket")
