@@ -13,7 +13,20 @@ module.exports = {
       watch   : true,
       name    : "ystracker",
       instances  : 1
-    }
+    },
+    {
+      "ignore_watch" : [
+          "LocalCache"
+      ],
+      "watch_options": {
+        "followSymlinks": false,
+      },
 
+
+      script  : "./sync.js",
+      watch   : true,
+      name    : "datasync",
+      instances  : 1
+    }
   ]
 }

@@ -1,0 +1,231 @@
+const fs = require('fs')
+const getOrderDetail    = require('./utils/athena/detail')
+const getOrderTag       = require('./utils/athena/tag')
+const getOrderList      = require('./utils/athena/list')
+const APAC_LIST         = require('./utils/athena/GBS_APAC_HITLIST')
+const extractClass          = require('./utils/report/class')
+const extractCountry        = require('./utils/report/country')
+const extractRegion         = require('./utils/report/region')
+const extractTeam           = require('./utils/report/team')
+const extractGBS            = require('./utils/report/gbs')
+const extractETA            = require('./utils/report/eta')
+const extractStatusUpdate   = require('./utils/report/status_update')
+const extractPriority       = require('./utils/report/priority')
+
+const getPixelConfig    = require('./utils/pixel/config')
+const MONTH_MAPPING = {
+    "01" : "Jan",
+    "02" : "Feb",
+    "03" : "Mar",
+    "04" : "Apr",
+    "05" : "May",
+    "06" : "Jun",
+    "07" : "Jul",
+    "08" : "Aug",
+    "09" : "Sept",
+    "10" : "Oct",
+    "11" : "Nov",
+    "12" : "Dec",
+}
+
+
+async function buildBodyRemote(order_id){
+    let [detail, tags] = await Promise.all([getOrderDetail(order_id), getOrderTag(order_id)])
+
+    const replies = detail.replies;
+
+    /** Tags & Status */
+    const ticketStatus = require('./utils/report/status')(tags)
+
+    /** Client Name */
+    const client = detail.items.filter(r=> r.label.includes('Client Name') || r.label.includes('Advertiser name')).pop()?.content || ""
+
+    /** ADV ID */
+    let adv_id = require('./utils/report/adv_id')(detail)
+    detail.adv_id = adv_id
+
+    /** Pixel ID */
+    let pixel_id = require('./utils/report/pixel')(detail)
+
+    /** AAM & 1P Cookie */
+    let pixelCfg = {}
+    if(pixel_id !== '' ) {
+        pixelCfg = await getPixelConfig(pixel_id)
+    }
+    const aam_enable    = pixelCfg.aam_enable
+    const cookie_enable = pixelCfg.cookie_enable
+ 
+
+    /** Pixel O / eAPI O */
+    const SO = require('./utils/report/signal')(detail)
+    // console.log(`SO=${SO}`)
+    const pixel_optimal = SO.pixel_o;
+    const eapi_optimal = SO.eapi_o;
+ 
+
+    /** Website */
+    let  website = detail.items.filter(r=> r.label.includes('Website URL')).pop()?.content.toString() || ""
+ 
+ 
+    /** class Name - CNOB only */
+    const className = extractClass(detail)
+
+    /** Country */
+    const country = extractCountry(detail)
+ 
+    /** Region */
+    const region =  extractRegion(country)
+ 
+    /** GBS Team */
+    const team = extractTeam(adv_id)
+ 
+    /** Ticket Requester */
+    const owner_name = detail.owner_name;
+    /** GBS  */
+    let gbs = ''
+    // let sales = extractGBS(detail).sales
+    // let cst   = extractGBS(detail).cst
+    let sales = ""
+    let cst   = ""
+ 
+    /** Current Follower */
+    const follower = detail.follower;
+    /** Priority */
+    let priority = await extractPriority(detail)
+
+    /** Ticket Open Time */
+    const create_time  = (new Date(detail.create_time*1000)).toISOString().split('T')[0];
+    const create_month = MONTH_MAPPING[create_time.substring(5, 7)]
+    /** Ticket Close Time */
+    const close_time = (detail.status==3)?((new Date(detail.update_time*1000)).toISOString().split('T')[0]):'';
+    const close_month = (close_time==="")?(""):(' ' + MONTH_MAPPING[close_time.substring(5, 7)])
+    /** Ticket Duration */
+    const duration = (close_time == '')?'':(((parseInt(detail.update_time)-parseInt(detail.create_time))) / 3600 / 24).toFixed(2)
+
+    /** Co-Pitch Requested*/
+    let is_copitch = await isCoPitchRequested(detail)
+ 
+    /** Is Adv Shopify */
+    const eapi_method_regex =   /(.*)(\[method=(.*)\])(.*)/i
+    // const replies =  detail.replies;
+    let eapi_method = ""
+    if(replies) {
+        for(let k = 0; k < replies.length; k++) {
+            const reply = replies[k];
+            const items = reply.items.filter(x => x.type == 6);
+
+            for(let j = 0; j < items.length; j++) {
+                const item = items[j];
+                const matches = item.content.match(eapi_method_regex)
+                if(matches) {
+                    // console.log(shopify_flag)
+                    eapi_method = matches[3]
+                    break
+                }
+            }
+        }
+    }
+
+    /** Is Implementation Agreed */
+    let isImplAgreed = await isImplementationAgreed(detail)
+
+    /** Get ETA */
+    let eta = extractETA(detail)
+ 
+    /** Status Update */
+    let status_notes = extractStatusUpdate(detail)                            
+
+    const summary = JSON.stringify({
+        refresh: (new Date(Date.now())).toISOString().substring(0,19) + 'Z',
+        client,
+        adv_id,
+        is_copitch,
+        priority,
+        main_status : ticketStatus.main_status,
+        sub_status  : ticketStatus.sub_status,
+        country,
+        region,
+        follower,
+        gbs,
+        sales,
+        cst,
+        owner_name,
+        isImplAgreed,
+        eapi_method,
+        eta,
+        status_notes,
+        create_time,
+        create_month,
+        close_time,
+        close_month,
+        duration,
+        pixel_id,
+        website,
+        aam_enable,
+        cookie_enable,
+        className,
+        team,
+        pixel_optimal,
+        eapi_optimal,
+         
+
+        delimeter: "------------------------------------------------",
+        detail : (process.env.PLATFORM in ['FAAS', 'AppService', 'BitBase', 'VM'])?"omitted":detail
+    }, null, 2)
+
+    /** Save a copy to LocalCache */
+    const cachePath = './LocalCache';
+    if (!fs.existsSync(cachePath)){
+        fs.mkdirSync(cachePath);
+    }
+    await fs.writeFileSync(`./LocalCache/${detail.id}.json`, summary);
+
+    /** Return to request */
+    return summary
+}
+
+
+async function isImplementationAgreed(detail){
+    const replies =  detail.replies;
+    let isImplAgreed        = "No"
+    if(replies) {
+        for(let k = 0; k < replies.length; k++) {
+            const reply = replies[k];
+            const items = reply.items.filter(x => x.type == 6);
+
+            for(let j = 0; j < items.length; j++) {
+                const item = items[j];
+                if(item.content.toLowerCase().includes("implementation agreed") 
+                        || item.content.toLowerCase().includes("so agreed")
+                        || item.content.toLowerCase().includes("eapi agreed")) {
+                    isImplAgreed = "Yes";
+                    break;
+                }
+            }
+        }
+    } 
+    return isImplAgreed;
+}
+
+async function isCoPitchRequested(detail) {
+    const replies =  detail.replies;
+    let is_copitch        = "No"
+    if(replies) {
+        for(let k = 0; k < replies.length; k++) {
+            const reply = replies[k];
+            const items = reply.items.filter(x => x.type == 6);
+
+            for(let j = 0; j < items.length; j++) {
+                const item = items[j];
+                if(item.content.toLowerCase().includes("co-pitch request") 
+                    || item.content.toLowerCase().includes("copitch request")) {
+                    is_copitch = "Yes";
+                    break;
+                }
+            }
+        }
+    } 
+    return is_copitch
+}
+
+module.exports = buildBodyRemote
