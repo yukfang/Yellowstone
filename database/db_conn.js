@@ -19,7 +19,7 @@
 // module.exports =  getDbCfg()
 console.log(`Process ENV PLATFORM ${process.env.PLATFORM}`)
 module.exports = 
-(process.env.PLATFORM in ['Azure'])?
+(process.env.PLATFORM === 'Azure')?
 {
         "host"      : process.env.DB_HOST,
         "username"  : process.env.DB_USER,
