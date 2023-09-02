@@ -2,6 +2,10 @@ const { Sequelize, DataTypes, Model, UniqueConstraintError, Op, QueryTypes } = r
 const dbConfig   = require('./db_conn_local.js');
 const detail = require('../utils/athena/detail.js');
 
+
+console.log(`DbConfig:`)
+console.log(dbConfig)
+
 const sequelize = new Sequelize(dbConfig.database, dbConfig.username, dbConfig.password, {
     host      : dbConfig.host,
     dialect   : dbConfig.dialect, /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
