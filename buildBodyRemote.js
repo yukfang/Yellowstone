@@ -32,6 +32,12 @@ const MONTH_MAPPING = {
 async function buildBodyRemote(order_id){
     let [detail, tags] = await Promise.all([getOrderDetail(order_id), getOrderTag(order_id)])
 
+    if(detail === undefined || tags === undefined) {
+        return null
+    } else {
+        console.log(detail)
+    }
+
     const replies = detail.replies;
 
     /** Tags & Status */
@@ -170,7 +176,7 @@ async function buildBodyRemote(order_id){
          
 
         delimeter: "------------------------------------------------",
-        detail : (process.env.PLATFORM in ['FAAS', 'AppService', 'BitBase', 'VM'])?"omitted":detail
+        // detail : (process.env.PLATFORM in ['FAAS', 'AppService', 'BitBase', 'VM'])?"omitted":detail
     }, null, 2)
 
     /** Save a copy to LocalCache */
@@ -181,7 +187,7 @@ async function buildBodyRemote(order_id){
     await fs.writeFileSync(`./LocalCache/${detail.id}.json`, summary);
 
     /** Return to request */
-    return summary
+    return {summary, detail, tags}
 }
 
 

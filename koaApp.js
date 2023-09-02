@@ -1,9 +1,10 @@
 const fs                = require('fs');
 const token             = require('./utils/athena/cookie')
-const timerTask         = require('./sync')
+const timerTask         = require('./syncLocal')
 
 
 const buildBodyRemote       = require('./buildBodyRemote')
+const buildBodyDatabase     = require('./buildBodyDatabase')
 
 const delayms = (ms) => new Promise((res, rej) => {setTimeout(res, ms * 1)})
 
@@ -30,7 +31,7 @@ koaApp.use(async (ctx, next) => {
 
 koaApp.use(async (ctx, next) => {
     console.log('-------------------------------------------------------------------')
-    if (ctx.path === '/detail') {
+    if (ctx.path === '/summary') {
         let order_id = `${ctx.query.order_id}`
         console.log(`>>>>>> Processing ${order_id} >>>>>>`)
 
@@ -53,7 +54,9 @@ koaApp.use(async (ctx, next) => {
 })
 
 async function buildBody(order_id){
-    return ( await buildBodyLocal(order_id) ) || (await buildBodyRemote(order_id))
+    // return ( await buildBodyLocal(order_id) ) || (await buildBodyRemote(order_id))
+
+    return buildBodyDatabase(order_id)
 }
 
 
@@ -96,6 +99,7 @@ async function initExistingTickets() {
 async function init() {
     console.log(`Server Init ---> ${(new Date(Date.now())).toISOString()}`);
     await initExistingTickets();
+    // timerTask()
     setInterval(timerTask, 1000 * 60 * 45)
 }
  
