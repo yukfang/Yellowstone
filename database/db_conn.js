@@ -1,12 +1,29 @@
+// function getDbCfg(){
+//     let dbConfig = {
+//         "host"      : process.env.DB_HOST,
+//         "username"  : process.env.DB_USER,
+//         "password"  : process.env.DB_PWD,
+//         "database"  : process.env.DB_NAME,
+//         "dialect"   : "mysql"
+//     }
+//     console.log(`123`)
+//     if(dbConfig.host === null) {
+//         console.log(`Read DB From Local`)
+//         dbConfig = require('./db_conn_local')
+//     }
 
+//     return dbConfig
+// }
 
-module.exports =  
-(process.env.PLATFORM === "Azure" || process.env.PLATFORM === 'FAAS')?
+ 
+// module.exports =  getDbCfg()
+
+module.exports = 
+(process.env.PLATFORM in ['Azure'])?
 {
-    "host"      : process.env.DB_HOST,
-    "username"  : process.env.DB_USER,
-    "password"  : process.env.DB_PWD,
-    "database"  : process.env.DB_NAME,
-    "dialect"   : "mysql"
-}:require('./db_conn_local')
-
+        "host"      : process.env.DB_HOST,
+        "username"  : process.env.DB_USER,
+        "password"  : process.env.DB_PWD,
+        "database"  : process.env.DB_NAME,
+        "dialect"   : "mysql"
+}: require('./db_conn_local')

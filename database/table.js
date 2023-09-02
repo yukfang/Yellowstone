@@ -1,5 +1,5 @@
 const { Sequelize, DataTypes, Model, UniqueConstraintError, Op, QueryTypes } = require('sequelize');
-const dbConfig   = require('./db_conn_local.js');
+const dbConfig   = require('./db_conn.js');
 const detail = require('../utils/athena/detail.js');
 
 
