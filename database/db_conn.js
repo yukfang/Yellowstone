@@ -1,7 +1,7 @@
 
 
 module.exports =  
-(process.env.PLATFORM in ['FAAS', 'Azure'])?
+(process.env.PLATFORM === "Azure" || process.env.PLATFORM === 'FAAS')?
 {
     "host"      : process.env.DB_HOST,
     "username"  : process.env.DB_USER,
