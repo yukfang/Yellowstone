@@ -98,6 +98,10 @@ async function initExistingTickets() {
  
 async function init() {
     console.log(`Server Init ---> ${(new Date(Date.now())).toISOString()}`);
+
+    if(!fs.existsSync(`./database/db_conn_local.js`)) {
+        fs.writeFileSync(`./database/db_conn_local.js`, "module.exports={}")
+    }
     await initExistingTickets();
     // timerTask()
     setInterval(timerTask, 1000 * 60 * 45)
