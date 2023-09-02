@@ -70,7 +70,7 @@ async function run() {
     while(true) {
         await token();
         await timerTask();
-        await delayms(1000 * 60 * 1)
+        await delayms(1000 * 3 * 1) // Only Sleep 3s
     }
 }
 
