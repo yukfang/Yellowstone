@@ -38,8 +38,8 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-          npm run build
-          # npm run test --if-present
+          npm run build --if-present
+          npm run test --if-present
 
       - name: Zip artifact to upload
         run: zip -r ${{ env.YOUR_ZIP_PACKAGE_NAME }} ${{ env.YOUR_AZURE_WEBAPP_PACKAGE_PATH }}
