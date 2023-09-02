@@ -12,7 +12,7 @@ async function buildBodyDatabase(order_id){
     })
 
     if(order) {
-        // return order summary
+        console.log(`Order found in db: ${order}`)
         return order.summary
     } else {
         const summary = {refresh: "2023-01-01T01:01:01Z", detail: {id: order_id}}

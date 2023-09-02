@@ -102,9 +102,9 @@ async function init() {
     if(!fs.existsSync(`./database/db_conn_local.js`)) {
         fs.writeFileSync(`./database/db_conn_local.js`, "module.exports={}")
     }
-    await initExistingTickets();
+    // await initExistingTickets();
     // timerTask()
-    setInterval(timerTask, 1000 * 60 * 45)
+    // setInterval(timerTask, 1000 * 60 * 45)
 }
  
 module.exports = {

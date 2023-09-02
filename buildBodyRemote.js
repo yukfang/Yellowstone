@@ -35,7 +35,7 @@ async function buildBodyRemote(order_id){
     if(detail === undefined || tags === undefined) {
         return null
     } else {
-        console.log(detail)
+        // console.log(detail)
     }
 
     const replies = detail.replies;

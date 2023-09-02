@@ -23,7 +23,7 @@ module.exports = {
       },
 
 
-      // script  : "./void.js",
+      script  : "./syncDb.js",
       watch   : true,
       name    : "datasync",
       instances  : 1
