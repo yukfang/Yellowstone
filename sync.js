@@ -35,14 +35,24 @@ async function timerTask() {
     console.log(summaries.map(s => s.refresh))
 
     for(let i = 0; i < summaries.length; i++) {
-        buildBodyRemote(summaries[i].detail.id).then(x=>{
-            console.log(`---------End refresh for ${JSON.parse(x).detail.id}`)
+        const ticket_id =  (summaries[i]).detail.id
+        console.log(`---------Start refresh for ${ticket_id}---------`)
+
+        buildBodyRemote(ticket_id).then(x=>{
+            // console.log(`---------End refresh for ${JSON.parse(x).detail.id}---------`)
         })
-        await delayms(200)
+        await delayms(333)
     }
     console.log(`... End Timer Refreshing <<<`)
-
 }
 
-timerTask();
-setInterval(timerTask, 1000 * 60 * 15)
+async function run() {
+    while(true) {
+        await timerTask();
+        await delayms(1000 * 60 * 30)
+    }
+}
+
+// run();
+
+module.exports = timerTask

@@ -1,5 +1,6 @@
 const fs                = require('fs');
 const token             = require('./utils/athena/cookie')
+const timerTask         = require('./sync')
 
 
 const buildBodyRemote       = require('./buildBodyRemote')
@@ -95,7 +96,7 @@ async function initExistingTickets() {
 async function init() {
     console.log(`Server Init ---> ${(new Date(Date.now())).toISOString()}`);
     await initExistingTickets();
-    // setInterval(timerTask, 1000 * 60 * 10)
+    setInterval(timerTask, 1000 * 60 * 45)
 }
  
 module.exports = {
