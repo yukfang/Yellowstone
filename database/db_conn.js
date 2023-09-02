@@ -17,7 +17,7 @@
 
  
 // module.exports =  getDbCfg()
-
+console.log(`Process ENV PLATFORM ${process.env.PLATFORM}`)
 module.exports = 
 (process.env.PLATFORM in ['Azure'])?
 {
