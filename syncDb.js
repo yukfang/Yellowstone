@@ -68,8 +68,14 @@ async function timerTask() {
 
 async function run() {
     while(true) {
-        await token();
-        await timerTask();
+        try {
+            await token();
+            await timerTask();
+        } catch (e) {
+            console.log(`Exception: `)
+            console.log(e)
+        }
+
         await delayms(1000 * 3 * 1) // Only Sleep 3s
     }
 }
