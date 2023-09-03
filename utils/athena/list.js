@@ -23,24 +23,18 @@ async function athena_api_v2_swimlane(){
                "order_id"
             ],
             "metrics":[
-               "priority",
-               "order_id",
+
                "is_vip",
                "title",
                "urged",
-               "create_time",
                "is_guest",
                "board_name",
                "order_first_name",
                "order_second_name",
-               "plat_id",
-               "employee_id",
-               "employee_name",
                "current_role_name",
                "employee_avatar",
                "employee_email",
                "show_auto_assign",
-               "pending_time",
                "vip_type",
                "circulation_count",
                "circulation_reply",
@@ -50,9 +44,24 @@ async function athena_api_v2_swimlane(){
                "is_overtime",
                "is_impending_overtime",
                "is_auto_closing",
-               "pending_status",
+               "total_reply_count",
+
+               "order_id",
+               "plat_id",
+               "priority",
+               "employee_id",
+               "employee_name",
+
                "last_reply_time",
-               "total_reply_count"
+               "pending_time",
+               "create_time",
+               "update_time",
+               "last_pending_time",
+
+
+               "category_1_name",
+               "archive_category",
+               "archive_category_1"
             ],
             "filters":[
                {
@@ -63,19 +72,21 @@ async function athena_api_v2_swimlane(){
                   "filter_type":1000,
                   "expression":{
                     "AND":[
-                       {
-                          "field":"create_time",
-                          "filter_type":1,
-                          "range_lower":"2023-05-01T00:00:00",
-                          "range_upper":"2024-12-29T00:00:00"
-                       },
-                       {
-                          "field":"archive_category",
-                          "filter_type":0,
-                          "in_field_values":[
-                             "1705151646989719_1768849764192273"
-                          ]
-                       }
+
+
+                     //   {
+                     //      "field":"archive_category",
+                     //      "filter_type":0,
+                     //      "in_field_values":[
+                     //         "1705151646989719_1768849764192273"
+                     //      ]
+                     //   }
+                     {
+                        "field":"create_time",
+                        "filter_type":1,
+                        "range_lower":"2023-07-21T00:00:00",
+                        "range_upper":"2024-12-29T00:00:00"
+                     },
                     ]
                  }
                }
@@ -83,20 +94,39 @@ async function athena_api_v2_swimlane(){
             "extra":{
                "service_type":7
             },
-            "order_field":"create_time",
+            // "order_field":"last_pending_time",
+            // "order_field":"order_id",
+            "order_field":"last_reply_time",
+
+
             "order_type":1,
             "page":1,
-            "page_size":100
+            "page_size":10
     };
     let param        = null;
 
 
     const response = (await proxying(method, endpoint, header, param, body, true));
-    console.log(response.data)
+   //  console.log(response.data)
 
     if(response.status == 200 ) {
-        const data = JSON.parse(response.data).data;
-        // console.table(data.data)
+         const raw_data = JSON.parse(response.data).data;
+         // const data = {data: raw_data.data.filter(d => d.order_id === '1448935')}
+         const data = raw_data
+      //   console.log(data.data[0])
+        console.log(data.data.length)
+        console.table(data.data.map(r => {
+         const rr = r;
+         rr.update_time_h = new Date(parseInt(r.update_time * 1000)) 
+         rr.create_time_h = new Date(parseInt(r.create_time * 1000)) 
+         rr.last_pending_time_h = new Date(parseInt(r.last_pending_time * 1000)) 
+
+         
+
+         return rr
+        }), ["order_id", "create_time_h","update_time_h", "pending_time", 'last_pending_time',  'last_reply_time', 'last_pending_time_h',
+            'category_1_name','archive_category'
+         ])
         return data.data;
     } else {
         console.log(`Get Order list Error !!!`)
@@ -105,6 +135,25 @@ async function athena_api_v2_swimlane(){
 }
 
 
-// athena_api_v2_swimlane()
+athena_api_v2_swimlane()
 
 module.exports = athena_api_v2_swimlane
+
+
+/**
+
+
+pending_time        =>   Pending how many seconds
+pending_time = 0    =>   Closed
+
+update_time
+   - change question type
+   - reply
+   - change priority 
+   - change section/tag DOES NOT update
+
+last_pending_time
+   - reply chan change it
+   - close/re-open can change it 
+
+ */

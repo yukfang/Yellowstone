@@ -29,7 +29,7 @@ module.exports = async function athena_api_admin_order_detail(order_id){
     const response = (await proxying(method, endpoint, header, param, body, true));
     // console.log(response.data)
 
-    if(response.status == 200 ) {
+    if(response?.status == 200 ) {
         const data = JSON.parse(response.data).data;
         return data;
 
