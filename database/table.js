@@ -20,8 +20,19 @@ const orderInfo = {
         summary             : { type: DataTypes.JSON,                               primaryKey: false,  allowNull : false  },
         detail              : { type: DataTypes.JSON,                               primaryKey: false,  allowNull : true   },
         tag                 : { type: DataTypes.JSON,                               primaryKey: false,  allowNull : true   },
+    }
+}
 
-
+const orderInfo2 = {
+    name     : "order_info2",
+    option   : { force: false },
+    property : {
+        order_id            : { type: DataTypes.INTEGER,                            primaryKey: true,   allowNull : false  },
+        refreshAt           : { type: DataTypes.DATE,                               primaryKey: false,  allowNull : true   },
+        update_time         : { type: DataTypes.DATE,                               primaryKey: false,  allowNull : true   },
+        summary             : { type: DataTypes.JSON,                               primaryKey: false,  allowNull : false  },
+        detail              : { type: DataTypes.JSON,                               primaryKey: false,  allowNull : true   },
+        tag                 : { type: DataTypes.JSON,                               primaryKey: false,  allowNull : true   },
     }
 }
 
@@ -109,6 +120,8 @@ async function test() {
 
 module.exports =  {
     OrderInfo : createModel(orderInfo),
+    OrderInfo2 : createModel(orderInfo2),
+
  
 
     _ : 0

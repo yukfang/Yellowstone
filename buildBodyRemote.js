@@ -31,6 +31,7 @@ const MONTH_MAPPING = {
 
 async function buildBodyRemote(order_id){
     let [detail, tags] = await Promise.all([getOrderDetail(order_id), getOrderTag(order_id)])
+    // console.log(detail)
 
     if(detail === undefined || tags === undefined) {
         return null
@@ -97,11 +98,14 @@ async function buildBodyRemote(order_id){
     /** Current Follower */
     const follower = detail.follower;
     /** Priority */
-    let priority = await extractPriority(detail)
+    let priority = await extractPriority(detail, region)
+     
 
     /** Ticket Open Time */
     const create_time  = (new Date(detail.create_time*1000)).toISOString().split('T')[0];
     const create_month = MONTH_MAPPING[create_time.substring(5, 7)]
+    /** Ticket Update Time */
+    const update_time  = detail.update_time;
     /** Ticket Close Time */
     const close_time = (detail.status==3)?((new Date(detail.update_time*1000)).toISOString().split('T')[0]):'';
     const close_month = (close_time==="")?(""):(' ' + MONTH_MAPPING[close_time.substring(5, 7)])
@@ -162,6 +166,7 @@ async function buildBodyRemote(order_id){
         status_notes,
         create_time,
         create_month,
+        update_time,
         close_time,
         close_month,
         duration,

@@ -5,6 +5,8 @@ function extract(detail){
     let country = detail.items.filter(r => regionLables.includes(r.label)).pop().content;
     if(country.toLowerCase().includes("-au")) {
         country = "AU"
+    } else if(country.toLowerCase().includes("sea-nz")) {
+        country = "AU"
     } else if(country.toLowerCase().includes('-hk')) {
         country = 'SEA-HK'
     }  else if(country.toLowerCase().includes('taiwan')) {

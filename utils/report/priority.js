@@ -2,7 +2,10 @@ const APAC_LIST         = require('../athena/GBS_APAC_HITLIST')
 const setPriority       = require('../athena/set_priority')
 
 
-async function  extract(detail){
+async function  extract(detail, region){
+    if(region !== "APAC") return detail.priority
+    if(region !== "CNOB") return detail.priority
+
     const priority = detail.priority
     const order_id = detail.id
     const adv_id = require('./adv_id')(detail)

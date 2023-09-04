@@ -81,5 +81,3 @@ async function run() {
 }
 
 run();
-
-module.exports = timerTask

@@ -22,8 +22,7 @@ module.exports = {
         "followSymlinks": false,
       },
 
-
-      script  : "./syncDb.js",
+      script  : "./syncDb2.js",
       watch   : true,
       name    : "datasync",
       instances  : 1
