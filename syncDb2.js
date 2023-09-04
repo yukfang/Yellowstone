@@ -90,17 +90,19 @@ async function syncRemoteToDb() {
             missingOrders.push(rmtOrder.order_id)
         }
     }
-    console.log(`Missing ticket number: ${missingOrders.length}`)
+    console.log(`Missing ticket number: ${missingOrders.length}, Age Order number: ${ageOrders.length}`)
 
     /** Update Missing Orders to DB */
-    await OrderTable.bulkCreate(missingOrders.map(t => {
-        return {
-            order_id    : t,
-            refreshAt   : '2020-10-23T08:08:08Z',
-            update_time : '2020-10-23T08:08:08Z',
-            summary     : {id: t}
-        }
-    }))
+    if(missingOrders.length > 0) {
+        await OrderTable.bulkCreate(missingOrders.map(t => {
+            return {
+                order_id    : t,
+                refreshAt   : '2020-10-23T08:08:08Z',
+                update_time : '2020-10-23T08:08:08Z',
+                summary     : {id: t}
+            }
+        }))
+    }
 
     /** 4. Fetch Remote Details to update */
     const xOrders = [].concat(missingOrders).concat(ageOrders)
