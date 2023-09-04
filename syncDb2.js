@@ -126,7 +126,8 @@ async function run() {
             console.log(e)
         }
 
-        await delayms(1000 * 2 * 1) // Only Sleep 2s
+        await delayms(1000 * 2 * 5) // Only Sleep 2s
+        console.log(`Begin to Sync for another round...`)
     }
 }
 

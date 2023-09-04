@@ -3,7 +3,7 @@ const fs = require('fs')
 const TABLES =  require('./database/table')
 
 async function buildBodyDatabase(order_id){
-    const OrderInfoTable = await TABLES.OrderInfo;
+    const OrderInfoTable = await TABLES.OrderInfo2;
 
     const order = await OrderInfoTable.findOne({
         where : {
