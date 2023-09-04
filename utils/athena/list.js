@@ -98,7 +98,6 @@ async function athena_api_v2_swimlane(metrics = METRICS){
             },
             "order_field":"last_pending_time",
             // "order_field":"order_id",
-            // "order_field":"last_reply_time",
             "order_type":1,
             "page":1,
             "page_size": 1000

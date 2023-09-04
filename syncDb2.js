@@ -105,7 +105,8 @@ async function syncRemoteToDb() {
     }
 
     /** 4. Fetch Remote Details to update */
-    const xOrders = [].concat(missingOrders).concat(ageOrders)
+    const xOrders = [].concat(missingOrders).concat(ageOrders).sort((a,b)=> a.last_pending_time - b.last_pending_time)
+    console.table(xOrders)
     for(let i = 0; i < xOrders.length; i++) {
         const order_id = xOrders[i]
 
