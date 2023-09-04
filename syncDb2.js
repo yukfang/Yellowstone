@@ -112,6 +112,8 @@ async function syncRemoteToDb() {
         console.log(`【${i}/${xOrders.length - 1}】 ${order_id} Start Refresh......`)
         await processOrder(order_id)
     }
+
+    console.log(`Remote <-> DB Syncing Completed`)
 }
 
 async function run() {
@@ -122,7 +124,7 @@ async function run() {
         try {
             await token();
             await syncRemoteToDb();
-            return
+            // return
         } catch (e) {
             console.log(`Exception: `)
             console.log(e)
