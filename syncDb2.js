@@ -67,6 +67,7 @@ async function syncRemoteToDb() {
             'createdAt'
         ]
     }))?.map(o => o.dataValues).sort((a,b) => b.update_time - a.update_time)
+    const newOrders = dbOrders.filter(o => (o.updatedAt - o.createdAt < 10)).map(o=>o.order_id)
     // const order971029 = orders.filter(o => o.order_id === 1409149)
     // console.log(order971029)
 
@@ -105,7 +106,7 @@ async function syncRemoteToDb() {
     }
 
     /** 4. Fetch Remote Details to update */
-    const xOrders = [].concat(missingOrders).concat(ageOrders).sort((a,b)=> a.last_pending_time - b.last_pending_time).slice(0.10)
+    const xOrders = [].concat(missingOrders).concat(ageOrders).concat(newOrders).sort((a,b)=> a.last_pending_time - b.last_pending_time).slice(0.10)
     console.table(xOrders)
     for(let i = 0; i < xOrders.length; i++) {
         const order_id = xOrders[i]
@@ -115,6 +116,7 @@ async function syncRemoteToDb() {
     }
 
     console.log(`Remote <-> DB Syncing Completed`)
+    console.log(`----------------------------------------`)
 }
 
 async function run() {
@@ -132,7 +134,7 @@ async function run() {
         }
 
         await delayms(1000 * 1 * 5) // Only Sleep 5s
-        console.log(`Begin to Sync for another round...`)
+        // console.log(`Begin to Sync for another round...`)
     }
 }
 
