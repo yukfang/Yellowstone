@@ -66,16 +66,16 @@ async function syncRemoteToDb() {
             'updatedAt',
             'createdAt'
         ]
-    }))?.map(o => o.dataValues).sort((a,b) => a.update_time - b.update_time)
-    // console.log(dbOrders)
-
+    }))?.map(o => o.dataValues).sort((a,b) => b.update_time - a.update_time)
     // const order971029 = orders.filter(o => o.order_id === 1409149)
     // console.log(order971029)
 
     /** 1. Get Tickets from Remote */
     const missingOrders = []
     const ageOrders = []
-    const remoteOrders = await getOrderList(['order_id', 'update_time']) 
+    const remoteOrders = await getOrderList(['order_id', 'update_time', 'last_pending_time']) 
+    console.table(remoteOrders )
+
     for(let i = 0; i < remoteOrders.length; i++) {
         const rmtOrder = remoteOrders[i];
         const idx = dbOrders.map(o=>o.order_id).indexOf(parseInt(rmtOrder.order_id))
