@@ -38,9 +38,12 @@ async function tagTask() {
 
 async function run() {
     while(true) {
-        await tagTask();
-        // return
-        await delayms(1000 * 1 * 1)
+        try{
+            await tagTask();
+            await delayms(1000 * 1 * 1)
+        } catch (e) {
+
+        }
     }
 }
 
