@@ -2,7 +2,7 @@ const fs                = require('fs');
 const token             = require('./utils/athena/cookie')
 
 const buildBodyRemote       = require('./buildBodyRemote')
-const buildBodyDatabase     = require('./buildBodyDatabase')
+const getSummaryFromDB     = require('./getSummaryFromDB')
 
 const delayms = (ms) => new Promise((res, rej) => {setTimeout(res, ms * 1)})
 
@@ -50,7 +50,8 @@ koaApp.use(async (ctx, next) => {
 async function buildBody(order_id){
     // return ( await buildBodyLocal(order_id) ) || (await buildBodyRemote(order_id))
 
-    return buildBodyDatabase(order_id)
+    const body = await getSummaryFromDB(order_id)
+    return JSON.stringify(body, null, 2)
 }
 
 

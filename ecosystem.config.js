@@ -24,7 +24,20 @@ module.exports = {
 
       script  : "./syncDb2.js",
       watch   : true,
-      name    : "datasync",
+      name    : "syncsummary",
+      instances  : 1
+    },
+    {
+      "ignore_watch" : [
+          "LocalCache"
+      ],
+      "watch_options": {
+        "followSymlinks": false,
+      },
+
+      script  : "./syncTags.js",
+      watch   : true,
+      name    : "synctag",
       instances  : 1
     }
   ]

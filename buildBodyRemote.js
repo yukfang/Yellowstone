@@ -11,7 +11,7 @@ const extractGBS            = require('./utils/report/gbs')
 const extractETA            = require('./utils/report/eta')
 const extractStatusUpdate   = require('./utils/report/status_update')
 const extractPriority       = require('./utils/report/priority')
-
+ 
 const getPixelConfig    = require('./utils/pixel/config')
 const MONTH_MAPPING = {
     "01" : "Jan",
@@ -27,7 +27,6 @@ const MONTH_MAPPING = {
     "11" : "Nov",
     "12" : "Dec",
 }
-
 
 async function buildBodyRemote(order_id){
     let [detail, tags] = await Promise.all([getOrderDetail(order_id), getOrderTag(order_id)])
@@ -185,11 +184,11 @@ async function buildBodyRemote(order_id){
     }, null, 2)
 
     /** Save a copy to LocalCache */
-    const cachePath = './LocalCache';
-    if (!fs.existsSync(cachePath)){
-        fs.mkdirSync(cachePath);
-    }
-    await fs.writeFileSync(`./LocalCache/${detail.id}.json`, summary);
+    // const cachePath = './LocalCache';
+    // if (!fs.existsSync(cachePath)){
+    //     fs.mkdirSync(cachePath);
+    // }
+    // await fs.writeFileSync(`./LocalCache/${detail.id}.json`, summary);
 
     /** Return to request */
     return {summary, detail, tags}
