@@ -42,7 +42,6 @@ async function reply(order_id, content) {
     // const on = await onoff.reopen(order_id)
     const response = await athena_api_v2_processor_order_reply(order_id, content);
     console.log(response.data)
-    const off = await onoff.close(order_id)
 }
 
 async function updateShopify(order_id) {
@@ -96,4 +95,20 @@ async function patch(){
     // await reply(12345, "[method=Shopify]")
 }
 
-reply('1411762', "[status update] GBS creates ticket by mistake. GBS closed the ticket")
+// reply('1411762', "[status update] GBS creates ticket by mistake. GBS closed the ticket")
+
+// reply('1367996', '[gbs=潘羽]')
+// reply('1388441', '[gbs=李思]')
+// reply('1393754', '[gbs=宋佳音]')
+// reply('1437046', '[gbs=何婉华]')
+// reply('1437081', '[gbs=何婉华]')
+// reply('1437082', '[gbs=何婉华]')
+// reply('1437237', '[gbs=卢红玲]')
+// reply('1440609', '[gbs=刘梦洁]')
+// reply('1441953', '[gbs=王子豪]')
+// reply('1449674', '[gbs=林莉莉]')
+// reply('1450758', '[gbs=林莉莉]')
+// reply('1450789', '[gbs=林莉莉]')
+// reply('1450836', '[gbs=林莉莉]')
+
+

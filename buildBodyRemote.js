@@ -11,7 +11,7 @@ const extractGBS            = require('./utils/report/gbs')
 const extractETA            = require('./utils/report/eta')
 const extractStatusUpdate   = require('./utils/report/status_update')
 const extractPriority       = require('./utils/report/priority')
- 
+  
 const getPixelConfig    = require('./utils/pixel/config')
 const MONTH_MAPPING = {
     "01" : "Jan",
@@ -88,7 +88,7 @@ async function buildBodyRemote(order_id){
     /** Ticket Requester */
     const owner_name = detail.owner_name;
     /** GBS  */
-    let gbs = ''
+    let gbs = extractGBS(detail).sales
     // let sales = extractGBS(detail).sales
     // let cst   = extractGBS(detail).cst
     let sales = ""
