@@ -1,6 +1,6 @@
 function extract(detail){
     const replies = detail.replies
-    const reg =   /(.*)(\[eta=(.*)\])(.*)/i
+    const reg =   /(.*?)(\[eta=(.*?)\])(.*?)/i
     let eta = ''
 
     const reg_exp = reg
@@ -18,7 +18,6 @@ function extract(detail){
             }
         }
     }
-    
     return eta
 }
 

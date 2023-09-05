@@ -1,5 +1,5 @@
 const TABLES =  require('./database/table')
-const token = require('./utils/athena/cookie')
+const token  = require('./utils/athena/cookie')
 const getOrderList = require('./utils/athena/list')
 const delayms = (ms) => new Promise((res, rej) => {setTimeout(res, ms * 1)})
 const buildBodyRemote = require('./buildBodyRemote')
@@ -68,14 +68,13 @@ async function syncRemoteToDb() {
         ]
     }))?.map(o => o.dataValues).sort((a,b) => b.update_time - a.update_time)
     const newOrders = dbOrders.filter(o => (o.updatedAt - o.createdAt < 10)).map(o=>o.order_id)
-    // const order971029 = orders.filter(o => o.order_id === 1409149)
-    // console.log(order971029)
+ 
 
     /** 1. Get Tickets from Remote */
     const missingOrders = []
     const ageOrders = []
-    const remoteOrders = await getOrderList(['order_id', 'update_time', 'last_pending_time']) 
-    // console.table(remoteOrders )
+    const remoteOrders = await getOrderList(['order_id', 'update_time', 'last_pending_time', "aging_time", "last_pending_status_time", "pending_time"]) 
+    // console.table(remoteOrders.filter(o=>o.order_id==1404591) )
 
     for(let i = 0; i < remoteOrders.length; i++) {
         const rmtOrder = remoteOrders[i];
@@ -87,7 +86,7 @@ async function syncRemoteToDb() {
                 // console.log(`${rmtTime} ${dbTime}`)
                 ageOrders.push(rmtOrder.order_id)
             }
-        } else {
+        } else { 
             missingOrders.push(rmtOrder.order_id)
         }
     }

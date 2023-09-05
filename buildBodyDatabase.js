@@ -20,7 +20,8 @@ async function buildBodyDatabase(order_id){
         // Update a empty record in DB
         await OrderInfoTable.create({
             order_id,
-            summary: summary
+            summary: summary,
+            update_time: "2023-01-01T01:01:01Z"
         })
 
         return summary

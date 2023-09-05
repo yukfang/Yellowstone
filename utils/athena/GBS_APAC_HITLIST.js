@@ -397,8 +397,8 @@ function audit() {
 
     const adv_ids = records.map(r=>r.adv_id)
     const duplicates = adv_ids.filter((item, index) => adv_ids.indexOf(item) !== index);
-    console.log(`Duplicated Records:  `)
-    console.log(duplicates)
+    console.log(`Duplicated Records:  omitted...`)
+    // console.log(duplicates)
 
 }
 

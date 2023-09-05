@@ -16,7 +16,6 @@ async function athena_api_v2_processor_order_bind_tag_list(order_id){
     }
 
     const plat_id = '1736490999244882'
-    // const endpoint = `https://ads.tiktok.com/athena/api/v2/processor/order/bind_tag_list`;
     const endpoint = `https://ads.tiktok.com/athena/api/v2/processor/order/bind_tag_list_v2`;
     const method      = 'GET';
     let header      =  {Cookie: cookie.value}

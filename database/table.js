@@ -4,7 +4,7 @@ const detail = require('../utils/athena/detail.js');
 
 
 console.log(`DbConfig:`)
-console.log(dbConfig)
+console.log(`${dbConfig.host}_${dbConfig.username}_${dbConfig.database}`)
 
 const sequelize = new Sequelize(dbConfig.database, dbConfig.username, dbConfig.password, {
     host      : dbConfig.host,

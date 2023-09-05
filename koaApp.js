@@ -1,13 +1,10 @@
 const fs                = require('fs');
 const token             = require('./utils/athena/cookie')
-const timerTask         = require('./syncLocal')
-
 
 const buildBodyRemote       = require('./buildBodyRemote')
 const buildBodyDatabase     = require('./buildBodyDatabase')
 
 const delayms = (ms) => new Promise((res, rej) => {setTimeout(res, ms * 1)})
-
 
 
 const Koa = require('koa');
@@ -34,9 +31,6 @@ koaApp.use(async (ctx, next) => {
     if (ctx.path === '/summary') {
         let order_id = `${ctx.query.order_id}`
         console.log(`>>>>>> Processing ${order_id} >>>>>>`)
-
-        // let [detail, tag] = await Promise.all([getOrderDetail(order_id), getOrderTag(order_id)])
-
         let body = await buildBody(order_id);
         console.log("\n")
 
@@ -102,11 +96,13 @@ async function init() {
     if(!fs.existsSync(`./database/db_conn_local.js`)) {
         fs.writeFileSync(`./database/db_conn_local.js`, "module.exports={}")
     }
-    // await initExistingTickets();
-    // timerTask()
-    // setInterval(timerTask, 1000 * 60 * 45)
+
+    const LocalCachePath = './LocalCache'
+    if (!fs.existsSync(LocalCachePath)) {
+        fs.mkdirSync(LocalCachePath, { recursive: true });
+    } 
 }
- 
+   
 module.exports = {
   koaApp,
   init,
