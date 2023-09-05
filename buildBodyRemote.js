@@ -82,8 +82,7 @@ async function buildBodyRemote(order_id){
     /** Region */
     const region =  extractRegion(country)
  
-    /** GBS Team */
-    const team = extractTeam(adv_id)
+
  
     /** Ticket Requester */
     const owner_name = detail.owner_name;
@@ -94,6 +93,10 @@ async function buildBodyRemote(order_id){
     let sales = ""
     let cst   = ""
  
+    /** GBS Team */
+    const team = extractTeam(adv_id)
+    const cnob_team = require('./Mapping/cnob_gbs_team')[gbs]
+
     /** Current Follower */
     const follower = detail.follower;
     /** Priority */
@@ -158,6 +161,7 @@ async function buildBodyRemote(order_id){
         gbs,
         sales,
         cst,
+        cnob_team,
         owner_name,
         isImplAgreed,
         eapi_method,
