@@ -47,8 +47,8 @@ async function fetchSummaryDb(order_id){
         const tag = await extractTags(tagdata.tag)
 
         // Use Local Cache to overwrite DB
-        order.summary.main_status = tag.main_status
-        order.summary.sub_status  = tag.sub_status
+        // order.summary.main_status = tag.main_status
+        // order.summary.sub_status  = tag.sub_status
     }
     return order.summary
 }
