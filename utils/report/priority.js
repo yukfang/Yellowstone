@@ -3,8 +3,9 @@ const setPriority       = require('../athena/set_priority')
 
 
 async function  extract(detail, region){
-    if(region !== "APAC") return detail.priority
-    if(region !== "CNOB") return detail.priority
+    console.log(`extract priority`)
+    if(region !== "APAC") return 'P' + detail.priority
+    if(region !== "CNOB") return 'P' +detail.priority
 
     const priority = detail.priority
     const order_id = detail.id
@@ -26,6 +27,7 @@ async function  extract(detail, region){
         detail.priority = gbsPriority
     }
 
+    console.log(`return priority x`)
     return 'P' + gbsPriority
 }
 
