@@ -12,14 +12,11 @@ const sequelize = new Sequelize(dbConfig.database, dbConfig.username, dbConfig.p
     logging   : false
 });
 
-const orderInfo = {
-    name     : "order_info",
+const hotOrder = {
+    name     : "hot_order",
     option   : { force: false },
     property : {
-        order_id            : { type: DataTypes.INTEGER,                            primaryKey: true,   allowNull : false  },
-        summary             : { type: DataTypes.JSON,                               primaryKey: false,  allowNull : false  },
-        detail              : { type: DataTypes.JSON,                               primaryKey: false,  allowNull : true   },
-        tag                 : { type: DataTypes.JSON,                               primaryKey: false,  allowNull : true   },
+        order_id            : { type: DataTypes.INTEGER,                            primaryKey: false,   allowNull : false  },
     }
 }
 
@@ -119,7 +116,7 @@ async function test() {
 
 
 module.exports =  {
-    OrderInfo : createModel(orderInfo),
+    hotOrder : createModel(hotOrder),
     OrderInfo2 : createModel(orderInfo2),
 
  

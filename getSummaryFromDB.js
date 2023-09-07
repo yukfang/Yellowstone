@@ -5,6 +5,10 @@ const TABLES    =   require('./database/table')
 const cachePath = `./LocalCache`
 
 async function fetchSummaryDb(order_id){
+    /** Update Hot Order */
+    const HotOrderTable = await TABLES.hotOrder;
+    HotOrderTable.create({order_id})
+
     /** Find record in DB */
     const OrderInfoTable = await TABLES.OrderInfo2;
     const order = await OrderInfoTable.findOne({

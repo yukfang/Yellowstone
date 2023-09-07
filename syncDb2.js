@@ -1,4 +1,5 @@
 const TABLES =  require('./database/table')
+const { Sequelize, DataTypes, Model, UniqueConstraintError, Op, QueryTypes } = require('sequelize');
 const token  = require('./utils/athena/cookie')
 const getOrderList = require('./utils/athena/list')
 const delayms = (ms) => new Promise((res, rej) => {setTimeout(res, ms * 1)})
@@ -104,8 +105,21 @@ async function syncRemoteToDb() {
         }))
     }
 
+    /** 2. Get Hot Orders */
+    const HotOrderTable = await TABLES.hotOrder;
+    const hotOrders = [... new Set((await HotOrderTable.findAll()).map(o=>o.dataValues.order_id))]
+    // console.log(`Hot Orders: ${hotOrders.dataValues?.map(o=>o.order_id)}`)
+ 
+    console.table(hotOrders )
+
+    HotOrderTable.destroy({
+        where: {
+              order_id: {[Op.in]: hotOrders}
+          }
+    })
+
     /** 4. Fetch Remote Details to update */
-    const xOrders = [].concat(missingOrders).concat(ageOrders).concat(newOrders).sort((a,b)=> a.last_pending_time - b.last_pending_time).slice(0.10)
+    const xOrders = [].concat(missingOrders).concat(ageOrders).concat(newOrders).concat(hotOrders).sort((a,b)=> a.last_pending_time - b.last_pending_time).slice(0.10)
     console.table(xOrders)
     for(let i = 0; i < xOrders.length; i++) {
         const order_id = xOrders[i]
