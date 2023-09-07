@@ -11,6 +11,7 @@ const extractGBS            = require('./utils/report/gbs')
 const extractETA            = require('./utils/report/eta')
 const extractStatusUpdate   = require('./utils/report/status_update')
 const extractPriority       = require('./utils/report/priority')
+const extractPlatform       = require('./utils/report/platform')
   
 const getPixelConfig    = require('./utils/pixel/config')
 const MONTH_MAPPING = {
@@ -119,25 +120,8 @@ async function buildBodyRemote(order_id){
     let is_copitch = await isCoPitchRequested(detail)
  
     /** Is Adv Shopify */
-    const eapi_method_regex =   /(.*)(\[method=(.*)\])(.*)/i
-    // const replies =  detail.replies;
-    let eapi_method = ""
-    if(replies) {
-        for(let k = 0; k < replies.length; k++) {
-            const reply = replies[k];
-            const items = reply.items.filter(x => x.type == 6);
 
-            for(let j = 0; j < items.length; j++) {
-                const item = items[j];
-                const matches = item.content.match(eapi_method_regex)
-                if(matches) {
-                    // console.log(shopify_flag)
-                    eapi_method = matches[3]
-                    break
-                }
-            }
-        }
-    }
+    let eapi_method = await extractPlatform(detail)
 
     /** Is Implementation Agreed */
     let isImplAgreed = await isImplementationAgreed(detail)
