@@ -95,7 +95,7 @@ async function buildBodyRemote(order_id){
  
     /** GBS Team */
     const team = extractTeam(adv_id)
-    const cnob_team = require('./Mapping/cnob_gbs_team')[gbs]
+    const cnob_team = require('./Mapping/cnob_gbs_team')[sales]
 
     /** Current Follower */
     const follower = detail.follower;
