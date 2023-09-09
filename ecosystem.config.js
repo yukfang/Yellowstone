@@ -22,23 +22,10 @@ module.exports = {
         "followSymlinks": false,
       },
 
-      script  : "./syncDb2.js",
+      script  : "./syncJob.js",
       watch   : true,
-      name    : "syncsummary",
+      name    : "syncjob",
       instances  : 1
     },
-    {
-      "ignore_watch" : [
-          "LocalCache"
-      ],
-      "watch_options": {
-        "followSymlinks": false,
-      },
-
-      script  : "./syncTags.js",
-      watch   : true,
-      name    : "synctag",
-      instances  : 1
-    }
   ]
 }

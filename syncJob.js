@@ -5,7 +5,8 @@ const getOrderList = require('./utils/athena/list')
 const delayms = (ms) => new Promise((res, rej) => {setTimeout(res, ms * 1)})
 const buildBodyRemote = require('./buildBodyRemote')
 const tickets = require('./tickets')
-
+const getOrderTag       = require('./utils/athena/tag')
+ 
 async function preProcessTicket() {
     const OrderTable = await TABLES.OrderInfo2
     const orders = (await OrderTable.findAll({
@@ -29,7 +30,7 @@ async function preProcessTicket() {
     }))
 }
 
-async function processOrder(order_id) {
+async function orderRefresh(order_id) {
     const OrderTable = await TABLES.OrderInfo2
 
     const result = await buildBodyRemote(order_id) 
@@ -119,16 +120,24 @@ async function syncRemoteToDb() {
     })
 
     /** 4. Fetch Remote Details to update */
-    const xOrders = [].concat(missingOrders).concat(ageOrders).concat(newOrders).concat(hotOrders).sort((a,b)=> a.last_pending_time - b.last_pending_time).slice(0.10)
+
+    const xOrders = (hotOrders.length > 0)? hotOrders :
+                    ([].concat(missingOrders).concat(ageOrders).concat(newOrders).concat(hotOrders))
+                    .sort((a,b)=> a.last_pending_time - b.last_pending_time).slice(0, 10)
+
     console.table(xOrders)
-    for(let i = 0; i < xOrders.length; i++) {
-        const order_id = xOrders[i]
-
-        console.log(`【${i}/${xOrders.length - 1}】 ${order_id} Start Refresh......`)
-        await processOrder(order_id)
+    if(xOrders.length > 0) {
+        for(let i = 0; i < xOrders.length; i++) {
+            const order_id = xOrders[i]
+    
+            console.log(`【${i}/${xOrders.length - 1}】 ${order_id} Start Refresh......`)
+            await orderRefresh(order_id)
+        }
+    } else {
+        await tagRefresh()
     }
+ 
 
-    console.log(`Remote <-> DB Syncing Completed`)
     console.log(`----------------------------------------`)
 }
 
@@ -146,10 +155,38 @@ async function run() {
             console.log(e)
         }
 
-        await delayms(1000 * 1 * 5) // Only Sleep 5s
+        await delayms(1000 * 1 * 2) // Only Sleep 5s
         // console.log(`Begin to Sync for another round...`)
     }
 }
 
 run();
 
+
+async function tagRefresh() {
+    console.log(`>>>>>> Start Tag Refreshing...`)
+
+    const OrderTable = await TABLES.OrderInfo2
+    let orders = (await OrderTable.findAll({
+        attributes: ['order_id', 'updatedAt']
+    }))?.map(o => o.dataValues)
+ 
+    orders = orders.sort((a,b)=> a.updatedAt - b.updatedAt).slice(0,10)
+
+    console.table(orders)
+
+    for(let i = 0; i < orders.length; i++) {
+        const order_id =  (orders[i]).order_id
+        const rawtag = await getOrderTag(order_id)
+
+        await OrderTable.update({
+            order_id    : order_id,
+            tag         : rawtag
+        }, {
+            where: {
+                order_id
+            },
+        })
+    }
+    console.log(` ...... End Tag Refreshing <<<<<<<<`)
+}
