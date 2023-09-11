@@ -73,7 +73,7 @@ async function syncRemoteToDb() {
 
     /** 0. Get new Tickets and Silent Tickets */
     const newOrders     = dbOrders.filter(o => (o.updatedAt - o.createdAt < 10)).map(o=>o.order_id) 
-    const silentOrders  = dbOrders.filter(o => (Date.now() - o.refreshAt > 1000 * 60 * 60 * 12)).map(o=>o.order_id) 
+    const silentOrders  = dbOrders.filter(o => (Date.now() - o.refreshAt > 1000 * 60 * 60 * 24)).map(o=>o.order_id) 
  
 
     /** 1. Get Tickets from Remote */
