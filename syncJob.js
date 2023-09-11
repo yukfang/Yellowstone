@@ -71,9 +71,9 @@ async function syncRemoteToDb() {
         ]
     }))?.map(o => o.dataValues).sort((a,b) => b.update_time - a.update_time)
 
-    /** 0. Get new Tickets and Silent Tickets */
+    /** 0. Get new Tickets and Cold Tickets */
     const newOrders     = dbOrders.filter(o => (o.updatedAt - o.createdAt < 10)).map(o=>o.order_id) 
-    const silentOrders  = dbOrders.filter(o => (Date.now() - o.refreshAt > 1000 * 60 * 60 * 24)).map(o=>o.order_id) 
+    const coldOrders  = dbOrders.filter(o => (Date.now() - o.refreshAt > 1000 * 60 * 60 * 24)).map(o=>o.order_id) 
  
 
     /** 1. Get Tickets from Remote */
@@ -132,8 +132,8 @@ async function syncRemoteToDb() {
                     ).sort((a,b)=> a.last_pending_time - b.last_pending_time)
     if(xOrders.length === 0) {
         const batch = 5
-        console.log(`Found Silent Orders: ${silentOrders.length}, take ${batch}...`)
-        xOrders = silentOrders.slice(0, batch)
+        console.log(`Found Cold Orders: ${coldOrders.length}, take ${batch}...`)
+        xOrders = coldOrders.slice(0, batch)
     }
 
     console.log(`Refreshing ${xOrders.length} Orders...`)
