@@ -36,29 +36,30 @@ async function orderRefresh(order_id) {
     const result = await buildBodyRemote(order_id) 
     if(result === null) {
         // delete order from DB
-        console.log(`Delete order from DB`)
+        console.log(`Delete order from DB because no such Order ID`)
         OrderTable.destroy({where : {order_id}})
+        return null
     } else {
         const summary = JSON.parse(result.summary)
+        const record = {
+            order_id    : order_id,
+            refreshAt   : summary.refresh,
+            update_time : summary.update_time * 1000,
+            summary     : summary,
+            detail      : result.detail,
+            tag         : result.tags
+        }
 
-        await OrderTable.update({
-                order_id    : order_id,
-                refreshAt   : summary.refresh,
-                update_time : summary.update_time * 1000,
-                summary     : summary,
-                detail      : result.detail,
-                tag         : result.tags
-            }, {
-                where: {
-                    order_id
-                },
-              }
-        )
+        // await OrderTable.update(record, {where: {order_id}})
+        return record
     }
+
+    // console.log(`                                     .................${order_id} Refresh Completed...`)
+    // return 
 }
 
 async function syncRemoteToDb() {
-    /** 0. Get Tickets in DB */
+    /** A. Get All Tickets in DB */
     const OrderTable = await TABLES.OrderInfo2
     const dbOrders = (await OrderTable.findAll({
         attributes: [
@@ -69,7 +70,10 @@ async function syncRemoteToDb() {
             'createdAt'
         ]
     }))?.map(o => o.dataValues).sort((a,b) => b.update_time - a.update_time)
-    const newOrders = dbOrders.filter(o => (o.updatedAt - o.createdAt < 10)).map(o=>o.order_id)
+
+    /** 0. Get new Tickets and Silent Tickets */
+    const newOrders     = dbOrders.filter(o => (o.updatedAt - o.createdAt < 10)).map(o=>o.order_id) 
+    const silentOrders  = dbOrders.filter(o => (Date.now() - o.refreshAt > 1000 * 60 * 60 * 12)).map(o=>o.order_id) 
  
 
     /** 1. Get Tickets from Remote */
@@ -109,10 +113,11 @@ async function syncRemoteToDb() {
     /** 2. Get Hot Orders */
     const HotOrderTable = await TABLES.hotOrder;
     const hotOrders = [... new Set((await HotOrderTable.findAll()).map(o=>o.dataValues.order_id))]
-    // console.log(`Hot Orders: ${hotOrders.dataValues?.map(o=>o.order_id)}`)
+    if(hotOrders.length >0) {
+        console.log(`>>> Hot Orders : ${hotOrders.length}`)
+        console.table(hotOrders)
+    }
  
-    console.table(hotOrders )
-
     HotOrderTable.destroy({
         where: {
               order_id: {[Op.in]: hotOrders}
@@ -120,19 +125,47 @@ async function syncRemoteToDb() {
     })
 
     /** 4. Fetch Remote Details to update */
+    let  xOrders =  (
+                        (hotOrders.length > 0)
+                        ? hotOrders 
+                        : ([].concat(missingOrders).concat(ageOrders).concat(newOrders))
+                    ).sort((a,b)=> a.last_pending_time - b.last_pending_time)
+    if(xOrders.length === 0) {
+        const batch = 5
+        console.log(`Found Silent Orders: ${silentOrders.length}, take ${batch}...`)
+        xOrders = silentOrders.slice(0, batch)
+    }
 
-    const xOrders = (hotOrders.length > 0)? hotOrders :
-                    ([].concat(missingOrders).concat(ageOrders).concat(newOrders).concat(hotOrders))
-                    .sort((a,b)=> a.last_pending_time - b.last_pending_time).slice(0, 10)
-
-    console.table(xOrders)
+    console.log(`Refreshing ${xOrders.length} Orders...`)
     if(xOrders.length > 0) {
+        let orderTask = [] 
+
         for(let i = 0; i < xOrders.length; i++) {
             const order_id = xOrders[i]
     
             console.log(`【${i}/${xOrders.length - 1}】 ${order_id} Start Refresh......`)
-            await orderRefresh(order_id)
+            orderTask.push( orderRefresh(order_id))
+            await delayms(500)
         }
+        let orders = await Promise.all(orderTask);
+        orders = orders.filter(o=> o !== null)
+
+        await OrderTable.bulkCreate(
+            orders,
+            {
+              updateOnDuplicate: ["refreshAt", "update_time", "summary", "detail", "tag", "updatedAt"],
+            }
+        );
+
+        // refreshAt   : summary.refresh,
+        // update_time : summary.update_time * 1000,
+        // summary     : summary,
+        // detail      : result.detail,
+        // tag         : result.tags 
+
+        console.log(`Complete ${orderTask.length} Order Refresh`)
+
+
     } else {
         await tagRefresh()
     }
@@ -187,6 +220,7 @@ async function tagRefresh() {
                 order_id
             },
         })
-    }
+    }   
+
     console.log(` ...... End Tag Refreshing <<<<<<<<`)
 }

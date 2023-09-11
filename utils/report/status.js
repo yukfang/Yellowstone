@@ -11,7 +11,7 @@ function extract(tags){
             } else if(sub_status.includes("Pending with Client")) {
                 sub_status = "Pending Client Assessment"
             }
-            console.log(`${main_status} ${sub_status}`)
+            // console.log(`${main_status} ${sub_status}`)
         }
     } catch(err) {
         throw err
