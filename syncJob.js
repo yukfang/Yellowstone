@@ -89,14 +89,13 @@ async function syncRemoteToDb() {
 
     /** 2. Get Hot Orders */
     const HotOrderTable = await TABLES.hotOrder;
-    const hotOrders = [... new Set((await HotOrderTable.findAll()).map(o=>o.dataValues.order_id))].slice(0, 5)
-    if(hotOrders.length >0) {
-        console.log(`>>> Hot Orders : ${hotOrders.length}`)
+    let hotOrders = [... new Set((await HotOrderTable.findAll()).map(o=>o.dataValues.order_id))]
+    if(hotOrders.length > 0) {
+        console.log(`Found Cold Orders: ${hotOrders.length}, take 5 Max ...`)
+        hotOrders = hotOrders.slice(0,5)
         console.table(hotOrders)
     }
  
-
-
     /** 4. Fetch Remote Details to update */
     let  xOrders =  (
                         (hotOrders.length > 0)
