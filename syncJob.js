@@ -4,31 +4,8 @@ const token  = require('./utils/athena/cookie')
 const getOrderList = require('./utils/athena/list')
 const delayms = (ms) => new Promise((res, rej) => {setTimeout(res, ms * 1)})
 const buildBodyRemote = require('./buildBodyRemote')
-const tickets = require('./tickets')
 const getOrderTag       = require('./utils/athena/tag')
  
-async function preProcessTicket() {
-    const OrderTable = await TABLES.OrderInfo2
-    const orders = (await OrderTable.findAll({
-        attributes: ['order_id']
-    }))?.map(o => o.dataValues).map(o => o.order_id)
-
-    console.log(orders)
-
-    const new_tickets = tickets.filter(t => !(orders.includes(t)))
-    console.log(new_tickets)
-
-    if(new_tickets.length === 0) return;
-
-    await OrderTable.bulkCreate(new_tickets.map(t => {
-        return {
-            order_id    : t,
-            refreshAt   : '2020-10-23T08:08:08Z',
-            update_time : '2020-10-23T08:08:08Z',
-            summary     : {id: t}
-        }
-    }))
-}
 
 async function orderRefresh(order_id) {
     const OrderTable = await TABLES.OrderInfo2
@@ -112,17 +89,13 @@ async function syncRemoteToDb() {
 
     /** 2. Get Hot Orders */
     const HotOrderTable = await TABLES.hotOrder;
-    const hotOrders = [... new Set((await HotOrderTable.findAll()).map(o=>o.dataValues.order_id))]
+    const hotOrders = [... new Set((await HotOrderTable.findAll()).map(o=>o.dataValues.order_id))].slice(0, 5)
     if(hotOrders.length >0) {
         console.log(`>>> Hot Orders : ${hotOrders.length}`)
         console.table(hotOrders)
     }
  
-    HotOrderTable.destroy({
-        where: {
-              order_id: {[Op.in]: hotOrders}
-          }
-    })
+
 
     /** 4. Fetch Remote Details to update */
     let  xOrders =  (
@@ -156,6 +129,12 @@ async function syncRemoteToDb() {
               updateOnDuplicate: ["refreshAt", "update_time", "summary", "detail", "tag", "updatedAt"],
             }
         );
+
+        await HotOrderTable.destroy({
+            where: {
+                  order_id: {[Op.in]: hotOrders}
+              }
+        })
 
         // refreshAt   : summary.refresh,
         // update_time : summary.update_time * 1000,

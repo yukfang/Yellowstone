@@ -927,4 +927,4 @@ async function preProcessTicket() {
     }))
 }
 
-preProcessTicket();
+// preProcessTicket();
