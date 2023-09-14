@@ -50,12 +50,12 @@ async function syncRemoteToDb() {
 
     /** 0. Get new Tickets and Cold Tickets */
     const newOrders     = dbOrders.filter(o => (o.updatedAt - o.createdAt < 10)).map(o=>o.order_id) 
-    const coldOrders  = dbOrders.filter(o => (Date.now() - o.refreshAt > 1000 * 60 * 60 * 24)).map(o=>o.order_id) 
+    const coldOrders  = dbOrders.filter(o => (Date.now() - o.refreshAt > 1000 * 60 * 60 * 10)).map(o=>o.order_id) 
  
 
     /** 1. Get Tickets from Remote */
     const missingOrders = []
-    const ageOrders = []
+    const updatedOrders = []
     const remoteOrders = await getOrderList(['order_id', 'update_time', 'last_pending_time', "aging_time", "last_pending_status_time", "pending_time"]) 
     // console.table(remoteOrders.filter(o=>o.order_id==1404591) )
 
@@ -67,13 +67,13 @@ async function syncRemoteToDb() {
             const dbTime  = dbOrders[idx].update_time.getTime()
             if(rmtTime !== dbTime) {
                 // console.log(`${rmtTime} ${dbTime}`)
-                ageOrders.push(rmtOrder.order_id)
+                updatedOrders.push(rmtOrder.order_id)
             }
         } else { 
             missingOrders.push(rmtOrder.order_id)
         }
     }
-    console.log(`Missing ticket number: ${missingOrders.length}, Age Order number: ${ageOrders.length}`)
+    console.log(`Missing Order number: ${missingOrders.length}, Updated Order number: ${updatedOrders.length}`)
 
     /** Update Missing Orders to DB */
     if(missingOrders.length > 0) {
@@ -91,7 +91,7 @@ async function syncRemoteToDb() {
     const HotOrderTable = await TABLES.hotOrder;
     let hotOrders = [... new Set((await HotOrderTable.findAll()).map(o=>o.dataValues.order_id))]
     if(hotOrders.length > 0) {
-        console.log(`Found Cold Orders: ${hotOrders.length}, take 5 Max ...`)
+        console.log(`Found Hot Orders: ${hotOrders.length}, take 5 Max ...`)
         hotOrders = hotOrders.slice(0,5)
         console.table(hotOrders)
     }
@@ -100,7 +100,7 @@ async function syncRemoteToDb() {
     let  xOrders =  (
                         (hotOrders.length > 0)
                         ? hotOrders 
-                        : ([].concat(missingOrders).concat(ageOrders).concat(newOrders))
+                        : ([].concat(missingOrders).concat(updatedOrders).concat(newOrders))
                     ).sort((a,b)=> a.last_pending_time - b.last_pending_time)
     if(xOrders.length === 0) {
         const batch = 5
