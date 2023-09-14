@@ -30,6 +30,19 @@ function extract(detail){
         }
     }
 
+    sales = sales
+    .replace(/<p>/g,      '').replace(/<\/p>/g,  '')
+                    .replace(/<ul>/g,     '').replace(/<\/ul>/g, '')
+                    .replace(/<br>/g,     '').replace(/<\/br>/g, '')
+                    .replace(/<li>/g,     '').replace(/<\/li>/g, '')
+                    .replace(/<ol>/g,     '').replace(/<\/ol>/g, '')
+                    .replace(/<strong>/g, '').replace(/<\/strong>/g, '')
+                    .replace(/<\/span>/g, '').replace(/(<span )(.*)(>)/g, ' ')
+                    .replace(/&gt;/g, ">")
+                    .replace(/&#39;/g, "'")
+                    .replace(/&nbsp;/g, '')
+
+    // console.log(sales)
     return {sales, cst};
 }
 
