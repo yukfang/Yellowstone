@@ -23,3 +23,25 @@
 
 
 
+{
+    async function sha256(text) {
+        // Convert the message string into an array of bytes.
+        const msgUint8 = new TextEncoder().encode(text);
+        
+        // Generate the hash.
+        const hashBuffer = await self.crypto.subtle.digest('SHA-256', msgUint8);
+        
+        // Convert the hash into a hexadecimal string.
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+        
+        return hashHex;
+    }
+    
+    // Example usage:
+    (async () => {
+        const hash = await sha256('abc@xyz.com');
+        console.log(hash);
+    })();
+    
+}
