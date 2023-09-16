@@ -43,15 +43,25 @@ async function syncRemoteToDb() {
             'order_id', 
             'refreshAt',
             'update_time',
+            'summary',
             'updatedAt',
             'createdAt'
         ]
     }))?.map(o => o.dataValues).sort((a,b) => b.update_time - a.update_time)
 
+
     /** 0. Get new Tickets and Cold Tickets */
     const newOrders     = dbOrders.filter(o => (o.updatedAt - o.createdAt < 10)).map(o=>o.order_id) 
-    const coldOrders    = dbOrders.filter(o => (Date.now() - o.refreshAt > 1000 * 60 * 60 * 8)).map(o=>o.order_id) 
+    const coldOrders    = dbOrders.filter(o => {
+        if(o.summary.close_time.trim() === '') {
+            return  (Date.now() - o.refreshAt > 1000 * 60 * 60 * 8)
+        } else {
+            // Don't refresh closed tickets 
+            return false
+        }
+    }).map(o=>o.order_id) 
  
+
 
     /** 1. Get Tickets from Remote */
     const missingOrders = []
