@@ -54,7 +54,7 @@ async function syncRemoteToDb() {
     const newOrders     = dbOrders.filter(o => (o.updatedAt - o.createdAt < 10)).map(o=>o.order_id) 
     const coldOrders    = dbOrders.filter(o => {
         if(o.summary.close_time.trim() === '') {
-            return  (Date.now() - o.refreshAt > 1000 * 60 * 60 * 8)
+            return  (Date.now() - o.refreshAt > 1000 * 60 * 60 * 4)
         } else {
             // Don't refresh closed tickets 
             return false
