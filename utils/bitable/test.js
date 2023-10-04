@@ -1,9 +1,8 @@
 const client = require("./client");
-const mock = require("./mock.json");
 const lark = require('@larksuiteoapi/node-sdk');
 
 
-const userToken = 'u-dTQ0k9NPle_9z00KvH5wGj45lQuxk0p9qW0005Ow0FeQ'
+const USER_TOKEN = `u-d2saIq1CRas9vAxIwiaXo445nQsxk0rxMq001hOw0IrA`
 
 const BitTables = {
     "CNOB_YS_TRACKER" : {
@@ -20,54 +19,35 @@ const BitTables = {
     }
 }
 
- 
-async function addTableRecord(app_token, table_id, record) {
-    await client.bitable.appTableRecord.create({
+async function addTableRecordBatch(app_token, table_id, records) {
+    console.log(records)
+    try {
+        const { data } = await client.bitable.appTableRecord.batchCreate({
         path: {
             app_token: app_token,
             table_id: table_id,
         },
         data: {
-            fields: {
-                "Athena" : 77
-            }
-        }
-    }, lark.withUserAccessToken("u-dQeNlWYf58.ajbwcxLYueh45lQs1k0hFMW00hgCw0EbR"))
-}
-
-async function addTableRecordBatch(app_token, table_id, records) {
-   try {
-    const { data } = await client.bitable.appTableRecord.batchCreate({
-      path: {
-        app_token: app_token,
-        table_id: table_id,
-      },
-      data: {
-        records: records,
-      },
-    });
-    return data;
-  } catch (e) {
-    console.log(e)
-    console.log(`------`)
-  }
+            records: records
+        },
+        }, lark.withUserAccessToken(USER_TOKEN))
+        return data;
+    } catch (e) {
+        console.log(`------`)
+        console.log(e)
+        console.log(`------`)
+    }
 };
 
-async function addOrder(order_id) {
-    const record = 
-        {fields: {"Athena": order_id} }
+async function addOrderBatch(orders) {
+    const records = orders.map(o => {
+        return {
+            fields: {"Athena" : o.order_id}
+        }
+    })
 
-   const res = await addTableRecord(appToken, tableId,  record)
-    if (res) {
-      console.log(res);
-    } 
-}
-async function addOrderBatch(order_id) {
-    const records = [
-        {fields: {"Athena": order_id} }
-    ]
-
-   const res = await addTableRecordBatch(appToken, tableId,  records)
+    const table = BitTables.CNOB_YS_TRACKER
+    const res = await addTableRecordBatch(table.appToken, table.tableId,  (records))
     if (res) {
       console.log(res);
     } 
@@ -76,7 +56,7 @@ async function addOrderBatch(order_id) {
 async function readRecords(app_token = appToken, table_id = tableId, user_access_token) {
     const res = await client.bitable.appTableRecord.list({
         params: {
-          page_size: 600,
+          page_size: 50,
           sort: '["UpdatedAt ASC" ]'
         },
         path: {
@@ -89,21 +69,39 @@ async function readRecords(app_token = appToken, table_id = tableId, user_access
     return res.data.items;
 }
 
-async function run() {
-    // Add 1 record
-    {
-        // await addOrder(111)
-    }
+async function updateRecords(app_token = appToken, table_id = tableId, records, user_access_token) {
+    try {
+        const res = await client.bitable.appTableRecord.batchUpdate({
+            path : { app_token, table_id},
+            data : { records }
+        }, lark.withUserAccessToken(user_access_token))
 
+    
+        // console.log(res)
+        return res
+    } catch (e) {
+        console.log(`------`)
+        console.log(e)
+        console.log(`------`)
+    }
+}
+
+async function run() {
     // Add Batch Record
+    if(false)
     {
-        // await addOrderBatch(222)
+        await addOrderBatch([
+            {order_id : 1528384},
+            {order_id : 1547928}
+        ])
+        console.log(`x-x-x-x`)
     }
 
     // Read All record 
+    if(false)
     {
-        const table = BitTables.ATHENA_TRACKER
-        const items   = await readRecords(table.appToken, table.tableId, userToken)
+        const table = BitTables.CNOB_YS_TRACKER
+        const items   = await readRecords(table.appToken, table.tableId, USER_TOKEN)
         const records = []
         
         for(let i = 0; i < items.length; i++) {            
@@ -118,10 +116,17 @@ async function run() {
     }
 
     // Update One Record 
+    if(true)
     {
-
+        const table = BitTables.CNOB_YS_TRACKER
+        const res   = await updateRecords(table.appToken, table.tableId, USER_TOKEN)
     }
 }
 
 
-run()
+// run()
+
+module.exports = {
+    readRecords,
+    updateRecords
+}

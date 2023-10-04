@@ -48,10 +48,13 @@ koaApp.use(async (ctx, next) => {
 })
 
 async function buildBody(order_id){
-    // return ( await buildBodyLocal(order_id) ) || (await buildBodyRemote(order_id))
+    if(order_id > 0) {
+        const body = await getSummaryFromDB(order_id)
+        return JSON.stringify(body, null, 2)
+    }  else {
+        return JSON.stringify({msg: `Unknown order id ${order_id}`}, null, 2)
+    }
 
-    const body = await getSummaryFromDB(order_id)
-    return JSON.stringify(body, null, 2)
 }
 
 
