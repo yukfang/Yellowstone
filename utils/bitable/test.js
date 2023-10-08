@@ -56,7 +56,7 @@ async function addOrderBatch(orders) {
 async function readRecords(app_token = appToken, table_id = tableId, user_access_token) {
     const res = await client.bitable.appTableRecord.list({
         params: {
-          page_size: 50,
+          page_size: 300,
           sort: '["UpdatedAt ASC" ]'
         },
         path: {

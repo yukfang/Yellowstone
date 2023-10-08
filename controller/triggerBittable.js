@@ -4,7 +4,13 @@ const delayms = (ms) => new Promise((res, rej) => {
     setTimeout(res, ms )
 })
 
-const USER_TOKEN = `u-edzmRWGzl1dpbbNJePcJDF45nQm1k0h9iW00k5yw0Fvw`
+const USER_TOKEN = `
+u-cyTcIYtg1d98QP66s7fPQq45lkuxk0pFja00l1yw0EbM
+
+
+
+
+`.trim()
 
 const BitTables = {
     "CNOB_YS_TRACKER" : {
@@ -77,9 +83,16 @@ async function triggerUpdate(table, user_access_token) {
 }
 
 async function job() {
-    triggerUpdate(BitTables.ATHENA_TRACKER, USER_TOKEN)
-    triggerUpdate(BitTables.TSC_YS_TRACKER, USER_TOKEN)
+    for(let i = 0; i < 3; i++) {
+        let task1 = triggerUpdate(BitTables.ATHENA_TRACKER, USER_TOKEN)
+        let task2 = triggerUpdate(BitTables.TSC_YS_TRACKER, USER_TOKEN)
+        let task3 = triggerUpdate(BitTables.CNOB_YS_TRACKER, USER_TOKEN)
 
+
+        await Promise.all([
+            task1, task2, task3
+        ])
+    }
 }
 
 job();
