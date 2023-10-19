@@ -99,7 +99,7 @@ async function buildBodyRemote(order_id){
     const team = extractTeam(adv_id)
     const acct_id = extractAcct(adv_id)
     // console.log(`adv_id = ${adv_id} acct = ${acct_id}`)
-    const cnob_team = require('./Mapping/cnob_gbs_team')[gbs]
+    const cnob_team = require('./Mapping/cnob_gbs_team')[gbs.trim()]
 
     /** Current Follower */
     const follower = detail.follower;
