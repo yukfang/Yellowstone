@@ -7,6 +7,7 @@ const extractClass          = require('./utils/report/class')
 const extractCountry        = require('./utils/report/country')
 const extractRegion         = require('./utils/report/region')
 const extractTeam           = require('./utils/report/team')
+const extractAcct           = require('./utils/report/acct_id')
 const extractGBS            = require('./utils/report/gbs')
 const extractETA            = require('./utils/report/eta')
 const extractStatusUpdate   = require('./utils/report/status_update')
@@ -96,6 +97,8 @@ async function buildBodyRemote(order_id){
  
     /** GBS Team */
     const team = extractTeam(adv_id)
+    const acct_id = extractAcct(adv_id)
+    // console.log(`adv_id = ${adv_id} acct = ${acct_id}`)
     const cnob_team = require('./Mapping/cnob_gbs_team')[gbs]
 
     /** Current Follower */
@@ -135,6 +138,7 @@ async function buildBodyRemote(order_id){
         refresh: (new Date(Date.now())).toISOString().substring(0,19) + 'Z',
         client,
         adv_id,
+        acct_id,
         is_copitch,
         priority,
         main_status : ticketStatus.main_status,
