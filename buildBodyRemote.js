@@ -105,6 +105,8 @@ async function buildBodyRemote(order_id){
     const follower = detail.follower;
     /** Priority */
     let priority = await extractPriority(detail, region)
+    console.log(`${detail.id} priority = ${priority}`)
+
      
 
     /** Ticket Open Time */
