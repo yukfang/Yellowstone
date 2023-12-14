@@ -12,4 +12,4 @@ async function washOrders() {
     }
 }
 
-washOrders();
+// washOrders();
