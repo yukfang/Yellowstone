@@ -10,7 +10,7 @@ module.exports = async function() {
         return cookie.value
     }
 
-    const endpoint = `https://yfadisk.azurewebsites.net/athena/secret.txt`;
+    const endpoint = `https://yfadisk.azurewebsites.net/athena/bridge.txt`;   
     const method      = 'GET';
     let header      =  {};
     let param       = {};
