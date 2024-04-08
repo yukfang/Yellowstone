@@ -29,11 +29,23 @@ async function process_tags(tags) {
 }
 
 async function process_detail(detail) {
+    const client_name = detail.items.filter(r=> r.label.includes('Client Name') || r.label.includes('Advertiser name')).pop().content;
+    const region = detail.items.filter(r=> r.label.includes('GBS Country') || r.label.includes('Region')).pop().content;
+    const mmp = detail.items.filter(r=> r.label.includes('Client MMP')).pop().content;
+    const vertical = detail.items.filter(r=> r.label.includes('Customer Vertical')).pop().content;
+
+
     return {
         create_time: (new Date(detail.create_time * 1000)).toISOString().split('T')[0],
         archive_category_1_name         : detail.archive_category_1_name,
         follower                        : detail.follower,
         creater_lark_name               : detail.creater_lark_name,
+
+        
+        mmp,
+        vertical,
+        client_name,
+        region,
 
 
 
