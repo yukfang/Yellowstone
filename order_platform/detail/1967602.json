@@ -1,0 +1,442 @@
+{
+  "reply_mode": 1,
+  "time_before_overtime": 0,
+  "set_priority_automatically": false,
+  "is_follow": 0,
+  "category_2": "",
+  "category_1": "1791202334548993",
+  "follower_avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v2_89b456bd-831d-4c73-9de2-3e5cbaf2fdhu~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+  "follower": "Miguel Fernández",
+  "create_time": 1711363116,
+  "deadline": 0,
+  "archive_board_id": 1705151646989842,
+  "replies": [
+    {
+      "is_hide_reply": false,
+      "create_time": 1711534456,
+      "auto_close_hit": 0,
+      "id": 7350984088070668000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "anna.zhecheva@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Anna Zhecheva",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7152756716944851970",
+      "name": "Anna Zhecheva",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi Team, </p><p><br></p><p>I hope you&#39;re well! </p><p><br></p><p>Just wanted to follow-up here. Do we have any updates on this topic?&nbsp;</p><p><br></p><p>The client is asking if we can set up a call, as we&#39;ve had this topic open for a while and resolving it via email and ticketing has been a bit difficult and lengthy.&nbsp;</p><p><br></p><p>Looking forward to hearing from you!</p><p><br></p><p>Kind regards,</p><p><br></p><p>Anna</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v2_4d4c5266-270a-4bbc-9ee3-fcabcd568fhu~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711589098,
+      "auto_close_hit": 0,
+      "id": 7351217228248842000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Miguel Fernández",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7178708618031023106",
+      "name": "Miguel Fernández",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi Anna,<br><br>Thanks for your patience.&nbsp; I&#39;m afraid I&#39;m on leave until next Monday 8th of April. If it&#39;s fine to schedule the call for 8th April onwards,&nbsp; please go ahead, my calendar is up to date.&nbsp;<br><br>In case it is extremely urgent to schedule the call by next week (1st to 5th April) please reach out to @Serdar Cokbulan on Lark, he will manage to find another TSC for the call.<br><br>Regarding the issue, there are some considerations:<br><br>- Please confirm with them if they have configured coarse grain schema for postbacks 2 and 3 and if yes, please ask to share the screenshots. If they haven&#39;t configured coarse grain schemas for postabacks 2 and 3, we are only receiving the postback 1 related with the actions happening in the first 48h. is the premium_purchase event (subscribe) happening in the first 48h after the install?<br><br>- Before transition, using SKAN 3, the postback was only abou the events happening in the first 24h<br><br>- Receiving only Registration (sign up) and not Login (sign in) is the expected behaviour with the current CV schema. Register (sign up) has  a higher CV -&gt;2 than Login (sign in) -&gt;1. Since &#34;sign up&#34; is probably a required step before login, 100% of users who &#34;sign in&#34; do the &#34;sign up&#34; before, so we will always receive the higher CV  (2) mapped to Registration.&nbsp;<br>They can use a funnel approach to the schema, and map sign up to cv 1 and&nbsp; sign up + sign in to cv 2<br><br>Thanks,<br>Miguel</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v2_89b456bd-831d-4c73-9de2-3e5cbaf2fdhu~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1712044537,
+      "auto_close_hit": 0,
+      "id": 7353174843505869000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "anna.zhecheva@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Anna Zhecheva",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7152756716944851970",
+      "name": "Anna Zhecheva",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi Miguel,</p><p><br></p><p>Thank you for your feedback!&nbsp;</p><p><br></p><p>I just sent you an invite fr Monday 15th April at 11:30 for a joint call with the client.&nbsp;</p><p><br></p><p>Regarding the considerations, here&#39;s the feedback:</p><p><br></p><ul><li><span style=\"color: #333333;\"> Please confirm with them if they have configured coarse grain schema for postbacks 2 and 3 and if yes, please ask to share the screenshots. If they haven&#39;t configured coarse grain schemas for postabacks 2 and 3, we are only receiving the postback 1 related with the actions happening in the first 48h. is the premium_purchase event (subscribe) happening in the first 48h after the install?</span></li></ul><p><br></p><ul><ul><li>Please find&nbsp;<span style=\"color: #1D1C1D;\">attached the coarse conversion values for all steps.</span></li></ul></ul><p><br></p><ul><li><span style=\"color: #333333;\">Before transition, using SKAN 3, the postback was only abou the events happening in the first 24h</span></li></ul><p><br></p><ul><ul><li><span style=\"color: #1D1C1D;\">yes</span></li></ul></ul><p><br></p><ul><li><span style=\"color: #333333;\">Receiving only Registration (sign up) and not Login (sign in) is the expected behaviour with the current CV schema. Register (sign up) has a higher CV -&gt;2 than Login (sign in) -&gt;1. Since &#34;sign up&#34; is probably a required step before login, 100% of users who &#34;sign in&#34; do the &#34;sign up&#34; before, so we will always receive the higher CV (2) mapped to Registration.&nbsp;<br>They can use a funnel approach to the schema, and map sign up to cv 1 and&nbsp; sign up + sign in to cv 2</span></li></ul><p><br></p><ul><ul><li><span style=\"color: #1D1C1D;\">That’s actually not exactly true. Users can sign in without having signed up if they have used the app previously. Moreover we use the 6BIt mapping therefore we can also track the combination of both events</span></li></ul></ul><p><br></p><p>Looking forward to hearing from you!</p><p><br></p><p>Kind regards,</p><p><br></p><p>Anna</p>",
+          "type": 6
+        },
+        {
+          "content": [
+            {
+              "file_type": "png",
+              "file_name": "Screenshot 2024-03-28 at 18.38.29.png",
+              "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/1f5811cf9c814989b7c4314653777a21.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169890&x-signature=xgta7THSJcVTi%2FgR0rZV3%2BD9VxA%3D",
+              "file_key": "tos-alisg-i-6g3pebcbys-sg/1f5811cf9c814989b7c4314653777a21.png",
+              "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/1f5811cf9c814989b7c4314653777a21.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169890&x-signature=xgta7THSJcVTi%2FgR0rZV3%2BD9VxA%3D",
+              "biz_type": 2,
+              "size": 88245
+            },
+            {
+              "file_type": "png",
+              "file_name": "Screenshot 2024-03-28 at 18.38.33.png",
+              "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/5deee7039d9e403493b18dda570bd3c9.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169890&x-signature=wFZuntXupVLKaP05ZFqy0GhsXUE%3D",
+              "file_key": "tos-alisg-i-6g3pebcbys-sg/5deee7039d9e403493b18dda570bd3c9.png",
+              "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/5deee7039d9e403493b18dda570bd3c9.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169890&x-signature=wFZuntXupVLKaP05ZFqy0GhsXUE%3D",
+              "biz_type": 2,
+              "size": 97815
+            },
+            {
+              "file_type": "png",
+              "file_name": "Screenshot 2024-03-28 at 18.38.37.png",
+              "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/bfd88e2fa71f4107b03e429a26a3013f.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169890&x-signature=QazY65JShjfweGI8trUvA5%2FoHhk%3D",
+              "file_key": "tos-alisg-i-6g3pebcbys-sg/bfd88e2fa71f4107b03e429a26a3013f.png",
+              "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/bfd88e2fa71f4107b03e429a26a3013f.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169890&x-signature=QazY65JShjfweGI8trUvA5%2FoHhk%3D",
+              "biz_type": 2,
+              "size": 94352
+            }
+          ],
+          "type": 5
+        }
+      ],
+      "avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v2_4d4c5266-270a-4bbc-9ee3-fcabcd568fhu~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    }
+  ],
+  "enable_forced_order_type": 0,
+  "plat_id": 1736490999244882,
+  "archive_category_2_name": "",
+  "pending_from_follower": true,
+  "id": 1967602,
+  "workflow_nodes": [],
+  "board_id": 1705151646989842,
+  "employee_email": "miguel.suarez@bytedance.com",
+  "is_support_suggestion": 0,
+  "title": "Knowunity Configuration Audit",
+  "category_1_name": "iOS SKAN Audit",
+  "auto_close_hit": 0,
+  "relation_qual": [],
+  "accountpass": 0,
+  "priority": 1,
+  "inner": 1,
+  "vip_types": [],
+  "is_impending_overtime": 0,
+  "creater_lark_avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v2_4d4c5266-270a-4bbc-9ee3-fcabcd568fhu~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+  "enable_compliance_mode": false,
+  "type": 6,
+  "current_role": null,
+  "fd_permission": 1,
+  "status": 2,
+  "business_data": [],
+  "update_time": 1712044537,
+  "owner_name": "Anna Zhecheva",
+  "enable_auto_close_v2": 0,
+  "time_after_overtime": 0,
+  "swim_lane_status": 4,
+  "enable_forced_order_tag": 1,
+  "satisfied": 0,
+  "category_2_name": "",
+  "reply_name": " MPO Technical Implementation  Team",
+  "is_guest": false,
+  "archive_category_2": "",
+  "archive_category_1_name": "iOS SKAN Audit",
+  "archive_category_1": "1791202334548993",
+  "allow_reopen": 0,
+  "categories": [
+    {
+      "to_user": 1,
+      "categories_id": "1791202334548993",
+      "cate_1_form_id": 1791205071838209,
+      "sub_cates": [],
+      "value": "iOS SKAN Audit"
+    }
+  ],
+  "core_user_id": "7152756716944851970",
+  "plat_name": "MPO Technical Implementation",
+  "follower_role": "TSC",
+  "remark": "",
+  "show_auto_assign": false,
+  "is_overtime": 0,
+  "creater_lark_name": "Anna Zhecheva",
+  "follow_employee_id": 7158055,
+  "is_order_top": 0,
+  "urged": 0,
+  "im_chat_id": "",
+  "is_delay": 0,
+  "enable_forced_priority": 0,
+  "pending_time": 516792,
+  "debug_permission": 1,
+  "is_vip": 0,
+  "items": [
+    {
+      "label": "",
+      "content": "Knowunity Configuration Audit",
+      "valid": true,
+      "item_id": 1791205071838225,
+      "type": 14,
+      "option_meaning": -1
+    },
+    {
+      "label": "Advertiser / Client Name",
+      "content": "Knowunity",
+      "valid": true,
+      "item_id": 1791205071838241,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Customer Vertical",
+      "content": "Entertainment",
+      "valid": true,
+      "key": "Entertainment",
+      "item_id": 1791205071838257,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "GBS Tier",
+      "content": "Enterprise",
+      "valid": true,
+      "key": "Enterprise",
+      "item_id": 1791205260785714,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "GBS Country / Region",
+      "content": "EU-DE",
+      "valid": true,
+      "key": "EU",
+      "item_id": 1791205328494657,
+      "type": 4,
+      "option_meaning": 0
+    },
+    {
+      "label": "Your Department / Team",
+      "content": "CSM",
+      "valid": true,
+      "key": "CSM",
+      "item_id": 1791205337175074,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Ad Account ID",
+      "content": "6886850686680580097",
+      "valid": true,
+      "item_id": 1791205337177090,
+      "type": 1,
+      "option_meaning": 4
+    },
+    {
+      "label": "Advertiser Priority Level/Tier",
+      "content": "P0",
+      "valid": true,
+      "key": "P0",
+      "item_id": 1791205337177106,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "iOS Mobile App ID",
+      "content": "6959502638375272450",
+      "valid": true,
+      "item_id": 1791205752022065,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Android Mobile App ID (if available)",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205752023041,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "SKAN Version",
+      "content": "Currently on 3.0",
+      "valid": true,
+      "key": "Currently on 3.0",
+      "item_id": 1791205752023057,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Client MMP",
+      "content": "Adjust",
+      "valid": true,
+      "key": "Adjust",
+      "item_id": 1791205757763634,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Reason of request",
+      "content": "Sanity check (including SKAN 4.0 transition)",
+      "valid": true,
+      "key": "Sanity check (including SKAN 4.0 transition)",
+      "item_id": 1791205889917953,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Revenue model",
+      "content": "Hybrid",
+      "valid": true,
+      "key": "Hybrid",
+      "item_id": 1791205889918977,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Describe the current problem in details (excluding sanity check requests)",
+      "content": "Hi Team,\n\nHope you're having a great start to the week! \n\nMy client Knowunity has been experiencing some issues with missing events in their SAKAD CV mapping. After some back and fort with TPS, I was recommended to reach out to you so we can schedule a call with the client to double check if the whole configuration was properly setup.\n\nPlease see the Athena ticket for more context around the issue.\n\nTicket ID: 1916463\nTicket link: https://ads.tiktok.com/athena/requester/boards?identify_key=ce513cc7f78be06846c87f202dc42fd824b0323b7d53872079291faf4d4f7456\n\nLooking forward to hearing from you soon!\n\nKind regards,\n\nAnna",
+      "valid": true,
+      "item_id": 1791205970506753,
+      "type": 2,
+      "option_meaning": -1
+    },
+    {
+      "label": "Enter the campaign or ad group ID  (excluding sanity check requests)",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205970506769,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Describe the desired future state in details (excluding sanity check requests)",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205970506785,
+      "type": 2,
+      "option_meaning": -1
+    },
+    {
+      "label": "Can client see the same behaviour on MMP dashboard?  (excluding sanity check requests)",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205970506801,
+      "type": 9,
+      "option_meaning": -1
+    },
+    {
+      "label": "Screenshots of partner integration",
+      "content": [
+        {
+          "file_type": "jpeg",
+          "file_name": "knowunity3.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/a78433e5117847b6884f463212b4aed9.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169890&x-signature=lLmACSkPCUoaU1fWqT8o41wMYyg%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/a78433e5117847b6884f463212b4aed9.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/a78433e5117847b6884f463212b4aed9.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169890&x-signature=lLmACSkPCUoaU1fWqT8o41wMYyg%3D",
+          "size": 110086
+        },
+        {
+          "file_type": "png",
+          "file_name": "Screenshot 2024-03-28 at 18.38.29.png",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/1f5811cf9c814989b7c4314653777a21.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169890&x-signature=xgta7THSJcVTi%2FgR0rZV3%2BD9VxA%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/1f5811cf9c814989b7c4314653777a21.png",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/1f5811cf9c814989b7c4314653777a21.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169890&x-signature=xgta7THSJcVTi%2FgR0rZV3%2BD9VxA%3D",
+          "biz_type": 2,
+          "size": 88245
+        },
+        {
+          "file_type": "png",
+          "file_name": "Screenshot 2024-03-28 at 18.38.33.png",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/5deee7039d9e403493b18dda570bd3c9.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169890&x-signature=wFZuntXupVLKaP05ZFqy0GhsXUE%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/5deee7039d9e403493b18dda570bd3c9.png",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/5deee7039d9e403493b18dda570bd3c9.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169890&x-signature=wFZuntXupVLKaP05ZFqy0GhsXUE%3D",
+          "biz_type": 2,
+          "size": 97815
+        },
+        {
+          "file_type": "png",
+          "file_name": "Screenshot 2024-03-28 at 18.38.37.png",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/bfd88e2fa71f4107b03e429a26a3013f.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169890&x-signature=QazY65JShjfweGI8trUvA5%2FoHhk%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/bfd88e2fa71f4107b03e429a26a3013f.png",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/bfd88e2fa71f4107b03e429a26a3013f.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169890&x-signature=QazY65JShjfweGI8trUvA5%2FoHhk%3D",
+          "biz_type": 2,
+          "size": 94352
+        }
+      ],
+      "valid": true,
+      "item_id": 1791205970507809,
+      "type": 5,
+      "option_meaning": -1
+    },
+    {
+      "label": "Screenshots of SKAN Conversion Value mapping",
+      "content": [
+        {
+          "file_type": "jpeg",
+          "file_name": "knowunity1.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/47bbebef3b144b4f91bf887512548613.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169890&x-signature=TmdsSwI8%2Ft7XvdJaaSdk2G4%2FbTo%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/47bbebef3b144b4f91bf887512548613.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/47bbebef3b144b4f91bf887512548613.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169890&x-signature=TmdsSwI8%2Ft7XvdJaaSdk2G4%2FbTo%3D",
+          "size": 124918
+        },
+        {
+          "file_type": "jpeg",
+          "file_name": "knowunity 2.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/6cc28d98a38245799da75f215f531601.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169890&x-signature=n0UU517hlvKe2scfq%2FwcOQjFcVw%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/6cc28d98a38245799da75f215f531601.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/6cc28d98a38245799da75f215f531601.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169890&x-signature=n0UU517hlvKe2scfq%2FwcOQjFcVw%3D",
+          "size": 71729
+        }
+      ],
+      "valid": true,
+      "item_id": 1791205970507825,
+      "type": 5,
+      "option_meaning": -1
+    },
+    {
+      "label": "Any comments",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205970508801,
+      "type": 2,
+      "option_meaning": -1
+    },
+    {
+      "label": "categorization",
+      "content": {
+        "category_1_name": "Apps-iOS SKAN Audit"
+      },
+      "valid": true,
+      "item_id": 0,
+      "type": 3,
+      "option_meaning": -1
+    }
+  ],
+  "fs_permission": 1,
+  "auto_close_time_left": null
+}

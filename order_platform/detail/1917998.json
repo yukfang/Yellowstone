@@ -1,0 +1,560 @@
+{
+  "reply_mode": 1,
+  "time_before_overtime": 0,
+  "set_priority_automatically": false,
+  "is_follow": 0,
+  "category_2": "",
+  "category_1": "1746926227731473",
+  "follower_avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v2_9d27abc7-8fc7-4c1e-b2ea-857e19298e4h~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+  "follower": "Armando Carmona Blanco",
+  "create_time": 1709597669,
+  "deadline": 0,
+  "archive_board_id": 1705151646989721,
+  "replies": [
+    {
+      "is_hide_reply": false,
+      "create_time": 1709677978,
+      "auto_close_hit": 0,
+      "id": 7342996399795061000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Armando Carmona Blanco",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7194519681674527746",
+      "name": "Armando Carmona Blanco",
+      "blocked_roles": [
+        "requester"
+      ],
+      "items": [
+        {
+          "content": "<p><br><br></p><p><strong>[Status Update] </strong>CSM requested support to guide the advertiser through Mobile SDK integration. Prior to the call, discovered the allowlist request is yet to be approved, we cannot continue with the process until the request is approved. Agreed with CSM they would work on the approval and loop me back in once everything has been taken care of.&nbsp;</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v2_9d27abc7-8fc7-4c1e-b2ea-857e19298e4h~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1710370941,
+      "auto_close_hit": 0,
+      "id": 7345978491042595000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Armando Carmona Blanco",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7194519681674527746",
+      "name": "Armando Carmona Blanco",
+      "blocked_roles": [
+        "requester"
+      ],
+      "items": [
+        {
+          "content": "<p><br><br></p><p><strong>[Status Update] </strong>Had call with CSM and advertiser. Walked them through how to generate app ID and access token. Shared the <a target=\"_blank\" href=\"https://business-api.tiktok.com/portal/docs?id=1771101111730178\">documentation</a> with them and answered questions on the benefits of using API for app integration vs. Mobile SDK. Advertiser to start planning implementation in anticipation of their next sprint. We will reconvene to QA implementation once they are ready. Work in progress.</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v2_9d27abc7-8fc7-4c1e-b2ea-857e19298e4h~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1710871276,
+      "auto_close_hit": 0,
+      "id": 7348135349203386000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Edgar Contreras",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7191880630828483586",
+      "name": "Edgar Contreras",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi, Client has the following questions to Install the API, can you please help us to send the response?</p><p><br></p><p><br><span style=\"color: #1F1F1F;\">For the idfa and idfv parameters, reading the documentation it is a data for the IOS platform, in the case of Android it sent them empty or they are not added to the Request And the following parameters, where will we obtain them?</span></p><p><br></p><p><span style=\"color: #1F1F1F;\">I stay Tuned</span></p><p><br></p><p><span style=\"color: #1F1F1F;\">edgar</span></p>",
+          "type": 6
+        },
+        {
+          "content": [
+            {
+              "file_type": "png",
+              "file_name": "Captura de pantalla 2024-03-15 a la(s) 11.37.37 a.m..png",
+              "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/103b6b10a93c4c818af95a382ad01c11.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833691396&x-signature=5yP%2BOCjgZWur8oqT2DQ3mTbVOZw%3D",
+              "file_key": "tos-alisg-i-6g3pebcbys-sg/103b6b10a93c4c818af95a382ad01c11.png",
+              "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/103b6b10a93c4c818af95a382ad01c11.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833691396&x-signature=5yP%2BOCjgZWur8oqT2DQ3mTbVOZw%3D",
+              "biz_type": 2,
+              "size": 53526
+            },
+            {
+              "file_type": "png",
+              "file_name": "Captura de pantalla 2024-03-15 a la(s) 11.40.21 a.m..png",
+              "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/83a25d6348f545a9a8542f0136d72deb.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833691396&x-signature=%2BGFBvuBaZaoQnA4yVHzZ%2FutBRCU%3D",
+              "file_key": "tos-alisg-i-6g3pebcbys-sg/83a25d6348f545a9a8542f0136d72deb.png",
+              "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/83a25d6348f545a9a8542f0136d72deb.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833691396&x-signature=%2BGFBvuBaZaoQnA4yVHzZ%2FutBRCU%3D",
+              "biz_type": 2,
+              "size": 63202
+            }
+          ],
+          "type": 5
+        }
+      ],
+      "avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v2_afed2353-b773-48be-9f5f-f7f98f79cdhu~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1710966567,
+      "auto_close_hit": 0,
+      "id": 7348540759013999000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Armando Carmona Blanco",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7194519681674527746",
+      "name": "Armando Carmona Blanco",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hola Edgar,</p><p>IDFA &amp; IDFV son datos que están disponibles para aplicaciones de iOS. Mientras que GAID es el equivalente para aplicaciones de Android.</p><p>La <a target=\"_blank\" href=\"https://business-api.tiktok.com/portal/docs?id=1771101111730178#item-link-Sample%20payload\">plantilla de muestra que vez aquí </a>incluye todos los parámetros que pueden ser usados, pero Coppel debe adaptarlo dependiendo su caso. Es decir:</p><ul><li>si están enviando los eventos directamente desde su aplicación de iOS, la carga incluirá solamente los parámetros relacionados con iOS, pero no los de Android.</li><li>Y por el otro lado, en los eventos provenientes de su aplicación Android, no incluirán parámetros de iOS.</li></ul><p>Con respecto a el objeto de Ad en la segunda imagen que pegaste, ellos pueden eliminar eso por completo de sus eventos ya que eso solo aplica cuando los eventos provienen de algún servidor de MMP.</p><p>Avisame si tienes alguna otra duda.<br>~Armando</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v2_9d27abc7-8fc7-4c1e-b2ea-857e19298e4h~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711134206,
+      "auto_close_hit": 0,
+      "id": 7349264566968271000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Edgar Contreras",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7191880630828483586",
+      "name": "Edgar Contreras",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hola Armand, buenas tardes!</p><p><br></p><p>Te paso la ultima duda de cliente:</p><p><br></p><p><span style=\"color: #222222;\">&#34;Revisando los parametros, en el apartado de user, me surgió la duda del siguiente parámetro:</span></p><p><br></p><p><br></p><p><span style=\"color: #222222;\">Me podrían ayudar para ver de dónde obtenerlo o si es necesario enviarlo.&#34;</span></p><p><br></p><p><span style=\"color: #222222;\">Sabes que le podría contestar a Coppel?</span></p><p><br></p><p><span style=\"color: #222222;\">Saludos</span></p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v2_afed2353-b773-48be-9f5f-f7f98f79cdhu~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711380051,
+      "auto_close_hit": 0,
+      "id": 7350319798288531000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Armando Carmona Blanco",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7194519681674527746",
+      "name": "Armando Carmona Blanco",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hola Edgar!</p><p>En tu mensaje anterior parece que debe haber una image adjunta, pero no puedo ver a que parámetro se refiere.</p><p>Si me puedes enviarme la image de nuevo?<br>~Armando</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v2_9d27abc7-8fc7-4c1e-b2ea-857e19298e4h~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711387234,
+      "auto_close_hit": 0,
+      "id": 7350351050798268000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Edgar Contreras",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7191880630828483586",
+      "name": "Edgar Contreras",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<img alt=\"Captura de pantalla 2024-03-25 a la(s) 10.57.01 a.m..png\" data-image_key=\"tos-alisg-i-6g3pebcbys-sg/a6a4723b970f4d449e8fcf5548653cd2.png\" height=\"66.987\" src=\"https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/a6a4723b970f4d449e8fcf5548653cd2.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&amp;x-expires=4833691396&amp;x-signature=Xpb9D%2FnJnIJFFCQv8Cyi2H%2BIVLk%3D\" width=\"375\"><p><br /></p><p>Amigo, esta es la imagen espero puedas verla</p></img>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v2_afed2353-b773-48be-9f5f-f7f98f79cdhu~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711387319,
+      "auto_close_hit": 0,
+      "id": 7350351829072593000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Edgar Contreras",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7191880630828483586",
+      "name": "Edgar Contreras",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<img alt=\"Captura de pantalla 2024-03-25 a la(s) 11.21.32 a.m..png\" data-image_key=\"tos-alisg-i-6g3pebcbys-sg/7d1463e8b06f49518105de44a1953cbe.png\" height=\"32.116\" src=\"https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/7d1463e8b06f49518105de44a1953cbe.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&amp;x-expires=4833691396&amp;x-signature=UaOLgxnMiTwXwjWuSbQtRCJLtNI%3D\" width=\"375\"><p><br /></p><p>Perdon amigo, esta es la imagen correcta.</p><p>Saludos</p></img>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v2_afed2353-b773-48be-9f5f-f7f98f79cdhu~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711387859,
+      "auto_close_hit": 0,
+      "id": 7350353854623400000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Armando Carmona Blanco",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7194519681674527746",
+      "name": "Armando Carmona Blanco",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hola Edgar,</p><p>El parametro de <strong><em>user_agent</em></strong> aplica para eventos API que provienen de web.</p><p>Como los eventos que ellos están enviando provienen directamente de sus aplicaciones mobiles, ese parametro no aplica en su caso.</p><p>Avísame si hay mas dudas.</p><p>~Armando</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v2_9d27abc7-8fc7-4c1e-b2ea-857e19298e4h~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    }
+  ],
+  "enable_forced_order_type": 0,
+  "plat_id": 1736490999244882,
+  "archive_category_2_name": "",
+  "pending_from_follower": false,
+  "id": 1917998,
+  "workflow_nodes": [],
+  "board_id": 1705151646989721,
+  "employee_email": "armando.carmona@bytedance.com",
+  "is_support_suggestion": 0,
+  "title": "Client SDK / API",
+  "category_1_name": "Mobile SDK",
+  "auto_close_hit": 0,
+  "relation_qual": [],
+  "accountpass": 0,
+  "priority": -1,
+  "inner": 1,
+  "vip_types": [],
+  "is_impending_overtime": 0,
+  "creater_lark_avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v2_afed2353-b773-48be-9f5f-f7f98f79cdhu~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+  "enable_compliance_mode": false,
+  "type": 6,
+  "current_role": null,
+  "fd_permission": 1,
+  "status": 1,
+  "business_data": [],
+  "update_time": 1711387859,
+  "owner_name": "Edgar Contreras",
+  "enable_auto_close_v2": 0,
+  "time_after_overtime": 0,
+  "swim_lane_status": 4,
+  "enable_forced_order_tag": 1,
+  "satisfied": 0,
+  "category_2_name": "",
+  "reply_name": " MPO Technical Implementation  Team",
+  "is_guest": false,
+  "archive_category_2": "",
+  "archive_category_1_name": "Mobile SDK",
+  "archive_category_1": "1746926227731473",
+  "allow_reopen": 0,
+  "categories": [
+    {
+      "to_user": 1,
+      "categories_id": "1746926227731473",
+      "cate_1_form_id": 1746925170639921,
+      "sub_cates": [],
+      "value": "Mobile SDK"
+    }
+  ],
+  "core_user_id": "7191880630828483586",
+  "plat_name": "MPO Technical Implementation",
+  "follower_role": "TSC",
+  "remark": "",
+  "show_auto_assign": false,
+  "is_overtime": 0,
+  "creater_lark_name": "Edgar Contreras",
+  "follow_employee_id": 1807296,
+  "is_order_top": 0,
+  "urged": 0,
+  "im_chat_id": "",
+  "is_delay": 0,
+  "enable_forced_priority": 0,
+  "pending_time": 239537,
+  "debug_permission": 1,
+  "is_vip": 0,
+  "items": [
+    {
+      "label": "Ticket Title",
+      "content": "Client SDK / API",
+      "valid": true,
+      "item_id": 1746925170640897,
+      "type": 14,
+      "option_meaning": -1
+    },
+    {
+      "label": "Is this consultation request to help your client get to Signals Optimal? ",
+      "content": "No, my request is only a specific question or issue about Signals",
+      "valid": true,
+      "key": "No, my request is only a specific question or issue about Signals",
+      "item_id": 1774552194962434,
+      "type": 9,
+      "option_meaning": -1
+    },
+    {
+      "label": "As what stage is your Signals discussion with your client?",
+      "content": "Post-Pitch but client has more questions",
+      "valid": true,
+      "key": "Post-Pitch but client has more questions",
+      "item_id": 1774552194962482,
+      "type": 9,
+      "option_meaning": -1
+    },
+    {
+      "label": "Is the partner using a third party platform for Web Pixel and/or Server side tagging?",
+      "content": "Unsure (Do Not Know)",
+      "valid": true,
+      "key": "Unsure (Do Not Know)",
+      "item_id": 1774552194963506,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Advertiser / Client Name",
+      "content": "Coppel",
+      "valid": true,
+      "item_id": 1746925170640913,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Customer Vertical",
+      "content": "Retail",
+      "valid": true,
+      "key": "Retail",
+      "item_id": 1746925270972417,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "GBS Tier",
+      "content": "Key Account",
+      "valid": true,
+      "key": "Key Account",
+      "item_id": 1746925270972433,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "GBS Country / Region",
+      "content": "LATAM-MX",
+      "valid": true,
+      "key": "LATAM",
+      "item_id": 1746925270972449,
+      "type": 4,
+      "option_meaning": 0
+    },
+    {
+      "label": "Your Department / Team",
+      "content": "CSM",
+      "valid": true,
+      "key": "CSM",
+      "item_id": 1746925270972465,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Ad Account ID",
+      "content": "7335230148255465473",
+      "valid": true,
+      "item_id": 1746925270973441,
+      "type": 1,
+      "option_meaning": 4
+    },
+    {
+      "label": "Advertiser Priority Level/Tier",
+      "content": "P1",
+      "valid": true,
+      "key": "P1",
+      "item_id": 1746925270973457,
+      "type": 4,
+      "option_meaning": 2
+    },
+    {
+      "label": "Android Mobile App ID",
+      "content": "",
+      "valid": true,
+      "item_id": 1746925270973473,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "iOS Mobile App ID",
+      "content": "1267382794",
+      "valid": true,
+      "item_id": 1746925270973489,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Does client use any mmp and mmp's name? ",
+      "content": "no",
+      "valid": true,
+      "item_id": 1746925270974465,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Target Implementation Date",
+      "content": "2024-03-04",
+      "valid": true,
+      "item_id": 1746925270974481,
+      "type": 11,
+      "option_meaning": -1
+    },
+    {
+      "label": "What's client's business goal of using SDK?",
+      "content": "Client wants to set the SDK for app, and has some questions for us to guide them. Can you please help us to guide my client?\n\nWe will have a Call tomorrow with the technical team, we need some help to guide them.\n\nThe android app id is: com.coppel.coppelapp",
+      "valid": true,
+      "item_id": 1746925827345441,
+      "type": 2,
+      "option_meaning": -1
+    },
+    {
+      "label": "Screenshot",
+      "content": [
+        {
+          "file_type": "png",
+          "file_name": "Captura de pantalla 2024-03-15 a la(s) 11.37.37 a.m..png",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/103b6b10a93c4c818af95a382ad01c11.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833691396&x-signature=5yP%2BOCjgZWur8oqT2DQ3mTbVOZw%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/103b6b10a93c4c818af95a382ad01c11.png",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/103b6b10a93c4c818af95a382ad01c11.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833691396&x-signature=5yP%2BOCjgZWur8oqT2DQ3mTbVOZw%3D",
+          "biz_type": 2,
+          "size": 53526
+        },
+        {
+          "file_type": "png",
+          "file_name": "Captura de pantalla 2024-03-15 a la(s) 11.40.21 a.m..png",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/83a25d6348f545a9a8542f0136d72deb.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833691396&x-signature=%2BGFBvuBaZaoQnA4yVHzZ%2FutBRCU%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/83a25d6348f545a9a8542f0136d72deb.png",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/83a25d6348f545a9a8542f0136d72deb.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833691396&x-signature=%2BGFBvuBaZaoQnA4yVHzZ%2FutBRCU%3D",
+          "biz_type": 2,
+          "size": 63202
+        },
+        {
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/a6a4723b970f4d449e8fcf5548653cd2.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833691396&x-signature=Xpb9D%2FnJnIJFFCQv8Cyi2H%2BIVLk%3D",
+          "file_name": "file_20240328_12_03_16_420475",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/a6a4723b970f4d449e8fcf5548653cd2.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833691396&x-signature=Xpb9D%2FnJnIJFFCQv8Cyi2H%2BIVLk%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/a6a4723b970f4d449e8fcf5548653cd2.png",
+          "file_type": "jpeg",
+          "biz_type": 2
+        },
+        {
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/7d1463e8b06f49518105de44a1953cbe.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833691396&x-signature=UaOLgxnMiTwXwjWuSbQtRCJLtNI%3D",
+          "file_name": "file_20240328_12_03_16_455975",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/7d1463e8b06f49518105de44a1953cbe.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833691396&x-signature=UaOLgxnMiTwXwjWuSbQtRCJLtNI%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/7d1463e8b06f49518105de44a1953cbe.png",
+          "file_type": "jpeg",
+          "biz_type": 2
+        }
+      ],
+      "valid": true,
+      "item_id": 1746925407705105,
+      "type": 5,
+      "option_meaning": -1
+    },
+    {
+      "label": "categorization",
+      "content": {
+        "category_1_name": "Mobile SDK-Mobile SDK"
+      },
+      "valid": true,
+      "item_id": 0,
+      "type": 3,
+      "option_meaning": -1
+    }
+  ],
+  "fs_permission": 1,
+  "auto_close_time_left": null
+}

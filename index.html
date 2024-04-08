@@ -1,203 +1,427 @@
-<html>
-    <head>
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script>
-        const PIXEL_CODE = 'CJASRI3C77U7QCENFV4G'
- 		!function (w, d, t) {
-		  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++
-)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=i+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-		
-		  ttq.load(PIXEL_CODE);
-		  ttq.page();
-		}(window, document, 'ttqr');
-		
-    	function getCookie(name) {
-            const value = `; ${document.cookie}`;
-            const parts = value.split(`; ${name}=`);
-            if (parts.length === 2) return parts.pop().split(';').shift();
-            return null;
-      }
-      function setCookie(name, value, days) {
-        let expires = "";
+<!DOCTYPE html>
+<head>
+           <!-- <script type="application/javascript"  src="./axios.min.js"></script> -->
+ 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
 
-        if (days) {
-            const date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            expires = "; expires=" + date.toUTCString();
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TB3JWJYF9S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-        document.cookie = name + "=" + (value || "") + expires + "; path=/";
-      }
-	 
-        const target = ttqr
-        const handler = {
-            get: function(target, property) {
-                return function(...arguments) {
-                    console.log(`Called function: ${property}: ${arguments[0]}, ${JSON.stringify(arguments[1])}, ${arguments[2]}`);
-                    
-                    if (property === 'track') {
-                      const requestBody = {
-                          pixel_code: PIXEL_CODE,
-                          ttp: getCookie('_ttp'),
-                          user_agent: navigator.userAgent,
-                          email: getCookie('_e'),
-                          phone_number: getCookie('_ph')
-                      };
-      
-                      axios.post('https://yellowstone.azurewebsites.net/detail?order_id=1315214', requestBody)
-                      .then(response => {
-                          console.log('Response from server:', response.data);
-                      })
-                      .catch(error => {
-                          console.error('Error sending request:', error);
-                      });
-                    } else if (property === 'identify') {
-                      const pii = arguments[0] || {}
-                      if(pii.hasOwnProperty("email")) {
-                        setCookie('_e', pii.email, 31);  
-                      }
-                      if(pii.hasOwnProperty("phone_number")) {
-                        setCookie('_ph', pii.phone_number, 31);
-                      }
-                    }
-                    
-                    if(typeof target[property] === 'function') {
-                        if(arguments[0] === '123') {
-                            console.log('123 is good, let it go')
-                            return target[property](...arguments)
-                        } else if(arguments[0] === 'xyz') {
-                            console.log('xyz is bad, stop it')
-                        } else {
-                            console.log('Undefined behavior, use default...')
-                            return target[property](...arguments)
-                        }
-                    }
+      gtag('config', 'G-TB3JWJYF9S');
+    </script>
+</head>
+<body>
+  <div id="app">
+    <v-app id="inspire">
+      <div>
+        <v-data-table :headers="headers" :items="orders" item-key="id" class="elevation-1" :search="search" :custom-filter="filterOnlyCapsText">
+          <template v-slot:top>
+            <v-text-field v-model="search" label="Search (ID, Notes, Client Name, Title)" class="mx-4" ></v-text-field>
+          </template>
+          <template v-slot:body.prepend>
+            <tr>
+              <td></td>
+              <td></td>
+              <td><v-text-field v-model="priority"        type="text"   label="Priority Keywords"></v-text-field></td>
+              <!-- <td><v-text-field v-model="copitch"         type="text"   label="Copitch Keywords"></v-text-field></td> -->
+              <!-- <td><v-text-field v-model="tier"         type="text"   label="Tier Keywords"></v-text-field></td> -->
+
+
+
+              <td><v-text-field v-model="status"          type="text"   label="Status Keywords"></v-text-field></td>
+              <td><v-text-field v-model="region"          type="text"   label="Region Keywords"></v-text-field></td>
+
+              <td><v-text-field v-model="follower"        type="text"   label="Owner Keywords"></v-text-field></td>
+              <td><v-text-field v-model="archive_category_1_name" type="text"   label="Product Keywords"></v-text-field></td>
+              <td><v-text-field v-model="tags"            type="text"   label="Tags Keywords"></v-text-field></td>
+              <td><v-text-field v-model="sub_tags"        type="text"   label="SubTag Keywords"></v-text-field></td>
+
+
+              <td><v-text-field v-model="idle"            type="number" label="> n Days"></v-text-field></td>
+              <td><v-text-field v-model="create_date"     type="text"   label="> n Days"></v-text-field></td>
+              <td><v-text-field v-model="close_date"      type="text"   label="> n Days"></v-text-field></td>
+            </tr>
+          </template>
+
+
+          <template v-slot:item.id="{ value }">
+            <a :href="`https://ads.tiktok.com/athena/feedback/workspace?order_id=${value}`" target="_blank">
+              {{ value }}
+            </a>
+        </template>
+          <!-- <template v-slot:item.id="{ item }">
+               <a :href="https://bing.com">{{ value }}</a>
+           </template> -->
+
+          <template v-slot:item.notes="{ item }">
+            <td>
+              <div v-for="value in item.notes">
+                 {{ value }}
+              </div>
+           </td>
+          </template>
+          <template v-slot:item.reviews="{ item }">
+            <td>
+              <div v-for="value in item.reviews">
+                 {{ value }}
+              </div>
+           </td>
+          </template>
+        </v-data-table>
+      </div>
+    </v-app>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+
+
+    <!-- <script type="application/javascript" src="js/vue.js"></script>
+    <script type="application/javascript" src="js/vuetify.js"></script>
+    <script type="application/javascript" src="js/axios.min.js"></script>  -->
+
+  <script>
+    let orders = [  {id: 1, follower: 'Yuk',        status: 'open',     category: 'Pixel - Basic',     idle: 7     },
+                    {id: 2, follower: 'Shiwei',     status: 'closed',   category: 'Pixel - Dev Mode',  idle: 777     },
+                    {id: 3, follower: 'Murugan',    status: 'open',     category: 'Leads Gen',         idle: 77      },
+                  ]
+
+
+    function getOrders() {
+        const data = {}
+        const options = {
+            method: 'GET',
+            headers: { 'content-type': 'application/json' },
+            data: data,
+            url: '/data'
+        };
+        axios(options)
+        .then(response=>{
+            orders = response.data.sort((a,b) => {return (b.id) - (a.id)});
+            for(let i = 0 ; i < orders.length; i++) {
+                /** Case Idle Days, keep this section before status re-map */
+                orders[i].idle = (orders[i].status === 3)? '' : Math.round(orders[i].pending_time / 3600 / 24)
+                if(orders[i].id === 1785166) {
+                  console.log(`check ${orders[i].id} ${orders[i].status} `)
                 }
+
+                /** Case Status */
+                if(orders[i].status === 3) {
+                  orders[i].status = 'Closed'
+                } else if (orders[i].status === 1) {
+                  orders[i].status = 'Open'
+                } else if (orders[i].status === 0) {
+                  orders[i].status = 'Open-TSC'
+                } else if (orders[i].status === 2) {
+                  orders[i].status = 'Open-TSC'
+                } else {
+
+                }
+
+
+
+                /** Remap Country */
+                if(orders[i].region == null ) {
+                  orders[i].region = 'Unknown'
+                } else if(orders[i].region.toString().toLowerCase() === 'sea-jp') {
+                  orders[i].region = 'APAC-JP'
+                } else if (orders[i].region.toString().toLowerCase() === 'japan') {
+                  orders[i].region = 'APAC-JP'
+                } else if (orders[i].region.toString().toLowerCase() === 'korea') {
+                  orders[i].region = 'APAC-KR'
+                } else if (orders[i].region.toString().toUpperCase() === 'SEA-KR') {
+                  orders[i].region = 'APAC-KR'
+                } else if (orders[i].region.toString().toUpperCase() === 'OUTBOUND-CN') {
+                  orders[i].region = 'CNOB'
+                } else if (orders[i].region.toString().toUpperCase() === 'SEA-AU') {
+                  orders[i].region = 'APAC-AU'
+                } else if (orders[i].region.toString().toUpperCase() === 'SEA-NZ') {
+                  orders[i].region = 'APAC-AU'
+                } else if (orders[i].region.toString().toUpperCase() === 'NORTHAMERICA-US') {
+                  orders[i].region = 'NA-US'
+                } else if (orders[i].region.toString().toUpperCase() === 'NORTHAMERICA-CA') {
+                  orders[i].region = 'NA-CA'
+                } 
+ 
+                /** Re-Map names */
+                if(orders[i].follower.includes('方宇')) {
+                  orders[i].follower = 'Yuk'
+                } else if (orders[i].follower.includes('方是惟')) {
+                  orders[i].follower = 'Shiwei'
+                } else if (orders[i].follower.includes('于素荣')) {
+                  orders[i].follower = 'Surong'
+                } else if (orders[i].follower.includes('Κατερίνα')) {
+                  orders[i].follower = 'Katerina'
+                } else if (orders[i].follower.includes('فانيسا شربل نجم')) {
+                  orders[i].follower = 'Vanessa'
+                } else if (orders[i].follower.includes("Armando")) {
+                  orders[i].follower = 'Armando'
+                } else if (orders[i].follower.includes("Carly")) {
+                  orders[i].follower = 'Carly'
+                } else if (orders[i].follower.includes("Jason")) {
+                  orders[i].follower = 'Jason'
+                } else if (orders[i].follower.includes("Robbie")) {
+                  orders[i].follower = 'Robbie'
+                } else if (orders[i].follower.includes("Chan")) {
+                  orders[i].follower = 'Chan'
+                } else if (orders[i].follower.includes("Miguel")) {
+                  orders[i].follower = 'Miguel'
+                } else if (orders[i].follower.includes("Selma")) {
+                  orders[i].follower = 'Selma'
+                } else if (orders[i].follower.includes("Miguel")) {
+                  orders[i].follower = 'Miguel'
+                } else if (orders[i].follower.includes("Ganesh")) {
+                  orders[i].follower = 'Ganesh'
+                }  else if (orders[i].follower.includes("Keshav")) {
+                  orders[i].follower = 'Keshav'
+                }  else if (orders[i].follower.includes("Serdar")) {
+                  orders[i].follower = 'Serdar'
+                } else if (orders[i].follower.includes("Thomas")) {
+                  orders[i].follower = 'Thomas'
+                } else if (orders[i].follower.includes("Heidi")) {
+                  orders[i].follower = 'Heidi'
+                } else if (orders[i].follower.includes("Renato")) {
+                  orders[i].follower = 'Renato'
+                }
+                
+                
+                
+                
+
+                /** Create/Close Time to String */
+                // orders[i].create_date = orders[i].create_time.split('T')[0];
+                orders[i].create_date = (new Date(orders[i].create_time)).toISOString().split('T')[0];
+                // orders[i].close_date  = ((t)=>{ return t.includes('1970')?'':t})(orders[i].close_time.split('T')[0]);
+                orders[i].close_date = (orders[i].close_time === 0) ? '' : (new Date(orders[i].close_time)).toISOString().split('T')[0];
             }
-        }
-        const ttq = new Proxy(target, handler);
 
-  	</script>
+            /** Create Vue instance */
+            let vm = new Vue({
+                el: '#app',
+                vuetify: new Vuetify(),
+                data:function () {
+                    return {
+                        search: '',
+                        client_name: '',
+                        priority: '',
+                        // copitch:'',
+                        adv_id: '',
+                        tier:'',
+                        status: '',
+                        region: '',
+                        follower: '',
+                        archive_category_1_name:'',
+                        tags:'',
+                        sub_tags:'',
+                        create_date:'',
+                        close_date:'',
+                        idle: '',
+                        orders
+                    }
+                },
+                computed: {
+                    headers () {
+                        return [
+                            { text: 'ID',     align: 'start', sortable: true, value: 'id' },
+                            { text: 'Client', align: 'start', sortable: true, value: 'client_name'},
+                            { text: 'Priority',     value: 'priority', filter: value => {
+                                if (!this.priority) return true
+                                return value.toLowerCase().includes(this.priority.toLowerCase())
+                            }},
+                            // { text: 'CoPitch',     value: 'copitch', filter: value => {
+                            //     if (!this.copitch) return true
+                            //     return value.toLowerCase().includes(this.copitch.toLowerCase())
+                            // }},
+                            /*
+                            { text: 'Tier',     value: 'tier', filter: value => {
+                                if (!this.tier) return true
+                                return value.toLowerCase().includes(this.tier.toLowerCase())
+                            }},
+                            */
 
-    </head>
-    <body>
-        <script>
+                            { text: 'Status',     value: 'status', filter: value => {
+                                if (!this.status) return true
+                                return value.toLowerCase().includes(this.status.toLowerCase())
+                            }},
 
-        function trackIosBtn() {
-            const PIXEL_CODE = pixel_code
-            const EVENT_NAME = 'Download'
-            const DEDUP_KEY = 'ios_btn_time'
-            const DEDUP_VALUE_TIME = sessionStorage.getItem(DEDUP_KEY);
-            const DEDUP_TIME_WINDOW = 1000 * 60 * 10; // 10 minutes, long enough
+
+
+                            { text: 'Region',     value: 'region', filter: value => {
+                                if (!this.region) return true
+                                if(this.region.toLowerCase() === "apac") {
+                                  if(value.toLowerCase().includes("au"))  return true;
+                                  if(value.toLowerCase().includes("sea")) return true;
+                                  if(value.toLowerCase().includes("jp"))  return true;
+                                  if(value.toLowerCase().includes("kr"))  return true;
+                                }
+                                return value.toLowerCase().includes(this.region.toLowerCase())
+                            }},
+
+                            { text: 'Ticket Owner',      value: 'follower', filter:value=>{
+                                if (!this.follower) return true;
+                                if(this.follower.toLowerCase() === 'apac') {
+                                  if(value.toLowerCase().includes('mur')) return true;
+                                  if(value.toLowerCase().includes('yuk')) return true;
+                                  if(value.toLowerCase().includes('gan')) return true;
+                                  if(value.toLowerCase().includes('shi')) return true;
+                                  if(value.toLowerCase().includes('cha')) return true;
+                                } else if (this.follower.toLowerCase() === 'emea') {
+                                  if(value.toLowerCase().includes('selm')) return true;
+                                  if(value.toLowerCase().includes('asif')) return true;
+                                  if(value.toLowerCase().includes('alus')) return true;
+                                  if(value.toLowerCase().includes('kate')) return true;
+                                  if(value.toLowerCase().includes('vane')) return true;
+                                  if(value.toLowerCase().includes('migu')) return true;
+                                } else if (this.follower.toLowerCase() === 'usus') {
+                                  if(value.toLowerCase().includes('robb')) return true;
+                                  if(value.toLowerCase().includes('carl')) return true;
+                                  if(value.toLowerCase().includes('rena')) return true;
+                                  if(value.toLowerCase().includes('saur')) return true;
+                                  if(value.toLowerCase().includes('armand')) return true;
+                                } else if(this.follower.toLowerCase() === 'live') {
+                                  if(value.toLowerCase().includes('itay')) return true;
+                                  if(value.toLowerCase().includes('jacob')) return true;
+                                }
+                                return value.toLowerCase().includes(this.follower.toLowerCase())
+                            } },
+
+                            { text: 'Product',           value: 'archive_category_1_name', filter:value=>{
+                              if (!this.archive_category_1_name) return true
+
+                              /** Signal Filter */
+                              if(this.archive_category_1_name.toLowerCase() === "signal") {
+                                return value.toLowerCase().includes("basic") 
+                                    || value.toLowerCase().includes("dev mode") 
+                                    || value.toLowerCase().includes("events api - web")
+                                    || value.toLowerCase().includes("pixel")
+                                    || value.toLowerCase().includes("signal vip")
+                              }
+
+                              /** Exclude Filter */
+                              if(this.archive_category_1_name.toLowerCase().startsWith("-")) {
+                                let keyword = this.archive_category_1_name.toLowerCase().substring(1, this.archive_category_1_name.toLowerCase().length)
+                                return !value.toLowerCase().includes(keyword)
+                              }
+
+                              /** Keyword match */
+                              return value.toLowerCase().includes(this.archive_category_1_name.toLowerCase())
+                            } },
+
+                            { text: 'Tags',           value: 'tags', filter:value=>{
+                              if (!this.tags) return true
+                              return value.toLowerCase().includes(this.tags.toLowerCase())
+                            } },
+
+                            { text: 'Sub Tags',       value: 'sub_tags', filter:value=>{
+                              if (!this.sub_tags) return true
+                              return value.toLowerCase().includes(this.sub_tags.toLowerCase())
+                            } },
+
+                            { text: 'Idle Days',    value: 'idle',    filter: value => {
+                              if (!this.idle) return true;
+                              return value >= parseInt(this.idle)
+                            }},
+
+                            { text: 'Create Date',    value: 'create_date', filter: value => {
+                              if (!this.create_date) return true;
+
+                              if(this.create_date.toLowerCase() === 'q1') {
+                                return value.includes('2024-01') || value.includes('2024-02') || value.includes('2024-03');
+                              }
+                              if(this.create_date.toLowerCase() === 'q2') {
+                                return value.includes('2024-04') || value.includes('2024-05') || value.includes('2024-06');
+                              } 
             
-            if(DEDUP_VALUE_TIME === null) {
-                /** Track for the first time */
-                ttq.instance(PIXEL_CODE).track(EVENT_NAME);
-                sessionStorage.setItem(DEDUP_KEY, Date.now());
-            } else {
-                try {
-                    if(Date.now() - DEDUP_VALUE_TIME > DEDUP_TIME_WINDOW) {
-                        /** Track for the second after tracking time window */
-                        ttq.instance(PIXEL_CODE).track(EVENT_NAME);
-                        sessionStorage.setItem(DEDUP_KEY, Date.now());
-                        console.log('longer than 10 min, send again')
-                    } else {
-                        /** Skip Tracking in short time window */
-                        console.log('Less than 10 min, skip sending')
-                    }
-                } catch(err) {
-                    /** Unknown error, reset tracking and timing flag */
-                    ttq.instance(PIXEL_CODE).track(EVENT_NAME);
-                    sessionStorage.setItem(DEDUP_KEY, Date.now());
-                }
-            }
-        }		
-		
-		
-		function track_and_btn() {
-            ttq.instance(pixel_code).setAdvancedMatchingAvailableProperties({"email":true,"phone_number":true,"auto_email":true,"auto_phone_number":true});
 
-		    ttq.identify({
-                email: '',
-                phone_number: '+8613909189091',
+                              if(!isNaN(this.create_date) && parseInt(this.create_date) > 0){
+                                /** Older than n Days */
+                                // console.log(`${this.create_date} number`)
+                                const day_gap = (Date.now() - (new Date(value))) / 1000 / 3600 / 24;
+                                return (day_gap - parseInt(this.create_date) > 0)
+                              } else if (false){
+                                /** Between...And [2022-07-01, 2022-09-30]*/
+                              } else {
+                                /** Key words search */
+                                // console.log(`${this.create_date}  str`)
+                                return value.includes(this.create_date);
+                              }
+                            } },
+
+                            { text: 'Close Date',    value: 'close_date', filter: value => {
+                              if (!this.close_date) return true;
+
+                              if(!isNaN(this.close_date) && parseInt(this.close_date) > 0){
+                                /** Older than n Days */
+                                console.log(`${this.close_date} number`)
+                                const day_gap = (Date.now() - (new Date(value))) / 1000 / 3600 / 24;
+                                return (day_gap - parseInt(this.close_date) > 0)
+                              } else if (false){
+                                /** Between...And [2022-07-01, 2022-09-30]*/
+                              } else {
+                                /** Key words search */
+                                console.log(`${this.close_date}  str`)
+                                return value.includes(this.close_date);
+                              }
+
+                            } },
+
+
+                            { text: '[[ Notes ]]',                value: 'notes' },
+                            { text: "{{ Leader Review }}",        value: 'reviews' },
+
+                        ]
+                    },
+                },
+                methods: { 
+                    filterOnlyCapsText (value, search, item) {
+
+                      if(value == null) return false;
+                      if(search == null) return false;
+                      if(typeof value != 'string') return false;
+
+                      let match = false
+                      if((''+item.id).toLowerCase().includes(search.toLowerCase()))                           {
+                        console.log(`Match ID`)
+                        match = true;
+                      } else if((item.client_name).toLowerCase().includes(search.toLowerCase()))              {
+                        console.log(`Match Client Name`)
+                        match = true;
+                      } else if((item.adv_id.toString()).toLowerCase().includes(search.toLowerCase()))        {
+                        console.log(`Match ADV ID`)
+                        match = true;
+                      } else {
+                        for(let i = 0 ; i < item.notes.length; i++) {
+                          if(item.notes[i].toLowerCase().includes(search.toLowerCase()))    {
+                            console.log(`Match Notes`)
+                            match= true;
+                            break;
+                          }
+                        }
+                      }
+
+                      if(match) {
+                        console.log(`---> ${value}, ${search}, ${item.id}`)
+                      }
+
+                      return match;
+                    },
+                },
             })
-		    
-		    console.log(`Track click button`)
-		    
-		    const PIXEL_CODE = pixel_code
-		    const TRACK_TIME_WINDOW = 1000 * 60 * 10; // 10 minutes
-		    const download_btn_time = sessionStorage.getItem('download_btn_time');
-		    
-		    if(download_btn_time === null) {
-		        /** Track for the first time */
-                ttq.instance(PIXEL_CODE).track('CompleteRegistration');
-                sessionStorage.setItem('download_btn_time', Date.now());
-		    } else {
-		        try {
-                    const gap = Date.now() - download_btn_time;
-    		        if(gap > TRACK_TIME_WINDOW) {
-                        /** Track for the second after tracking time window */
-                        ttq.instance(PIXEL_CODE).track('CompleteRegistration');
-                        sessionStorage.setItem('download_btn_time', Date.now());
-                        console.log('longer than 10 min, send again')
-    		        } else {
-                        /** Skip Tracking in short time window */
-    		            console.log('Less than 10 min, skip sending')
-    		        }
-		        } catch(err) {
-		            /** Unknown error, reset tracking and timing flag */
-                    ttq.instance(PIXEL_CODE).track('CompleteRegistration');
-                    sessionStorage.setItem('download_btn_time', Date.now());
-		        }
-		    }
-		}
-	    function trackAdd2Cart() {
-            // ttq.instance('C8NFFF8VMNUOS5KM0E20').setAdvancedMatchingAvailableProperties({"email":true,"phone_number":true,"auto_email":true,"auto_phone_number":true});
+        })
+        .catch(err=>console.log(err));
+    }
 
-		    ttq.identify({
-                email: '',
-                phone_number: '+8613909189091',
-            })
-	        console.log(`add2cart`)
-	       // ttq.track('XYZ')
-            ttq.track("AddToCart",{
-                "contents":[
-                 {
-                    "content_id":"11111",
-                    "content_type":"product",
-                    "content_name":"X",
-                    "quantity":1,
-                    "price":37.95
-                 },
-                 {
-                    "content_id":"33333",
-                    "content_type":"product",
-                    "content_name":"Z",
-                    "quantity":1,
-                    "price":24.95
-                 }
-              ],
-              "value":87.85,
-              "currency":"USD",
-              "quantity":3
-            })
-        }
-        
-        
-        </script>
-        <div id='div01' >
-            <button id='btn01' type="button" onclick="" height="200px" width="200px">
-                ClickButton
-            </button>
-            <button  type="button" onclick="console.log(123)" height="200px" width="200px">
-                AddToWishlist
-            </button>
-            <button  type="button" onclick="trackAdd2Cart()" height="200px" width="200px">
-                AddToCart
-            </button>
-        </div>
-    </body>
-</html>
-
-
-
+    getOrders();
+  </script>
+</body>

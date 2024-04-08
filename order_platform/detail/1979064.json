@@ -1,0 +1,619 @@
+{
+  "reply_mode": 1,
+  "time_before_overtime": 0,
+  "set_priority_automatically": false,
+  "is_follow": 0,
+  "category_2": "",
+  "category_1": "1736497066245137",
+  "follower_avatar": "https://s3-imfile.feishucdn.com/static-resource/v1/v2_2e8c47b2-7853-4298-8f1b-98c86502825g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+  "follower": "Robbie Santos",
+  "create_time": 1711750320,
+  "deadline": 0,
+  "archive_board_id": 1705151646989663,
+  "replies": [
+    {
+      "is_hide_reply": false,
+      "create_time": 1711753938,
+      "auto_close_hit": 0,
+      "id": 7351921800772698000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Robbie Santos",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "6998070135030318082",
+      "name": "Robbie Santos",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi Akeem,</p><p>Thanks for making the ticket! I can go ahead and take an audit of their current setup. I will be OOO Monday 4/1 but I can provide you with a preliminary conclusion and potential follow up questions/items for the advertiser by EOD Tues 4/2.</p><p>Best,</p><p>Robbie</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_2e8c47b2-7853-4298-8f1b-98c86502825g~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1712068689,
+      "auto_close_hit": 0,
+      "id": 7353277333886878000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Robbie Santos",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "6998070135030318082",
+      "name": "Robbie Santos",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi Akeem,</p><p>Thanks for your patience! </p><p>The client still is not providing us with a timestamp but we are populating it with a value of our own. If the client does not pass back an event timestamp, which is a common occurrence, we will populate another column with a timestamp that we received the event on. </p><p>They are also consistently passing us back an IP/User Agent with each event which is critical for proper attribution</p><p>Their event setup generally looks OK with just a few things missing for VSA critical events: </p><ul><li>ViewContent event</li><ul><li>content_id OK</li><li>content_type OK</li><li>price OK</li><li>quantity OK</li><li>currency MISSING</li><li>value MISSING</li></ul><li>AddToCart event</li><ul><li>content_id OK</li><li>content_type OK</li><li>price: OK</li><li>quantity: OK</li><li>currency OK</li><li>value: MISSING/INCORRECT </li><ul><li>Passing back \"0\" for all AddToCart events</li></ul></ul><li>CompletePayment event</li><ul><li>content_id OK</li><li>content_type OK </li><li>price OK</li><li>quantity OK</li><li>currency OK</li><li>value OK</li></ul></ul><p><br /></p><p>Their most outstanding issue here is that they're not passing back a hashed Email and/or hashed Phone number for Manual Advanced Matching for their CompletePayment events. Have you had the conversation with them about getting this setup?</p><img alt=\"image.png\" data-image_key=\"tos-alisg-i-6g3pebcbys-sg/d5b3b0e743e246b5b9b5bf0c747fbeae.png\" height=\"470.69\" src=\"https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/d5b3b0e743e246b5b9b5bf0c747fbeae.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&amp;x-expires=4834608592&amp;x-signature=4iI4e2f7xQkpqjDl4m9mIZAazGY%3D\" width=\"375\"><p>Would you be able to provide me with a business center and/or a catalog ID to reference?</p><p>Thanks!</p><p>Robbie</p></img>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_2e8c47b2-7853-4298-8f1b-98c86502825g~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1712073837,
+      "auto_close_hit": 0,
+      "id": 7353299453920461000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "akeem.thompson@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Akeem R Thompson",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7301058681406505986",
+      "name": "Akeem R Thompson",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<ul><li>Thanks for update on the missing currency/value parameters, we will make sure to to call that out for view content/add to cart.</li></ul><p><br></p><ul><li>Interestingly enough, R&amp;D said the lack of timestamp is causing VSA retargeting not to work, which in turn has caused the client to turn on their VSA campaigns.</li></ul><p><br></p><ul><li>Thanks for the PII called, unfortunately as of right now Samsung will never passback PII due to global rules</li><li><strong>Catalog ID:&nbsp;6839019077151752197</strong></li></ul><p><br></p><p>That being said, want to double-check that there are no other  issues going on with the eAPI that we need to call out here? Esp in regards to eAPI?</p><p><br></p><p> The client relationship is rocky at this path, so we want to make sure our feedback is concise on any changes needed on their end</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v3_008v_e1b79399-c592-499e-ab56-0a8539128ebh~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1712095405,
+      "auto_close_hit": 0,
+      "id": 7353391817620062000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Robbie Santos",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "6998070135030318082",
+      "name": "Robbie Santos",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi Akeem,</p><p>Thanks for the info! The Catalog ID seems to be deleted: <span style=\"color: #333333;\"><strong>6839019077151752197</strong></span></p><img alt=\"image.png\" data-image_key=\"tos-alisg-i-6g3pebcbys-sg/671cea37f4e24bc083f742e6153149fa.png\" height=\"97.92\" src=\"https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/671cea37f4e24bc083f742e6153149fa.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&amp;x-expires=4834608592&amp;x-signature=PvEuQCPzoFpiNP2DLjGnt%2BIffVg%3D\" width=\"375\"><p>Regarding the timestamp - I would defer to R&amp;D about their guidance on the timestamp but from my experience it shouldn't be a blocker as we do have a timestamp to leverage. However, let's have them pass one back with their eAPI payloads for best practice/consistency.</p><p><br /></p><p>Verifying that the rest of their eAPI setup looks good, just a note regarding the AddPaymentInfo and AddToWishlist events below in <strong>bold</strong></p><p><br /></p><ol><li>ViewContent events firing as expected on PDP page views on URLs like (but not limited to)</li></ol><div class=\"tableWrapper\"><table style=\"min-width: 24px;\"><colgroup><col></col></colgroup><tbody><tr><td><p>https://www.samsung.com/us/home-appliances/refrigerators/bespoke/bespoke-4-door-french-door-refrigerator-23-cu-ft-with-beverage-center-in-white-glass-rf23bb860012aa/</p></td></tr><tr><td><p>https://www.samsung.com/us/home-appliances/wall-ovens/microwave-combination-oven/30-microwave-combination-wall-oven-with-steam-cook-in-matte-black-steel-nq70cg600dmtaa/</p></td></tr><tr><td><p>https://www.samsung.com/us/mobile/phones/galaxy-s/galaxy-s9-64gb--unlocked--sm-g960uzpaxaa/</p></td></tr><tr><td><p>https://www.samsung.com/us/computing/memory-storage/usb-flash-drives/usb-type-c-256gb-muf-256da-am/</p></td></tr><tr><td><p>https://www.samsung.com/us/home-appliances/washers/top-load/5-5-cu-ft-extra-large-capacity-smart-top-load-washer-with-super-speed-wash-in-white-wa55cg7100awus/</p></td></tr><tr><td><p>https://www.samsung.com/us/smart-home/security/cameras/smartcam-hd-pro-1080p-full-hd-wifi-camera-snh-p6410bn/</p></td></tr><tr><td><p>https://www.samsung.com/us/computing/memory-storage/portable-solid-state-drives/portable-ssd-t7-usb-3-2-1tb--gray--mu-pc1t0t-am/</p></td></tr></tbody></table></div><p>Parameter info:</p><ul><li><span style=\"color: #333333;\">content_id OK</span></li><li><span style=\"color: #333333;\">content_type OK</span></li><li><span style=\"color: #333333;\">price OK</span></li><li><span style=\"color: #333333;\">quantity OK</span></li><li><span style=\"color: #333333;\">currency MISSING</span></li><li><span style=\"color: #333333;\">value MISSING</span></li></ul><p><br /></p><p><br /></p><ol><li>AddToCart events firing as expected after a customer has added something to their cart on URL</li></ol><div class=\"tableWrapper\"><table style=\"min-width: 24px;\"><colgroup><col></col></colgroup><tbody><tr><td><p>https://www.samsung.com/us/web/express/cart/</p></td></tr></tbody></table></div><p>Parameter Info:</p><ul><li><span style=\"color: #333333;\">content_id OK</span></li><li><span style=\"color: #333333;\">content_type OK</span></li><li><span style=\"color: #333333;\">price: OK</span></li><li><span style=\"color: #333333;\">quantity: OK</span></li><li><span style=\"color: #333333;\">currency OK</span></li><li><span style=\"color: #333333;\">value: MISSING/INCORRECT </span></li><ul><li><span style=\"color: #333333;\">Passing back \"0\" for all AddToCart events</span></li></ul></ul><p><br /></p><ol><li>InitiateCheckout events firing as expected when a customer begins the checkout flow on URLs:</li></ol><div class=\"tableWrapper\"><table style=\"min-width: 24px;\"><colgroup><col></col></colgroup><tbody><tr><td><p>https://www.samsung.com/us/web/business/express/checkout</p></td></tr><tr><td><p>https://www.samsung.com/us/web/express/assisted-checkout</p></td></tr><tr><td><p>https://www.samsung.com/us/web/express/assisted-checkout-app</p></td></tr><tr><td><p>https://www.samsung.com/us/web/express/cart</p></td></tr><tr><td><p>https://www.samsung.com/us/web/express/cart/</p></td></tr><tr><td><p>https://www.samsung.com/us/web/express/checkout</p></td></tr><tr><td><p>https://www.samsung.com/us/web/express/checkout/</p></td></tr></tbody></table></div><p><br /></p><ol><li><strong>AddPaymentInfo event should be firing on https://www.samsung.com/us/web/express/checkout URLs. It looks like they are firing on PDP type URLs shown in the table below. This is not a critical event for VSA but it would be worth addressing/looking into to ensure that this AddPaymentInfo event is firing where it should/as expected:</strong></li></ol><div class=\"tableWrapper\"><table style=\"min-width: 24px;\"><colgroup><col></col></colgroup><tbody><tr><td><p>https://www.samsung.com/us/computing/galaxy-books/galaxy-book4-series/buy/galaxy-book4-ultra-16-intelcore-ultra-7-1tb-moonstone-gray-np960xgl-xg2us/</p></td></tr><tr><td><p>https://www.samsung.com/us/smartphones/galaxy-s24/buy/galaxy-s24-plus-256gb-unlocked-sm-s926uzkaxaa/</p></td></tr><tr><td><p>https://www.samsung.com/us/tablets/galaxy-tab-s9/buy/galaxy-tab-s9-plus-256gb-beige-wi-fi-sm-x810nzeaxar/</p></td></tr><tr><td><p>https://www.samsung.com/us/smartphones/galaxy-s24/buy/galaxy-s24-plus-256gb-unlocked-sm-s926uzkaxaa/</p></td></tr><tr><td><p>https://www.samsung.com/us/smartphones/galaxy-z-fold5/buy/galaxy-z-fold5-512gb-unlocked-sm-f946uzkexaa/</p></td></tr><tr><td><p>https://www.samsung.com/us/televisions-home-theater/tvs/crystal-uhd-tvs/55-class-cu7000-crystal-uhd-4k-smart-tv-2023-un55cu7000fxza/</p></td></tr><tr><td><p>https://www.samsung.com/us/mobile/audio/headphones/galaxy-buds2-pro-white-sm-r510nzwaxar/</p></td></tr><tr><td><p>https://www.samsung.com/us/smartphones/galaxy-s23-fe/buy/galaxy-s23-fe-128gb-unlocked-sm-s711ulgaxaa/</p></td></tr></tbody></table></div><p><br /></p><ol><li><strong>AddToWishlist event are firing on https://www.samsung.com/us/web/express/cart/ URLs. The expectation is that the AddToWishlist event is fired on either:</strong></li></ol><ul><ul><li><strong>https://www.samsung.com/us/account/wishlist/</strong></li><li><strong>Or a PDP URL on the click of the \"heart\" icon: https://www.samsung.com/us/computing/memory-storage/usb-flash-drives/usb-type-c-256gb-muf-256da-am/</strong></li></ul></ul><img alt=\"image.png\" data-image_key=\"tos-alisg-i-6g3pebcbys-sg/ad03b33f1d5645a79692c3184164e3c5.png\" height=\"143.669\" src=\"https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/ad03b33f1d5645a79692c3184164e3c5.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&amp;x-expires=4834608592&amp;x-signature=7GXHwP8NkVCCapAsjkl%2FlGv42%2B8%3D\" width=\"375\"><ul><li><strong>This is not a critical event for VSA but it would be worth addressing/looking into to ensure that this AddToWishlist event is firing where it should/as expected</strong></li></ul><p><br /></p><ol><li>Search event firing as expected on https://www.samsung.com/us/search/searchMain/ URLs</li></ol><p><br /></p><ol><li>CompletePayment events firing as expected on purchase confirmation URLs:</li></ol><div class=\"tableWrapper\"><table style=\"min-width: 24px;\"><colgroup><col></col></colgroup><tbody><tr><td><p>https://www.samsung.com/us/web/express/order-confirm/8be90e6a-c92b-49da-ae72-da1f9ff6b761</p></td></tr><tr><td><p>https://www.samsung.com/us/web/express/order-confirm/d88379ae-4386-4602-932b-65965fb1a95a</p></td></tr><tr><td><p>https://www.samsung.com/us/web/express/order-confirm/da48d081-5c1e-4757-b1d9-9e8ca5fbf9f0</p></td></tr><tr><td><p>https://www.samsung.com/us/web/express/order-confirm/7782a880-6397-4b07-9db2-f779f716134f</p></td></tr><tr><td><p>https://www.samsung.com/us/web/express/order-confirm/e31fd926-0218-413b-a6cc-20902df2a9b9</p></td></tr><tr><td><p>https://www.samsung.com/us/web/express/order-confirm/b33bba69-6f49-4c08-b7df-3e9c7622d115</p></td></tr><tr><td><p>https://www.samsung.com/us/web/express/order-confirm/458dd4d6-fa23-4c06-89f5-382520351294</p></td></tr></tbody></table></div><p>Parameter Information:</p><ul><li>content_id OK</li><li>content_type OK </li><li>price OK</li><li>quantity OK</li><li>currency OK</li><li>value OK</li></ul><p><br /></p><p>Thanks!</p><p>Robbie</p></img></img>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_2e8c47b2-7853-4298-8f1b-98c86502825g~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1712171004,
+      "auto_close_hit": 0,
+      "id": 7353714418217583000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "akeem.thompson@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Akeem R Thompson",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7301058681406505986",
+      "name": "Akeem R Thompson",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hey Robbie, are there any parameters being passed back for&nbsp;<span style=\"color: #333333;\"><strong>AddToWishlist?&nbsp;</strong>&nbsp;When i check EM, i don&#39;t see any, summarizing a response for the client now and want to include this info</span></p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v3_008v_e1b79399-c592-499e-ab56-0a8539128ebh~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1712171321,
+      "auto_close_hit": 0,
+      "id": 7353717714621317000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Robbie Santos",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "6998070135030318082",
+      "name": "Robbie Santos",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi Akeem,</p><p>They are not passing back any parameters for AddToWishlist. They are not mandatory here but they would essentially pass back the same parameters as the ViewContent and AddToCart events&nbsp;</p><p>Thanks!</p><p>Robbie</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_2e8c47b2-7853-4298-8f1b-98c86502825g~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1712171333,
+      "auto_close_hit": 0,
+      "id": 7353717752210784000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "akeem.thompson@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Akeem R Thompson",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7301058681406505986",
+      "name": "Akeem R Thompson",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>For the client to passback of<span style=\"color: #333333;\">&nbsp;eAPI payloads request, do we want them to trigger each of these events and take a screenshot of the payload?</span></p><p><br></p><p><span style=\"color: #333333;\">Want to be descriptive as possible here</span></p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v3_008v_e1b79399-c592-499e-ab56-0a8539128ebh~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1712171505,
+      "auto_close_hit": 0,
+      "id": 7353719346583077000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Robbie Santos",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "6998070135030318082",
+      "name": "Robbie Santos",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Yes, if possible. </p><p>I&#39;m also able to pull the data from our end but it will take a few hours or up to a day for the updated data to arrive at our accessible databases. </p><p>Will they be testing these updates in a lower environment like a QA/Staging/Pre-prod? If so, would they be able to provide me with the URL? It will help me build my query to filter out live samsung.com events and view the test events with the applied changes only</p><p>Thanks!</p><p>Robbie</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_2e8c47b2-7853-4298-8f1b-98c86502825g~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1712177424,
+      "auto_close_hit": 0,
+      "id": 7353744513153663000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Gabe Houser",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "6996965890966373378",
+      "name": "Gabe Houser",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi Robbie,</p><p><br></p><p>Hopping in here! We are looking to confirm there is 100% Events API signal coverage on the below URLs that we ran the VSA campaign with. We did not see any Viewcontent events populate when directing users to these PDPs, which was extremely odd given we drove over 2K clicks and 1500 Landing Page Views to these PDP pages. </p><p><br></p><p>We ran this VSA campaign and once it was live, it did not generate any results within a 7 Day Click attribution window. We want to make sure that our signal has full coverage for both Click + View through attribution. Please confirm that is the case.&nbsp;</p><p><br></p><p>These URLs are also a focus for this Samsung campaign, so if we can confirm the URLs indeed have Events API Signal coverage, that would be great.&nbsp;</p><p><br></p><p>The below URLs are from the Catalog ID&nbsp;7060360683782670081 within Business Center ID&nbsp;6839019077151752197. The URLs are within the product set Q124 CTV One Launch Hot VSA.&nbsp;</p><p><br></p><div class=\"tableWrapper\"><table style=\"min-width: 144px;\"><colgroup><col><col><col><col><col><col></colgroup><tbody><tr><td><p>Product Link</p></td></tr><tr><td><p><a href=\"https://www.samsung.com/us/televisions-home-theater/tvs/oled-tvs/77-class-oled-s95d-qn77s95dafxza/\" target=\"_blank noopener noreferrer\">https://www.samsung.com/us/televisions-home-theater/tvs/oled-tvs/77-class-oled-s95d-qn77s95dafxza/</a></p></td></tr><tr><td><p>https://www.samsung.com/us/televisions-home-theater/tvs/samsung-neo-qled-8k/85-class-samsung-neo-qled-8k-qn900d-qn85qn900dfxza/</p></td></tr><tr><td><p>https://www.samsung.com/us/televisions-home-theater/tvs/samsung-neo-qled-4k/85-class-samsung-neo-qled-4k-qn85d-qn85qn85dbfxza/</p></td></tr><tr><td><p>https://www.samsung.com/us/televisions-home-theater/tvs/samsung-neo-qled-8k/75-class-samsung-neo-qled-8k-qn800d-qn75qn800dfxza/</p></td></tr><tr><td><p>https://www.samsung.com/us/televisions-home-theater/tvs/the-frame/75-class-the-frame-qled-4k-ls03d-qn75ls03dafxza/</p></td></tr><tr><td><p>https://www.samsung.com/us/televisions-home-theater/tvs/samsung-neo-qled-4k/75-class-qn90d-samsung-neo-qled-4k-qn75qn90dafxza/</p></td></tr><tr><td><p>https://www.samsung.com/us/televisions-home-theater/tvs/oled-tvs/55-class-oled-s95d-qn55s95dafxza/</p></td></tr><tr><td><p>https://www.samsung.com/us/televisions-home-theater/tvs/the-frame/43-class-the-frame-qled-4k-ls03d-qn43ls03dafxza/</p></td></tr><tr><td><p>https://www.samsung.com/us/televisions-home-theater/tvs/samsung-neo-qled-8k/65-class-samsung-neo-qled-8k-qn900d-qn65qn900dfxza/</p></td></tr><tr><td><p>https://www.samsung.com/us/televisions-home-theater/tvs/samsung-neo-qled-4k/75-class-samsung-neo-qled-4k-qn85d-qn75qn85dbfxza/</p></td></tr><tr><td><p>https://www.samsung.com/us/televisions-home-theater/tvs/samsung-neo-qled-4k/65-class-samsung-neo-qled-4k-qn85d-qn65qn85dbfxza/</p></td></tr><tr><td><p>https://www.samsung.com/us/televisions-home-theater/tvs/samsung-neo-qled-4k/55-class-qn90d-samsung-neo-qled-4k-qn55qn90dafxza/</p></td></tr><tr><td><p>https://www.samsung.com/us/televisions-home-theater/tvs/samsung-neo-qled-4k/65-class-qn90d-samsung-neo-qled-4k-qn65qn90dafxza/</p></td></tr><tr><td><p>https://www.samsung.com/us/televisions-home-theater/tvs/samsung-neo-qled-4k/43-class-qn90d-samsung-neo-qled-4k-qn43qn90dafxza/</p></td></tr><tr><td><p>https://www.samsung.com/us/televisions-home-theater/tvs/samsung-neo-qled-4k/55-class-samsung-neo-qled-4k-qn85d-qn55qn85dbfxza/</p></td></tr><tr><td><p>https://www.samsung.com/us/televisions-home-theater/tvs/samsung-neo-qled-8k/65-class-samsung-neo-qled-8k-qn800d-qn65qn800dfxza/</p></td></tr><tr><td><p>https://www.samsung.com/us/televisions-home-theater/tvs/samsung-neo-qled-4k/98-class-qn90d-samsung-neo-qled-4k-qn98qn90dafxza/</p></td></tr><tr><td><p>https://www.samsung.com/us/televisions-home-theater/tvs/oled-tvs/65-class-oled-s95d-qn65s95dafxza/</p></td></tr><tr><td><p>https://www.samsung.com/us/televisions-home-theater/tvs/the-frame/50-class-the-frame-qled-4k-ls03d-qn50ls03dafxza/</p></td></tr><tr><td><p>https://www.samsung.com/us/televisions-home-theater/tvs/samsung-neo-qled-4k/50-class-qn90d-samsung-neo-qled-4k-qn50qn90dafxza/</p></td></tr></tbody></table></div><p><br></p><p>Thank you so much and please let us know your findings.</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/7816efab-6b6e-4dfc-b9aa-c6b2608eca5g~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    }
+  ],
+  "enable_forced_order_type": 0,
+  "plat_id": 1736490999244882,
+  "archive_category_2_name": "",
+  "pending_from_follower": true,
+  "id": 1979064,
+  "workflow_nodes": [],
+  "board_id": 1705151646989663,
+  "employee_email": "robbie.santos@bytedance.com",
+  "is_support_suggestion": 0,
+  "title": "Samsung eAPI needs to have a full audit due to errors found in setup affecting VSA delivery  ",
+  "category_1_name": "Events API - Web",
+  "auto_close_hit": 0,
+  "relation_qual": [],
+  "accountpass": 0,
+  "priority": -1,
+  "inner": 1,
+  "vip_types": [],
+  "is_impending_overtime": 0,
+  "creater_lark_avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v3_008v_e1b79399-c592-499e-ab56-0a8539128ebh~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+  "enable_compliance_mode": false,
+  "type": 6,
+  "current_role": null,
+  "fd_permission": 1,
+  "status": 2,
+  "business_data": [],
+  "update_time": 1712177424,
+  "owner_name": "Akeem Thompson",
+  "enable_auto_close_v2": 0,
+  "time_after_overtime": 0,
+  "swim_lane_status": 4,
+  "enable_forced_order_tag": 1,
+  "satisfied": 0,
+  "category_2_name": "",
+  "reply_name": " MPO Technical Implementation  Team",
+  "is_guest": false,
+  "archive_category_2": "",
+  "archive_category_1_name": "Events API - Web",
+  "archive_category_1": "1736497066245137",
+  "allow_reopen": 0,
+  "categories": [
+    {
+      "to_user": 1,
+      "categories_id": "1736497066245137",
+      "cate_1_form_id": 1736491088651314,
+      "sub_cates": [
+        {
+          "to_user": 0,
+          "categories_id": "1772385714882593",
+          "value": "Lima"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385714882609",
+          "value": "TagHero"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385714883585",
+          "value": "Pixeron"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385714883601",
+          "value": "Kraken Data"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748400130",
+          "value": "Stape"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748400146",
+          "value": "AccuraCast"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748400162",
+          "value": "DataHash"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748400178",
+          "value": "SignalSight"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748401154",
+          "value": "Tiger Pistol"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748401170",
+          "value": "Panomix"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748401186",
+          "value": "NNT"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748401202",
+          "value": "E-Cens"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772548708426753",
+          "value": "TSC"
+        }
+      ],
+      "value": "Events API - Web"
+    }
+  ],
+  "core_user_id": "7301058681406505986",
+  "plat_name": "MPO Technical Implementation",
+  "follower_role": "TSC",
+  "remark": "",
+  "show_auto_assign": false,
+  "is_overtime": 0,
+  "creater_lark_name": "Akeem Thompson",
+  "follow_employee_id": 6713518,
+  "is_order_top": 0,
+  "urged": 0,
+  "im_chat_id": "",
+  "is_delay": 0,
+  "enable_forced_priority": 0,
+  "pending_time": 373088,
+  "debug_permission": 1,
+  "is_vip": 0,
+  "items": [
+    {
+      "label": "Ticket Title",
+      "content": "Samsung eAPI needs to have a full audit due to errors found in setup affecting VSA delivery  ",
+      "valid": true,
+      "item_id": 1736491088652290,
+      "type": 14,
+      "option_meaning": -1
+    },
+    {
+      "label": "Is this consultation request to help your client get to Signals Optimal? ",
+      "content": "No, my request is only a specific question or issue about Signals",
+      "valid": true,
+      "key": "No, my request is only a specific question or issue about Signals",
+      "item_id": 1774551082736689,
+      "type": 9,
+      "option_meaning": -1
+    },
+    {
+      "label": "As what stage is your Signals discussion with your client?",
+      "content": "Post-Pitch and client is ready to implement",
+      "valid": true,
+      "key": "Post-Pitch and client is ready to implement",
+      "item_id": 1774551082737697,
+      "type": 9,
+      "option_meaning": -1
+    },
+    {
+      "label": "Is the partner using a third party platform for Web Pixel and/or Server side tagging?",
+      "content": "Unsure (Do Not Know)",
+      "valid": true,
+      "key": "Unsure (Do Not Know)",
+      "item_id": 1774551147185217,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Advertiser / Client Name",
+      "content": "Samung",
+      "valid": true,
+      "item_id": 1736491088652306,
+      "type": 1,
+      "option_meaning": 6
+    },
+    {
+      "label": "Client Vertical ",
+      "content": "Other",
+      "valid": true,
+      "key": "Other",
+      "item_id": 1736491088652322,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "GBS Account Tier",
+      "content": "Key Account",
+      "valid": true,
+      "key": "Key Account",
+      "item_id": 1736492036013090,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "GBS Country / Region",
+      "content": "NORTHAMERICA-US",
+      "valid": true,
+      "key": "NORTHAMERICA",
+      "item_id": 1736491882822689,
+      "type": 4,
+      "option_meaning": 0
+    },
+    {
+      "label": "Your Department / Team",
+      "content": "Other",
+      "valid": true,
+      "key": "Other",
+      "item_id": 1736491882823729,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Ad Account ID(s)",
+      "content": [
+        "7340320531272695810"
+      ],
+      "valid": true,
+      "item_id": 1736492509963313,
+      "type": 18,
+      "option_meaning": 4
+    },
+    {
+      "label": "Advertiser Priority Level/Tier",
+      "content": "P1",
+      "valid": true,
+      "key": "P1",
+      "item_id": 1740206947358722,
+      "type": 4,
+      "option_meaning": 2
+    },
+    {
+      "label": "Please list name & role of Account Team for this client (BPM/CSM/ADE etc.)",
+      "content": "Lindsey Bono, Gabe Houser, Harold Lee, Peter Norris, Christina Perez",
+      "valid": true,
+      "item_id": 1740206947359746,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Business Center ID",
+      "content": "",
+      "valid": true,
+      "item_id": 1736492509964289,
+      "type": 1,
+      "option_meaning": 10
+    },
+    {
+      "label": "Pixel ID",
+      "content": "eAPI ID: CG3RMEJC77UENQEJPDQ0",
+      "valid": true,
+      "item_id": 1740206947359762,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Website URL(s)",
+      "content": [
+        "samsung.com "
+      ],
+      "valid": true,
+      "item_id": 1771654477299713,
+      "type": 18,
+      "option_meaning": -1
+    },
+    {
+      "label": "Product for Implementation",
+      "content": "Events API - Web",
+      "valid": true,
+      "key": "Events API - Web",
+      "item_id": 1736494728349698,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Target Implementation Date",
+      "content": "2024-03-29",
+      "valid": true,
+      "item_id": 1736500801975346,
+      "type": 11,
+      "option_meaning": -1
+    },
+    {
+      "label": "Does your client have Developer Resources available to support the implementation?",
+      "content": "No",
+      "valid": true,
+      "key": "No",
+      "item_id": 1736494728350770,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Reason for request: Please briefly describe the help needed for this account.",
+      "content": "VSA Retargeting Ad: VSA Retargeting Ads continued to see 0 delivery beyond the initial technical errors in the auction platform.  After investigation from the product team, we discovered the root cause was due to event timestamp data not being passed back to TikTok server which further prevented final delivery on the auction platform.\n\nTHE ASK: Because of this issue we would like to do a full audit of the client eAPI setup, to ensure there are no other issues that can come up in future and to assure our clients we are on top of everything. \n\nCan you please let us know what steps MPO needs to take to QA our clients eAPI set up? Does the client's dev team need to be involved? Any idea on turn around times?\n\nAs always thank you for your assistance! ",
+      "valid": true,
+      "item_id": 1736494803233810,
+      "type": 2,
+      "option_meaning": 8
+    },
+    {
+      "label": "Screenshot",
+      "content": [
+        {
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/d5b3b0e743e246b5b9b5bf0c747fbeae.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608592&x-signature=4iI4e2f7xQkpqjDl4m9mIZAazGY%3D",
+          "file_name": "file_20240408_02_49_52_664960",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/d5b3b0e743e246b5b9b5bf0c747fbeae.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608592&x-signature=4iI4e2f7xQkpqjDl4m9mIZAazGY%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/d5b3b0e743e246b5b9b5bf0c747fbeae.png",
+          "file_type": "jpeg",
+          "biz_type": 2
+        },
+        {
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/671cea37f4e24bc083f742e6153149fa.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608592&x-signature=PvEuQCPzoFpiNP2DLjGnt%2BIffVg%3D",
+          "file_name": "file_20240408_02_49_52_851053",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/671cea37f4e24bc083f742e6153149fa.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608592&x-signature=PvEuQCPzoFpiNP2DLjGnt%2BIffVg%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/671cea37f4e24bc083f742e6153149fa.png",
+          "file_type": "jpeg",
+          "biz_type": 2
+        },
+        {
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/ad03b33f1d5645a79692c3184164e3c5.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608592&x-signature=7GXHwP8NkVCCapAsjkl%2FlGv42%2B8%3D",
+          "file_name": "file_20240408_02_49_52_851206",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/ad03b33f1d5645a79692c3184164e3c5.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608592&x-signature=7GXHwP8NkVCCapAsjkl%2FlGv42%2B8%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/ad03b33f1d5645a79692c3184164e3c5.png",
+          "file_type": "jpeg",
+          "biz_type": 2
+        }
+      ],
+      "valid": true,
+      "item_id": 1740206947357746,
+      "type": 5,
+      "option_meaning": -1
+    },
+    {
+      "label": "categorization",
+      "content": {
+        "category_1_name": "Events API - Web-Events API - Web"
+      },
+      "valid": true,
+      "item_id": 0,
+      "type": 3,
+      "option_meaning": -1
+    }
+  ],
+  "fs_permission": 1,
+  "auto_close_time_left": null
+}

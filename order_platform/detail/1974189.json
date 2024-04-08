@@ -1,0 +1,574 @@
+{
+  "reply_mode": 1,
+  "time_before_overtime": 0,
+  "set_priority_automatically": false,
+  "is_follow": 0,
+  "category_2": "",
+  "category_1": "1736497066245137",
+  "follower_avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v3_0093_6d598d1e-f1ae-4b58-814b-30233de243eh~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+  "follower": "Heidi Williams",
+  "create_time": 1711561790,
+  "deadline": 0,
+  "archive_board_id": 1705151646989663,
+  "replies": [
+    {
+      "is_hide_reply": false,
+      "create_time": 1711639226,
+      "auto_close_hit": 0,
+      "id": 7351433693350609000,
+      "reply_role": "TSC",
+      "staff_id": 5710207,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "heidi.williams@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Heidi Williams",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7268322549460435969",
+      "name": "Heidi Williams",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi Sam, working on this now! Thanks for the buzz.</p><p><br></p><p>Heidi</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v3_0093_6d598d1e-f1ae-4b58-814b-30233de243eh~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711639430,
+      "auto_close_hit": 0,
+      "id": 7351434345753723000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "sam.valentine@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Sam Valentine",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7122427248200008705",
+      "name": "Sam Valentine",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Great, thank you!</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v3_0081_20de18bb-8da6-4801-b7f1-83fefdc2e8fh~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711646278,
+      "auto_close_hit": 0,
+      "id": 7351463037766812000,
+      "reply_role": "TSC",
+      "staff_id": 5710207,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "heidi.williams@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Heidi Williams",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7268322549460435969",
+      "name": "Heidi Williams",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Here is the pixel/Event API audit for:</p><p><a href=\"https://www.pitviper.com/\" target=\"_blank\">https://www.pitviper.com/</a></p><p>Account ID - <a href=\"https://ads.tiktok.com/i18n/dashboard?aadvid=7114004977021927426\" target=\"_blank\">6863072833635876870</a></p><p>Pixel ID - <a href=\"https://ads.tiktok.com/i18n/events_manager/pixel/detail/CAT0D6JC77U1K6S9K5F0?start_time=2024-03-22&amp;end_time=2024-03-28&amp;aadvid=7114004977021927426\" target=\"_blank\">CMNCT6BC77U667VEGJBG</a></p><p>Implementation Type: Browser (Shopify)/Event API </p><p>-Events: Upper to lower funnel:</p><p>PageView (standard)</p><p>PageView (custom)</p><p>ViewContent - <span style=\"color: #B83232;\">not always firing</span> - example:</p><p>ViewContent fired here:</p><img alt=\"image.png\" data-image_key=\"tos-alisg-i-6g3pebcbys-sg/a29b8f559d974cd294b54831442ac964.png\" height=\"152.848\" src=\"https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/a29b8f559d974cd294b54831442ac964.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&amp;x-expires=4833830588&amp;x-signature=T1dg2wfLACZ6wW7V95Gbsxdkf3U%3D\" width=\"375\"><p>But not here:</p><img alt=\"image.png\" data-image_key=\"tos-alisg-i-6g3pebcbys-sg/76b40e95640f4ceeb707d9d4e1ce84e8.png\" height=\"165.576\" src=\"https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/76b40e95640f4ceeb707d9d4e1ce84e8.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&amp;x-expires=4833830588&amp;x-signature=0JBGF%2B9YMNaQwbLOQLbSwow%2BlV8%3D\" width=\"375\"><p>Parameters showing different values between Shopify and other implementation (pixel)</p><p> </p><p>example parameters:</p><p><strong>Shopify pixel.js</strong></p><p>,\"contents\":[{\"price\":\"92.00\",\"content_category\":\"Eyewear\",\"content_id\":\"6921289597022\",\"content_name\":\"The Sandstorm 2000 - BALL-ISTIC‚Ñ¢ Smoke\",<strong>\"content_type\":\"product_group\"</strong>}]</p><p> </p><p> </p><p><span style=\"color: #1F1F1F;\"><strong>PixelHTTP pixel.js (non-Shopify)</strong></span></p><p>\"contents\":[{\"price\":\"1799.69\",\"quantity\":\"1\",\"content_id\":\"44876772802806\",\"content_name\":\"The Monster Bull Polarized Double Wide\",<strong>\"content_type\":\"product\"</strong>}</p><p>Content_type should be the same across the site. For reference, content_type 'product' should map to SKU id, and content_type 'product_group' should map to SPU id (see instructions <a href=\"https://ads.tiktok.com/help/article/about-parameters?lang=en#:~:text=based%20Optimization%20(VBO)-,content_type,-The%20content_type%20object\" target=\"_blank\">here</a>). </p><p><br /></p><p>I would also recommend they consolidate their implementation, and not have pixel firing from two different sources. This will impact deduplication and generally cause events to report accurately.</p><p><br /></p><p>AddToCart - example parameters: </p><img alt=\"image.png\" data-image_key=\"tos-alisg-i-6g3pebcbys-sg/3c8c120696244fe0bfeec006885d9058.png\" height=\"175.639\" src=\"https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/3c8c120696244fe0bfeec006885d9058.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&amp;x-expires=4833830588&amp;x-signature=lXbLp9gNqqOSjcjCxXq4sjCVxwY%3D\" width=\"375\"><p>Shopify implementation is passing Email and Phone_number incorrectly formatted</p><img alt=\"image.png\" data-image_key=\"tos-alisg-i-6g3pebcbys-sg/6ee29d1ba2834dfabfde532a3e7c439b.png\" height=\"310.23056799999995\" src=\"https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/6ee29d1ba2834dfabfde532a3e7c439b.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&amp;x-expires=4833830588&amp;x-signature=OdI24pzQI%2BioN0a9wNiVC%2FaTSvM%3D\" width=\"327\"><p>Pixel implementation does not include 'value' parameter (screenshots indicate 'Shopify' but data report shows 'PixelHTTP')</p><img alt=\"image.png\" data-image_key=\"tos-alisg-i-6g3pebcbys-sg/4aeccfbf39084c17b65467d5beac75b0.png\" height=\"468.29307199999994\" src=\"https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/4aeccfbf39084c17b65467d5beac75b0.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&amp;x-expires=4833830588&amp;x-signature=cLsW23soa3uUYplYAjAevQTnEJw%3D\" width=\"313\"><p><strong>collection_viewed</strong> (custom) default event</p><p><strong>view_cart</strong> (custom)</p><p><strong>InitiateCheckout</strong> - missing 'value' and 'phone_number' format is invalid</p><p><strong>CompletePayment</strong> - example parameters: ,\"contents\":[{\"price\":\"48.09\",\"quantity\":\"1\",\"content_id\":\"40403360383070\",\"content_name\":\"The Big Buck Hunter Original\",\"content_type\":\"product\"}],\"currency\":\"USD\"</p><p>Three events firing for many transactions, example:</p><img alt=\"image.png\" data-image_key=\"tos-alisg-i-6g3pebcbys-sg/42e23e6336ca45b2b9bf05842682dd37.png\" height=\"23.553\" src=\"https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/42e23e6336ca45b2b9bf05842682dd37.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&amp;x-expires=4833830588&amp;x-signature=sbAjU%2B1T2Tm3TxFcJ97vx2quSUI%3D\" width=\"375\"><p>If you check the timestamp, this is one transactions with three pixel events associated to it. Simplifying the implementation should fix this (we recommend Shopify One-click, which solves all the issues) </p><p><strong>Search</strong> - I am seeing a lot of the same values repeating here for Email and Phone_number. They should make sure there is no hard-coded value being passed here:</p><img alt=\"image.png\" data-image_key=\"tos-alisg-i-6g3pebcbys-sg/b11ebedec2f4418a96f6c37596d0f654.png\" height=\"117.829\" src=\"https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/b11ebedec2f4418a96f6c37596d0f654.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&amp;x-expires=4833830588&amp;x-signature=Ey0rZQWPVWydYtLFiKb5hK%2Fs76Y%3D\" width=\"375\"><p><strong>-AM: Automatic and Manual Advanced Matching</strong></p><p>Email reporting at 100% for CompletePayment - I will check this when the formatting issue has been fixed:</p><img alt=\"image.png\" data-image_key=\"tos-alisg-i-6g3pebcbys-sg/2432e7cd5b9e4a41a06e89a43e50f067.png\" height=\"83.792\" src=\"https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/2432e7cd5b9e4a41a06e89a43e50f067.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&amp;x-expires=4833830588&amp;x-signature=xa5xiFRUdhXI%2BNdAqOllFXu41XY%3D\" width=\"375\"><p>-Deduplication: Please see tab on attached spreadsheet (Deduplication - Shopping). Each id should have a count of 2, one from server, one from browser. Example of ideal scenario:</p><img alt=\"image.png\" data-image_key=\"tos-alisg-i-6g3pebcbys-sg/0dad38d43aed4851a24d048d8e41cbec.png\" height=\"50.433\" src=\"https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/0dad38d43aed4851a24d048d8e41cbec.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&amp;x-expires=4833830588&amp;x-signature=ATniAw0RZ%2BeLXqyx6Z0gHksEON0%3D\" width=\"375\"><p>They can use the data to look into individual events to help diagnose the issues.</p><p><br /></p><p>We can also go over this on a call if needed!</p><p><br /></p><p>Thanks, Heidi</p></img></img></img></img></img></img></img></img></img>",
+          "type": 6
+        },
+        {
+          "content": [
+            {
+              "file_type": "xlsx",
+              "file_name": "Pitviper All Events TikTok 3-28.xlsx",
+              "file_url": "https://lf16-athena-ticketing-sign.ibytedtos.com/obj/tos-alisg-v-90231e-sg/oUBIFjfYAPxamiAUMA4CEeQviBABpEQg1dAA23.xlsx?lk3s=cbe26b3a&x-expires=4833830588&x-signature=EdutDYULi6F49bofv%2FI6S3ia89g%3D",
+              "file_key": "tos-alisg-v-90231e-sg/oUBIFjfYAPxamiAUMA4CEeQviBABpEQg1dAA23.xlsx",
+              "url": "https://lf16-athena-ticketing-sign.ibytedtos.com/obj/tos-alisg-v-90231e-sg/oUBIFjfYAPxamiAUMA4CEeQviBABpEQg1dAA23.xlsx?lk3s=cbe26b3a&x-expires=4833830588&x-signature=EdutDYULi6F49bofv%2FI6S3ia89g%3D",
+              "biz_type": 2,
+              "size": 4068431
+            }
+          ],
+          "type": 5
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v3_0093_6d598d1e-f1ae-4b58-814b-30233de243eh~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711735895,
+      "auto_close_hit": 0,
+      "id": 7351846904491196000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "sam.valentine@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Sam Valentine",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7122427248200008705",
+      "name": "Sam Valentine",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi Heidi,</p><p><br></p><p>We shared all of this over to the client and they are interested in hopping on a call with technical support to talk through next steps and troubleshooting to solve these issues. Would you be able to jump on a call next week with Pit Viper? If so, what does your availability look like?</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v3_0081_20de18bb-8da6-4801-b7f1-83fefdc2e8fh~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711738456,
+      "auto_close_hit": 0,
+      "id": 7351858119670006000,
+      "reply_role": "TSC",
+      "staff_id": 5710207,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "heidi.williams@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Heidi Williams",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7268322549460435969",
+      "name": "Heidi Williams",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi Sam, yes, feel free to book any time next week I have available EST.</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v3_0093_6d598d1e-f1ae-4b58-814b-30233de243eh~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    }
+  ],
+  "enable_forced_order_type": 0,
+  "plat_id": 1736490999244882,
+  "archive_category_2_name": "",
+  "pending_from_follower": false,
+  "id": 1974189,
+  "workflow_nodes": [],
+  "board_id": 1705151646989663,
+  "employee_email": "heidi.williams@bytedance.com",
+  "is_support_suggestion": 0,
+  "title": "Pit Viper Pixel and eAPI",
+  "category_1_name": "Events API - Web",
+  "auto_close_hit": 0,
+  "relation_qual": [],
+  "accountpass": 0,
+  "priority": 1,
+  "inner": 1,
+  "vip_types": [],
+  "is_impending_overtime": 0,
+  "creater_lark_avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v3_0081_20de18bb-8da6-4801-b7f1-83fefdc2e8fh~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+  "enable_compliance_mode": false,
+  "type": 6,
+  "current_role": null,
+  "fd_permission": 1,
+  "status": 1,
+  "business_data": [],
+  "update_time": 1711738456,
+  "owner_name": "Sam Valentine",
+  "enable_auto_close_v2": 0,
+  "time_after_overtime": 0,
+  "swim_lane_status": 4,
+  "enable_forced_order_tag": 1,
+  "satisfied": 0,
+  "category_2_name": "",
+  "reply_name": " MPO Technical Implementation  Team",
+  "is_guest": false,
+  "archive_category_2": "",
+  "archive_category_1_name": "Events API - Web",
+  "archive_category_1": "1736497066245137",
+  "allow_reopen": 0,
+  "categories": [
+    {
+      "to_user": 1,
+      "categories_id": "1736497066245137",
+      "cate_1_form_id": 1736491088651314,
+      "sub_cates": [
+        {
+          "to_user": 0,
+          "categories_id": "1772385714882593",
+          "value": "Lima"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385714882609",
+          "value": "TagHero"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385714883585",
+          "value": "Pixeron"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385714883601",
+          "value": "Kraken Data"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748400130",
+          "value": "Stape"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748400146",
+          "value": "AccuraCast"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748400162",
+          "value": "DataHash"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748400178",
+          "value": "SignalSight"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748401154",
+          "value": "Tiger Pistol"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748401170",
+          "value": "Panomix"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748401186",
+          "value": "NNT"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748401202",
+          "value": "E-Cens"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772548708426753",
+          "value": "TSC"
+        }
+      ],
+      "value": "Events API - Web"
+    }
+  ],
+  "core_user_id": "7122427248200008705",
+  "plat_name": "MPO Technical Implementation",
+  "follower_role": "TSC",
+  "remark": "",
+  "show_auto_assign": false,
+  "is_overtime": 0,
+  "creater_lark_name": "Sam Valentine",
+  "follow_employee_id": 5710207,
+  "is_order_top": 0,
+  "urged": 1,
+  "im_chat_id": "",
+  "is_delay": 0,
+  "enable_forced_priority": 0,
+  "pending_time": 28133,
+  "debug_permission": 1,
+  "is_vip": 0,
+  "items": [
+    {
+      "label": "Ticket Title",
+      "content": "Pit Viper Pixel and eAPI",
+      "valid": true,
+      "item_id": 1736491088652290,
+      "type": 14,
+      "option_meaning": -1
+    },
+    {
+      "label": "Is this consultation request to help your client get to Signals Optimal? ",
+      "content": "Yes, my request is to get my client to Signals Optimal",
+      "valid": true,
+      "key": "Yes, my request is to get my client to Signals Optimal",
+      "item_id": 1774551082736689,
+      "type": 9,
+      "option_meaning": -1
+    },
+    {
+      "label": "As what stage is your Signals discussion with your client?",
+      "content": "Post-Pitch and client is ready to implement",
+      "valid": true,
+      "key": "Post-Pitch and client is ready to implement",
+      "item_id": 1774551082737697,
+      "type": 9,
+      "option_meaning": -1
+    },
+    {
+      "label": "Is the partner using a third party platform for Web Pixel and/or Server side tagging?",
+      "content": "Unsure (Do Not Know)",
+      "valid": true,
+      "key": "Unsure (Do Not Know)",
+      "item_id": 1774551147185217,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Advertiser / Client Name",
+      "content": "Pit Viper",
+      "valid": true,
+      "item_id": 1736491088652306,
+      "type": 1,
+      "option_meaning": 6
+    },
+    {
+      "label": "Client Vertical ",
+      "content": "Ecommerce",
+      "valid": true,
+      "key": "Ecommerce",
+      "item_id": 1736491088652322,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "GBS Account Tier",
+      "content": "Growth",
+      "valid": true,
+      "key": "Growth",
+      "item_id": 1736492036013090,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "GBS Country / Region",
+      "content": "NORTHAMERICA-US",
+      "valid": true,
+      "key": "NORTHAMERICA",
+      "item_id": 1736491882822689,
+      "type": 4,
+      "option_meaning": 0
+    },
+    {
+      "label": "Your Department / Team",
+      "content": "BPM / Sales",
+      "valid": true,
+      "key": "BPM / Sales",
+      "item_id": 1736491882823729,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Ad Account ID(s)",
+      "content": [
+        "7114004977021927426"
+      ],
+      "valid": true,
+      "item_id": 1736492509963313,
+      "type": 18,
+      "option_meaning": 4
+    },
+    {
+      "label": "Advertiser Priority Level/Tier",
+      "content": "P2",
+      "valid": true,
+      "key": "P2",
+      "item_id": 1740206947358722,
+      "type": 4,
+      "option_meaning": 2
+    },
+    {
+      "label": "Please list name & role of Account Team for this client (BPM/CSM/ADE etc.)",
+      "content": "Sam Valentine (BPM) & Alis Agayn (CSM)",
+      "valid": true,
+      "item_id": 1740206947359746,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Business Center ID",
+      "content": "6989633199097839617",
+      "valid": true,
+      "item_id": 1736492509964289,
+      "type": 1,
+      "option_meaning": 10
+    },
+    {
+      "label": "Pixel ID",
+      "content": "CAT0D6JC77U1K6S9K5F0",
+      "valid": true,
+      "item_id": 1740206947359762,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Website URL(s)",
+      "content": [
+        "pitviper.com"
+      ],
+      "valid": true,
+      "item_id": 1771654477299713,
+      "type": 18,
+      "option_meaning": -1
+    },
+    {
+      "label": "Product for Implementation",
+      "content": "Events API - Web",
+      "valid": true,
+      "key": "Events API - Web",
+      "item_id": 1736494728349698,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Target Implementation Date",
+      "content": "2024-03-27",
+      "valid": true,
+      "item_id": 1736500801975346,
+      "type": 11,
+      "option_meaning": -1
+    },
+    {
+      "label": "Does your client have Developer Resources available to support the implementation?",
+      "content": "Yes",
+      "valid": true,
+      "key": "Yes",
+      "item_id": 1736494728350770,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Reason for request: Please briefly describe the help needed for this account.",
+      "content": "Pit Viper is showing as signal optimal and asked for us to confirm that everything is set up and in place. But their events manager for the pixel shows duplicate custom events and issues with the events implemented. I also tested the events and there were events not showing up on the pixel helper as well as duplicate events and flags for each of the events. Are you able to take a look at the pixel and events api and let me know what the client can do to clean up their events to ensure everything is tracking properly?",
+      "valid": true,
+      "item_id": 1736494803233810,
+      "type": 2,
+      "option_meaning": 8
+    },
+    {
+      "label": "Screenshot",
+      "content": [
+        {
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/6ee29d1ba2834dfabfde532a3e7c439b.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833830588&x-signature=OdI24pzQI%2BioN0a9wNiVC%2FaTSvM%3D",
+          "file_name": "file_20240330_02_43_08_778741",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/6ee29d1ba2834dfabfde532a3e7c439b.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833830588&x-signature=OdI24pzQI%2BioN0a9wNiVC%2FaTSvM%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/6ee29d1ba2834dfabfde532a3e7c439b.png",
+          "file_type": "jpeg",
+          "biz_type": 2
+        },
+        {
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/42e23e6336ca45b2b9bf05842682dd37.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833830588&x-signature=sbAjU%2B1T2Tm3TxFcJ97vx2quSUI%3D",
+          "file_name": "file_20240330_02_43_08_778822",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/42e23e6336ca45b2b9bf05842682dd37.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833830588&x-signature=sbAjU%2B1T2Tm3TxFcJ97vx2quSUI%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/42e23e6336ca45b2b9bf05842682dd37.png",
+          "file_type": "jpeg",
+          "biz_type": 2
+        },
+        {
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/76b40e95640f4ceeb707d9d4e1ce84e8.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833830588&x-signature=0JBGF%2B9YMNaQwbLOQLbSwow%2BlV8%3D",
+          "file_name": "file_20240330_02_43_08_778839",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/76b40e95640f4ceeb707d9d4e1ce84e8.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833830588&x-signature=0JBGF%2B9YMNaQwbLOQLbSwow%2BlV8%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/76b40e95640f4ceeb707d9d4e1ce84e8.png",
+          "file_type": "jpeg",
+          "biz_type": 2
+        },
+        {
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/0dad38d43aed4851a24d048d8e41cbec.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833830588&x-signature=ATniAw0RZ%2BeLXqyx6Z0gHksEON0%3D",
+          "file_name": "file_20240330_02_43_08_778854",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/0dad38d43aed4851a24d048d8e41cbec.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833830588&x-signature=ATniAw0RZ%2BeLXqyx6Z0gHksEON0%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/0dad38d43aed4851a24d048d8e41cbec.png",
+          "file_type": "jpeg",
+          "biz_type": 2
+        },
+        {
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/2432e7cd5b9e4a41a06e89a43e50f067.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833830588&x-signature=xa5xiFRUdhXI%2BNdAqOllFXu41XY%3D",
+          "file_name": "file_20240330_02_43_08_778870",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/2432e7cd5b9e4a41a06e89a43e50f067.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833830588&x-signature=xa5xiFRUdhXI%2BNdAqOllFXu41XY%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/2432e7cd5b9e4a41a06e89a43e50f067.png",
+          "file_type": "jpeg",
+          "biz_type": 2
+        },
+        {
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/a29b8f559d974cd294b54831442ac964.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833830588&x-signature=T1dg2wfLACZ6wW7V95Gbsxdkf3U%3D",
+          "file_name": "file_20240330_02_43_08_778886",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/a29b8f559d974cd294b54831442ac964.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833830588&x-signature=T1dg2wfLACZ6wW7V95Gbsxdkf3U%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/a29b8f559d974cd294b54831442ac964.png",
+          "file_type": "jpeg",
+          "biz_type": 2
+        },
+        {
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/3c8c120696244fe0bfeec006885d9058.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833830588&x-signature=lXbLp9gNqqOSjcjCxXq4sjCVxwY%3D",
+          "file_name": "file_20240330_02_43_08_778899",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/3c8c120696244fe0bfeec006885d9058.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833830588&x-signature=lXbLp9gNqqOSjcjCxXq4sjCVxwY%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/3c8c120696244fe0bfeec006885d9058.png",
+          "file_type": "jpeg",
+          "biz_type": 2
+        },
+        {
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/b11ebedec2f4418a96f6c37596d0f654.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833830588&x-signature=Ey0rZQWPVWydYtLFiKb5hK%2Fs76Y%3D",
+          "file_name": "file_20240330_02_43_08_778911",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/b11ebedec2f4418a96f6c37596d0f654.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833830588&x-signature=Ey0rZQWPVWydYtLFiKb5hK%2Fs76Y%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/b11ebedec2f4418a96f6c37596d0f654.png",
+          "file_type": "jpeg",
+          "biz_type": 2
+        },
+        {
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/4aeccfbf39084c17b65467d5beac75b0.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833830588&x-signature=cLsW23soa3uUYplYAjAevQTnEJw%3D",
+          "file_name": "file_20240330_02_43_08_778924",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/4aeccfbf39084c17b65467d5beac75b0.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833830588&x-signature=cLsW23soa3uUYplYAjAevQTnEJw%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/4aeccfbf39084c17b65467d5beac75b0.png",
+          "file_type": "jpeg",
+          "biz_type": 2
+        },
+        {
+          "file_type": "xlsx",
+          "file_name": "Pitviper All Events TikTok 3-28.xlsx",
+          "file_url": "https://lf16-athena-ticketing-sign.ibytedtos.com/obj/tos-alisg-v-90231e-sg/oUBIFjfYAPxamiAUMA4CEeQviBABpEQg1dAA23.xlsx?lk3s=cbe26b3a&x-expires=4833830588&x-signature=EdutDYULi6F49bofv%2FI6S3ia89g%3D",
+          "file_key": "tos-alisg-v-90231e-sg/oUBIFjfYAPxamiAUMA4CEeQviBABpEQg1dAA23.xlsx",
+          "url": "https://lf16-athena-ticketing-sign.ibytedtos.com/obj/tos-alisg-v-90231e-sg/oUBIFjfYAPxamiAUMA4CEeQviBABpEQg1dAA23.xlsx?lk3s=cbe26b3a&x-expires=4833830588&x-signature=EdutDYULi6F49bofv%2FI6S3ia89g%3D",
+          "biz_type": 2,
+          "size": 4068431
+        }
+      ],
+      "valid": true,
+      "item_id": 1740206947357746,
+      "type": 5,
+      "option_meaning": -1
+    },
+    {
+      "label": "categorization",
+      "content": {
+        "category_1_name": "Events API - Web-Events API - Web"
+      },
+      "valid": true,
+      "item_id": 0,
+      "type": 3,
+      "option_meaning": -1
+    }
+  ],
+  "fs_permission": 1,
+  "auto_close_time_left": null
+}

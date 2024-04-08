@@ -1,35 +1,23 @@
 const proxying = require('../http/proxying');
-const cookieRemote = require('./cookie');
+const cookie = require('./cookie');
 
-let cookie = {
-    value : '',
-    fetchTime : 0
-}
+
 
 module.exports = async function athena_api_admin_order_detail(order_id){
     const endpoint = `https://ads.tiktok.com/athena/api/admin/order/detail/`;
     const method      = 'GET';
-
-    if(Date.now() - cookie.fetchTime > 1000 * 60 * 3) {
-        cookie = {
-            value: (await cookieRemote()),
-            fetchTime: Date.now()
-        }
-    }
-    // console.log(`cookie = ${JSON.stringify(cookie)}`)
-    let header      = {Cookie: cookie.value}
+    let header      = {Cookie: await cookie()}
     let param       = {
         order_id,
         archive_after: true,
-        lang: 'EN'
+        lang: 'EN' 
     };
     let body        = null;
-
 
     const response = (await proxying(method, endpoint, header, param, body, true));
     // console.log(response.data)
 
-    if(response?.status == 200 ) {
+    if(response.status == 200 ) {
         const data = JSON.parse(response.data).data;
         return data;
 

@@ -1,0 +1,370 @@
+{
+  "reply_mode": 1,
+  "time_before_overtime": 0,
+  "set_priority_automatically": false,
+  "is_follow": 0,
+  "category_2": "",
+  "category_1": "1791202334548993",
+  "follower_avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v2_89b456bd-831d-4c73-9de2-3e5cbaf2fdhu~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+  "follower": "Miguel Fernández",
+  "create_time": 1710911091,
+  "deadline": 0,
+  "archive_board_id": 1705151646989842,
+  "replies": [
+    {
+      "is_hide_reply": false,
+      "create_time": 1711581593,
+      "auto_close_hit": 0,
+      "id": 7351185321142272000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Miguel Fernández",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7178708618031023106",
+      "name": "Miguel Fernández",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>HI&nbsp;<span style=\"color: #333333;\">王正,</span><br><br><span style=\"color: #333333;\">Thank you for your patience, please find below my comments:</span><br><br><span style=\"color: #333333;\">- We would need to understand what idfa_shop_visited event is tracking to provide feedback on the schema. Could you ask to the client?</span><br><span style=\"color: #333333;\">- idfa_shop_visited event is not being mapped to any TikTok event in the connector, so it can&#39;t be decoded from SKAN postbacks. Please ask the client to go to the TikTok connector and map the in-app event to a TikTok Standard event</span><br><span style=\"color: #333333;\">- &#34;low&#34; cv for postback1 is recommended to be mapped with &#34;session&#34;. Not 100% sure that the current setup is always forcing a postback. Are &#34;idfa_shop_visited&#34; or &#34;purchase&#34; events always happening for any app install in the 1st 48?</span><br><br><span style=\"color: #333333;\">Thanks,</span><br><span style=\"color: #333333;\">Miguel</span><br><br><br></p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v2_89b456bd-831d-4c73-9de2-3e5cbaf2fdhu~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711962574,
+      "auto_close_hit": 0,
+      "id": 7352822471105495000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "aaron.wang@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Aaron Wang",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7104208699925808130",
+      "name": "Aaron Wang",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Thanks Miguel, following up with client re above on my end and will update as soon as we get them back.</p><p><br></p><p>Thanks,</p><p>Aaron</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v3_0086_5f1c4263-c383-41d6-ac77-92964ee3echu~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    }
+  ],
+  "enable_forced_order_type": 0,
+  "plat_id": 1736490999244882,
+  "archive_category_2_name": "",
+  "pending_from_follower": true,
+  "id": 1955702,
+  "workflow_nodes": [],
+  "board_id": 1705151646989842,
+  "employee_email": "miguel.suarez@bytedance.com",
+  "is_support_suggestion": 0,
+  "title": "Rovio - Angry Birds 2 - SKAN 4 Client Engagement Request",
+  "category_1_name": "iOS SKAN Audit",
+  "auto_close_hit": 0,
+  "relation_qual": [],
+  "accountpass": 0,
+  "priority": 1,
+  "inner": 1,
+  "vip_types": [],
+  "is_impending_overtime": 0,
+  "creater_lark_avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v3_0086_5f1c4263-c383-41d6-ac77-92964ee3echu~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+  "enable_compliance_mode": false,
+  "type": 6,
+  "current_role": null,
+  "fd_permission": 1,
+  "status": 2,
+  "business_data": [],
+  "update_time": 1711962574,
+  "owner_name": "王正",
+  "enable_auto_close_v2": 0,
+  "time_after_overtime": 0,
+  "swim_lane_status": 4,
+  "enable_forced_order_tag": 1,
+  "satisfied": 0,
+  "category_2_name": "",
+  "reply_name": " MPO Technical Implementation  Team",
+  "is_guest": false,
+  "archive_category_2": "",
+  "archive_category_1_name": "iOS SKAN Audit",
+  "archive_category_1": "1791202334548993",
+  "allow_reopen": 0,
+  "categories": [
+    {
+      "to_user": 1,
+      "categories_id": "1791202334548993",
+      "cate_1_form_id": 1791205071838209,
+      "sub_cates": [],
+      "value": "iOS SKAN Audit"
+    }
+  ],
+  "core_user_id": "7104208699925808130",
+  "plat_name": "MPO Technical Implementation",
+  "follower_role": "TSC",
+  "remark": "",
+  "show_auto_assign": false,
+  "is_overtime": 0,
+  "creater_lark_name": "王正",
+  "follow_employee_id": 7158055,
+  "is_order_top": 0,
+  "urged": 1,
+  "im_chat_id": "",
+  "is_delay": 0,
+  "enable_forced_priority": 0,
+  "pending_time": 524283,
+  "debug_permission": 1,
+  "is_vip": 0,
+  "items": [
+    {
+      "label": "",
+      "content": "Rovio - Angry Birds 2 - SKAN 4 Client Engagement Request",
+      "valid": true,
+      "item_id": 1791205071838225,
+      "type": 14,
+      "option_meaning": -1
+    },
+    {
+      "label": "Advertiser / Client Name",
+      "content": "Rovio",
+      "valid": true,
+      "item_id": 1791205071838241,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Customer Vertical",
+      "content": "Gaming",
+      "valid": true,
+      "key": "Gaming",
+      "item_id": 1791205071838257,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "GBS Tier",
+      "content": "Key Account",
+      "valid": true,
+      "key": "Key Account",
+      "item_id": 1791205260785714,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "GBS Country / Region",
+      "content": "EU-GB",
+      "valid": true,
+      "key": "EU",
+      "item_id": 1791205328494657,
+      "type": 4,
+      "option_meaning": 0
+    },
+    {
+      "label": "Your Department / Team",
+      "content": "CSM",
+      "valid": true,
+      "key": "CSM",
+      "item_id": 1791205337175074,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Ad Account ID",
+      "content": "6906078184505098241",
+      "valid": true,
+      "item_id": 1791205337177090,
+      "type": 1,
+      "option_meaning": 4
+    },
+    {
+      "label": "Advertiser Priority Level/Tier",
+      "content": "P0",
+      "valid": true,
+      "key": "P0",
+      "item_id": 1791205337177106,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "iOS Mobile App ID",
+      "content": "880047117",
+      "valid": true,
+      "item_id": 1791205752022065,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Android Mobile App ID (if available)",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205752023041,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "SKAN Version",
+      "content": "Currently on 4.0",
+      "valid": true,
+      "key": "Currently on 4.0",
+      "item_id": 1791205752023057,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Client MMP",
+      "content": "Singular",
+      "valid": true,
+      "key": "Singular",
+      "item_id": 1791205757763634,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Reason of request",
+      "content": "Sanity check (including SKAN 4.0 transition)",
+      "valid": true,
+      "key": "Sanity check (including SKAN 4.0 transition)",
+      "item_id": 1791205889917953,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Revenue model",
+      "content": "Hybrid",
+      "valid": true,
+      "key": "Hybrid",
+      "item_id": 1791205889918977,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Describe the current problem in details (excluding sanity check requests)",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205970506753,
+      "type": 2,
+      "option_meaning": -1
+    },
+    {
+      "label": "Enter the campaign or ad group ID  (excluding sanity check requests)",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205970506769,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Describe the desired future state in details (excluding sanity check requests)",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205970506785,
+      "type": 2,
+      "option_meaning": -1
+    },
+    {
+      "label": "Can client see the same behaviour on MMP dashboard?  (excluding sanity check requests)",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205970506801,
+      "type": 9,
+      "option_meaning": -1
+    },
+    {
+      "label": "Screenshots of partner integration",
+      "content": [
+        {
+          "file_type": "png",
+          "file_name": "output.png",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/80ffc3542919401eb75a5df88ef20f8d.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169875&x-signature=%2FujoyyLY09OZ1s%2FPUeIzeL3jeEA%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/80ffc3542919401eb75a5df88ef20f8d.png",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/80ffc3542919401eb75a5df88ef20f8d.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169875&x-signature=%2FujoyyLY09OZ1s%2FPUeIzeL3jeEA%3D",
+          "size": 38952
+        },
+        {
+          "file_type": "png",
+          "file_name": "ec1213bf-e21c-4d43-82f2-d6d458148f2b.png",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/6e7c4c17b82c464da886e4495ee6d78b.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169875&x-signature=LH7sxXVIxNedQy4M7y48Uwptzlc%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/6e7c4c17b82c464da886e4495ee6d78b.png",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/6e7c4c17b82c464da886e4495ee6d78b.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169875&x-signature=LH7sxXVIxNedQy4M7y48Uwptzlc%3D",
+          "size": 58059
+        },
+        {
+          "file_type": "png",
+          "file_name": "8f1ac6f4-47c3-4beb-8ade-b259f0340923.png",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/91ebb8bb23ac443794942a5853527a46.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169875&x-signature=t%2B%2Bm69oHjyob6A7V99b6tsz%2FSCI%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/91ebb8bb23ac443794942a5853527a46.png",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/91ebb8bb23ac443794942a5853527a46.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169875&x-signature=t%2B%2Bm69oHjyob6A7V99b6tsz%2FSCI%3D",
+          "size": 58468
+        }
+      ],
+      "valid": true,
+      "item_id": 1791205970507809,
+      "type": 5,
+      "option_meaning": -1
+    },
+    {
+      "label": "Screenshots of SKAN Conversion Value mapping",
+      "content": [
+        {
+          "file_type": "png",
+          "file_name": "4924415e-4164-47aa-9cb3-e2074add582a.png",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/8ae191704cb74c59b2cbef2688a805ca.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169875&x-signature=9ZhrpJXPo7HjDUiGPzBGg0oPsY0%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/8ae191704cb74c59b2cbef2688a805ca.png",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/8ae191704cb74c59b2cbef2688a805ca.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169875&x-signature=9ZhrpJXPo7HjDUiGPzBGg0oPsY0%3D",
+          "size": 173048
+        },
+        {
+          "file_type": "png",
+          "file_name": "6e18c717-9147-4a44-9138-2d7e35503273.png",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/9a4d8c87d1c54efe921cae6bb50c3a55.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169875&x-signature=TpvN0DNKNZpNEwDNaw94ji0FAAI%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/9a4d8c87d1c54efe921cae6bb50c3a55.png",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/9a4d8c87d1c54efe921cae6bb50c3a55.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169875&x-signature=TpvN0DNKNZpNEwDNaw94ji0FAAI%3D",
+          "size": 170888
+        }
+      ],
+      "valid": true,
+      "item_id": 1791205970507825,
+      "type": 5,
+      "option_meaning": -1
+    },
+    {
+      "label": "Any comments",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205970508801,
+      "type": 2,
+      "option_meaning": -1
+    },
+    {
+      "label": "categorization",
+      "content": {
+        "category_1_name": "Apps-iOS SKAN Audit"
+      },
+      "valid": true,
+      "item_id": 0,
+      "type": 3,
+      "option_meaning": -1
+    }
+  ],
+  "fs_permission": 1,
+  "auto_close_time_left": null
+}

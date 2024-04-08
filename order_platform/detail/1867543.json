@@ -1,0 +1,633 @@
+{
+  "reply_mode": 1,
+  "time_before_overtime": 0,
+  "set_priority_automatically": false,
+  "is_follow": 0,
+  "category_2": "",
+  "category_1": "1736497066245137",
+  "follower_avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v2_da416f8b-dc05-4497-988c-ae851bf56c2h~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+  "follower": "Thomas Mei",
+  "create_time": 1707496828,
+  "deadline": 0,
+  "archive_board_id": 1705151646989663,
+  "replies": [
+    {
+      "is_hide_reply": false,
+      "create_time": 1707519658,
+      "auto_close_hit": 0,
+      "id": 7333738735136768000,
+      "reply_role": "TSC",
+      "staff_id": 2819808,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "thomas.mei@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Thomas Mei",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7243872271105934337",
+      "name": "Thomas Mei",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi Josh,</p><p><br></p><p>Let&#39;s regroup next week. I&#39;d need some time to review their current setup and get an idea of what they are looking to do.&nbsp;</p><p><br></p><p>Thomas</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v2_da416f8b-dc05-4497-988c-ae851bf56c2h~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1707754308,
+      "auto_close_hit": 0,
+      "id": 7334748127473435000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "josh.filderman@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Josh Filderman",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7085106565916886017",
+      "name": "Josh Filderman",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>I put a 30 min invite in your calendar for Wednesday for us to chat about Wealthsimple&#39;s set up internally, then ill confirm a time with the client for late this week / early next week :)</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v3_0062_5a489a53-39b2-48c3-8420-550799df7bhu~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1707945735,
+      "auto_close_hit": 0,
+      "id": 7335568911720595000,
+      "reply_role": "TSC",
+      "staff_id": 2819808,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "thomas.mei@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Thomas Mei",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7243872271105934337",
+      "name": "Thomas Mei",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Internal call recap 2-14:</p><ul><li>Wealthsimple team largely concerned with two technical pieces:</li><ul><li>Setting up EAPI through Segment</li><li>Utilizing Offline Events</li></ul><li>We will use the call time to get a rundown of their apps/sites and Marketing flow and objectives.&nbsp;</li><li>Following that can discuss their above technical asks and how that can be implemented</li><li>Call scheduled for 2-15</li></ul>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v2_da416f8b-dc05-4497-988c-ae851bf56c2h~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1708032586,
+      "auto_close_hit": 0,
+      "id": 7335943109857116000,
+      "reply_role": "TSC",
+      "staff_id": 2819808,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "thomas.mei@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Thomas Mei",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7243872271105934337",
+      "name": "Thomas Mei",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Client Call Recap 2-15</p><ol><li>Client has three stages they are driving customers towards</li><ol><li>Account Registration</li><li>Product Signup (Credit Cards, HYSA, Investments etc.)</li><li>Funding (adding/depositing money into Wealthsimple)</li></ol><li>The Account Registration Lead form also diverges into two Paths</li><ol><li>Concierge - $100K+ net worth will receive high touch service</li><li>Self Serve - will drive them to app download</li></ol><li>Events API - pass back users who fund their accounts. Still unclear what they want to do here.&nbsp;</li></ol><p><br></p><p>Things discussed on our end:</p><p>1) Website setup - using custom events to track interest in specific products for generating audience segments, then retargeting those segments with product specific creatives to drive account registrations</p><p>2) App setup - mapping custom Appsflyer events to standard App events to track interest or usage of specific products in app, as well as funding completion</p><p><br></p><p>Next steps - client team will provide more details/context as to their user sign up/marketing flows. We will review their materials and provide some recommendations or schedule another call for more clarity.&nbsp;</p><p><br></p><p>Thomas</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v2_da416f8b-dc05-4497-988c-ae851bf56c2h~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711029594,
+      "auto_close_hit": 0,
+      "id": 7348814667004903000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "josh.filderman@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Josh Filderman",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7085106565916886017",
+      "name": "Josh Filderman",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi Thomas!</p><p><br /></p><p>Updating this ticket with new information from the client after our chats with them :) They are implementing API with Meta this week, so all the data is in order on their side!</p><p><br /></p><p>Think you could put together an implementation guide for Wealthsimple with this new info? Let me know when you think you could do this by to make sure they're set up in the best way possible!</p><p><br /></p><p>Client is using hightouch for API implementation and already have pixel implemented with us, so instructions should include de-duplication and updating Pixel events on our side.</p><img alt=\"Screenshot 2024-03-21 at 9.57.42 AM.png\" data-image_key=\"tos-alisg-i-6g3pebcbys-sg/7a968ca51e3e458ba74d1ff1b3b839ac.png\" height=\"162.92344\" src=\"https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/7a968ca51e3e458ba74d1ff1b3b839ac.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&amp;x-expires=4833826269&amp;x-signature=cRiBQIiUz7uArMxcDdbINkCyEEc%3D\" width=\"694.0000000000001\"><p>------</p><p><span style=\"color: #222222;\">For lifecycle -- we've narrowed down what we want to capture. Let me know what you think and what the next steps are for Events API. We are using a platform called Hightouch for all of this - hopefully it will be easy to setup. <br /></span><br /></p><p><span style=\"color: #222222;\"><strong>Front-end events to send through:</strong><br>Registrant/Sign-up (event)<br>KYC Complete (event)<br>Open an account (event, product)<br>First Funding Intent (event, product, value, currency)<br>Funding Intent (event, product, value, currency)</br></br></br></br></br></span></p><p><span style=\"color: #222222;\"><strong>Back-end (offline) events to send through:</strong><br>Funded Event (event, product, value, currency)</br></span></p><p><br /></p><p>--------</p></img>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v3_0062_5a489a53-39b2-48c3-8420-550799df7bhu~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711033560,
+      "auto_close_hit": 0,
+      "id": 7348831973776900000,
+      "reply_role": "TSC",
+      "staff_id": 2819808,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "thomas.mei@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Thomas Mei",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7243872271105934337",
+      "name": "Thomas Mei",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi Josh,</p><p><br></p><p>For Hightouch we have an internal doc here with some info:&nbsp;https://bytedance.us.larkoffice.com/docx/VAAadp9npou1UKxMpeMuQqkhs1c</p><p><br></p><p>There are no internal integration guides that exist from what I could find. I have not worked with this platform yet so I can&#39;t provide one in that regard. We do have a partnership page on the Hightouch site and we can start by forwarding this to the client:&nbsp;https://hightouch.com/docs/destinations/tiktok</p><p><br></p><p>If they run into any roadblocks with event setup we can address them via email or on call.&nbsp;</p><p><br></p><p>In terms of their mapping, are they able to provide which Pixel event they want to map to or are they looking for us to provide recommendations?</p><p><br></p><p><span style=\"color: #222222;\">Registrant/Sign-up (event)<br>KYC Complete (event)<br>Open an account (event, product)<br>First Funding Intent (event, product, value, currency)<br>Funding Intent (event, product, value, currency)</span></p><p><br></p><p><span style=\"color: #222222;\">Regards,</span></p><p><span style=\"color: #222222;\">Thomas</span></p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v2_da416f8b-dc05-4497-988c-ae851bf56c2h~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711396166,
+      "auto_close_hit": 0,
+      "id": 7350387222836707000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "josh.filderman@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Josh Filderman",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7085106565916886017",
+      "name": "Josh Filderman",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>hey Thomas!</p><p><br></p><p>Heard back from the client with a few questions and their event mapping thoughts. Think you could help here with their questions and any recommendations you have on their mapping suggestion?</p><p><br></p><ol><li><span style=\"color: #222222;\">For the API Integration --- does this work for our App campaigns as well? Or is purely for Web? <em>Josh note - they use appsflyer as their MMP and we&#39;re working on transitioning them to SAN. They&#39;d be open to any recommendations we have here!</em></span></li></ol><p><br></p><p><span style=\"color: #222222;\"> </span></p><ol><li><span style=\"color: #222222;\">For the events -- this is what I am thinking -- I don&#39;t think it is complicated -- if you have any recos or suggestions I&#39;m open to them.</span></li></ol><p><span style=\"color: #222222;\">Registrant/Sign-up (event) --&gt; Registration<br>KYC (know your customer) Complete (event) --&gt; AddtoCart<br>Open an account (event, product) --&gt; TBD<br>First Funding Intent (event, product, value, currency) --&gt; Purchase<br>Funding Intent (event, product, value, currency) --&gt; TBD</span></p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v3_0062_5a489a53-39b2-48c3-8420-550799df7bhu~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711466285,
+      "auto_close_hit": 0,
+      "id": 7350690868078084000,
+      "reply_role": "TSC",
+      "staff_id": 2819808,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "thomas.mei@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Thomas Mei",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7243872271105934337",
+      "name": "Thomas Mei",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Responded to client&#39;s email and questions on March 25th -</p><p><br></p><p><span style=\"color: #1F2329;\">Hi Allan,</span></p><p><span style=\"color: #1F2329;\">Answers to your questions below:</span></p><ul><li><span style=\"color: #1F2329;\"><strong><em>For the API Integration --- does this work for our App campaigns as well? Or is purely for Web? And does the data get incorporated into Reporting, Attribution&nbsp;and Optimization?</em></strong></span></li><ul><li><span style=\"color: #1F2329;\">Our Events API can be used to report both web and app events. The setup for app events has differences vs. the web events API. The data/reporting/optimization will be separated out as we treat web vs. app events differently.&nbsp;</span></li></ul><li><span style=\"color: #1F2329;\">In terms of event mapping: is this for web or app? My recommendations/notes below are assuming web events.&nbsp;</span></li></ul><div class=\"tableWrapper\"><table style=\"min-width: 72px;\"><colgroup><col><col><col></colgroup><tbody><tr><td><p><span style=\"color: #1F2329;\"><strong>Website Action</strong></span></p></td><td><p><span style=\"color: #1F2329;\"><strong>TikTok Event Name</strong></span></p></td><td><p><span style=\"color: #1F2329;\"><strong>Notes</strong></span></p></td></tr><tr><td><p><span style=\"color: #1F2329;\">Landing Pages (Account Registration, product lines, service lines etc.)</span></p></td><td><p><span style=\"color: #1F2329;\">View Content</span></p></td><td><p><span style=\"color: #1F2329;\">Captures visitors to the site who have not completed registration</span></p></td></tr><tr><td><p><span style=\"color: #1F2329;\">Registrant/Sign-up</span></p></td><td><p><span style=\"color: #1F2329;\">Complete Registration</span></p></td><td><p><br></p></td></tr><tr><td><p><span style=\"color: #1F2329;\">KYC Complete</span></p></td><td><p><span style=\"color: #1F2329;\">AddtoCart</span></p></td><td><p><br></p></td></tr><tr><td><p><span style=\"color: #1F2329;\">Open an account</span></p></td><td><p><span style=\"color: #1F2329;\">Initiate Checkout</span></p></td><td><p><br></p></td></tr><tr><td><p><span style=\"color: #1F2329;\">First Funding Intent</span></p></td><td><p><span style=\"color: #1F2329;\">first_funding (custom event)</span></p></td><td><p><span style=\"color: #1F2329;\">Custom events can be used to create segments for retargeting</span></p></td></tr><tr><td><p><span style=\"color: #1F2329;\">Funding Intent</span></p></td><td><p><span style=\"color: #1F2329;\">funding_intent (custom event)</span></p></td><td><p><span style=\"color: #1F2329;\">Custom events can be used to create segments for retargeting</span></p></td></tr><tr><td><p><span style=\"color: #1F2329;\">Funding Completed</span></p></td><td><p><span style=\"color: #1F2329;\">Complete Payment</span></p></td><td><p><span style=\"color: #1F2329;\">Use the custom segments from funding intent to drive funding</span></p></td></tr></tbody></table></div><ul><li><span style=\"color: #1F2329;\">We always recommend an event that can be used as a broad traffic goal and higher in the funnel than the actual application process. In this case having View Content fire on landing pages will serve the purpose of capturing visitors to the site who have not completed the account registration process</span></li><li><span style=\"color: #1F2329;\">Funding Intent seems to be a signal for the actual funding which makes it perfect for configuring as a custom Pixel event. Currently TikTok&#39;s custom Pixel events can be used for segment generation but not optimization</span></li><li><span style=\"color: #1F2329;\">You would be able to use audience segments from the &#34;First Funding&#34; and &#34;Funding Intent&#34; events and drive towards the Funding Completed event (Complete Payment)</span></li><li><span style=\"color: #1F2329;\">To drive a funding completion, I recommend adding a &#34;Complete Payment&#34; event. I always recommend the bottom funnel conversion event as Complete Payment as the algorithm treats it with more weight and you can optimize towards Complete Payment in Value Based Optimization (TikTok&#39;s version of CPA goal) campaigns.&nbsp;</span></li></ul><p><span style=\"color: #1F2329;\">Please let me know if you have any questions regarding the above.&nbsp;</span></p><p><span style=\"color: #1F2329;\">Regards,</span></p><p><span style=\"color: #1F2329;\">Thomas</span></p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v2_da416f8b-dc05-4497-988c-ae851bf56c2h~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711569762,
+      "auto_close_hit": 0,
+      "id": 7351134188881363000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "josh.filderman@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Josh Filderman",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7085106565916886017",
+      "name": "Josh Filderman",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hey Thomas,</p><p><br></p><p>Got a response from the client and would love if you could jump on a call with them at 3:30 pm tomorrow to chat it through (especially around web vs. app and potentially combining the two flows like you can on META).</p><p><br></p><p>I&#39;ve also forwarded our SAN thread with the client to your email so you have visibility on the SAN discussions ongoing as well :)</p><p><br></p><p>API email from Client:</p><p>Hi Thomas -- this is super helpful.&nbsp;</p><p>- Events API: The data feed coming from Wealthsimple -- can that be a single feed that contains both web&nbsp;+ app data? For example in our META CAPI -- they have a field called &#39;action source&#39; that allows us to distinguish web&nbsp;+ app -- and everything is combined in a single feed.</p><p>- Everything you said makes sense -- one small change i am thinking about is making the Funding Complete a custom event. Reason being -- the final funding event is not a front-end event... It takes days/weeks to process and happens entirely in our backend. On average I&#39;d say it takes &gt;7-days from adclick to a funded event. Let me know your thoughts -- I 100% would love to optimize based on Value though!&nbsp;</p><p>- The deepest a user can go (via Front End events -- both web&nbsp;+ app) us Funding Intent. So I am thinking this is as deep as I should go. Unless you are able to optimize against offline conversions or the funding completed event that is technically offline that has a long time delay. Let me know your thoughts.&nbsp;</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v3_0062_5a489a53-39b2-48c3-8420-550799df7bhu~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711737880,
+      "auto_close_hit": 0,
+      "id": 7351855780867391000,
+      "reply_role": "TSC",
+      "staff_id": 2819808,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "thomas.mei@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Thomas Mei",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7243872271105934337",
+      "name": "Thomas Mei",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Client call 3-28 update:</p><ul><li>Currently they are on a Segment Browser setup and planning to use Hightouch for EAPI</li><li>They inquired if it were possible to make this type of dual channel setup work and I informed them one po tential challenge is deduplication</li><li>We also discussed the possibility of an EAPI only setup with the challenge being capturing cookie ID and click ID via Hightouch</li><li>They would like to send an event back to TikTok to represent funding of an account which typically has a delay from their last actionable web event which is &#34;funding intent&#34;</li><li>I informed them that we can do this in one of two ways:</li><ul><li>Send back a custom event via EAPI</li><li>Send a standard event via Offline Conversions API</li></ul></ul><p><br></p><p>Next steps:</p><p>Need to provide client with some answers/recommendations on the following:</p><ol><li>Whether it would be possible to do a dual channel setup with proper deduplication of Segment browser and Hightouch EAPI</li><li>Whether a server only setup with Hightouch EAPI can capture cookie id and click id</li><li>Recommendation of whether to go with a custom event via EAPI or standard offline conversion event to capture funding</li></ol><p><br></p><p>Still checking on # 1 and # 2 - for # 3 we can recommend the offline conversion event route as it has a longer timeframe/window vs. the Events API.</p><p><br></p><p>Thomas</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v2_da416f8b-dc05-4497-988c-ae851bf56c2h~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    }
+  ],
+  "enable_forced_order_type": 0,
+  "plat_id": 1736490999244882,
+  "archive_category_2_name": "",
+  "pending_from_follower": false,
+  "id": 1867543,
+  "workflow_nodes": [],
+  "board_id": 1705151646989663,
+  "employee_email": "thomas.mei@bytedance.com",
+  "is_support_suggestion": 0,
+  "title": "Wealthsimple - API + SAN + Offline events (signals optimal push)",
+  "category_1_name": "Events API - Web",
+  "auto_close_hit": 0,
+  "relation_qual": [],
+  "accountpass": 0,
+  "priority": -1,
+  "inner": 1,
+  "vip_types": [],
+  "is_impending_overtime": 0,
+  "creater_lark_avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v3_0062_5a489a53-39b2-48c3-8420-550799df7bhu~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+  "enable_compliance_mode": false,
+  "type": -1,
+  "current_role": null,
+  "fd_permission": 1,
+  "status": 1,
+  "business_data": [],
+  "update_time": 1711737880,
+  "owner_name": "Josh Filderman",
+  "enable_auto_close_v2": 0,
+  "time_after_overtime": 0,
+  "swim_lane_status": 4,
+  "enable_forced_order_tag": 1,
+  "satisfied": 0,
+  "category_2_name": "",
+  "reply_name": " MPO Technical Implementation  Team",
+  "is_guest": false,
+  "archive_category_2": "",
+  "archive_category_1_name": "Events API - Web",
+  "archive_category_1": "1736497066245137",
+  "allow_reopen": 0,
+  "categories": [
+    {
+      "to_user": 1,
+      "categories_id": "1736497066245137",
+      "cate_1_form_id": 1736491088651314,
+      "sub_cates": [
+        {
+          "to_user": 0,
+          "categories_id": "1772385714882593",
+          "value": "Lima"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385714882609",
+          "value": "TagHero"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385714883585",
+          "value": "Pixeron"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385714883601",
+          "value": "Kraken Data"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748400130",
+          "value": "Stape"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748400146",
+          "value": "AccuraCast"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748400162",
+          "value": "DataHash"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748400178",
+          "value": "SignalSight"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748401154",
+          "value": "Tiger Pistol"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748401170",
+          "value": "Panomix"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748401186",
+          "value": "NNT"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772385748401202",
+          "value": "E-Cens"
+        },
+        {
+          "to_user": 0,
+          "categories_id": "1772548708426753",
+          "value": "TSC"
+        }
+      ],
+      "value": "Events API - Web"
+    }
+  ],
+  "core_user_id": "7085106565916886017",
+  "plat_name": "MPO Technical Implementation",
+  "follower_role": "TSC",
+  "remark": "",
+  "show_auto_assign": false,
+  "is_overtime": 0,
+  "creater_lark_name": "Josh Filderman",
+  "follow_employee_id": 2819808,
+  "is_order_top": 0,
+  "urged": 0,
+  "im_chat_id": "",
+  "is_delay": 0,
+  "enable_forced_priority": 0,
+  "pending_time": 24390,
+  "debug_permission": 1,
+  "is_vip": 0,
+  "items": [
+    {
+      "label": "Ticket Title",
+      "content": "Wealthsimple - API + SAN + Offline events (signals optimal push)",
+      "valid": true,
+      "item_id": 1736491088652290,
+      "type": 14,
+      "option_meaning": -1
+    },
+    {
+      "label": "Is this consultation request to help your client get to Signals Optimal? ",
+      "content": "Yes, my request is to get my client to Signals Optimal",
+      "valid": true,
+      "key": "Yes, my request is to get my client to Signals Optimal",
+      "item_id": 1774551082736689,
+      "type": 9,
+      "option_meaning": -1
+    },
+    {
+      "label": "As what stage is your Signals discussion with your client?",
+      "content": "Post-Pitch but client has more questions",
+      "valid": true,
+      "key": "Post-Pitch but client has more questions",
+      "item_id": 1774551082737697,
+      "type": 9,
+      "option_meaning": -1
+    },
+    {
+      "label": "Is the partner using a third party platform for Web Pixel and/or Server side tagging?",
+      "content": "Segment",
+      "valid": true,
+      "key": "Segment",
+      "item_id": 1774551147185217,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Advertiser / Client Name",
+      "content": "Wealthsimple",
+      "valid": true,
+      "item_id": 1736491088652306,
+      "type": 1,
+      "option_meaning": 6
+    },
+    {
+      "label": "Client Vertical ",
+      "content": "Finance",
+      "valid": true,
+      "key": "Finance",
+      "item_id": 1736491088652322,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "GBS Account Tier",
+      "content": "Key Account",
+      "valid": true,
+      "key": "Key Account",
+      "item_id": 1736492036013090,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "GBS Country / Region",
+      "content": "NORTHAMERICA-CA",
+      "valid": true,
+      "key": "NORTHAMERICA",
+      "item_id": 1736491882822689,
+      "type": 4,
+      "option_meaning": 0
+    },
+    {
+      "label": "Your Department / Team",
+      "content": "CSM",
+      "valid": true,
+      "key": "CSM",
+      "item_id": 1736491882823729,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Ad Account ID(s)",
+      "content": [
+        "6925082713045090305",
+        "6883964193481949186"
+      ],
+      "valid": true,
+      "item_id": 1736492509963313,
+      "type": 18,
+      "option_meaning": 4
+    },
+    {
+      "label": "Advertiser Priority Level/Tier",
+      "content": "P1",
+      "valid": true,
+      "key": "P1",
+      "item_id": 1740206947358722,
+      "type": 4,
+      "option_meaning": 2
+    },
+    {
+      "label": "Please list name & role of Account Team for this client (BPM/CSM/ADE etc.)",
+      "content": "David Traunero, BPM. Josh Filderman, CSM. ",
+      "valid": true,
+      "item_id": 1740206947359746,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Business Center ID",
+      "content": "",
+      "valid": true,
+      "item_id": 1736492509964289,
+      "type": 1,
+      "option_meaning": 10
+    },
+    {
+      "label": "Pixel ID",
+      "content": "C4EQ4JM9UAPKMTRVNO90",
+      "valid": true,
+      "item_id": 1740206947359762,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Website URL(s)",
+      "content": [
+        "https://start.wealthsimple.com/to/Ox8hM9xQ?premium&utm_source=tiktok&utm_medium=sales&utm_campaign=UGC-Z"
+      ],
+      "valid": true,
+      "item_id": 1771654477299713,
+      "type": 18,
+      "option_meaning": -1
+    },
+    {
+      "label": "Product for Implementation",
+      "content": "Events API - Web",
+      "valid": true,
+      "key": "Events API - Web",
+      "item_id": 1736494728349698,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Target Implementation Date",
+      "content": "2024-02-09",
+      "valid": true,
+      "item_id": 1736500801975346,
+      "type": 11,
+      "option_meaning": -1
+    },
+    {
+      "label": "Does your client have Developer Resources available to support the implementation?",
+      "content": "Yes",
+      "valid": true,
+      "key": "Yes",
+      "item_id": 1736494728350770,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Reason for request: Please briefly describe the help needed for this account.",
+      "content": "Wealthsimple is the largest FinTech in Canada.\n\nThey have multiple products that each have a unique onboarding flow that includes app, web and offline events.\n\nI'd love to get a technical solutions staff from MPO on a call with the head of Growth at WS to talk through their ideal setup, provide resources, and work with them to become signals optimal!",
+      "valid": true,
+      "item_id": 1736494803233810,
+      "type": 2,
+      "option_meaning": 8
+    },
+    {
+      "label": "Screenshot",
+      "content": [
+        {
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/7a968ca51e3e458ba74d1ff1b3b839ac.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833826269&x-signature=cRiBQIiUz7uArMxcDdbINkCyEEc%3D",
+          "file_name": "file_20240330_01_31_09_693689",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/7a968ca51e3e458ba74d1ff1b3b839ac.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4833826269&x-signature=cRiBQIiUz7uArMxcDdbINkCyEEc%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/7a968ca51e3e458ba74d1ff1b3b839ac.png",
+          "file_type": "jpeg",
+          "biz_type": 2
+        }
+      ],
+      "valid": true,
+      "item_id": 1740206947357746,
+      "type": 5,
+      "option_meaning": -1
+    },
+    {
+      "label": "categorization",
+      "content": {
+        "category_1_name": "Events API - Web-Events API - Web"
+      },
+      "valid": true,
+      "item_id": 0,
+      "type": 3,
+      "option_meaning": -1
+    }
+  ],
+  "fs_permission": 1,
+  "auto_close_time_left": null
+}

@@ -1,0 +1,1009 @@
+{
+  "reply_mode": 1,
+  "time_before_overtime": 0,
+  "set_priority_automatically": false,
+  "is_follow": 0,
+  "category_2": "",
+  "category_1": "1791202334548993",
+  "follower_avatar": "https://s3-imfile.feishucdn.com/static-resource/v1/v2_d6b98c4a-7ef2-4747-9f41-04df2a84d05g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+  "follower": "Chan Lim",
+  "create_time": 1711475498,
+  "deadline": 0,
+  "archive_board_id": 1705151646989842,
+  "replies": [
+    {
+      "is_hide_reply": false,
+      "create_time": 1711528352,
+      "auto_close_hit": 0,
+      "id": 7350957641960653000,
+      "reply_role": "admin",
+      "staff_id": 3050890,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "chan.lim@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Chan Lim",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7119495696798254081",
+      "name": "Chan Lim",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi Fabrice, apart from provided screenshots, can we please also ask client for a screenshot proving that their SDK is 6.12.1? It should be available in Appsflyer dashboard.</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_d6b98c4a-7ef2-4747-9f41-04df2a84d05g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711635774,
+      "auto_close_hit": 0,
+      "id": 7351417987900932000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Fabrice Rousseau",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "6966152196359963650",
+      "name": "Fabrice Rousseau",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hey,</p><p><br></p><p>Here is the proof with the SDK split (dashboard from Appsflyer) and we can see they are using 6.13.0 mostly now.</p><p>Thanks for your help,</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/85c218f3-d6df-4817-ae2f-b28f89889e2g~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711635803,
+      "auto_close_hit": 0,
+      "id": 7351417987900965000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Fabrice Rousseau",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "6966152196359963650",
+      "name": "Fabrice Rousseau",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": [
+            {
+              "file_type": "jpeg",
+              "file_name": "MWM SDK.jpeg",
+              "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/8ae947cb2038495d92a6977bd4e07599.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=%2B2jjVIPXaaKQbRrLGolKTMLWwfg%3D",
+              "file_key": "tos-alisg-i-6g3pebcbys-sg/8ae947cb2038495d92a6977bd4e07599.jpeg",
+              "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/8ae947cb2038495d92a6977bd4e07599.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=%2B2jjVIPXaaKQbRrLGolKTMLWwfg%3D",
+              "biz_type": 2,
+              "size": 374533
+            }
+          ],
+          "type": 5
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/85c218f3-d6df-4817-ae2f-b28f89889e2g~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711636545,
+      "auto_close_hit": 0,
+      "id": 7351420396530401000,
+      "reply_role": "admin",
+      "staff_id": 3050890,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "chan.lim@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Chan Lim",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7119495696798254081",
+      "name": "Chan Lim",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Cool, thanks for confirmation. I can confirm that this is related to the known issue.</p><p>But at the same time, I also see their coarse value schema is incomplete.</p><p><br></p><ul><li>af_ad_revenue is not mapped to InAppADClick or&nbsp;InAppADImpr in the Partner integration screen. Please ask your client to map this.<br> af_ad_revenue exists in SKAN Coarse schema, but this is not mapped to any TikTok event in the partner integration, which means we will not be able to reflect the metrics on TTAM. </li><li>Also, medium value does not exist for Postback window #3. Is this intentional? Not an issue, as long as they confirm they are okay with no mid value.</li><li>I cannot check coarse value schema for low/medium of Postback window #1. Can we please ensure both low/medium values are correctly set and the Appsflyer event name is also mapped to TikTok event in the partner integration screen? Once rectified, please attach a screenshot.</li></ul><p><br></p><p>May you please ask the client to check the above first and address? </p><p>Once schema is addressed, I will submit for allowlisting.</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_d6b98c4a-7ef2-4747-9f41-04df2a84d05g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711639228,
+      "auto_close_hit": 0,
+      "id": 7351433175970644000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Fabrice Rousseau",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "6966152196359963650",
+      "name": "Fabrice Rousseau",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": [
+            {
+              "file_type": "jpeg",
+              "file_name": "2MWM4.jpeg",
+              "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/e19dc392fece4bf3902e7a58aacc5715.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=ohR2pPTMm2R2roPnHW9KtSY8%2FqM%3D",
+              "file_key": "tos-alisg-i-6g3pebcbys-sg/e19dc392fece4bf3902e7a58aacc5715.jpeg",
+              "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/e19dc392fece4bf3902e7a58aacc5715.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=ohR2pPTMm2R2roPnHW9KtSY8%2FqM%3D",
+              "biz_type": 2,
+              "size": 232521
+            },
+            {
+              "file_type": "jpeg",
+              "file_name": "2MWM5.jpeg",
+              "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/9292daefc4a644d883144c3ddf9a6f53.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=WkMehqUrI2KQ51cpNqoQ2LHiGg4%3D",
+              "file_key": "tos-alisg-i-6g3pebcbys-sg/9292daefc4a644d883144c3ddf9a6f53.jpeg",
+              "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/9292daefc4a644d883144c3ddf9a6f53.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=WkMehqUrI2KQ51cpNqoQ2LHiGg4%3D",
+              "biz_type": 2,
+              "size": 226273
+            }
+          ],
+          "type": 5
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/85c218f3-d6df-4817-ae2f-b28f89889e2g~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711639195,
+      "auto_close_hit": 0,
+      "id": 7351433931968758000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Fabrice Rousseau",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "6966152196359963650",
+      "name": "Fabrice Rousseau",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>You&#39;ll find the screenshot following the adjustment on their end</p>",
+          "type": 6
+        },
+        {
+          "content": [
+            {
+              "file_type": "jpeg",
+              "file_name": "2MWM1.jpeg",
+              "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/78d13834b7aa436d933632b9e4d7fd30.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=pVPDmeMY3CgUBexvcX5Afn%2F%2B424%3D",
+              "file_key": "tos-alisg-i-6g3pebcbys-sg/78d13834b7aa436d933632b9e4d7fd30.jpeg",
+              "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/78d13834b7aa436d933632b9e4d7fd30.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=pVPDmeMY3CgUBexvcX5Afn%2F%2B424%3D",
+              "biz_type": 2,
+              "size": 406245
+            },
+            {
+              "file_type": "jpeg",
+              "file_name": "2MWM2.jpeg",
+              "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/33f663ff50a44863ad42d418ee8f9c72.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=sh47hLiX94aI%2Bv9bBbS4i1MZTWA%3D",
+              "file_key": "tos-alisg-i-6g3pebcbys-sg/33f663ff50a44863ad42d418ee8f9c72.jpeg",
+              "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/33f663ff50a44863ad42d418ee8f9c72.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=sh47hLiX94aI%2Bv9bBbS4i1MZTWA%3D",
+              "biz_type": 2,
+              "size": 210652
+            },
+            {
+              "file_type": "jpeg",
+              "file_name": "2MWM3.jpeg",
+              "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/21221321fbd741fc893dcab185f4b09b.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=qY3qxDHwD%2FfGFbT2Gbmtipw86EA%3D",
+              "file_key": "tos-alisg-i-6g3pebcbys-sg/21221321fbd741fc893dcab185f4b09b.jpeg",
+              "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/21221321fbd741fc893dcab185f4b09b.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=qY3qxDHwD%2FfGFbT2Gbmtipw86EA%3D",
+              "biz_type": 2,
+              "size": 224155
+            }
+          ],
+          "type": 5
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/85c218f3-d6df-4817-ae2f-b28f89889e2g~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711640867,
+      "auto_close_hit": 0,
+      "id": 7351440758609625000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Fabrice Rousseau",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "6966152196359963650",
+      "name": "Fabrice Rousseau",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>My bad, wrong screenshot, wrong app! But the problem also existed on this app and they have been able to transition in the past, is it okay still?</p><p>App ID is&nbsp;<span style=\"color: #666666;\">1362013798</span></p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/85c218f3-d6df-4817-ae2f-b28f89889e2g~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711648271,
+      "auto_close_hit": 0,
+      "id": 7351471505227792000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Fabrice Rousseau",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "6966152196359963650",
+      "name": "Fabrice Rousseau",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": [
+            {
+              "file_type": "jpeg",
+              "file_name": "3MWM1.jpeg",
+              "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/5b5daead77b64effab443ea66beecb62.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=w%2Bo2ZYB%2F630swdzrZDITreqxrDY%3D",
+              "file_key": "tos-alisg-i-6g3pebcbys-sg/5b5daead77b64effab443ea66beecb62.jpeg",
+              "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/5b5daead77b64effab443ea66beecb62.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=w%2Bo2ZYB%2F630swdzrZDITreqxrDY%3D",
+              "biz_type": 2,
+              "size": 238466
+            },
+            {
+              "file_type": "jpeg",
+              "file_name": "3MWM2.jpeg",
+              "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/e314b22357b940b78db5f368c006a767.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=ea9PF4NX6bO3l2I1nTSoWX0mv6A%3D",
+              "file_key": "tos-alisg-i-6g3pebcbys-sg/e314b22357b940b78db5f368c006a767.jpeg",
+              "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/e314b22357b940b78db5f368c006a767.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=ea9PF4NX6bO3l2I1nTSoWX0mv6A%3D",
+              "biz_type": 2,
+              "size": 322256
+            }
+          ],
+          "type": 5
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/85c218f3-d6df-4817-ae2f-b28f89889e2g~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711648195,
+      "auto_close_hit": 0,
+      "id": 7351471645485285000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Fabrice Rousseau",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "6966152196359963650",
+      "name": "Fabrice Rousseau",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>You&#39;ll find the SKAN conversion schema - for info, on Edjing (the app on this ticket), there is no af_ad_revenue.</p>",
+          "type": 6
+        },
+        {
+          "content": [
+            {
+              "file_type": "jpeg",
+              "file_name": "3MWM3.jpeg",
+              "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/95ec071d18784563999265ee9e0dd3ef.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=cRiWpxUUfJgJ8D9shMVCn69k6Gw%3D",
+              "file_key": "tos-alisg-i-6g3pebcbys-sg/95ec071d18784563999265ee9e0dd3ef.jpeg",
+              "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/95ec071d18784563999265ee9e0dd3ef.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=cRiWpxUUfJgJ8D9shMVCn69k6Gw%3D",
+              "biz_type": 2,
+              "size": 235674
+            },
+            {
+              "file_type": "jpeg",
+              "file_name": "3MWM4.jpeg",
+              "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/8ec54fb7217e4081bf509f68cdffe4a9.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=y6h1WbMjRzFTrDVC7xFE7OAZD5E%3D",
+              "file_key": "tos-alisg-i-6g3pebcbys-sg/8ec54fb7217e4081bf509f68cdffe4a9.jpeg",
+              "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/8ec54fb7217e4081bf509f68cdffe4a9.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=y6h1WbMjRzFTrDVC7xFE7OAZD5E%3D",
+              "biz_type": 2,
+              "size": 217925
+            },
+            {
+              "file_type": "jpeg",
+              "file_name": "3MWM5.jpeg",
+              "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/778b6635ad93490f9d2e9bd327dad75d.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=bgpwBfSwOiSj4AAk95rvGkKU55Y%3D",
+              "file_key": "tos-alisg-i-6g3pebcbys-sg/778b6635ad93490f9d2e9bd327dad75d.jpeg",
+              "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/778b6635ad93490f9d2e9bd327dad75d.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=bgpwBfSwOiSj4AAk95rvGkKU55Y%3D",
+              "biz_type": 2,
+              "size": 221565
+            }
+          ],
+          "type": 5
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/85c218f3-d6df-4817-ae2f-b28f89889e2g~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711649171,
+      "auto_close_hit": 0,
+      "id": 7351475904163430000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Fabrice Rousseau",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "6966152196359963650",
+      "name": "Fabrice Rousseau",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": [
+            {
+              "file_type": "jpeg",
+              "file_name": "MWMM.jpeg",
+              "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/3370672853db4b87a39abe32aac7c412.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=CkeCn4sCXt9%2BszQtz%2FB74GQ3cSI%3D",
+              "file_key": "tos-alisg-i-6g3pebcbys-sg/3370672853db4b87a39abe32aac7c412.jpeg",
+              "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/3370672853db4b87a39abe32aac7c412.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=CkeCn4sCXt9%2BszQtz%2FB74GQ3cSI%3D",
+              "biz_type": 2,
+              "size": 130450
+            }
+          ],
+          "type": 5
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/85c218f3-d6df-4817-ae2f-b28f89889e2g~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711668513,
+      "auto_close_hit": 0,
+      "id": 7351553231673115000,
+      "reply_role": "admin",
+      "staff_id": 3050890,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "chan.lim@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Chan Lim",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7119495696798254081",
+      "name": "Chan Lim",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>So from the latest screenshots from you, I see still some in-app events are missing from the coarse schema. Is this on purpose? If they confirm that they left some in-app events blank intentionally, I can submit for allowlisting.</p><p>I just want to make sure that this is the schema they want (not that this is a misconfig)</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_d6b98c4a-7ef2-4747-9f41-04df2a84d05g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711705951,
+      "auto_close_hit": 0,
+      "id": 7351719486774444000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Fabrice Rousseau",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "6966152196359963650",
+      "name": "Fabrice Rousseau",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Yes they did it on purpose (I spotted it and they confirmed it)<br>Thanks a lot, please let me know when it&#39;s added to the allowlist!<br>Have a nice day :)</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/85c218f3-d6df-4817-ae2f-b28f89889e2g~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711960421,
+      "auto_close_hit": 0,
+      "id": 7352813720298422000,
+      "reply_role": "admin",
+      "staff_id": 3050890,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": true,
+      "editable": 0,
+      "reply_email": "chan.lim@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Chan Lim",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7119495696798254081",
+      "name": "Chan Lim",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Thanks for confirmation! I've submitted for allowlisting.</p><p>They allowlist it every Tues/Thurs, so You will hear from me by Wednesday! Please bear with me for a moment.</p><p>Have a great week ahead ;-)</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s3-imfile.feishucdn.com/static-resource/v1/v2_d6b98c4a-7ef2-4747-9f41-04df2a84d05g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1712023374,
+      "auto_close_hit": 0,
+      "id": 7353082345698066000,
+      "reply_role": "admin",
+      "staff_id": 3050890,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "chan.lim@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Chan Lim",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7119495696798254081",
+      "name": "Chan Lim",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>I confirm the app is now ready for transition. Please have the client click Switch to SKAN 4.0 from TTEM!</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_d6b98c4a-7ef2-4747-9f41-04df2a84d05g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1712221772,
+      "auto_close_hit": 0,
+      "id": 7353934444190908000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Fabrice Rousseau",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "6966152196359963650",
+      "name": "Fabrice Rousseau",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Transition is done, thanks a lot for the help!</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/85c218f3-d6df-4817-ae2f-b28f89889e2g~?image_size=640x640&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    }
+  ],
+  "enable_forced_order_type": 0,
+  "plat_id": 1736490999244882,
+  "archive_category_2_name": "",
+  "pending_from_follower": true,
+  "id": 1971325,
+  "workflow_nodes": [],
+  "board_id": 1705151646989842,
+  "employee_email": "chan.lim@bytedance.com",
+  "is_support_suggestion": 0,
+  "title": "App not able to transition despite MMP SDK updated & SKAN schema updated (fine & coarse)",
+  "category_1_name": "iOS SKAN Audit",
+  "auto_close_hit": 0,
+  "relation_qual": [],
+  "accountpass": 0,
+  "priority": 3,
+  "inner": 1,
+  "vip_types": [],
+  "is_impending_overtime": 0,
+  "creater_lark_avatar": "https://s3-imfile.feishucdn.com/static-resource/v1/85c218f3-d6df-4817-ae2f-b28f89889e2g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+  "enable_compliance_mode": false,
+  "type": 5,
+  "current_role": null,
+  "fd_permission": 1,
+  "status": 3,
+  "business_data": [],
+  "update_time": 1712221777,
+  "owner_name": "Fabrice Rousseau",
+  "enable_auto_close_v2": 0,
+  "time_after_overtime": 0,
+  "swim_lane_status": 5,
+  "enable_forced_order_tag": 1,
+  "satisfied": 0,
+  "category_2_name": "",
+  "reply_name": " MPO Technical Implementation  Team",
+  "is_guest": false,
+  "archive_category_2": "",
+  "archive_category_1_name": "iOS SKAN Audit",
+  "archive_category_1": "1791202334548993",
+  "allow_reopen": 0,
+  "categories": [
+    {
+      "to_user": 1,
+      "categories_id": "1791202334548993",
+      "cate_1_form_id": 1791205071838209,
+      "sub_cates": [],
+      "value": "iOS SKAN Audit"
+    }
+  ],
+  "core_user_id": "6966152196359963650",
+  "plat_name": "MPO Technical Implementation",
+  "follower_role": "admin",
+  "remark": "",
+  "show_auto_assign": false,
+  "is_overtime": 0,
+  "creater_lark_name": "Fabrice Rousseau",
+  "follow_employee_id": 3050890,
+  "is_order_top": 0,
+  "urged": 0,
+  "im_chat_id": "",
+  "is_delay": 0,
+  "enable_forced_priority": 0,
+  "pending_time": 322798,
+  "debug_permission": 1,
+  "is_vip": 0,
+  "items": [
+    {
+      "label": "",
+      "content": "App not able to transition despite MMP SDK updated & SKAN schema updated (fine & coarse)",
+      "valid": true,
+      "item_id": 1791205071838225,
+      "type": 14,
+      "option_meaning": -1
+    },
+    {
+      "label": "Advertiser / Client Name",
+      "content": "MWM",
+      "valid": true,
+      "item_id": 1791205071838241,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Customer Vertical",
+      "content": "Other",
+      "valid": true,
+      "key": "Other",
+      "item_id": 1791205071838257,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "GBS Tier",
+      "content": "Key Account",
+      "valid": true,
+      "key": "Key Account",
+      "item_id": 1791205260785714,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "GBS Country / Region",
+      "content": "EU-FR",
+      "valid": true,
+      "key": "EU",
+      "item_id": 1791205328494657,
+      "type": 4,
+      "option_meaning": 0
+    },
+    {
+      "label": "Your Department / Team",
+      "content": "CSM",
+      "valid": true,
+      "key": "CSM",
+      "item_id": 1791205337175074,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Ad Account ID",
+      "content": "6945829236808663041",
+      "valid": true,
+      "item_id": 1791205337177090,
+      "type": 1,
+      "option_meaning": 4
+    },
+    {
+      "label": "Advertiser Priority Level/Tier",
+      "content": "P0",
+      "valid": true,
+      "key": "P0",
+      "item_id": 1791205337177106,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "iOS Mobile App ID",
+      "content": "493226494",
+      "valid": true,
+      "item_id": 1791205752022065,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Android Mobile App ID (if available)",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205752023041,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "SKAN Version",
+      "content": "Currently on 4.0",
+      "valid": true,
+      "key": "Currently on 4.0",
+      "item_id": 1791205752023057,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Client MMP",
+      "content": "Appsflyer",
+      "valid": true,
+      "key": "Appsflyer",
+      "item_id": 1791205757763634,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Reason of request",
+      "content": "Sanity check (including SKAN 4.0 transition)",
+      "valid": true,
+      "key": "Sanity check (including SKAN 4.0 transition)",
+      "item_id": 1791205889917953,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Revenue model",
+      "content": "Subscription",
+      "valid": true,
+      "key": "Subscription",
+      "item_id": 1791205889918977,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Describe the current problem in details (excluding sanity check requests)",
+      "content": "This client is handling a lot of apps, and transitioned most of them but on TTAM, this app cannot transition due to the button staying grey, due to SDK 3.0 - it's an error as they are using the SDK 6.12.1 from Appsflyer (eligible to SKAN 4)\n\n",
+      "valid": true,
+      "item_id": 1791205970506753,
+      "type": 2,
+      "option_meaning": -1
+    },
+    {
+      "label": "Enter the campaign or ad group ID  (excluding sanity check requests)",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205970506769,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Describe the desired future state in details (excluding sanity check requests)",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205970506785,
+      "type": 2,
+      "option_meaning": -1
+    },
+    {
+      "label": "Can client see the same behaviour on MMP dashboard?  (excluding sanity check requests)",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205970506801,
+      "type": 9,
+      "option_meaning": -1
+    },
+    {
+      "label": "Screenshots of partner integration",
+      "content": [
+        {
+          "file_type": "jpeg",
+          "file_name": "MWM1.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/fb56335a3fd14fca85e4790b6b30873e.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=EOUX2DM94HpIr7xdZnLbJcHgC5A%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/fb56335a3fd14fca85e4790b6b30873e.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/fb56335a3fd14fca85e4790b6b30873e.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=EOUX2DM94HpIr7xdZnLbJcHgC5A%3D",
+          "size": 383606
+        },
+        {
+          "file_type": "jpeg",
+          "file_name": "MWM2.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/839af79217c34e49892ec745bf6a0fc2.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=qfalySyssxeoSDC2N%2F9su2euW24%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/839af79217c34e49892ec745bf6a0fc2.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/839af79217c34e49892ec745bf6a0fc2.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=qfalySyssxeoSDC2N%2F9su2euW24%3D",
+          "size": 276863
+        },
+        {
+          "file_type": "jpeg",
+          "file_name": "MWM3.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/1007653c9c2b4e799a66f51a0c57cb98.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=rJ2sbsDK9GajQAeQUGZ5z4dGu%2BA%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/1007653c9c2b4e799a66f51a0c57cb98.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/1007653c9c2b4e799a66f51a0c57cb98.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=rJ2sbsDK9GajQAeQUGZ5z4dGu%2BA%3D",
+          "size": 402742
+        },
+        {
+          "file_type": "jpeg",
+          "file_name": "MWM SDK.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/8ae947cb2038495d92a6977bd4e07599.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=%2B2jjVIPXaaKQbRrLGolKTMLWwfg%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/8ae947cb2038495d92a6977bd4e07599.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/8ae947cb2038495d92a6977bd4e07599.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=%2B2jjVIPXaaKQbRrLGolKTMLWwfg%3D",
+          "biz_type": 2,
+          "size": 374533
+        },
+        {
+          "file_type": "jpeg",
+          "file_name": "2MWM4.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/e19dc392fece4bf3902e7a58aacc5715.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=ohR2pPTMm2R2roPnHW9KtSY8%2FqM%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/e19dc392fece4bf3902e7a58aacc5715.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/e19dc392fece4bf3902e7a58aacc5715.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=ohR2pPTMm2R2roPnHW9KtSY8%2FqM%3D",
+          "biz_type": 2,
+          "size": 232521
+        },
+        {
+          "file_type": "jpeg",
+          "file_name": "2MWM5.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/9292daefc4a644d883144c3ddf9a6f53.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=WkMehqUrI2KQ51cpNqoQ2LHiGg4%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/9292daefc4a644d883144c3ddf9a6f53.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/9292daefc4a644d883144c3ddf9a6f53.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=WkMehqUrI2KQ51cpNqoQ2LHiGg4%3D",
+          "biz_type": 2,
+          "size": 226273
+        },
+        {
+          "file_type": "jpeg",
+          "file_name": "2MWM1.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/78d13834b7aa436d933632b9e4d7fd30.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=pVPDmeMY3CgUBexvcX5Afn%2F%2B424%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/78d13834b7aa436d933632b9e4d7fd30.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/78d13834b7aa436d933632b9e4d7fd30.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=pVPDmeMY3CgUBexvcX5Afn%2F%2B424%3D",
+          "biz_type": 2,
+          "size": 406245
+        },
+        {
+          "file_type": "jpeg",
+          "file_name": "2MWM2.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/33f663ff50a44863ad42d418ee8f9c72.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=sh47hLiX94aI%2Bv9bBbS4i1MZTWA%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/33f663ff50a44863ad42d418ee8f9c72.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/33f663ff50a44863ad42d418ee8f9c72.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=sh47hLiX94aI%2Bv9bBbS4i1MZTWA%3D",
+          "biz_type": 2,
+          "size": 210652
+        },
+        {
+          "file_type": "jpeg",
+          "file_name": "2MWM3.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/21221321fbd741fc893dcab185f4b09b.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=qY3qxDHwD%2FfGFbT2Gbmtipw86EA%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/21221321fbd741fc893dcab185f4b09b.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/21221321fbd741fc893dcab185f4b09b.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=qY3qxDHwD%2FfGFbT2Gbmtipw86EA%3D",
+          "biz_type": 2,
+          "size": 224155
+        },
+        {
+          "file_type": "jpeg",
+          "file_name": "3MWM1.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/5b5daead77b64effab443ea66beecb62.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=w%2Bo2ZYB%2F630swdzrZDITreqxrDY%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/5b5daead77b64effab443ea66beecb62.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/5b5daead77b64effab443ea66beecb62.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=w%2Bo2ZYB%2F630swdzrZDITreqxrDY%3D",
+          "biz_type": 2,
+          "size": 238466
+        },
+        {
+          "file_type": "jpeg",
+          "file_name": "3MWM2.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/e314b22357b940b78db5f368c006a767.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=ea9PF4NX6bO3l2I1nTSoWX0mv6A%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/e314b22357b940b78db5f368c006a767.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/e314b22357b940b78db5f368c006a767.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=ea9PF4NX6bO3l2I1nTSoWX0mv6A%3D",
+          "biz_type": 2,
+          "size": 322256
+        },
+        {
+          "file_type": "jpeg",
+          "file_name": "3MWM3.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/95ec071d18784563999265ee9e0dd3ef.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=cRiWpxUUfJgJ8D9shMVCn69k6Gw%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/95ec071d18784563999265ee9e0dd3ef.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/95ec071d18784563999265ee9e0dd3ef.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=cRiWpxUUfJgJ8D9shMVCn69k6Gw%3D",
+          "biz_type": 2,
+          "size": 235674
+        },
+        {
+          "file_type": "jpeg",
+          "file_name": "3MWM4.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/8ec54fb7217e4081bf509f68cdffe4a9.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=y6h1WbMjRzFTrDVC7xFE7OAZD5E%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/8ec54fb7217e4081bf509f68cdffe4a9.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/8ec54fb7217e4081bf509f68cdffe4a9.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=y6h1WbMjRzFTrDVC7xFE7OAZD5E%3D",
+          "biz_type": 2,
+          "size": 217925
+        },
+        {
+          "file_type": "jpeg",
+          "file_name": "3MWM5.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/778b6635ad93490f9d2e9bd327dad75d.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=bgpwBfSwOiSj4AAk95rvGkKU55Y%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/778b6635ad93490f9d2e9bd327dad75d.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/778b6635ad93490f9d2e9bd327dad75d.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=bgpwBfSwOiSj4AAk95rvGkKU55Y%3D",
+          "biz_type": 2,
+          "size": 221565
+        },
+        {
+          "file_type": "jpeg",
+          "file_name": "MWMM.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/3370672853db4b87a39abe32aac7c412.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=CkeCn4sCXt9%2BszQtz%2FB74GQ3cSI%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/3370672853db4b87a39abe32aac7c412.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/3370672853db4b87a39abe32aac7c412.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=CkeCn4sCXt9%2BszQtz%2FB74GQ3cSI%3D",
+          "biz_type": 2,
+          "size": 130450
+        }
+      ],
+      "valid": true,
+      "item_id": 1791205970507809,
+      "type": 5,
+      "option_meaning": -1
+    },
+    {
+      "label": "Screenshots of SKAN Conversion Value mapping",
+      "content": [
+        {
+          "file_type": "jpeg",
+          "file_name": "MWM4.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/b487a47400644cc2b391200165328bb7.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=XVsGQb29SNR%2B6ZHPlBufgQ9AcMw%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/b487a47400644cc2b391200165328bb7.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/b487a47400644cc2b391200165328bb7.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=XVsGQb29SNR%2B6ZHPlBufgQ9AcMw%3D",
+          "size": 456519
+        },
+        {
+          "file_type": "jpeg",
+          "file_name": "MWM5.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/62eb6977507c452fa418f53f4434169e.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=pdzQa%2BcFTvg%2FK2%2F8e8QRLLv3K3s%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/62eb6977507c452fa418f53f4434169e.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/62eb6977507c452fa418f53f4434169e.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=pdzQa%2BcFTvg%2FK2%2F8e8QRLLv3K3s%3D",
+          "size": 369444
+        },
+        {
+          "file_type": "jpeg",
+          "file_name": "MWM6.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/c1469ce414cd4ef19310405ad90aa123.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=Uk7HLnalsa6lhpUeEf1yKUZHrwo%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/c1469ce414cd4ef19310405ad90aa123.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/c1469ce414cd4ef19310405ad90aa123.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=Uk7HLnalsa6lhpUeEf1yKUZHrwo%3D",
+          "size": 196585
+        },
+        {
+          "file_type": "jpeg",
+          "file_name": "MWM7.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/c8af4b3e69354d89a3d4d72316737485.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=Rjo9%2BrfIT0jrMvBHg7lFjRyZKI4%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/c8af4b3e69354d89a3d4d72316737485.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/c8af4b3e69354d89a3d4d72316737485.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=Rjo9%2BrfIT0jrMvBHg7lFjRyZKI4%3D",
+          "size": 250723
+        },
+        {
+          "file_type": "jpeg",
+          "file_name": "MWM8.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/9c87ded0254c494f825c4338e4892f2e.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=VuVZcuErfNA7KA%2BDbIE3LnpZlaM%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/9c87ded0254c494f825c4338e4892f2e.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/9c87ded0254c494f825c4338e4892f2e.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=VuVZcuErfNA7KA%2BDbIE3LnpZlaM%3D",
+          "size": 194506
+        },
+        {
+          "file_type": "jpeg",
+          "file_name": "MWM9.jpeg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/f041e30b0d1e463ca8c351e5e7a5cf53.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=kkLteTlXuHoEU3N2ocz68nyE3MY%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/f041e30b0d1e463ca8c351e5e7a5cf53.jpeg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/f041e30b0d1e463ca8c351e5e7a5cf53.jpeg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834608575&x-signature=kkLteTlXuHoEU3N2ocz68nyE3MY%3D",
+          "size": 198308
+        }
+      ],
+      "valid": true,
+      "item_id": 1791205970507825,
+      "type": 5,
+      "option_meaning": -1
+    },
+    {
+      "label": "Any comments",
+      "content": "We already faced that issue with another app and I contacted Brian Kim (PSO) for that - it seems like there is a recurring bug existing and I needed to create a ticket.\n\nCould you please help us and force the transition on your end?\n\nThanks",
+      "valid": true,
+      "item_id": 1791205970508801,
+      "type": 2,
+      "option_meaning": -1
+    },
+    {
+      "label": "categorization",
+      "content": {
+        "category_1_name": "Apps-iOS SKAN Audit"
+      },
+      "valid": true,
+      "item_id": 0,
+      "type": 3,
+      "option_meaning": -1
+    }
+  ],
+  "fs_permission": 1,
+  "auto_close_time_left": null
+}

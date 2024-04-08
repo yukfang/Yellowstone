@@ -1,24 +1,13 @@
 const proxying = require('../http/proxying');
-const cookieRemote = require('./cookie');
-
-let cookie = {
-    value : '',
-    fetchTime : 0
-}
+const cookie = require('./cookie');
 
 module.exports =
 async function athena_api_v2_processor_order_bind_tag_list(order_id){
-    if(Date.now() - cookie.fetchTime > 1000 * 60 * 3) {
-        cookie = {
-            value: (await cookieRemote()),
-            fetchTime: Date.now()
-        }
-    }
-
     const plat_id = '1736490999244882'
+    // const endpoint = `https://ads.tiktok.com/athena/api/v2/processor/order/bind_tag_list`;
     const endpoint = `https://ads.tiktok.com/athena/api/v2/processor/order/bind_tag_list_v2`;
     const method      = 'GET';
-    let header      =  {Cookie: cookie.value}
+    let header      = {Cookie: await cookie()}
     let param       = {
         order_id,
         plat_id,
@@ -36,6 +25,7 @@ async function athena_api_v2_processor_order_bind_tag_list(order_id){
         // console.log(tags)
         const impl_tags_data = tags.filter(tg => tg.group_name.includes("Implementation Status"))
         // console.log(impl_tags)
+        // console.log('  ')
         // const data = JSON.parse(response.data).data.tags.filter(tg => tg.group_name.includes("Implementation Status"));
         // console.log(data.tags.filter(tg => tg.group_name.includes("Implementation Status")))
         if(impl_tags_data.length == 1) {

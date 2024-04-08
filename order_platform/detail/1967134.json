@@ -1,0 +1,380 @@
+{
+  "reply_mode": 1,
+  "time_before_overtime": 0,
+  "set_priority_automatically": false,
+  "is_follow": 0,
+  "category_2": "",
+  "category_1": "1754600307444754",
+  "follower_avatar": "https://s3-imfile.feishucdn.com/static-resource/v1/v2_6b5da10a-8b0f-475a-93d4-7e7bcf621c5g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+  "follower": "Κατερίνα Σάκκουλα",
+  "create_time": 1711353384,
+  "deadline": 0,
+  "archive_board_id": 1705151646989733,
+  "replies": [
+    {
+      "is_hide_reply": false,
+      "create_time": 1711485263,
+      "auto_close_hit": 0,
+      "id": 7350770584369807000,
+      "reply_role": "TSC",
+      "staff_id": 9295306,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "katerina.sakkoula@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Κατερίνα Σάκκουλα",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7043718772188251137",
+      "name": "Κατερίνα Σάκκουλα",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi Tatiana,</p><p><br></p><p>Thank you for reaching out.</p><p><br></p><p>The Pixel ID:&nbsp;C7EOAR9O8QD3U7LQDCNG which is connected to the Catalog ID:&nbsp;7321708462893778690 Event Sources is a Shopify pixel, whereas the Catalog has not been synced directly via Shopify. Is there a reason why the catalog was manually uploaded instead of being synced via Shopify?</p><p><br></p><p>Some product categories have not been uploaded to the catalog. Specifically:</p><ol><li><strong>Accessories (inc. Straps and Equipment)</strong>: https://store.betterme.world/products/buttery-yellow-betterme-band-strap&nbsp;<br>https://store.betterme.world/products/pilates-essential-kit-stone-gray</li><li><span style=\"color: #222222;\"><strong>E-Gift Card:</strong>&nbsp;https://store.betterme.world/products/e-giftcard</span></li></ol><p><br></p><p>Could you please ask the client to ensure that all products are uploaded? They can then create &#39;Product Sets&#39; in order to group which products they want to use for advertising.</p><p><br></p><p>Best,</p><p>Katerina</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s3-imfile.feishucdn.com/static-resource/v1/v2_6b5da10a-8b0f-475a-93d4-7e7bcf621c5g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711520458,
+      "auto_close_hit": 0,
+      "id": 7350923377965679000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "tatiana.kim@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Tatiana Kim",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7276449029852464130",
+      "name": "Tatiana Kim",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p><span style=\"color: #333333;\">hi hi! thanks a mil for taking a look!&nbsp;</span></p><p><br></p><p><span style=\"color: #333333;\">the Catalog has not been synced directly via Shopify -&gt; we checked with the client if it synced correctly and i believe it should be (please find the ss)</span></p><p><br></p><p><span style=\"color: #333333;\">Is there a reason why the catalog was manually uploaded instead of being synced via Shopify? -&gt; yes, client tried an unofficial app for Shopify integration, however afterward they moved to the official app and should have synced catalog with Shopify</span></p>",
+          "type": 6
+        },
+        {
+          "content": [
+            {
+              "file_type": "jpg",
+              "file_name": "2024-03-27 10.14.10.jpg",
+              "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/dd992813195e4cc2b2704b6540dbabea.jpg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169888&x-signature=0foGcIeq4BDr0CpX2T94YzA4iUA%3D",
+              "file_key": "tos-alisg-i-6g3pebcbys-sg/dd992813195e4cc2b2704b6540dbabea.jpg",
+              "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/dd992813195e4cc2b2704b6540dbabea.jpg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169888&x-signature=0foGcIeq4BDr0CpX2T94YzA4iUA%3D",
+              "biz_type": 2,
+              "size": 37121
+            }
+          ],
+          "type": 5
+        }
+      ],
+      "avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v2_23826b9f-1a72-44f2-aa10-1a876988a1hu~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1712045978,
+      "auto_close_hit": 0,
+      "id": 7353180443082097000,
+      "reply_role": "TSC",
+      "staff_id": 9295306,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "katerina.sakkoula@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Κατερίνα Σάκκουλα",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7043718772188251137",
+      "name": "Κατερίνα Σάκκουλα",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hey Tatiana,</p><p><br></p><p>Thanks for your patience!</p><p><br></p><p>The client has some catalogs that are directly synced via Shopify and others that are using a feed URL instead. When looking at both types of catalogs we still see lower match rates for the View Content and Complete Payment events. As previously confirmed, this seems to be caused due to missing products.</p><p><br></p><p>We caught up with Kashif, as he is managing this account from the SE side, and he will advise the client accordingly. I will go ahead and close this ticket, as this account is an SE focused account, and therefore not eligible for our support.</p><p><br></p><p>Best,</p><p>Katerina</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s3-imfile.feishucdn.com/static-resource/v1/v2_6b5da10a-8b0f-475a-93d4-7e7bcf621c5g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1712046021,
+      "auto_close_hit": 0,
+      "id": 7353180595054248000,
+      "reply_role": "TSC",
+      "staff_id": 9295306,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "katerina.sakkoula@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Κατερίνα Σάκκουλα",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7043718772188251137",
+      "name": "Κατερίνα Σάκκουλα",
+      "blocked_roles": [
+        "requester"
+      ],
+      "items": [
+        {
+          "content": "<p><strong>[Conclusion]</strong> Catalogs are missing products (gift cards and accessories) leading to poor match rate.</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s3-imfile.feishucdn.com/static-resource/v1/v2_6b5da10a-8b0f-475a-93d4-7e7bcf621c5g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    }
+  ],
+  "enable_forced_order_type": 0,
+  "plat_id": 1736490999244882,
+  "archive_category_2_name": "",
+  "pending_from_follower": false,
+  "id": 1967134,
+  "workflow_nodes": [],
+  "board_id": 1705151646989733,
+  "employee_email": "katerina.sakkoula@bytedance.com",
+  "is_support_suggestion": 0,
+  "title": "BetterMe - low rate of events matching with content id",
+  "category_1_name": "Catalog Integration or Optimization",
+  "auto_close_hit": 0,
+  "relation_qual": [],
+  "accountpass": 0,
+  "priority": 2,
+  "inner": 1,
+  "vip_types": [],
+  "is_impending_overtime": 0,
+  "creater_lark_avatar": "https://s16-imfile-sg.feishucdn.com/static-resource/v1/v2_23826b9f-1a72-44f2-aa10-1a876988a1hu~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+  "enable_compliance_mode": false,
+  "type": 0,
+  "current_role": null,
+  "fd_permission": 1,
+  "status": 3,
+  "business_data": [],
+  "update_time": 1712046048,
+  "owner_name": "Tatiana Kim",
+  "enable_auto_close_v2": 0,
+  "time_after_overtime": 0,
+  "swim_lane_status": 5,
+  "enable_forced_order_tag": 1,
+  "satisfied": 0,
+  "category_2_name": "",
+  "reply_name": " MPO Technical Implementation  Team",
+  "is_guest": false,
+  "archive_category_2": "",
+  "archive_category_1_name": "Catalog Integration or Optimization",
+  "archive_category_1": "1754600307444754",
+  "allow_reopen": 0,
+  "categories": [
+    {
+      "to_user": 1,
+      "categories_id": "1754600307444754",
+      "cate_1_form_id": 1754532886212609,
+      "sub_cates": [],
+      "value": "Catalog Integration or Optimization"
+    }
+  ],
+  "core_user_id": "7276449029852464130",
+  "plat_name": "MPO Technical Implementation",
+  "follower_role": "TSC",
+  "remark": "",
+  "show_auto_assign": false,
+  "is_overtime": 0,
+  "creater_lark_name": "Tatiana Kim",
+  "follow_employee_id": 9295306,
+  "is_order_top": 0,
+  "urged": 0,
+  "im_chat_id": "",
+  "is_delay": 0,
+  "enable_forced_priority": 0,
+  "pending_time": 59840,
+  "debug_permission": 1,
+  "is_vip": 0,
+  "items": [
+    {
+      "label": "Ticket Title",
+      "content": "BetterMe - low rate of events matching with content id",
+      "valid": true,
+      "item_id": 1754532886212625,
+      "type": 14,
+      "option_meaning": -1
+    },
+    {
+      "label": "Is this consultation request to help your client get to Signals Optimal? ",
+      "content": "Yes, my request is to get my client to Signals Optimal",
+      "valid": true,
+      "key": "Yes, my request is to get my client to Signals Optimal",
+      "item_id": 1774553223789586,
+      "type": 9,
+      "option_meaning": -1
+    },
+    {
+      "label": "As what stage is your Signals discussion with your client?",
+      "content": "Post-Pitch but client has more questions",
+      "valid": true,
+      "key": "Post-Pitch but client has more questions",
+      "item_id": 1774553319301153,
+      "type": 9,
+      "option_meaning": -1
+    },
+    {
+      "label": "Is the partner using a third party platform for Web Pixel and/or Server side tagging?",
+      "content": "Shopify",
+      "valid": true,
+      "key": "Shopify",
+      "item_id": 1774553319302177,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Advertiser / Client Name",
+      "content": "BetterMe",
+      "valid": true,
+      "item_id": 1754533102928897,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Customer Vertical",
+      "content": "Ecommerce",
+      "valid": true,
+      "key": "Ecommerce",
+      "item_id": 1754533102928913,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "GBS Tier",
+      "content": "Key Account",
+      "valid": true,
+      "key": "Key Account",
+      "item_id": 1754533238535202,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "GBS Country / Region",
+      "content": "EASTEUROPE-RU",
+      "valid": true,
+      "key": "EASTEUROPE",
+      "item_id": 1754533238537234,
+      "type": 4,
+      "option_meaning": 0
+    },
+    {
+      "label": "Your Department / Team",
+      "content": "CST",
+      "valid": true,
+      "key": "CST",
+      "item_id": 1754533337491457,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Ad Account ID(s)",
+      "content": "7312375636524302337",
+      "valid": true,
+      "item_id": 1754533479391250,
+      "type": 1,
+      "option_meaning": 4
+    },
+    {
+      "label": "Advertiser Priority Level/Tier",
+      "content": "P0",
+      "valid": true,
+      "key": "P0",
+      "item_id": 1754533479391266,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Revenue impact",
+      "content": "10k/day",
+      "valid": true,
+      "item_id": 1754533479398417,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Target Implementation Date",
+      "content": "2024-03-25",
+      "valid": true,
+      "item_id": 1754533479398433,
+      "type": 11,
+      "option_meaning": -1
+    },
+    {
+      "label": "What does the client need support with?",
+      "content": "Existing catalog optimization",
+      "valid": true,
+      "key": "Existing catalog optimization",
+      "item_id": 1754533479398449,
+      "type": 9,
+      "option_meaning": -1
+    },
+    {
+      "label": "Please describe client's requirements",
+      "content": "hi, the biggest client of METAP BetterMe recently launched e-commerce ads with Shopify integration. However, they have been struggling with a catalog, only 65% of events matching with content id. and this rate is fluctuating day by day, if you could help resolve the issue, it would be great as it's affecting performance\nplease find the link to catalog manager: https://ads.tiktok.com/catalogs/event-sources?id=7321708462893778690&bc_id=6969953894138953729&path=event-sources-detail&app_id=7051931675252572161",
+      "valid": true,
+      "item_id": 1754533479399457,
+      "type": 2,
+      "option_meaning": -1
+    },
+    {
+      "label": "Screenshot(s)",
+      "content": [
+        {
+          "file_type": "png",
+          "file_name": "Screenshot 2024-03-25 at 11.51.08 AM.png",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/753fcaf24ec8416884fab8fc639ba9f5.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169888&x-signature=MXnD9xyZnL68LjfzQhdcCgFDS4o%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/753fcaf24ec8416884fab8fc639ba9f5.png",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/753fcaf24ec8416884fab8fc639ba9f5.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169888&x-signature=MXnD9xyZnL68LjfzQhdcCgFDS4o%3D",
+          "size": 215904
+        },
+        {
+          "file_type": "jpg",
+          "file_name": "2024-03-27 10.14.10.jpg",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/dd992813195e4cc2b2704b6540dbabea.jpg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169888&x-signature=0foGcIeq4BDr0CpX2T94YzA4iUA%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/dd992813195e4cc2b2704b6540dbabea.jpg",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/dd992813195e4cc2b2704b6540dbabea.jpg~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834169888&x-signature=0foGcIeq4BDr0CpX2T94YzA4iUA%3D",
+          "biz_type": 2,
+          "size": 37121
+        }
+      ],
+      "valid": true,
+      "item_id": 1754533479399473,
+      "type": 5,
+      "option_meaning": -1
+    },
+    {
+      "label": "categorization",
+      "content": {
+        "category_1_name": "Catalog-Catalog Integration or Optimization"
+      },
+      "valid": true,
+      "item_id": 0,
+      "type": 3,
+      "option_meaning": -1
+    }
+  ],
+  "fs_permission": 1,
+  "auto_close_time_left": null
+}

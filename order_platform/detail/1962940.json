@@ -1,0 +1,499 @@
+{
+  "reply_mode": 1,
+  "time_before_overtime": 0,
+  "set_priority_automatically": false,
+  "is_follow": 0,
+  "category_2": "",
+  "category_1": "1791202334548993",
+  "follower_avatar": "https://s3-imfile.feishucdn.com/static-resource/v1/v2_d6b98c4a-7ef2-4747-9f41-04df2a84d05g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+  "follower": "Chan Lim",
+  "create_time": 1711127688,
+  "deadline": 0,
+  "archive_board_id": 1705151646989842,
+  "replies": [
+    {
+      "is_hide_reply": false,
+      "create_time": 1711384980,
+      "auto_close_hit": 0,
+      "id": 7350342154570465000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "jessica.puro@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Jessica Puro",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7128352992928384002",
+      "name": "Jessica Puro",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi! I was wondering if you could do an iOS SKAN audit? I am trying to launch an AEO flywheel this week. Thanks so much!</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v2_85abe5ab-dbee-42d6-9b86-7279c28e6efh~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711442358,
+      "auto_close_hit": 0,
+      "id": 7350587553130496000,
+      "reply_role": "admin",
+      "staff_id": 3050890,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "chan.lim@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Chan Lim",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7119495696798254081",
+      "name": "Chan Lim",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi Jessica,</p><p>Sorry for the delayed response. My colleague in the US is currently unavailable, hence I am taking over here from APAC.</p><p>Looking at the provided config, I can confirm there is no issue with the schema they set. Everything is correct.</p><p><br></p><p>I am not sure what&#39;s the average/expected KPI for Free trial, but yeah it does look a little low number compared to the number of installs.</p><p><br></p><p>My question is, do you know whether this client runs campaigns on any other platforms such as Meta or Google, and how the FreeTrial number look like for them?</p><p><br></p><ol><li>If the numbers are relatively low on other platforms, we may want to have client revisit their app integration with Appsflyer SDK as the SDK may not be correctly capturing free trial on the app side due to misconfig hence the numbers are dropping on all platforms.</li><li>If the numbers are low only on TikTok, since there is no config issue, the metrics seem correct for now. What we can probably do extra here is that we add some mid funnel events to understand how users are interacting with App (whether they actually enjoy the app before starting a trial?)</li></ol>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_d6b98c4a-7ef2-4747-9f41-04df2a84d05g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711466581,
+      "auto_close_hit": 0,
+      "id": 7350691177437463000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "jessica.puro@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Jessica Puro",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7128352992928384002",
+      "name": "Jessica Puro",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>They said their CPA goal is below $10 - but the ultimate goal is $5!&nbsp;</p><p><br></p><p>I will ask them about those metrics and get back to you! Thank you for helping Chan!</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v2_85abe5ab-dbee-42d6-9b86-7279c28e6efh~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711466877,
+      "auto_close_hit": 0,
+      "id": 7350692336315171000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "jessica.puro@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Jessica Puro",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7128352992928384002",
+      "name": "Jessica Puro",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p><span style=\"color: #222222;\">Sorry, I misspoke:</span></p><p><br></p><p><span style=\"color: #222222;\">&#34;Our current CPA is different from the CPI, as we are aiming to achieve a<strong> $27 CPT (cost per trial)&#34;</strong></span></p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v2_85abe5ab-dbee-42d6-9b86-7279c28e6efh~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711480984,
+      "auto_close_hit": 0,
+      "id": 7350752870997770000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "jessica.puro@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Jessica Puro",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7128352992928384002",
+      "name": "Jessica Puro",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p><span style=\"color: #222222;\">&#34;As your MPO team mentioned, we are having issues with the Appsflyer SDK not capturing the correct number of free trials, hence the low number compared to installs (this is happening in other platforms as well). Having this in mind, I wanted to ask you the following to you and the MPO team:<br><br></span><br></p><ul><li><span style=\"color: #222222;\">Should we launch the AEO campaign once the AppsFlyer integration issue is solved? would this affect the campaign&#39;s performance if we decide to launch it now? (number of trials not showing or even not getting conversions)</span></li><li><span style=\"color: #222222;\">Based on the audit, which mid-funnel events would you recommend to include and how should we include them? p.e. only as an additional tracking metric or by adding them to a new campaign.</span></li><li><span style=\"color: #222222;\">How can we improve the current CPI for iOS, from a technical/backend perspective?&#34;</span></li></ul>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v2_85abe5ab-dbee-42d6-9b86-7279c28e6efh~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1711516724,
+      "auto_close_hit": 0,
+      "id": 7350906165385003000,
+      "reply_role": "admin",
+      "staff_id": 3050890,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "chan.lim@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Chan Lim",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7119495696798254081",
+      "name": "Chan Lim",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi Jessica,</p><p>Thanks for getting back. Great to know that the client acknowledged the problem is on their side. :)</p><p><br></p><ul><li><span style=\"color: #222222;\"><em>Should we launch the AEO campaign once the AppsFlyer integration issue is solved? would this affect the campaign&#39;s performance if we decide to launch it now? (number of trials not showing or even not getting conversions)</em></span></li></ul><p> If the objective of the AEO campaign is Free Trial. Yes, not having a correct number of conversions can affect the campaign performance, as we optimise based on the in-app event data.&nbsp;</p><p><br></p><ul><li><span style=\"color: #222222;\"><em>Based on the audit, which mid-funnel events would you recommend to include and how should we include them? p.e. only as an additional tracking metric or by adding them to a new campaign.</em></span></li></ul><p>Looking through the app, it looks like after registration, you must have a subscription to browse any content inside the app. So I think the mid funnel between registration and subscription (browsing the content screen after logging in, or user attempting to click any content but being asked to start a free trial) would be ideal.&nbsp;</p><p>But, given the SDKs are not capturing Registration/FreeTrial conversions correctly right now, maybe we can focus on fixing these first and see how it goes.</p><p>For utilising the mid funnel event, ideally only as additional metrics will be enough for now. After fixing the SDK issue, if we still do not get good number of conversions for lower funnel campaigns (FreeTrial), we can consider adding a mid funnel campaign at that stage.</p><p><br></p><ul><li><span style=\"color: #222222;\"><em>How can we improve the current CPI for iOS, from a technical/backend perspective?&#34;</em></span></li></ul><p>Are we discussing about Cost per Installs here? Not Cost per Trial?</p><p>If the client is looking for improvement in Installs, I suggest you keep using APPO as it would help us take advantage of onsite signals which can help improve delivery performance for dedicated campaigns. Looking at their account, I saw some creatives used APPO and some did not.&nbsp;</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_d6b98c4a-7ef2-4747-9f41-04df2a84d05g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1712560102,
+      "auto_close_hit": 0,
+      "id": 7355387884876218000,
+      "reply_role": "admin",
+      "staff_id": 3050890,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "chan.lim@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Chan Lim",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7119495696798254081",
+      "name": "Chan Lim",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi Jessica, I just wanted to check in the progress here. How are they fixing the issue so far?</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_d6b98c4a-7ef2-4747-9f41-04df2a84d05g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    }
+  ],
+  "enable_forced_order_type": 0,
+  "plat_id": 1736490999244882,
+  "archive_category_2_name": "",
+  "pending_from_follower": false,
+  "id": 1962940,
+  "workflow_nodes": [],
+  "board_id": 1705151646989842,
+  "employee_email": "chan.lim@bytedance.com",
+  "is_support_suggestion": 0,
+  "title": "Zumba iOS campaign",
+  "category_1_name": "iOS SKAN Audit",
+  "auto_close_hit": 0,
+  "relation_qual": [],
+  "accountpass": 0,
+  "priority": 3,
+  "inner": 1,
+  "vip_types": [],
+  "is_impending_overtime": 0,
+  "creater_lark_avatar": "https://pan16.larksuitecdn.com/static-resource/v1/v2_85abe5ab-dbee-42d6-9b86-7279c28e6efh~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+  "enable_compliance_mode": false,
+  "type": 6,
+  "current_role": null,
+  "fd_permission": 1,
+  "status": 1,
+  "business_data": [],
+  "update_time": 1712560102,
+  "owner_name": "Jessica Puro",
+  "enable_auto_close_v2": 0,
+  "time_after_overtime": 0,
+  "swim_lane_status": 3,
+  "enable_forced_order_tag": 1,
+  "satisfied": 0,
+  "category_2_name": "",
+  "reply_name": " MPO Technical Implementation  Team",
+  "is_guest": false,
+  "archive_category_2": "",
+  "archive_category_1_name": "iOS SKAN Audit",
+  "archive_category_1": "1791202334548993",
+  "allow_reopen": 0,
+  "categories": [
+    {
+      "to_user": 1,
+      "categories_id": "1791202334548993",
+      "cate_1_form_id": 1791205071838209,
+      "sub_cates": [],
+      "value": "iOS SKAN Audit"
+    }
+  ],
+  "core_user_id": "7128352992928384002",
+  "plat_name": "MPO Technical Implementation",
+  "follower_role": "admin",
+  "remark": "",
+  "show_auto_assign": false,
+  "is_overtime": 0,
+  "creater_lark_name": "Jessica Puro",
+  "follow_employee_id": 3050890,
+  "is_order_top": 0,
+  "urged": 0,
+  "im_chat_id": "",
+  "is_delay": 0,
+  "enable_forced_priority": 0,
+  "pending_time": 630,
+  "debug_permission": 1,
+  "is_vip": 0,
+  "items": [
+    {
+      "label": "",
+      "content": "Zumba iOS campaign",
+      "valid": true,
+      "item_id": 1791205071838225,
+      "type": 14,
+      "option_meaning": -1
+    },
+    {
+      "label": "Advertiser / Client Name",
+      "content": "Zumba Fitness",
+      "valid": true,
+      "item_id": 1791205071838241,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Customer Vertical",
+      "content": "Other",
+      "valid": true,
+      "key": "Other",
+      "item_id": 1791205071838257,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "GBS Tier",
+      "content": "Growth",
+      "valid": true,
+      "key": "Growth",
+      "item_id": 1791205260785714,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "GBS Country / Region",
+      "content": "NORTHAMERICA-US",
+      "valid": true,
+      "key": "NORTHAMERICA",
+      "item_id": 1791205328494657,
+      "type": 4,
+      "option_meaning": 0
+    },
+    {
+      "label": "Your Department / Team",
+      "content": "BPM / Sales",
+      "valid": true,
+      "key": "BPM / Sales",
+      "item_id": 1791205337175074,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Ad Account ID",
+      "content": "7325532308138934273",
+      "valid": true,
+      "item_id": 1791205337177090,
+      "type": 1,
+      "option_meaning": 4
+    },
+    {
+      "label": "Advertiser Priority Level/Tier",
+      "content": "P1",
+      "valid": true,
+      "key": "P1",
+      "item_id": 1791205337177106,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "iOS Mobile App ID",
+      "content": "6447769025",
+      "valid": true,
+      "item_id": 1791205752022065,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Android Mobile App ID (if available)",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205752023041,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "SKAN Version",
+      "content": "Currently on 3.0",
+      "valid": true,
+      "key": "Currently on 3.0",
+      "item_id": 1791205752023057,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Client MMP",
+      "content": "Appsflyer",
+      "valid": true,
+      "key": "Appsflyer",
+      "item_id": 1791205757763634,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Reason of request",
+      "content": "Campaign started, but inaccurate data postback",
+      "valid": true,
+      "key": "Campaign started, but inaccurate data postback",
+      "item_id": 1791205889917953,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Revenue model",
+      "content": "Subscription",
+      "valid": true,
+      "key": "Subscription",
+      "item_id": 1791205889918977,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Describe the current problem in details (excluding sanity check requests)",
+      "content": "I am not sure what SKAN version they have or how to check!\n\nThe client is about to run our App install ios flywheel activation and asked that we double check that it is properly set up. He said that the numbers he's seeing in AppsFlyer for TikTok is very low.\n\nThis is for the SKAN Events of the iOS campaign and the event is free trial ",
+      "valid": true,
+      "item_id": 1791205970506753,
+      "type": 2,
+      "option_meaning": -1
+    },
+    {
+      "label": "Enter the campaign or ad group ID  (excluding sanity check requests)",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205970506769,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Describe the desired future state in details (excluding sanity check requests)",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205970506785,
+      "type": 2,
+      "option_meaning": -1
+    },
+    {
+      "label": "Can client see the same behaviour on MMP dashboard?  (excluding sanity check requests)",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205970506801,
+      "type": 9,
+      "option_meaning": -1
+    },
+    {
+      "label": "Screenshots of partner integration",
+      "content": [
+        {
+          "file_type": "png",
+          "file_name": "image (1).png",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/fc239554197d4d8798524a294e040189.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834624732&x-signature=rcRNhOwzK6sBRYaYfQnfpBZGPZc%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/fc239554197d4d8798524a294e040189.png",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/fc239554197d4d8798524a294e040189.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834624732&x-signature=rcRNhOwzK6sBRYaYfQnfpBZGPZc%3D",
+          "size": 128033
+        },
+        {
+          "file_type": "png",
+          "file_name": "image (2).png",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/c9a0608c99f34618b77d06c77a506844.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834624732&x-signature=dzEEPnoR6msIl4vAvQ8o3%2FMrFK0%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/c9a0608c99f34618b77d06c77a506844.png",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/c9a0608c99f34618b77d06c77a506844.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834624732&x-signature=dzEEPnoR6msIl4vAvQ8o3%2FMrFK0%3D",
+          "size": 192677
+        }
+      ],
+      "valid": true,
+      "item_id": 1791205970507809,
+      "type": 5,
+      "option_meaning": -1
+    },
+    {
+      "label": "Screenshots of SKAN Conversion Value mapping",
+      "content": [
+        {
+          "file_type": "png",
+          "file_name": "image (3).png",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/ac83282a1b704e5a82fd4a78b9d7b69f.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834624732&x-signature=%2Fs5QD25Gnf6c7BDonma3RK9%2FhHI%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/ac83282a1b704e5a82fd4a78b9d7b69f.png",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/ac83282a1b704e5a82fd4a78b9d7b69f.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834624732&x-signature=%2Fs5QD25Gnf6c7BDonma3RK9%2FhHI%3D",
+          "size": 103621
+        }
+      ],
+      "valid": true,
+      "item_id": 1791205970507825,
+      "type": 5,
+      "option_meaning": -1
+    },
+    {
+      "label": "Any comments",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205970508801,
+      "type": 2,
+      "option_meaning": -1
+    },
+    {
+      "label": "categorization",
+      "content": {
+        "category_1_name": "Apps-iOS SKAN Audit"
+      },
+      "valid": true,
+      "item_id": 0,
+      "type": 3,
+      "option_meaning": -1
+    }
+  ],
+  "fs_permission": 1,
+  "auto_close_time_left": null
+}

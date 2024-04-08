@@ -1,0 +1,421 @@
+{
+  "reply_mode": 1,
+  "time_before_overtime": 0,
+  "set_priority_automatically": false,
+  "is_follow": 0,
+  "category_2": "",
+  "category_1": "1791202334548993",
+  "follower_avatar": "https://s3-imfile.feishucdn.com/static-resource/v1/v2_d6b98c4a-7ef2-4747-9f41-04df2a84d05g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+  "follower": "Chan Lim",
+  "create_time": 1712089786,
+  "deadline": 0,
+  "archive_board_id": 1705151646989842,
+  "replies": [
+    {
+      "is_hide_reply": false,
+      "create_time": 1712213731,
+      "auto_close_hit": 0,
+      "id": 7353901493767963000,
+      "reply_role": "admin",
+      "staff_id": 3050890,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "chan.lim@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Chan Lim",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7119495696798254081",
+      "name": "Chan Lim",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Hi Harold,</p><p>Can I please confirm when exactly this client switched to SKAN 4.0 on TikTok (when did they click the switch button on TTEM?)</p><p><br></p><p>I cannot check when exactly they switched but I can check the postback data instead. From the postback data, I can see we started receiving SKAN 4.0 from Mar 24, so if they switched to SKAN 4.0 around that time, I think it is too early to expect Postback 2 and 3 data.&nbsp;</p><p><br></p><p>You can expect Postback #2 data in 8-13 days after the transition date, and Postback #3 data in 36-41 days after transition.</p><p>https://bytedance.us.larkoffice.com/docx/C3kudpmOxoEU7exlM0auejEMsJg#H0gmdCmYWoOKkexEx0ouNajFsXg</p><p><br></p><p>In order to ensure there is no issue with Postback 2/3 as well as check user retention during these postback windows, we recommend to map Session (OPEN or LaunchApp) events to Low value which is currently left empty now.</p><p>That way, even if there was no Start Trial or Purchase, if the user launched app, at least Low will be posted back to us during Postback Window 2-3 and we can ensure we are getting postbacks and users are engaging with this app for a longer period.</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s3-imfile.feishucdn.com/static-resource/v1/v2_d6b98c4a-7ef2-4747-9f41-04df2a84d05g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1712234906,
+      "auto_close_hit": 0,
+      "id": 7353992077396525000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "harold.lee@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Harold Lee",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "6963725788542469122",
+      "name": "Harold Lee",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Got it, thank you Chan.&nbsp; We switch them to SKAN 4.0 on 3/8 but they only restarted their campaigns on March 21.</p><p><br></p><p>Duly noted on the postbacks 2/3 + adding low value</p><p><br></p><p>Theres no technical errors you&#39;re seeing though, right?&nbsp;</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s3-imfile.feishucdn.com/static-resource/v1/f30fe650-a990-4722-a2db-32dde37af43g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1712273894,
+      "auto_close_hit": 0,
+      "id": 7354152234931831000,
+      "reply_role": "admin",
+      "staff_id": 3050890,
+      "type": 0,
+      "is_questioner": false,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "chan.lim@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Chan Lim",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "7119495696798254081",
+      "name": "Chan Lim",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>I see, thanks for confirmation on that. Yeah, I don&#39;t see any misconfigs at this time.</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s3-imfile.feishucdn.com/static-resource/v1/v2_d6b98c4a-7ef2-4747-9f41-04df2a84d05g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    },
+    {
+      "is_hide_reply": false,
+      "create_time": 1712277505,
+      "auto_close_hit": 0,
+      "id": 7354165591336288000,
+      "reply_role": null,
+      "staff_id": "",
+      "type": 1,
+      "is_questioner": true,
+      "is_update": false,
+      "editable": 0,
+      "reply_email": "harold.lee@bytedance.com",
+      "is_blocked_role": false,
+      "is_final_solution": 0,
+      "reply_name": "Harold Lee",
+      "reply_to_user_id": null,
+      "is_hide_name": false,
+      "core_user_id": "6963725788542469122",
+      "name": "Harold Lee",
+      "blocked_roles": [],
+      "items": [
+        {
+          "content": "<p>Got it, thanks Chan.&nbsp; You&#39;ve been a great help - Cheers!</p>",
+          "type": 6
+        }
+      ],
+      "avatar": "https://s3-imfile.feishucdn.com/static-resource/v1/f30fe650-a990-4722-a2db-32dde37af43g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+      "context": {}
+    }
+  ],
+  "enable_forced_order_type": 0,
+  "plat_id": 1736490999244882,
+  "archive_category_2_name": "",
+  "pending_from_follower": false,
+  "id": 1986812,
+  "workflow_nodes": [],
+  "board_id": 1705151646989842,
+  "employee_email": "chan.lim@bytedance.com",
+  "is_support_suggestion": 0,
+  "title": "Adobe Lightroom | SKAN 4.0 Issue",
+  "category_1_name": "iOS SKAN Audit",
+  "auto_close_hit": 0,
+  "relation_qual": [],
+  "accountpass": 0,
+  "priority": 3,
+  "inner": 1,
+  "vip_types": [],
+  "is_impending_overtime": 0,
+  "creater_lark_avatar": "https://s1-imfile.feishucdn.com/static-resource/v1/f30fe650-a990-4722-a2db-32dde37af43g~?image_size=72x72&cut_type=&quality=&format=png&sticker_format=.webp",
+  "enable_compliance_mode": false,
+  "type": 6,
+  "current_role": null,
+  "fd_permission": 1,
+  "status": 3,
+  "business_data": [],
+  "update_time": 1712560626,
+  "owner_name": "Harold Lee",
+  "enable_auto_close_v2": 0,
+  "time_after_overtime": 0,
+  "swim_lane_status": 5,
+  "enable_forced_order_tag": 1,
+  "satisfied": 0,
+  "category_2_name": "",
+  "reply_name": " MPO Technical Implementation  Team",
+  "is_guest": false,
+  "archive_category_2": "",
+  "archive_category_1_name": "iOS SKAN Audit",
+  "archive_category_1": "1791202334548993",
+  "allow_reopen": 0,
+  "categories": [
+    {
+      "to_user": 1,
+      "categories_id": "1791202334548993",
+      "cate_1_form_id": 1791205071838209,
+      "sub_cates": [],
+      "value": "iOS SKAN Audit"
+    }
+  ],
+  "core_user_id": "6963725788542469122",
+  "plat_name": "MPO Technical Implementation",
+  "follower_role": "admin",
+  "remark": "",
+  "show_auto_assign": false,
+  "is_overtime": 0,
+  "creater_lark_name": "Harold Lee",
+  "follow_employee_id": 3050890,
+  "is_order_top": 0,
+  "urged": 0,
+  "im_chat_id": "",
+  "is_delay": 0,
+  "enable_forced_priority": 0,
+  "pending_time": 343,
+  "debug_permission": 1,
+  "is_vip": 0,
+  "items": [
+    {
+      "label": "",
+      "content": "Adobe Lightroom | SKAN 4.0 Issue",
+      "valid": true,
+      "item_id": 1791205071838225,
+      "type": 14,
+      "option_meaning": -1
+    },
+    {
+      "label": "Advertiser / Client Name",
+      "content": "Adobe",
+      "valid": true,
+      "item_id": 1791205071838241,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Customer Vertical",
+      "content": "Other",
+      "valid": true,
+      "key": "Other",
+      "item_id": 1791205071838257,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "GBS Tier",
+      "content": "Key Account",
+      "valid": true,
+      "key": "Key Account",
+      "item_id": 1791205260785714,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "GBS Country / Region",
+      "content": "NORTHAMERICA-US",
+      "valid": true,
+      "key": "NORTHAMERICA",
+      "item_id": 1791205328494657,
+      "type": 4,
+      "option_meaning": 0
+    },
+    {
+      "label": "Your Department / Team",
+      "content": "Other",
+      "valid": true,
+      "key": "Other",
+      "item_id": 1791205337175074,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Ad Account ID",
+      "content": "7055375879437893634",
+      "valid": true,
+      "item_id": 1791205337177090,
+      "type": 1,
+      "option_meaning": 4
+    },
+    {
+      "label": "Advertiser Priority Level/Tier",
+      "content": "P0",
+      "valid": true,
+      "key": "P0",
+      "item_id": 1791205337177106,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "iOS Mobile App ID",
+      "content": "878783582",
+      "valid": true,
+      "item_id": 1791205752022065,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Android Mobile App ID (if available)",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205752023041,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "SKAN Version",
+      "content": "Currently on 4.0",
+      "valid": true,
+      "key": "Currently on 4.0",
+      "item_id": 1791205752023057,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Client MMP",
+      "content": "Branch",
+      "valid": true,
+      "key": "Branch",
+      "item_id": 1791205757763634,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Reason of request",
+      "content": "Campaign started, but no data postback",
+      "valid": true,
+      "key": "Campaign started, but no data postback",
+      "item_id": 1791205889917953,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Revenue model",
+      "content": "Others",
+      "valid": true,
+      "key": "Others",
+      "item_id": 1791205889918977,
+      "type": 4,
+      "option_meaning": -1
+    },
+    {
+      "label": "Describe the current problem in details (excluding sanity check requests)",
+      "content": "Hello, Client successfully transitioned to SKAN 4.0 on both TikTok and MMP (Branch) end. \n\nHowever, when looking at reporting, client let us know they are not getting any SKAN 4.0 Coarse Values in either their MMP and TikTok. \n\nI took a look at the SKAN Postback Sequence and I noticed we have only received the 1st postback where as the 2nd and 3rd postbacks are usually where Coarse values are registered. \n\n\nIs this something on the MMP end or a specific issue to TikTok?\n\nI'm also wondering if TikTok is just not generating these coarse values to postback",
+      "valid": true,
+      "item_id": 1791205970506753,
+      "type": 2,
+      "option_meaning": -1
+    },
+    {
+      "label": "Enter the campaign or ad group ID  (excluding sanity check requests)",
+      "content": "1792889381844994",
+      "valid": true,
+      "item_id": 1791205970506769,
+      "type": 1,
+      "option_meaning": -1
+    },
+    {
+      "label": "Describe the desired future state in details (excluding sanity check requests)",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205970506785,
+      "type": 2,
+      "option_meaning": -1
+    },
+    {
+      "label": "Can client see the same behaviour on MMP dashboard?  (excluding sanity check requests)",
+      "content": "Yes",
+      "valid": true,
+      "key": "Yes",
+      "item_id": 1791205970506801,
+      "type": 9,
+      "option_meaning": -1
+    },
+    {
+      "label": "Screenshots of partner integration",
+      "content": [
+        {
+          "file_type": "png",
+          "file_name": "partint.png",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/67b1a64e03a743a1bb638b5e540366a5.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834624968&x-signature=3XdTymBoBsVdLpoDU7DANBuqZAw%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/67b1a64e03a743a1bb638b5e540366a5.png",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/67b1a64e03a743a1bb638b5e540366a5.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834624968&x-signature=3XdTymBoBsVdLpoDU7DANBuqZAw%3D",
+          "size": 182925
+        }
+      ],
+      "valid": true,
+      "item_id": 1791205970507809,
+      "type": 5,
+      "option_meaning": -1
+    },
+    {
+      "label": "Screenshots of SKAN Conversion Value mapping",
+      "content": [
+        {
+          "file_type": "png",
+          "file_name": "Fine.png",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/8ad6da350ecb45cd85127ed0fc8eb3a4.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834624968&x-signature=OszolleHhLgwqVsyypZn1UXFMYU%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/8ad6da350ecb45cd85127ed0fc8eb3a4.png",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/8ad6da350ecb45cd85127ed0fc8eb3a4.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834624968&x-signature=OszolleHhLgwqVsyypZn1UXFMYU%3D",
+          "size": 129534
+        },
+        {
+          "file_type": "png",
+          "file_name": "coarse.png",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/6442cca42c5441edb794bf96e11239b5.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834624968&x-signature=UzI87QmmNtNRtvUkQtS%2BrKpOGqI%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/6442cca42c5441edb794bf96e11239b5.png",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/6442cca42c5441edb794bf96e11239b5.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834624968&x-signature=UzI87QmmNtNRtvUkQtS%2BrKpOGqI%3D",
+          "size": 92521
+        },
+        {
+          "file_type": "png",
+          "file_name": "coarse2.png",
+          "file_url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/543ebfd825434feda59899659e2f0e1a.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834624968&x-signature=8fEQaU%2F%2Bij2OQ3RAfzMbZidqsvM%3D",
+          "file_key": "tos-alisg-i-6g3pebcbys-sg/543ebfd825434feda59899659e2f0e1a.png",
+          "url": "https://p16-athena-sign-sg.ibyteimg.com/tos-alisg-i-6g3pebcbys-sg/543ebfd825434feda59899659e2f0e1a.png~tplv-6g3pebcbys-image.jpeg?lk3s=cbe26b3a&x-expires=4834624968&x-signature=8fEQaU%2F%2Bij2OQ3RAfzMbZidqsvM%3D",
+          "size": 92804
+        }
+      ],
+      "valid": true,
+      "item_id": 1791205970507825,
+      "type": 5,
+      "option_meaning": -1
+    },
+    {
+      "label": "Any comments",
+      "content": "",
+      "valid": true,
+      "item_id": 1791205970508801,
+      "type": 2,
+      "option_meaning": -1
+    },
+    {
+      "label": "categorization",
+      "content": {
+        "category_1_name": "Apps-iOS SKAN Audit"
+      },
+      "valid": true,
+      "item_id": 0,
+      "type": 3,
+      "option_meaning": -1
+    }
+  ],
+  "fs_permission": 1,
+  "auto_close_time_left": null
+}

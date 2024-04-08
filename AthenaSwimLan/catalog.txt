@@ -1,0 +1,700 @@
+557468__+__Catalog Event Source issue
+557833__+__Hawkers Catalog Issue
+558404__+__Issue with Waterpik Catalog Upload
+560193__+__Rank & Style
+560362__+__Catalog not approved 
+560410__+__Anchor link Review 
+560527__+__Catalog product sets not showing up
+561203__+__Catalogs migrated to BC - Not connected to Ad Account
+561280__+__Client not able to see Video Templates in Catalog Manager
+561333__+__Shopify Sync Issue with Catalog
+561347__+__Samsung USA | Catalog 'Unavailable' Products
+561593__+__Product feed not uploading correctly
+561642__+__Torrid - Product Upload Question
+561647__+__Lovepop- Cannot Transfer Catalog
+561676__+__LINE MAN Catalog : Product Feed Error (processing)
+561683__+__Client Unable to activate catalog 
+562463__+__Cannot see any events at all after migrate to BC.
+562737__+__Client isn't able to access Catalog following Catalog migration to BC 
+564041__+__Invalid value: additional_image_link l Ad Account ID: 7021543803085406210
+564683__+__Client questions on Showcase Ads 
+565674__+__Catalog stuck in Processing
+566056__+__The catalog takes a long time to upload
+566202__+__Catalog Upload Failed (Feed Schedule)
+566294__+__Dynamic UTM Parameters (Macros) for Product Catalog
+566698__+__Catalog permission issues, viewability, and ability to link to ad groups
+566788__+__Crocs l Items not approved
+566825__+__Purchase event not being tracked on the catalog
+566872__+__Catalog error when transferring to BC
+567524__+__Shakr templates don't show up in ad preview after refresh
+567696__+__Catalog Americanas S.A. | Endpoint Instability
+567884__+__Catalog stuck in processing
+568225__+__LINE MAN : Product Feed  (Content ID Parameter) & Event Source Check
+570905__+__CCC - catalog rejected products
+571096__+__Dior Catalog Migration to BC
+571295__+__Client's products aren't pulling through to the Shop
+571589__+__Champion - Processing Products
+574349__+__PATPAT - CATALOG ERROR
+574394__+__Catalog platform can't process image link. 
+574621__+__Unable to upload products
+574763__+__Catalog by product file not working properly
+574940__+__Catalogue discounts are not pulling through correctly in Clients TikTok Shop
+575057__+__beeline - unavailable products
+575239__+__Nue Co - Storefront (Shopify)
+575288__+__Advertiser implemented the catalog more than 24 hours ago and there are still no approved products
+575291__+__problems with the catalog
+575982__+__Products unavailable due to server limitations 
+576646__+__2214 products in the feed, 8408 products in the catalog
+576673__+__Problems to preview the catalog
+576790__+__Products are not appeared in the catalogue
+577060__+__Power Ford - Catalog Creation - BC
+577078__+__Francesca's Catalog Issue
+581131__+__Hi I have tiktok shop - Shop hello-597.myshopify.com-shopify1 ID : ID:7083450057638348545 - ID: 1669776654755845 My shopping listings keep getting disapproved because of the Crypto currency policy , But the fact is that my products are not Crypto currency
+581551__+__Ritual - Ads Blurry
+582260__+__Gittigidiyor New Catalog Event Source Issue
+582999__+__Migrating Catalogue to BC
+583170__+__Cannot Share catalog to business center -> blocking TikTok Shopping
+584032__+__Catalogue is still in "processing" status and not updating  
+584319__+__Pomelo - Catalog not spending
+585174__+__shopDisney Shopping
+585918__+__Filtering acive catalog
+586041__+__Product Status update
+586160__+__Catalog check
+586351__+__Client not able to unfreeze catalog
+586805__+__Bohme
+587122__+__System error occurred while uploading. Submit a ticket for next steps.
+587569__+__Catalog in "processing" for over a month.
+587883__+__Products were uploaded back in March but are still unavailable
+588112__+__Tiffany Co. - Zero Matched Event in Catalog Manager
+588325__+__My client (ad account ID 6854296756700577797) is having this issue with their catalog: Katie originally created this catalog, but on the settings page is says there is no owner: - https://ads.tiktok.com/catalogs/setting?aadvid=6854296756700577797&id=70627
+590556__+__DSA商品数据更新上传失败
+590783__+__Catalog is unavailable ( IRELAND)
+590791__+__Products were disapproved , re-reviewed and approved, but now don't post. 
+591236__+__Advertiser implemented the catalog more than 24 hours ago and there are still no approved products
+591740__+__Admin error when transferring catalogs to BC
+592555__+__Move catalog to BC
+592849__+__No7 Advertiser Does Not Have Prompt to Transfer Catalog to BC
+592879__+__Lovepop - stuck at catalog transfer
+593054__+__Crocs l Catalog Issues
+593418__+__Catalog Migration
+593665__+__BC missing Catalog as Asset 
+593742__+__event still 0% match after 12hours
+593743__+__Trendyol International No Product Issue
+594181__+__Lulu's - Catalog Ownership
+594224__+__Client is experiencing issues with slow processing times on catalogs
+594445__+__Cobasi - Product matching
+595175__+__棒谷 Shopify catalog 
+595177__+__Product in process
+595223__+__GHD - Catalogue Review
+595522__+__Cant find catalog where already migrated to BC
+596099__+__Page Editor Bug
+596771__+__Review
+597051__+__Torrid 
+599032__+__Casas Bahia - BC:6915093376022872066 Ad Account:  | Client without permission to operate the catalog
+600102__+__SKU in Product Set Incorrectly Unavailable
+600724__+__TikTok SKUs not match with Shopify after catalog sync
+601391__+__Francesca's Catalog - 100% of products "Unavailable"
+601522__+__Musely
+601630__+__[Poshmark] Unable to add products from store manager
+601971__+__Catalog stuck for more than 2 weeks, not sent to audit yet. 
+602728__+__Catalogue is still under review 
+604024__+__Catalog Review status - Still Processing
+604092__+__Catalog doesn't populate product
+604534__+__iHerb | Catalog not syncing
+605946__+__Shopify Storefront Catalog - Products keep getting rejected incorrectly
+606749__+__Woolrich | Rules not able to be applied to product source
+607030__+__Issue disapproved products Sweet delivery - Shopify 
+607538__+__Her Universe - Catalog
+607661__+__Catalog sync issue
+607664__+__System error occurred
+607691__+__TikTok Shopping/Marketing Products Disapproved 
+608420__+__Products stuck in processiong stage
+608969__+__Half the catalog is unavaiable
+609482__+__Casas Bahia - BC ID: 6915093376022872066 | Client without permission to update catalog via API
+609747__+__Columbia l Prodcuts Unavailable Catalog
+610155__+__阿里的catalog更新失败，辛苦帮排查原因
+610515__+__Dynamic UTM parameters to catalogue
+611051__+__0% match rate Pixel/ catalog
+611106__+__Storefront gone 
+611314__+__Connecting Two Catalogs to one Business Centre
+612120__+__Connecting the Catalog through Shopify - Brasil
+612331__+__DSA ads no spend 
+612573__+__FC INTER - catalog problem
+612804__+__Client is seeing issues with image size in cataloge
+613069__+__Video Upload Issue
+613114__+__Catalog is not working
+613128__+__J Crew Products Processing
+614041__+__Ciceksepeti Catalog doesn't appear on Ads Manager
+617913__+__Lounge can't see the right catalog ID
+618187__+__Vego Garden TikTok Catalogue
+618500__+__Kabum - Low event matching in Pixel
+619736__+__Review ticket #590783
+620263__+__Unable to Add Product to Storefronts
+620699__+__Image resave problem
+621775__+__Catalog still not working
+622187__+__PetSmart Catalog Migration Question
+623047__+__Under Armour - Catalog Product Errors
+623114__+__Can't create more than 20 data feed
+623480__+__Product set not populating under catalog sales
+623540__+__Ulta Catalog: 32506 warnings during PDE/MARS Alpha Test
+623606__+__Catalog Error
+624424__+__Catalog migration
+624425__+__Taager Catalogue ads 
+624484__+__Nivea Catalogue not updating
+625117__+__Tory Burch Catalog IPs
+627113__+__Data Feed Catalog Product Set Filtering
+628853__+__Stitch Fix -  Catalog Review, June Launch 
+628943__+__Zattini - Wreb events matching
+629464__+__柒剑 catalog商品全拒审
+630010__+__Elemis - Catalogue Match Rate
+630236__+__Catalogue Transfer says "permission error" fo admin user
+630248__+__https://ads.tiktok.com/catalogs/list?aadvid=6945533726256283649
+630336__+__migrating catalog to BC 
+630410__+__Product Issues 
+630667__+__Unavailable Status
+631621__+__Catalog Unavailable status
+631920__+__Catalog Not Populating
+632067__+__Dealers United - No BC level Catalog
+632271__+__Zattini - Catalog upload fail
+633002__+__Under Armour - Product upload errors
+633788__+__URGENT Benefit Catalog Disapproval 
+633849__+__Issues with catalog integration from shopify
+634018__+__DICK's - CALIA Catalog Processing
+634989__+__Errors and Event Sources
+635094__+__Issue with the disapproved products 
+639361__+__Get rejected catalog items through Auto moderation 
+639979__+__Error: Issues with Marketing
+640090__+__Transfer Catalog owner
+640352__+__Marcos UTM Codes 
+640697__+__MeUndies Catalog Issues
+642125__+__CTA missing & Black bars appearing when previewing the ad using USER ID
+643104__+__Cartier Catalog Migration Issue
+643852__+__Purchase events 
+644171__+__Morhipo DSA ads with wrong price
+644412__+__Majority of products listed as unavailable 
+644748__+__HerUniverse Catalog Issues
+645176__+__Alternative Brewing - Products Unavailable for TikTok Marketing
+645213__+__Catalogs for Hungarian market
+648794__+__Catalog Status under Process
+649006__+__Does not accept a catalog in Russian
+649109__+__Error in formatting - catalog 
+649264__+__Collection ads not working 
+649697__+__Tory Burch Catalog Permission Issue
+649821__+__Groupon Catalog is showing more products than uploaded
+649886__+__Vego Garden Product Issues
+650312__+__Loreal CPAS Account Having 300+ Unavailable Items
+650565__+__Preview not Showing
+650826__+__Catalog does not appear in the business center
+652035__+__CA_Indigo_Catalog Feed Rejections_June 2022
+652278__+__150 products stuck in 'Processing' despite the catalog having been ingested almost 2 weeks ago
+652772__+__【产品功能提需】DSA拉活功能支持 定向DMP人群包
+653083__+__Rimowa Catalog Issue 
+653722__+__Problem with catalogue uploading 
+654878__+__Catalog Sales Objective only showing App and not Website at ad group level
+655037__+__Catalog Migration to BC prompt missing
+655644__+__Retarget Audience DSA 
+656166__+__catalogs is not connected app event sources
+657164__+__Catalog shopify - Henriette&Co
+659470__+__Catalog Migration x Pixel Sharing
+660835__+__Fenty Beauty Catalog Disapproval - Blushes - Live Event on  6/17
+660980__+__When setting up Catalog Sales Campaign, "Web" option is not showing up
+662237__+__Catalog - sale_price z
+663608__+__客户投放印尼VSA，今天账户内实时转化成本飙升，是前日的7～8倍，是否转化回传数据有问题
+664110__+__客户投放印尼VSA，今天账户内实时转化成本飙升，与本日其余VSA客户出现的情况相似，希望排查原因
+664455__+__Turkcell TV+ Catalog Product Approval Delay
+665589__+__Products listed as 'Not Availble' but approved, No products listed as rejected, no filter for 'unavailable' products
+665652__+__Maestro Catalog issue 
+666087__+__Products stuck in review since a few days
+666185__+__Catalog Products are still under processing
+666327__+__catalog关联的event source里view content, add to cart, purchase没有收到相应数据-是否会导致用这个catalog投install广告时没有展示
+666836__+__Catalog products showing as unavailable 
+668206__+__客户已经在TTS后台绑定了TTAM，在BC后台也有store，在创建VSA广告时，无法选中TTS已经上架的商品
+668613__+__Disapproved Products
+668970__+__Francesca's Catalog - products "Unavailable" or "Processing" - Re-opened
+669030__+__Kabum - Products in "processing" stage. 
+671707__+__status of product in catalog as Processing
+671834__+__client changed their platform (BigCommerce instead of Shopify), and also had to install a new pixel. Can they use the the existing pixel (Shopify) on the new BigCommerce store? Is there a way to transfer the data from the original pixel (linked with Shopi
+671879__+__IL - CST - Domestic - Steve Madden Catalog - Transferring to Publicis's BA
+672226__+__All event sources are 0% matched on catalogue
+672669__+__SNDYS - linking catalog through shopify 
+673231__+__Catalog Upload Unsuccessful
+673536__+__客户的Catalog做过BC资产化，并授权给广告账户进行投放。今天被授权的Catalog忽然从授权广告账户“目录”里消失了
+675714__+__Product 0 Bug
+675761__+__Our products in our catalog have been approved for marketing, but not for shopping
+677171__+__Feed changes for shoipping costs
+678091__+__The Home Depot Catalog
+678216__+__Carly Jean Catalog upload issue
+678332__+__Shopify catalog could not link with agency BC 
+678666__+__Products that does not under catalog link is showing on DSA's campaigns
+678825__+__DSAの設定で製品データをアップロードするとエラーとなる
+678980__+__Review period exceeded for Scalpers
+679682__+__Products in Catalog issue
+679762__+__Tory Burch Catalog - Products stuck in processing state
+679778__+__Crate & Barrel
+682290__+__There are available products in catalog, but it cannot be used in ad group
+682376__+__Products dont upload
+682409__+__Slow catalog processing speeds
+682886__+__Running into Issue in Creating Dynamic Showcase Ads
+683256__+__Product Catalog is frozen
+684630__+__Rejected Products pending in client's catalog
+685206__+__Torrid Catalog - Products unavailable
+686496__+__platform bug: unable to add products on catalog
+686532__+__IL - CST - Domestic - Steve Madden - Shared Catalog with Publicis BC
+686581__+__Catalog Product Upload Issue
+686593__+__Product Title Incorrect
+686597__+__Catalog section does not appear on the BC
+686829__+__Ad Product Loading Error
+687589__+__Turkcell Tv+ // Catalog Processing // DSA Unlocking
+688370__+__FENDI catalog in processing
+688681__+__Catalog products do not evolve from the "processing" phase
+690639__+__Catalog cannot be used while creating campaign for CLA test
+693186__+__Product Status Unavailable 
+693423__+__Unable to upload Products catalog
+694260__+__FELTRINELLI - Catalog -"TikTok Marketing" status
+694311__+__Problem with catalogue uploading 
+694728__+__Rejected Catalog 
+694755__+__Remove additional image link from catalog - The Iconic
+694834__+__ Product Review Issue
+695079__+__Catalog cannot update automatically
+695171__+__The status from all the product is on "Processing" since last Friday
+696306__+__Torrid Catalog - Products unavailable REOPENED
+696547__+__Products showing as unavailable 
+696593__+__Products Unavailable for TikTok Shopping - Image Link
+697199__+__soufeel创建计划时无法找到对应bc下已经完成资产化的catalog
+697888__+__Turkcell - Paycell // Catalog Approval Delay
+698564__+__CALPAK - Catalog Issue
+699395__+__Catalog bug - Génération Souvenirs
+700277__+__Client: Suizo. 100.00% products rejected due to errors.
+700392__+__LCW cannot connect events to catalog
+701753__+__Products being rejected from Catalog
+704933__+__Client can't connect Pixel to Catalog
+705172__+__Products has status "Processing" for TikTok Shop
+705948__+__Vivo CE - products unavailable on the catalog
+706388__+__TikTok Marketing - Stuck on 'Processing'
+706792__+__Client failed to upload Shopify product to catalog list
+707087__+__Incorrect links when usingrules to add utms
+707280__+__Catalog - sale_price 
+707606__+__Insufficient Event Sources with Catalog Sales 
+708948__+__Client has a huge amount if products not usable due to size but when we check it , the images look huge
+710076__+__Reach vs Video View Totals | Metric Misalignment
+710177__+__Daughters Of India - US vs. AU Product Catalogue
+710638__+__catalog无法转移
+712960__+__Camper-Catalog with unavailable products
+713028__+__SHEIN 【Catalog ad creation fail】
+713059__+__SHEIN 【Catalog ad creation fail】
+713066__+__SHEIN 【catalog migration fail】
+713582__+__Error on disapproved products
+716200__+__The Littl - Pending products
+719038__+__Catalog event source 0% matching
+719185__+__Event Source is not showing active events
+719588__+__Collection ads Universal Music
+720167__+__Stuck in Processing
+720279__+__YOUKNOW Clothing Limited - Sizing variants
+720394__+__Catalog sizing variants 
+721168__+__Luxottica Catalogs
+721365__+__Tissot Catalog Issue
+721811__+__Carly Jean Shopify Catalog Sync Paused
+722147__+__Torrid Catalog - Products unavailable REOPENED
+722203__+__Groupon- Catalog update
+722590__+__Catalog migration
+722976__+__Issue creating Collection Ads - Represent clothing 
+724388__+__Groupon- Catalog match rates
+724867__+__Agency created Catalog in the BC, but cant see it in Ads Manager
+725762__+__Items processing for 3 days 
+726157__+__Unable to appeal in Catalog Manager
+729368__+__How to add UTM to the links
+729553__+__Content ID and SKU not matching
+730242__+__Via Varejo Ad accounts without permission to Catalog Update | Bulk Upload SKU list of product set creation
+730265__+__Rejected Catalog Items
+730444__+__Columbia l Catalog Not Displaying on Ad Accounts
+730646__+__Runaway the Label - issues accessing catalog 
+731432__+__Event source not showing up as active in catalog
+731862__+__Bulk upload SKU list for product set creation is not available
+731885__+__Entire Catalog "Processing" for days
+732384__+__Data Feed not populating custom column 
+733100__+__pat - abnormal spending 
+734345__+__Hill House Catalog Issue
+737239__+__Columbia l Create Product Set
+737738__+__Sephora Catalog - Product Set Transfer
+738084__+__Advertiser unable to transfer catalog to BC - module missing
+741566__+__Aliexpress，投DSA拉活，商品库审核进度确认
+741867__+__Catalog ID doesn't appear in TTAM
+742023__+__System error occurred while uploading. Submit a ticket for next steps.
+743509__+__Unavailable products
+743837__+__Columbia l Catalog Template
+744119__+__My client (ad account ID 6891684562166874114) (BC ID 7122883705881903106) is getting stuck when trying to implement their Shopify Catalog in their business center. It is giving them a prompt that their account is not successfully connecting. Can you pleas
+744849__+__Catalog Price Not Working
+745071__+__PRADA | Client migrated the Catalogs (from Ads Manager) to the wrong Business Center
+745648__+__Uber DSA Stuck In Processing
+745708__+__HEB DPA Catalog
+745845__+__Catalog Not Processing: Mars Business Center / Catalog Manager to Shopify Issue
+745917__+__Columbia l Product Set 
+745995__+__Catalog Error Messages - Value Price
+746266__+__Catalog Creation Keep 'Processing' after a day
+747007__+__Catalog Migration
+747266__+__Don't know where to link a catalog to an ad account
+747374__+__My client's attempts to upload product sets via data feed partner are failing
+747454__+__San Diego Hat Co. - Cannot select catalog in ads
+748923__+__Lulu's Catalog Issue
+750839__+__Wayfair - Catalog Upload
+750843__+__My client (ad account ID 6891684562166874114) is needing to get Catalog ID 7031882477404817154 transferred to their new ad account/business center (ID 7122883705881903106) but cannot figure out how. Can you please assist or give instructions? thank you! 
+751292__+__Catalog in processing after awhile
+751981__+__My client needs to transfer catalog ID 7031882477404817154 from BC (ID 6872422909130833921) to new BC (ID 7122883705881903106). Can you please send instructions on how to do this? thank you
+752138__+__Data feeds not syncing with TikTok
+753251__+__拉取feed file没有更新出来商品
+753258__+__Product set creation error
+753371__+__Catalog Event not sync
+753924__+__Catalog Integration
+754188__+__Snap Supplements 0 Events Matched
+754423__+__65 Catalog items Processing for 2+ weeks
+754668__+__Lazada Catalog Review
+756054__+__Missing products from Sync from Shopify to TikTok
+756175__+__0% matching rate in View Content
+756604__+__Superbalist - Rules Not showing
+756643__+__Unable to link feed
+757090__+__Loreal Account - Missing pricing information on certain products
+757106__+__Can't link catalog
+757219__+__LCW cannot remove app events from Catalog 
+757285__+__Catalog menu option missing
+757297__+__Client getting unknown error when setting up Shopify Catalog
+757478__+__Can't Create Catalog Videos - Tiktok Hyundai of Auburn
+757652__+__Flight Coffee - Products 'Pending'
+757824__+__TikTok IP addresses that can access catalog URL 
+758267__+__Catalog errors increases each time the feed is refreshed.
+758446__+__Processing status for product sets
+758887__+__Uploading feed issue
+760813__+__Catalog Products Incorrectly Disapproved
+762155__+__Catalog stuck in processing 
+762188__+__Catalog upload via data feed schedule isn't working
+762254__+__7054438438673712898该商品库无法查看视频
+763144__+__Catalog Automatic Update Failing
+763422__+__URBN | FP TikTok Upload Error
+763516__+__Catalog will not connect to ad account
+764206__+__Catalog not refreshing each hour
+764896__+__Catalog Product Set unavailable on collection ad
+765110__+__Not showing the option for Catalog Sales on ads manager
+765251__+__Product Set SKU removal 
+766527__+__Product Feed Issue
+766918__+__Catalog Products Showing as "Not Available"
+767234__+__Glory Allen - Product Bundles are not showcasing to change in the ad option
+767767__+__problem with catalog
+768290__+__Coach Outlet_Product Feed Syncing Issues
+768417__+__Turkcell Tv+ // Catalog Error
+770500__+__Yitty store issue - products stuck in processing 
+770705__+__Catalog recognizes 0 products from the data feed file - Fossil
+771446__+__Catalog still recognizes 0 products from the data feed file - Fossil
+771487__+__Client having issues uploading products for a catalog
+771552__+__Catalogue not able to transfer due to linkage issue 
+771689__+__Milk Makeup Catalog 
+771806__+__Uber - Inconsistent Product Number
+772906__+__Unable to download list of "unavailable" products from Catalog
+773358__+__Magalu - Event Matching
+773428__+__PMG | The Container Store | Catalog
+774759__+__LCW Catalog App Events at 0% matched
+774793__+__Samsung USA | Catalog Issue
+774807__+__product flow still processing
+775182__+__Baboon to the Moon - TikTok Marketing Unavailable
+776000__+__Builders ZA - Catalog Upload Error
+776762__+__Catalog stopped auto-refreshing
+776858__+__DIFF Eyewear - Content ID Question
+776914__+__Product items aren't approved that fit all criteria 
+776968__+__Constantly Varied Gear Issues with Products Loading 
+778295__+__Client  BC: CHI_Tik Tok ID: 6974066233503121409. Catalog: Manually Added Products_CL_CLP ID:7135069735498041089
+778454__+__Nordstrom unable to upload catalog feed CSV file
+781717__+__Catalog Still showing processing after 48 hours
+783725__+__Macy's Stitcher Catalog - Processing
+783776__+__On Going Catalog DSA creation Issue
+784828__+__KA客户敦煌 catalog商品一直显示不过审，辛苦帮看下
+784937__+__HP SPAIN - CATALOG ISSUES
+785072__+__Unable to view created catalog
+785355__+__Full Catalog not populating
+785456__+__Catalog taking more than 24hs to process Rule change
+785475__+__Catalog Matchrate | cuddle+kind | 8/31/22
+786642__+__West Elm Catalog XML upload issue 
+786655__+__Image is correct size 
+786703__+__Coach Outlet US Catalog Not Updating
+786770__+__Claire's -
+787627__+__La Rosée | Shopify Catalog | products missing
+787848__+__Issue with the creation of a catalog for Collection ads
+788199__+__West Elm Catalog XML upload issue
+789916__+__The Littl - pixel event source not working on manually uploaded catalog 
+790501__+__Agency can not associate catalog on campaign
+790517__+__Client's agency (who create the catalogs) can not associate catalog on campaign
+790524__+__Client's agency (who create the catalogs) can not associate catalog on campaign
+790527__+__Client's agency (who create the catalogs) can not associate catalog on campaign
+790986__+__Unable to create ads
+791024__+__Not accepting the catalog format
+791211__+__UNFREEZE CATALOG - HP UK 
+791251__+__Very low catalogue - events matching rate 
+792815__+__Zenni
+793269__+__Uber SKU Mapping for Catalog Sales
+793952__+__Catalog upload is very slow
+794105__+__Jimmuy Choo - 6942513069054492674
+794434__+__Multiple SKU ID's Problem
+794575__+__Clients product - Rejected / Unavailable 
+795007__+__Timberland Catalog Unavailable
+795018__+__Catalog: Low Match Rates
+795581__+__Superbalist - How to Return Campaign Name dynamically
+796724__+__Delete Catalog in TTAM
+796747__+__Check frozen catalog
+797662__+__Unfreeze catalog for Dr. Martens
+797943__+__Client can't upload catalog feed 
+798044__+__Macy's - Catalog Match Rates 
+798101__+__Petco Commerce Hub Integration
+798195__+__J. Crew Catalog Feed Sync Timing
+800284__+__ACFC Catalog_Product Unavailable for Marketing
+802664__+__Catalog Transfer 
+803004__+__Tommy Hilfiger - Cannot see new products in their product set
+803020__+__Processing Delay
+803283__+__Catalog is not fully sync
+803481__+__Sol De Janeiro - catalog matching issue 
+803550__+__Client Unable to Access Catalog
+803596__+__Magazine Luiza - low match rates
+804947__+__Nair_Product Set Approval for Collection Ads
+804955__+__ID to use to match content_ID
+805081__+__Try Nood | Catalog not showing in BC w/ Shopify Integration | 9/14/22
+805266__+__Levi's catalog not refreshing, but also not showing Frozen status
+806139__+__In Process Catalog
+806495__+__Torrid - Catalog Issue 
+806981__+__Catalog Account Error
+807149__+__Samsung USA | Catalog URL Whitelisting
+807814__+__Whiteaway @ catalog products are still under progressing after 5 days. 
+808413__+__Flawless Beauty Products with "Unavailable" Status
+811101__+__192 products stuck in Pending
+811119__+__Catalogs with product divergences
+811486__+__Abercrombie catalog not showing up in ad creation
+811645__+__Cannot access catalogue
+812600__+__No products are processed within the feed
+812911__+__HP (HyperX) | Catalog Frozen
+813065__+__DIFF Eyewear - Catalog
+813201__+__Sol De Janeiro - catalog match insufficient
+813313__+__Explanation for why these products are unavailable?
+813938__+__Failed to connect to event source
+814045__+__Bed Bath & Beyond NZ - Catalog Issue
+814330__+__Catalog not processing
+814410__+__Event tracking originally ticket #796808
+814424__+__Client product feed not updating 
+814466__+__Nordstrom Rack - Confirm Frozen Catalog
+814644__+__Event Sources tab - No way to connect Pixel 
+814672__+__Catalogue not getting connected t the BC
+815027__+__Logitech G USA | Catalog Frozen
+815089__+__No Catalog Matches 
+815844__+__URGENT_KA_CATALOG ISSUE_CAN NOT PROCESS SETUP CATALOG
+815963__+__Unable to upload dynamic template
+816105__+__Frozen Catalog
+816377__+__Sunshine Sisters Unable To Upload Products to Catalog
+816385__+__Too many products
+816693__+__Catalog - Products can't be added by multiple datas sources
+816914__+__客户catalog商品上传超过48h过审率依然为0，商品状态全部显示为“处理中”
+817634__+__Vestiaire Collective Product Event Matching Issue
+817876__+__Question on custom tags when playing with catalogs
+818155__+__Catalog not updating 
+818238__+__Client is receiving "internal error" message while creating the ad
+820480__+__客户使用catalog api对接catalog，接口报错
+820790__+__Karaca Catalog Mapping Rule Not Working
+820885__+__Catalog taking too long to process
+821185__+__unable to load catalog
+821301__+__Products in Catalog Not Approved/Processing
+822125__+__TAB Gida's Processing Products
+822326__+__Unable to view catalog created by the client
+822353__+__Any tools to increase catalog image size to required 500*500 px
+822722__+__Avon - catalog feed queries
+823329__+__Runaway the Label AU Catalogue Events + Pixel
+823827__+__Missing Catalogs 
+824280__+__The "shipping" field is using an invalid value.
+824618__+__SHIPPING TYPE PARAMETER ISSUE WITH FRENCH CLIENT
+824747__+__Shopify Upload
+825242__+__Rhoback Commerce Activation - Catalog Processing Error
+825306__+__Kulani Kinis unable to sync Shopify catalog
+825671__+__Missing field
+826021__+__Catalogs Missing for 6th street 
+826524__+__Shopify Product still in pending status for TikTok
+826737__+__Catalogue // Notification for wrong currency 
+826950__+__Low catalog match rate 
+827839__+__Products Unavailable - Fiever Catalog
+827946__+__Golde - Pure Matcha Suspension 
+829189__+__IL - CST - PS - James Allen - Catalog Frozen
+830920__+__Abercrombie 
+831494__+__0 content_id match with SKU ID
+831621__+__Kinetica
+831860__+__Low Match rate for the events in the Catalogues
+831991__+__Catalog Frozen - Iguatemi 365
+832088__+__Journey's Catalog Events
+832094__+__Catalog in review
+832172__+__Country Issue - Shopify Catalog
+832765__+__URGENT_KA POD/DROPSHIP_CAN NOT FIND THE CATALOG SOURCE IN UI/UX
+833642__+__Cutom Colums - product feeds
+833686__+__Dior Catalog Processing 
+833819__+__Please  expedite product approvals for KA Glossier
+833947__+__Sephora Catalog Upload Access
+834127__+__Please expedite product catalog processing for KA Glossier
+834451__+__Carvak Feed Issue
+834928__+__Issue uploading catalogue
+835881__+__Emuaid - Catalog Product Approval
+836418__+__Can't add utm parameter with "Use Regex Replace"
+836583__+__Check frozen catalog
+836701__+__Flawless Beauty Products with Unavailable/Processing Status
+836759__+__Shady rays
+836785__+__Pact Commerce Activation VSA Testing
+838509__+__Riversol - Catalog Stuck in Processing - 10/9
+838817__+__客户9.27更新catalog后，商品至今（长达两周）一直处于“processing”状态，请问何时通过审核，processing状态如何加速
+839166__+__Soufeel 投放VSA（nonshop），前置上传catalog与shopify一键对接的pixel中的事件匹配率为0。
+839352__+__Not able to use catalog in Video Shopping Ads
+839612__+__Samsung USA | Catalog Pixel Match Rate
+839722__+__Calpak
+840597__+__TAB Gıda BK Products Availability Error
+840732__+__客户上传商品时一直提示404或“同步中”
+840895__+__Unavailable status for product in product sets. Our system changed JPG to PNG format and rejected such products
+841490__+__Catalog errors
+841553__+__Crate & Barrel Catalog Transfer Troubleshoot 
+841677__+__Upload catalog Shopify - TSE 
+841824__+__Products in catalogue feed not being recognised by TTAM
+842603__+__bloomchic - 无法访问feed
+842710__+__Products unavailable for catalog ads
+842852__+__Jumia Egypt - Catalog Match Rate
+842890__+__American Uncle | Shopify catalogue not all products uploaded in TT
+842994__+__Unable to export unavailable product from catalogue
+843989__+__ACFC_Product Images can not display
+845079__+__Long processing time; 30% products 'pending'
+845630__+__Catalog的导出表格显示不全
+845889__+__Less product after migration 
+846088__+__文件一直上传不上去，进度0%
+846181__+__SOF Catalog Purchase Event
+848646__+__客户米糖，商品库事件匹配度较低（30%左右）
+848875__+__Client is trying to upload catalog through shopify
+849369__+__Review is still processing whereas the catalog was uploaded 3 days ago
+849445__+__9 items being uploaded - 1 being processed
+849524__+__GLD Catalog
+849546__+__Reopen ticket #833642 - using custom columns in catalogs
+849808__+__Item is stuck in "processing" for TikTok Shopping
+850069__+__Feed URL disappeared 
+850484__+__OTTO - Rejected products / wrong reasoning
+851547__+__Catalog issue (La3eb)
+851572__+__Unable to upload catalog through Feedonomics 
+851589__+__Tarte - Salesforce Integration - items in catalog stuck in processing
+851791__+__Crate & Barrel Catalog Transfer Troubleshoot
+852528__+__products in the catalog are unavailable
+853252__+__Catalogue does not update every 1 hour as set up
+853266__+__Event Source not Matching M
+853311__+__Catalog TM rejections
+853519__+__Catalog Not Approved
+855013__+__0 content_id match with SKU ID
+855064__+__Catalog is not uploading with new products 
+855544__+__Issue with Appending Tracking/UTM Parameters for Catalog
+858391__+__Perfume.com | Catalog Review impacting Delivery | 10/20/22
+858567__+__Technodom has problems with catalog
+858584__+__Magnum has problems with catalog
+859153__+__NAOS' Catalog Transfer
+859822__+__StatSports  - Catalog &Shopify Integration support needed 
+863090__+__Soft Goat - Catalog Creation
+863134__+__Catalog update
+863527__+__Client cannot import catalogue from Google Merchant Center
+863536__+__Products "Unavailable"
+863570__+__Products "Unavailable 
+863631__+__Products Rejected Due to Characters in Title
+863990__+__Rebel Sport Feed Not Connecting
+864315__+__Ayala Malls - DSA Catalog Setup
+864581__+__Client data feed file isn't working (products not loading) however identical set up on 2nd region is working 
+865175__+__Products showing as Unavailable WWF 25/10 6845167028068679686
+865494__+__CA_Indigo_CatalogUploadErrors_Oct2022
+865520__+__Simons - Catalog Ingestion and Campaign Creation Issue - 10/25
+866098__+__创建catalog 失败，创建方式为从google导入
+866323__+__Catalog in review
+866368__+__匹配度过低-通过Shopify同步catalog
+866444__+__Cannot see the catalog at ad creation process
+867326__+__0% Match Rate (Prepping for VSA)
+867736__+__Conagra Angies + GoPuff | Catalog Products stuck in Processing
+868227__+__Rebel Sport XML Feed Not Loading
+868904__+__Sephora _Catalog integration issue_Lengow
+868923__+__Superdry Catalog Approval
+869180__+__Event Match Rate is 0%
+869283__+__Zulily - Google Merchant upload
+869561__+__EyeBuyDirect Catalog Processing Issue
+869660__+__Brilliant Earth (ad account ID 6863533557512404998) is having catalog issues when trying to execute collection ads. 
+870363__+__Unavailable Products
+871096__+__rayban catalog in processing
+871113__+__Catalog Processing for 18+ Hours
+871185__+__Catalo unavailable
+871441__+__Catalog Frozen, launching Video Shopping Ads ASAP for $200K
+871444__+__Problem to share catalog
+874302__+__[Sivvi] Unable to transfer catalogs to the BC
+874488__+__Connection Catalogue - Pixel not working correctly
+874730__+__Manchester United - Catalog integration help needed 
+874737__+__Manchester United - catalog set up help 
+874934__+__Unavailable Catalog from Merchant Center
+875920__+__[Lazada] Event postback with content ID
+876047__+__Avon - catalog issues
+876284__+__CoolCrutches  - New products catalog processing issue 
+876309__+__Catalog - All products was rejected
+876445__+__DV8 Fashion - many products rejected for Marketing 
+876587__+__Catalog Feed update in German not going through
+876860__+__Client can not create rules in the catalog 
+877571__+__Is this catalague paused? 7143525471534237442
+877592__+__Catalog processing status
+877773__+__The CATLOG IS Processing
+878249__+__Boots - Products in catalog but not showing in TTAM
+878308__+__Unable to upload Nocibe Catalog
+878391__+__Product Catalog Errors
+879007__+__Alibaba投放拉活，多国家feed显示0商品异常状态，辛苦排查。
+879035__+__TTAM Macros not working for catalogue
+879507__+__Dynamic Parameter issues, Syntax appears as broken in Google Analytics
+879699__+__Have a TikTok Store through Shopify but only 1 product in Catalog
+879910__+__SheFit StoreFront
+880871__+__DSA template upload error for Zalora
+881094__+__Pre-live // Catalog Check Request 
+881289__+__Catalog cannot be created
+881383__+__Low Match Rate even with SKU ID & content ID matching
+881410__+__Unavailable Products
+883568__+__URGENT_CATALOG TAKE MORE THAN 48H TO HAVE ATIVE STATUS
+883877__+__Shopee - DSA propspecting VS Conversion retargeting 
+884112__+__Catalog Troubleshooting
+884449__+__0 content_id match ATC events with SKU ID
+884615__+__Impossible to upload data feed 
+884620__+__Catalog uploaded on BC but not showing on Ad Account
+884798__+__Sulpak has a problem with catalog
+885100__+__Five Below Catalogue Issue
+885848__+__Catalog Rules Tab missing
+886042__+__Ad is still in review status and not delivering
+887018__+__Catalog + Event Match Rate
+887233__+__Mitre 10 - Product Feed
+888268__+__Catalog Products are not loading
+888915__+__Galaxy Play - Catalog can not Processing status
+889171__+__Shopify Automatic Catalog
+889279__+__Catalog Event Sources - low match rate
+889295__+__WWF, Catalog items rejected 10/11
+890581__+__Nivea x Nahdi Coll ads catalog upload issue
+890583__+__Rejection due to title of the product
+890606__+__Uploading CSV doc to automated Feed
+890723__+__L'Oreal catalogue not updating in the catalogue list -> product sources
+890762__+__Catalog set up issue
+890923__+__Altinyildiz Catalog Review 
+891120__+__Catalog Upload Issue
+891213__+__Augustinus Bader Catalog products
+893457__+__客户catalog内部分商品显示不可用
+893658__+__Frozen Catalog
+893912__+__Issues in uploading feed from GMC || Depop
+893923__+__VERSACE catalog issue
+894716__+__Goodr - unavailable products in Catalog
+894899__+__URGENT_CATALOG TAKE MORE THAN 48H TO HAVE ATIVE STATUS
+895932__+__Low level of match rate for Purchase event
+896300__+__Mass Product Rejections
+896885__+__[Lazada] Error when uploading file to update catalog feed
+897118__+__SHEIN DSA catalog视频模版无法创建
+897297__+__Match Rate in Event Source O%
+897320__+__Cannot integrate with Google merchant center
+897687__+__Event matching issues | Aimn
+897738__+__Mapping not working
+899715__+__SheFit | Organic Storefront Issues
+899719__+__Having troubles uploading a catalogue to TikTok (minimum of 500x500 pixels for the images)
+900125__+__Products in catalog are still processing
+900559__+__Rakuten - Can't see upload log on Catalog Manager
+900760__+__Kavak Catalogue
+900996__+__Catalog on an hourly upload schedule, but doesnt seem to have updated hourly since end of september
+903986__+__Catalog issue- cannot create catalog by google
+904476__+__Feed URL Error
+904565__+__File not uploading from Google Merchant Center 
+905089__+__Happy V - catalog rejections
+905551__+__想用google导入catalog，在操作的时候发现无法选google feed的情况
+905649__+__Catalog Disapproved - Fashion Brand
+907551__+__catalog updating forever
+908244__+__【fordeal】商品库只能定向一个国家

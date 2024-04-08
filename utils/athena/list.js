@@ -6,6 +6,16 @@ let cookie = {
     fetchTime : 0
 }
 
+const DATE_STEPS = [
+   // {start_date : "2024-01-01", end_date : "2024-01-15"},
+   {start_date : "2024-01-01", end_date : "2024-02-15"},
+   {start_date : "2024-02-15", end_date : "2024-03-01"},
+   {start_date : "2024-03-01", end_date : "2024-04-01"},
+   {start_date : "2024-04-01", end_date : "2024-05-01"},
+
+
+]
+
 const METRICS = [
 
    "is_vip",
@@ -67,15 +77,13 @@ async function athena_api_v2_swimlane(metrics = METRICS){
             "metrics":metrics,
             "filters":[
                {
-                  "field": "plat_id", "filter_type":0, "in_field_values":[ "1736490999244882"]
+                  "field": "plat_id", "filter_type":0, "in_field_values":[ "1736490999244882", 1736490999244882]
                },
                {
                   "field":"athena_order_bool_expression",
                   "filter_type":1000,
                   "expression":{
                     "AND":[
-
-
                      //   {
                      //      "field":"archive_category",
                      //      "filter_type":0,
@@ -86,9 +94,9 @@ async function athena_api_v2_swimlane(metrics = METRICS){
                      {
                         "field":"create_time",
                         "filter_type":1,
-                        "range_lower":"2023-06-30T00:00:00",
-                        "range_upper":"2024-12-29T00:00:00"
-                     },
+                        "range_lower":"2024-01-01T00:00:00",
+                        "range_upper":"2025-01-01T00:00:00"
+                     }
                     ]
                  }
                }
@@ -102,18 +110,49 @@ async function athena_api_v2_swimlane(metrics = METRICS){
             "page":1,
             "page_size": 1000
     };
-    let param        = null;
+   let param   = null;
 
+   let records = []
+   for(let i = 0; i < DATE_STEPS.length; i++) {
+      let body_x = Object.assign({},body)
+      body_x.filters.push(
+         {
+            "field":"athena_order_bool_expression",
+            "filter_type":1000,
+            "expression":{
+              "AND":[
+                  {
+                     "field":"create_time",
+                     "filter_type":1,
+                     "range_lower": `${DATE_STEPS[i].start_date}T00:00:00`,
+                     "range_upper": `${  DATE_STEPS[i].end_date}T00:00:00`,
+                     // "range_lower": `2024-01-01T00:00:00`,
+                     // "range_upper": `2024-01-31T00:00:00`,
+                  },
+               ]
+           }
+         }
+      )
+      const response = (await proxying(method, endpoint, header, param, body_x, true));
+      // console.log(response)
 
-    const response = (await proxying(method, endpoint, header, param, body, true));
-   //  console.log(response.data)
-
-    if(response.status == 200 ) {
+      if(response.status == 200 ) {
          const raw_data = JSON.parse(response.data).data;
+         console.log(`${DATE_STEPS[i].start_date} - ${DATE_STEPS[i].end_date} : ${raw_data.data.length}`)
          // const data = {data: raw_data.data.filter(d => d.order_id === '1448935')}
          const data = raw_data
-      //   console.log(data.data[0])
-        console.log(data.data.length)
+         // console.log(data.data[0])
+         const orders = data.data.map(a => {a.create_time2 = (new Date(parseInt(a.create_time * 1000))); return a})
+         if(false) {
+            console.table(orders.sort((a,b) => parseInt(a.order_id) - parseInt(b.order_id)), [
+               "order_id",
+               "employee_name",
+               "create_time",
+               "create_time2"
+            ])
+         }
+
+         // console.log(data.data.length)
       //   console.table(data.data.map(r => {
       //    const rr = r;
       //    // rr.update_time_h = new Date(parseInt(r.update_time * 1000)) 
@@ -126,11 +165,24 @@ async function athena_api_v2_swimlane(metrics = METRICS){
       //   }), ["order_id", "create_time_h","update_time_h", "pending_time", 'last_pending_time',  'last_reply_time', 'last_pending_time_h',
       //       'category_1_name','archive_category'
       //    ])
-        return data.data;
-    } else {
-        console.log(`Get Order list Error !!!`)
-        return null;
-    }
+         records = records.concat( data.data );
+      } else {
+         console.log(`Get Order list Error !!!`)
+         // return null;
+      }
+   }
+
+   // console.log(`Total Records: ${records.length}`)
+   const uniqueRecords = [...new Set(records)]
+   console.log(`Total Unique Records:  ${uniqueRecords.length}`)
+   return uniqueRecords
+
+   // const uniqueArray = [...new Set(array)];
+ 
+   // const response_3 = (await proxying(method, endpoint, header, param, body, true));
+
+   //  console.log(response.data)
+
 }
 
 
