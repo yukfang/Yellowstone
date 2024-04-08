@@ -14,9 +14,7 @@ router.get('/order/:id', getOrderInfo)
 async function getOrderInfo(ctx, next){
     const order_id = ctx.params.id 
     if(order_id === null) return
-
     const info = await get_order_info(order_id)
-
     ctx.body = info
 }
 
