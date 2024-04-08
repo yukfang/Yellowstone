@@ -13,7 +13,7 @@ module.exports = {
 
       script: "./index.js",
       "watch": true,
-      name: "AthenaWatcher"
+      name: "AthenaProxy"
     }
 
   ]

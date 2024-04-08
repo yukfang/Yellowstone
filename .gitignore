@@ -1,4 +1,2 @@
 node_modules
 package-lock.json
-LocalCache
-database/db_conn_local.js
