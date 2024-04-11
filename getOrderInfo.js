@@ -30,8 +30,8 @@ async function process_tags(tags) {
 async function process_detail(detail) {
     const client_name = detail.items.filter(r=> r.label.includes('Client Name') || r.label.includes('Advertiser name')).pop().content;
     const region = detail.items.filter(r=> r.label.includes('GBS Country') || r.label.includes('Region')).pop().content;
-    const mmp = detail.items.filter(r=> r.label.includes('Client MMP')).pop().content;
-    const vertical = detail.items.filter(r=> r.label.includes('Customer Vertical')).pop().content;
+    const mmp = detail.items.filter(r=> r.label.includes('Client MMP')).pop()?.content || "";
+    const vertical = detail.items.filter(r=> r.label.includes('Customer Vertical')).pop()?.content || ""
 
 
     return {
