@@ -17,7 +17,7 @@ async function getOrderInfo(ctx, next){
       console.log(`no order_id found`)
       return
     } else {
-      console.log(`Get request for : ${ctx.query.order_id}`)
+      console.log(`Get request for : ${ctx.query.order_id} ${ctx.query.performer}`)
     }
     const info = await get_order_info(order_id)
     ctx.body = info
