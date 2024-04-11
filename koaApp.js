@@ -9,15 +9,15 @@ const get_order_info = require(`./getOrderInfo`)
 
 koaApp.use(router.routes()).use(router.allowedMethods())
 
-router.get('/:order_id?', getOrderInfo)
 router.get('/', getOrderInfo)
 
-
 async function getOrderInfo(ctx, next){
-    const order_id = ctx.params.order_id || ctx.query.order_id
+    const order_id =  ctx.query.order_id
     if(order_id === null) {
       console.log(`no order_id found`)
       return
+    } else {
+      console.log(`Get request for : ${ctx.query.order_id}`)
     }
     const info = await get_order_info(order_id)
     ctx.body = info
