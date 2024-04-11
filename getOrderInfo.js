@@ -31,6 +31,7 @@ async function process_detail(detail) {
     const client_name = detail.items.filter(r=> r.label.includes('Client Name') || r.label.includes('Advertiser name')).pop().content;
     const region = detail.items.filter(r=> r.label.includes('GBS Country') || r.label.includes('Region')).pop().content;
     const mmp = detail.items.filter(r=> r.label.includes('Client MMP')).pop()?.content || "";
+    const ios_app_id = detail.items.filter(r=> r.label.includes('iOS Mobile App ID')).pop()?.content || "";
     const vertical = detail.items.filter(r=> r.label.includes('Customer Vertical')).pop()?.content || ""
 
 
@@ -45,7 +46,7 @@ async function process_detail(detail) {
         vertical,
         client_name,
         region,
-
+        ios_app_id,
         detail
     }
 }
