@@ -6,10 +6,9 @@ async function get_order_info(order_id) {
     const detail = await get_order_detail(order_id)
 
     if(tags !== null && detail !== null) {
-        return {
-            tags : await process_tags(tags),
-            detail: await process_detail(detail)
-        }
+        const data = await process_detail(detail);
+        data.status = await process_tags(tags)
+        return data
     }
 }
 
@@ -46,8 +45,6 @@ async function process_detail(detail) {
         vertical,
         client_name,
         region,
-
-
 
         detail
     }
