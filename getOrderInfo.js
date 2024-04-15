@@ -29,7 +29,16 @@ async function process_tags(tags) {
 
 async function process_detail(detail) {
     const client_name = detail.items.filter(r=> r.label.includes('Client Name') || r.label.includes('Advertiser name')).pop().content;
-    const region = detail.items.filter(r=> r.label.includes('GBS Country') || r.label.includes('Region')).pop().content;
+    const country = detail.items.filter(r=> r.label.includes('GBS Country') || r.label.includes('Region')).pop().content;
+    let region = ''
+    if(country.contains("NORTH")) {
+        region = "NA"
+    } else if( country.contains("EU-") || country.contains("MENA-")) {
+        region = 'EMEA'
+    } else if( country.contains("SEA-")) {
+        region = "APAC"
+    }
+
     const mmp = detail.items.filter(r=> r.label.includes('Client MMP')).pop()?.content || "";
     const ios_app_id = detail.items.filter(r=> r.label.includes('iOS Mobile App ID')).pop()?.content || "";
     const vertical = detail.items.filter(r=> r.label.includes('Customer Vertical')).pop()?.content || ""
@@ -45,6 +54,7 @@ async function process_detail(detail) {
         mmp,
         vertical,
         client_name,
+        country,
         region,
         ios_app_id,
         detail
