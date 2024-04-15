@@ -8,6 +8,9 @@ async function get_order_info(order_id) {
     if(tags !== null && detail !== null) {
         const data = await process_detail(detail);
         data.status = await process_tags(tags)
+        if(data.status.subStatus === undefined) {
+            data.status.subStatus = data.status.mainStatus
+        }
         return data
     }
 }
