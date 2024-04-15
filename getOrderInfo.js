@@ -30,12 +30,13 @@ async function process_tags(tags) {
 async function process_detail(detail) {
     const client_name = detail.items.filter(r=> r.label.includes('Client Name') || r.label.includes('Advertiser name')).pop().content;
     const country = detail.items.filter(r=> r.label.includes('GBS Country') || r.label.includes('Region')).pop().content;
+    console.log(country)
     let region = ''
-    if(country.contains("NORTH")) {
+    if(country.includes("NORTH")) {
         region = "NA"
-    } else if( country.contains("EU-") || country.contains("MENA-")) {
+    } else if( country.includes("EU-") || country.includes("MENA-")) {
         region = 'EMEA'
-    } else if( country.contains("SEA-")) {
+    } else if( country.includes("SEA-")) {
         region = "APAC"
     }
 
