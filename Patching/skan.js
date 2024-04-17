@@ -15,7 +15,17 @@ module.exports = {
         ios_app_id : "1556531176",
         mmp: "AppsFlyer"        
     },
+    "1921180" : {
+        ios_app_id : "1488296980",
+        mmp: "AppsFlyer"        
+    },
+    "1950312" : {
+        ios_app_id : "1049234587",
+        mmp: "AppsFlyer"        
+    },
 }
+
+
 
 
 
