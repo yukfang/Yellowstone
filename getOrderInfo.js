@@ -46,8 +46,8 @@ async function process_detail(detail) {
         region = "APAC"
     }
 
-    const mmp = detail.items.filter(r=> r.label.includes('Client MMP')).pop()?.content || patchInfo?.mmp
-    const ios_app_id = detail.items.filter(r=> r.label.includes('iOS Mobile App ID')).pop()?.content || patchInfo?.ios_app_id
+    const mmp = patchInfo?.mmp || detail.items.filter(r=> r.label.includes('Client MMP')).pop()?.content || ""
+    const ios_app_id = patchInfo?.ios_app_id || detail.items.filter(r=> r.label.includes('iOS Mobile App ID')).pop()?.content || ""
     const vertical = detail.items.filter(r=> r.label.includes('Customer Vertical')).pop()?.content || ""
 
 

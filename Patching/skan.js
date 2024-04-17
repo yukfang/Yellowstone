@@ -23,6 +23,22 @@ module.exports = {
         ios_app_id : "1049234587",
         mmp: "AppsFlyer"        
     },
+    "1905376" : {
+        ios_app_id : "1447274646",
+        mmp: "AppsFlyer"    
+    },
+    "2008151" : {
+        ios_app_id : "586328581",
+        mmp: "Adjust"    
+    },
+    "1967602" : {
+        ios_app_id : "1484296272",
+        mmp: "Adjust"   
+    },
+    "1967872" : {
+        ios_app_id : "334235181",
+        mmp: "Branch"   
+    }
 }
 
 
