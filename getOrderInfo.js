@@ -1,5 +1,6 @@
 const get_order_detail = require('./utils/athena/detail')
 const get_order_tag = require('./utils/athena/tag')
+const SkanPatching = require('./Patching/skan')
 
 async function get_order_info(order_id) {
     const tags = await get_order_tag(order_id)
@@ -31,6 +32,8 @@ async function process_tags(tags) {
 }
 
 async function process_detail(detail) {
+    const patchInfo = SkanPatching[`${detail.id}`]
+
     const client_name = detail.items.filter(r=> r.label.includes('Client Name') || r.label.includes('Advertiser name')).pop().content;
     const country = detail.items.filter(r=> r.label.includes('GBS Country') || r.label.includes('Region')).pop().content;
     console.log(country)
@@ -43,8 +46,8 @@ async function process_detail(detail) {
         region = "APAC"
     }
 
-    const mmp = detail.items.filter(r=> r.label.includes('Client MMP')).pop()?.content || "";
-    const ios_app_id = detail.items.filter(r=> r.label.includes('iOS Mobile App ID')).pop()?.content || "";
+    const mmp = detail.items.filter(r=> r.label.includes('Client MMP')).pop()?.content || patchInfo.mmp
+    const ios_app_id = detail.items.filter(r=> r.label.includes('iOS Mobile App ID')).pop()?.content || patchInfo.ios_app_id;
     const vertical = detail.items.filter(r=> r.label.includes('Customer Vertical')).pop()?.content || ""
 
 
