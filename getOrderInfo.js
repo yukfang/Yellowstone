@@ -47,7 +47,10 @@ async function process_detail(detail) {
     }
 
     const mmp = patchInfo?.mmp || detail.items.filter(r=> r.label.includes('Client MMP')).pop()?.content || ""
-    const ios_app_id = patchInfo?.ios_app_id || detail.items.filter(r=> r.label.includes('iOS Mobile App ID')).pop()?.content || ""
+    let ios_app_id = patchInfo?.ios_app_id || (detail.items.filter(r=> r.label.includes('iOS Mobile App ID')).pop()?.content) || ""
+    if(ios_app_id.toLowerCase().includes('id')) {
+        ios_app_id = ios_app_id.substring(2)
+    }
     const vertical = detail.items.filter(r=> r.label.includes('Customer Vertical')).pop()?.content || ""
 
 
