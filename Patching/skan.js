@@ -38,6 +38,10 @@ module.exports = {
     "1967872" : {
         ios_app_id : "334235181",
         mmp: "Branch"   
+    },
+    "2021956" : {
+        ios_app_id : "1230286588",
+        mmp: "Branch"   
     }
 }
 
