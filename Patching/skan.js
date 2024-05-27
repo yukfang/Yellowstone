@@ -42,7 +42,14 @@ module.exports = {
     "2021956" : {
         ios_app_id : "1230286588",
         mmp: "Branch"   
-    }
+    },
+
+    "2039442" : {ios_app_id : "682613038"  , mmp : "Adjust"     },
+    "2052228" : {ios_app_id : "1441116618" , mmp : "AppsFlyer"  },
+    "2075458" : {ios_app_id : "6479229586" , mmp : "Adjust"     },
+    "2076394" : {ios_app_id : "1580572679" , mmp : "Adjust"     },
+    "2092383" : {ios_app_id : "1326224436" , mmp : "Adjust"     },
+
 }
 
 
