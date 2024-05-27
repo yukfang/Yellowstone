@@ -49,7 +49,12 @@ module.exports = {
     "2075458" : {ios_app_id : "6479229586" , mmp : "Adjust"     },
     "2076394" : {ios_app_id : "1580572679" , mmp : "Adjust"     },
     "2092383" : {ios_app_id : "1326224436" , mmp : "Adjust"     },
+    "2036669" : {ios_app_id : "558486768"  , mmp : "AppsFlyer"     },
+    "2094796" : {ios_app_id : "1558803930" , mmp : "AppsFlyer"     },
 
+
+
+    "" : {ios_app_id : ""  , mmp : ""     }
 }
 
 
